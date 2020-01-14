@@ -32,7 +32,7 @@
 						document.getElementById("conversationaldata").innerHTML += "<a class=\"btn btn-primary btn-md\" style='margin-right: 3px;' href=\"https://msmarco.blob.core.windows.net/conversationalsearch/ann_session_dev.tar.gz\">Dev(04/19/2019)</a>"
 						document.getElementById("conversationaldata").innerHTML += "<a class=\"btn btn-primary btn-md\" style='margin-right: 3px;' href=\"https://msmarco.blob.core.windows.net/conversationalsearch/artificialSessionsQueryEncoding500kSample.tsv.gz\">AGI Encoder Sample(03/06/2019)</a>"
 						document.getElementById("conversationaldata").innerHTML += "<a class=\"btn btn-primary btn-md\" style='margin-right: 3px;' href=\"https://msmarco.blob.core.windows.net/conversationalsearch/artificialSessionsBERT500k.tsv.gz\">BERT Sample(03/06/2019)</a>"
-						
+						//ranking
 						document.getElementById("rankingdata").innerHTML += "<a class=\"btn btn-primary btn-md\" style='margin-right: 3px;' href=\"https://msmarco.blob.core.windows.net/msmarcoranking/collection.tar.gz\">Collection(10/26/2018)</a>"
 						document.getElementById("rankingdata").innerHTML += "<a class=\"btn btn-primary btn-md\" style='margin-right: 3px;' href=\"https://msmarco.blob.core.windows.net/msmarcoranking/fulldocs.tsv.gz\">Full Web Documents(05/02/2019)</a>"
 						document.getElementById("rankingdata").innerHTML += "<a class=\"btn btn-primary btn-md\" style='margin-right: 3px;' href=\"https://msmarco.blob.core.windows.net/msmarcoranking/queries.tar.gz\">Queries(11/13/2018)</a>"
@@ -45,6 +45,7 @@
 						document.getElementById("rankingdata").innerHTML += "<a class=\"btn btn-primary btn-md\" style='margin-right: 3px;' href=\"https://msmarco.blob.core.windows.net/msmarcoranking/top1000.train.tar.gz\">Top 1000 Train(05/06/2019)</a>"
 						document.getElementById("rankingdata").innerHTML += "<a class=\"btn btn-primary btn-md\" style='margin-right: 3px;' href=\"https://msmarco.blob.core.windows.net/msmarcoranking/top1000.dev.tar.gz\">Top 1000 Dev(05/02/2019)</a>"
 						document.getElementById("rankingdata").innerHTML += "<a class=\"btn btn-primary btn-md\" style='margin-right: 3px;' href=\"https://msmarco.blob.core.windows.net/msmarcoranking/top1000.eval.tar.gz\">Top 1000 Eval(05/02/2019)</a>"
+						//Qna
 						document.getElementById("qnadataset").innerHTML += "<h4>Question Answering V2.1</h4>"
 						document.getElementById("qnadataset").innerHTML += "<a class=\"btn btn-primary btn-md\" style='margin-right: 3px;' href=\"https://msmarco.blob.core.windows.net/msmarco/train_v2.1.json.gz\">Training Set(04/23/2018)</a>"
 						document.getElementById("qnadataset").innerHTML += "<a class=\"btn btn-primary btn-md\" style='margin-right: 3px;' href=\"https://msmarco.blob.core.windows.net/msmarco/dev_v2.1.json.gz\">Dev Set(04/03/2018)</a>"
@@ -53,20 +54,14 @@
 						document.getElementById("qnadataset").innerHTML += "<a class=\"btn btn-primary btn-md\" style='margin-right: 3px;' href=\"https://msmarco.blob.core.windows.net/msmsarcov1/train_v1.1.json.gz\">Training Set(12/01/2016)</a>"
 						document.getElementById("qnadataset").innerHTML += "<a class=\"btn btn-primary btn-md\" style='margin-right: 3px;' href=\"https://msmarco.blob.core.windows.net/msmsarcov1/dev_v1.1.json.gz\">Dev Set(12/01/2016)</a>"
 						document.getElementById("qnadataset").innerHTML += "<a class=\"btn btn-primary btn-md\" style='margin-right: 3px;' href=\"https://msmarco.blob.core.windows.net/msmsarcov1/test_hidden_v1.1.json\">Evaluation Set(12/01/2016)</a>"  
+						//Optimal crawling
 						document.getElementById("ocdata").innerHTML += "<a class=\"btn btn-primary btn-md\" style='margin-right: 3px;' href=\"https://msmarco.blob.core.windows.net/crawling/Dataset.tar.gz\">Crawling Dataset(10/22/2019)</a>"  
-						document.getElementById("download").innerHTML += "<h4>Github</h4>"
-						document.getElementById("download").innerHTML += "<a class=\"btn btn-primary btn-md\" style='margin-right: 3px;' href=\"https://github.com/microsoft/OpenKP\">KeyPhrase Extraction</a>"
-						document.getElementById("download").innerHTML += "<a class=\"btn btn-primary btn-md\" style='margin-right: 3px;' href=\"https://github.com/microsoft/MSMARCO-Conversational-Search\">Conversational Search</a>"
-						document.getElementById("download").innerHTML += "<a class=\"btn btn-primary btn-md\" style='margin-right: 3px;' href=\"https://github.com/microsoft/Optimal-Freshness-Crawl-Scheduling\">Optimal Freshness Crawl Under Politeness Constraints</a>"
-						document.getElementById("download").innerHTML += "<a class=\"btn btn-primary btn-md\" style='margin-right: 3px;' href=\"https://github.com/microsoft/MSMARCO-Passage-Ranking\">Passage Ranking</a>"
 						alert("Download Links are now viewable")
 					} else {
 						alert("Please Agree to our conditions to download the dataset")
 					}
 				}
-			</script>
-
-			
+			</script>	
 	</head>
 	<body id="page-top">
 		<nav class="navbar navbar-expand-lg navbar-dark fixed-top topnav" id="mainNav">
@@ -88,13 +83,16 @@
 							<a class="nav-link js-scroll-trigger" href="#kp">KeyPhrase</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link js-scroll-trigger" href="#qna">Question Answering</a>
+							<a class="nav-link js-scroll-trigger" href="#qna">QnA</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link js-scroll-trigger" href="#cs">Conversational Search</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link js-scroll-trigger" href="#oc">Optimal Crawling</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link js-scroll-trigger" href="#updates">Updates</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link js-scroll-trigger" href="#contact">Submissions</a>
@@ -110,27 +108,27 @@
 			<div class="container">
 				<center>
 					<img style='vertical-align: middle' src="img/MarcoLogo.small.png" />
+					<img src="img/MicrosoftLogo.png">
 				</center>
 				<div  style='vertical-align: middle' class="row">
 					<a href="https://twitter.com/msmarco?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @msmarco</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 				</div>
 				<div class="row">
 					<p>Starting with a paper released at <a href="https://arxiv.org/pdf/1611.09268.pdf"> NIPS 2016</a>, MS MARCO is a collection of datasets focused on deep learning in search.</p>
-					was an ambitious, real-world Machine Reading Comprehension Dataset. Since then we have been slowly improving the existing QA datasets and releasing new datasets. How does your model perform?
+					<p>The first dataset was a question answering dataset featuring 100,000 real Bing questions and a human generated answer. Since then we released a 1,000,000 question dataset, a natural langauge generation dataset, a passage ranking dataset, keyphrase extraction dataset, crawling dataset, and a conversational search.</p>
 				</div>
 				<div class="row">
 					<h3>Terms and Conditions</h3>
-					<p>The MS MARCO datasets are intended for non-commercial research purposes only to promote advancement in the field of artificial intelligence and related areas, and is made available free of charge without extending any license or other intellectual property rights.  The dataset is provided “as is” without warranty and usage of the data has risks since we may not own the underlying rights in the documents.  We are not be liable for any damages related to use of the dataset.  Feedback is voluntarily given and can be used as we see fit. Upon violation of any of these terms, your rights to use the dataset will end automatically.</p><br /><br /> <p> Please contact us at ms-marco@microsoft.com if you own any of the documents made available but do not want them in this dataset.  We will remove the data accordingly.  If you have questions about use of the dataset or any research outputs in your products or services, we encourage you to undertake your own independent legal review.  For other questions, please feel free to contact us.</p>            
-					<br><br><br><br>
+					<p>The MS MARCO datasets are intended for non-commercial research purposes only to promote advancement in the field of artificial intelligence and related areas, and is made available free of charge without extending any license or other intellectual property rights.  The dataset is provided “as is” without warranty and usage of the data has risks since we may not own the underlying rights in the documents.  We are not be liable for any damages related to use of the dataset.  Feedback is voluntarily given and can be used as we see fit. Upon violation of any of these terms, your rights to use the dataset will end automatically.</p><br /><br /> <p> Please contact us at <script type="text/javascript">gen_mail_to_link('ms-marco','microsoft.com','MS Marco Issue','ms-marco@microsoft.com');</script> if you own any of the documents made available but do not want them in this dataset.  We will remove the data accordingly.  If you have questions about use of the dataset or any research outputs in your products or services, we encourage you to undertake your own independent legal review.  For other questions, please feel free to contact us.</p>            
 					<div class="checkbox">
                         <label>
                             <input type="checkbox" name="termAgreed" id="TA" value="true"  />
-                            I agree to terms and condititions. Upon accepting links to dataset will become available.
+                            I agree to terms and conditions. Upon accepting links to dataset will become available.
                         </label>
 					</div>
-					<br><br><br><br>
-					<button type="button" class="btn btn-primary btn-default" onclick='return addDownloadLink()'>Submit</button>
 				</div>
+				<div class="row">
+					<button type="button" class="btn btn-primary btn-default" onclick='return addDownloadLink()'>Submit</button>
 				</div>
 			</div>
 		</section> 
@@ -138,12 +136,50 @@
 			<div class="container">
 				<div class="row">
 					<div class="table-responsive">
-						<h2>Passage Retrieval(10/26/2018-Present) ranked by MRR on Eval</h2>
-						<p>Given a query and a corpus of 8.8m passages, rank the passages by relevance. Use either the full corpus or start with BM25s top 1000(Ranking)</p>
+						<h2>Passage and Document Retrieval(10/26/2018-Present)</h2>
+						<p>Based on the passages and questions in the <a href='#qna'>Question Answering Dataset</a>, a passage and document ranking task was formulated. There are 8.8 million passages, 3.2 million documents and the goal is to rank based on their relevance.</p>
+						<p>Relevance labels are derived from what passages was marked as having the answer in the QnA dataset making this one of the largest relevance datasets ever.</p>
+						<p>This dataset is the focus of the <a href='https://trec.nist.gov/'>2020 and 2019 TREC Deep Learning Track</a> and has been used as a teaching aid for <a href='http://sigir.org/afirm2020/'>ACM SIGIR/SIGKDD AFIRM Summer School on Machine Learning for Data Mining and Search</a>.</p>
+						<h4>Tasks</h4>
+						<ol>
+							<li>Passage Re-Ranking:Given a candidate top 1000 passages as retrieved by BM25, re-rank passage by relevance.</li>
+							<li>Passage Full Ranking:Given a corpus of 8.8m passages generate a candidate top 1000 passages sorted by relevance.</li>
+							<li>Document Re-Ranking:Given a candidate top 1000 document as retrieved by BM25, re-rank documents by relevance.</li>
+							<li>Document Full Ranking:Given a corpus of 3.2m documents generate a candidate top 1000 documents sorted by relevance.</li>
+						</ol>
+						<h4>Relevant Links</h4>
+						<a class="btn btn-primary btn-md" style='margin-right: 3px;' href="https://arxiv.org/abs/1611.09268">Paper</a>
+						<a class="btn btn-primary btn-md" style='margin-right: 3px;' href="https://github.com/microsoft/MSMARCO-Passage-Ranking">MSMARCO Passage Ranking Github</a>
+						<a class="btn btn-primary btn-md" style='margin-right: 3px;' href="https://github.com/microsoft/MSMARCO-Document-Ranking">MSMARCO Document Ranking Github</a>
 						<a class="btn btn-primary btn-md" style='margin-right: 3px;' href="https://github.com/microsoft/TREC-2020-Deep-Learning">TREC 2020 Deep Learning</a>
 						<a class="btn btn-primary btn-md" style='margin-right: 3px;' href="https://github.com/microsoft/TREC-2019-Deep-Learning">TREC 2019 Deep Learning</a>
 						<h3>Dataset Download links</h3>
 						<div id="rankingdata"> </div>
+						<h4>Document Ranking Leaderboard(02/01/2020-Passage)ranked by MRR on Eval</h4>
+						<table class="table table-striped">
+							<thead>
+								<tr>
+									<th>Rank</th>
+									<th class="col-md-5">Model</th>
+									<th class="col-md-1">Ranking Style</th>
+									<th class="col-md-1">Submission Date</th>
+									<th class="col-md-1">MRR@10 On Eval</th>
+									<th class="col-md-1">MRR@10 On Dev</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tbody>
+									<tr>
+									   <td>1</td>
+									   <td><strong>BM25 Baseline</strong> MSMARCO Team</td>
+									   <td>ReRanking</td>
+									   <td><a href="https://twitter.com/MSMarcoAI/">February 2020</a></td>
+									   <td>-</td>
+									   <td>-</td>
+								   </tr>
+							</tbody>
+						</table>
+						<h4>Passage Ranking Leaderboard(10/26/2018-Present) ranked by MRR on Eval</h4>
 						<table class="table table-striped">
 							<thead>
 								<tr>
@@ -612,61 +648,66 @@
 		<section id="kp" class="bg-light">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-12 mx-auto"></div>
-						<div class="table-responsive" >
-							<h2>KeyPhrase Extraction(10/18/2019) ranked by F1 @3 on Eval</h2>
-							<p>1. Given a document select the 3 most salient keyphrases.</p>
-							<a class="btn btn-primary btn-md" style='margin-right: 3px;' href="https://github.com/microsoft/OpenKP">KeyPhrase Extraction Github Repo</a>
-							<h3>Dataset Download links</h3>
-							<div id="keyphrasedata"> </div>
-							<table class="table table-striped">
-								<thead>
+					<div class="col-md-12 mx-auto">
+						<h2>KeyPhrase Extraction(10/18/2019-Present)</h2>
+						<p>Keyphrase extraction on open domain document is an up and coming area that can be used for many NLP tasks like document ranking, Topic Clusetring, etc. To enable the research community to build performant KeyPhrase Extraction systems we have build OpenKP a human annotated extraction of Keyphrases on a wide variety of documents.</p>
+						<p>The dataset features 148,124 real world web documents along with a human annotation indicating the 1-3 most relevant keyphrases. More information about the dataset and our initial experiments can be found in the paper <a href='https://www.aclweb.org/anthology/D19-1521/'>Open Domain Web Keyphrase Extraction Beyond Language Modeling</a> which was an oral presentation at <a href='https://www.emnlp-ijcnlp2019.org/'>EMNLP-IJCNLP 2019</a>. It is part of the MSMARCO dataset family and research projects like this power the core document understanding pipeline that Bing uses.</p>
+						<h4>Tasks</h4>
+						<ol>
+							<li>Given a document produce the top 3 most salient keyphrases</li>
+						</ol>
+						<h4>Relevant Links</h4>
+						<a class="btn btn-primary btn-md" style='margin-right: 3px;' href="https://github.com/microsoft/OpenKP">KeyPhrase Extraction Github Repo</a>
+						<a class="btn btn-primary btn-md" style='margin-right: 3px;' href="https://arxiv.org/abs/1911.02671">Paper</a>
+						<h3>Dataset Download links</h3>
+						<div id="keyphrasedata"> </div>
+						<h4>KeyPhrase Extraction(10/18/2019) ranked by F1 @3 on Eval</h4>
+						<table class="table table-striped">
+							<thead>
+								<tr>
+									<th>Rank</th>
+									<th class="col-lg-3">Model</th>
+									<th class="col-md-1">Submission Date</th>
+									<th class="col-md-2">Precision @1,@3,@5</th>
+									<th class="col-md-2">Recall @1,@3,@5</th>
+									<th class="col-md-2">F1 @1,@3,@5</th>
+								</tr>
+							</thead>
+							<tbody>
 									<tr>
-										<th>Rank</th>
-										<th class="col-lg-3">Model</th>
-										<th class="col-md-1">Submission Date</th>
-										<th class="col-md-2">Precision @1,@3,@5</th>
-										<th class="col-md-2">Recall @1,@3,@5</th>
-										<th class="col-md-2">F1 @1,@3,@5</th>
-									</tr>
-								</thead>
-								<tbody>
-									 <tr>
-										<td>1</td>
-										<td><strong>BERT (Base) Sequence Tagging Baseline</strong> Si Sun (Tsinghua University), Chenyan Xiong (MSR AI), Zhiyuan Liu (Tsinghua University) [<a href="https://github.com/thunlp/Bert2Tag">Code</a>]</td>
-										<td><a href="https://twitter.com/MSMarcoAI/status/1191781706832867328">November 5th, 2019</a></td>
-										<td>0.484, 0.312, 0.227</td>
-										<td>0.255, 0.469, 0.563</td>
-										<td>0.321, <strong>0.361</strong>, 0.314</td>
-									</tr>
-									 <tr>
-										<td>2</td>
-										<td><strong>LLbeBack</strong> Rodrigo Nogueira (Epistemic AI), Jimmy Lin (University of Waterloo)</td>
-										<td><a href="https://twitter.com/MSMarcoAI/status/1196862630738006018">November 19th, 2019</a></td>
-										<td>0.519, 0.297, 0.178</td>
-										<td>0.281, 0.428, 0.438</td>
-										<td>0.349, <strong>0.341</strong>, 0.246</td>
-									</tr>
+									<td>1</td>
+									<td><strong>BERT (Base) Sequence Tagging Baseline</strong> Si Sun (Tsinghua University), Chenyan Xiong (MSR AI), Zhiyuan Liu (Tsinghua University) [<a href="https://github.com/thunlp/Bert2Tag">Code</a>]</td>
+									<td><a href="https://twitter.com/MSMarcoAI/status/1191781706832867328">November 5th, 2019</a></td>
+									<td>0.484, 0.312, 0.227</td>
+									<td>0.255, 0.469, 0.563</td>
+									<td>0.321, <strong>0.361</strong>, 0.314</td>
+								</tr>
 									<tr>
-										<td>3</td>
-										<td><strong>Baseline finetuned on Bing Queries</strong> MSMARCO Team [<a href="https://www.aclweb.org/anthology/D19-1521/ ">Xiong, et al. '19&lt;</a>]</td>
-										<td><a href="https://twitter.com/MSMarcoAI/status/1186755348188676096">October 19th, 2019</a></td>
-										<td>0.397, 0.249, 0.149</td>
-										<td>0.215, 0.391, 0.391</td>
-										<td>0.267, <strong>0.292</strong>, 0.209</td>
-									</tr>
-									<tr>
-										<td>4</td>
-										<td><strong>Baseline</strong> MSMARCO Team [<a href="https://www.aclweb.org/anthology/D19-1521/ ">Xiong, et al. '19&lt;</a>]&lt;</td>
-										<td><a href="https://twitter.com/MSMarcoAI/status/1186755348188676096">October 19th, 2019</a></td>
-										<td>0.365, 0.237, 0.142</td>
-										<td>0.196, 0.367, 0.367</td>
-										<td>0.244, <strong>0.277</strong>, 0.198</td>
-									</tr>
-								</tbody>
-							</table>
-							<br>
-						</div>
+									<td>2</td>
+									<td><strong>LLbeBack</strong> Rodrigo Nogueira (Epistemic AI), Jimmy Lin (University of Waterloo)</td>
+									<td><a href="https://twitter.com/MSMarcoAI/status/1196862630738006018">November 19th, 2019</a></td>
+									<td>0.519, 0.297, 0.178</td>
+									<td>0.281, 0.428, 0.438</td>
+									<td>0.349, <strong>0.341</strong>, 0.246</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td><strong>Baseline finetuned on Bing Queries</strong> MSMARCO Team [<a href="https://www.aclweb.org/anthology/D19-1521/ ">Xiong, et al. '19&lt;</a>]</td>
+									<td><a href="https://twitter.com/MSMarcoAI/status/1186755348188676096">October 19th, 2019</a></td>
+									<td>0.397, 0.249, 0.149</td>
+									<td>0.215, 0.391, 0.391</td>
+									<td>0.267, <strong>0.292</strong>, 0.209</td>
+								</tr>
+								<tr>
+									<td>4</td>
+									<td><strong>Baseline</strong> MSMARCO Team [<a href="https://www.aclweb.org/anthology/D19-1521/ ">Xiong, et al. '19&lt;</a>]&lt;</td>
+									<td><a href="https://twitter.com/MSMarcoAI/status/1186755348188676096">October 19th, 2019</a></td>
+									<td>0.365, 0.237, 0.142</td>
+									<td>0.196, 0.367, 0.367</td>
+									<td>0.244, <strong>0.277</strong>, 0.198</td>
+								</tr>
+							</tbody>
+						</table>
 					</div>
 				</div>
 			</div>
@@ -675,13 +716,22 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12 mx-auto">
-						<p>Q</p>
-						<p>QnA:Given a query and 10 passages provide the best answer avaible based(Q&A). The target answers in the dataset files are 'answers'</p>
-						<p>NLGEN:Given a query and 10 passages provide the best answer avaible in natural language that could be used by a smart device/digital assistant(Q&A + Natural Language Generation).  The target answers in the dataset files are 'wellFormedAnswers'</p>
+						<h2>Question Answering and Natural Langauge Generation(12/01/2016-Present)</h2>
+						<p>The original focus of MSMARCO was to provide a corpus for training and testing systems which given a real domain user query systems would then provide the most likley candidate answer and do so in language which was natural and conversational.</p>
+						<p>This data comes in three tasks/forms: Original QnA dataset(v1.1), Question Answering(v2.1), Natural Language Generation(v2.1). The original question answering datset featured 100,000 examples and was released in 2016. Leaderboard is now closed but data is availible below.</p>
+						<p>The current competitive tasks are Question Answering and Natural Language Generation. Question Answering features over 1,000,000 queries and is much like the original QnA dataset but bigger and with higher quality. The Natural Language Generation dataset features 180,000 examples and builds upon the QnA dataset to deliver answers that could be spoken by a smart speaker.</p>
+						<h4>Tasks</h4>
+						<ol>
+							<li>QnA(v1.1 now closed):Given a query and 10 candidate passages select the most relvant one and use it to answer the question.</li>
+							<li>QnA(v2.1):Given a query and 10 candidate passages select the most relvant one and use it to answer the question.</li>
+							<li>NLGEN(v2.1):Given a query and 10 candidate passages select the most relvant one and use it to answer the question. Provide your answer in a way in which it could be read from a smart speaker and make sense without any additional context.</li>
+						</ol>
+						<h4>Relevant Links</h4>
+						<a class="btn btn-primary btn-md" style='margin-right: 3px;' href="https://arxiv.org/abs/1611.09268">Paper</a>
 						<a class="btn btn-primary btn-md" style='margin-right: 3px;' href="https://github.com/microsoft/MSMARCO-Question-Answering">Question Answering Github Repo</a>
 						<h3>Dataset Download links</h3>
 						<div id="qnadataset"> </div>
-						<h2>Q&amp;A Task(03/01/2018-Present)</h2>
+						<h4>Question Answering Task(03/01/2018-Present) Leaderboard</h4>
 						<table class="table table-striped">
 							<thead>
 								<tr>
@@ -1019,7 +1069,7 @@
 							</tbody>
 						</table>
 						<br>
-						<h2>Natural Language Generation Task(03/01/2018-Present)</h2>
+						<h4>Natural Language Generation Task(03/01/2018-Present)</h4>
 						<table class="table table-striped">
 							<thead>
 								<tr>
@@ -1406,7 +1456,7 @@
 							</tbody>
 						</table>
 						<br>
-						<h1>MS MARCO V1(12/01/2016-03/31/2018)</h1>
+						<h4>MS MARCO V1(12/01/2016-03/31/2018)</h4>
 						<div class="table-responsive">
 							<table class="table table-striped">
 								<thead>
@@ -1550,10 +1600,39 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12 mx-auto">
-						<p>Given a session with 2-n queries with one query being masked, predict the masked query(Conversational Search).</p>
+						<h2>Conversational Search(03/2020-Present)</h2>
+						<p>Truly Conversational Search is the next logic step in the journey to generate intelligent and useful AI. To understand what this may mean, researchers have voiced a continuous desire to study how people currently converse with search engines. As a result we have released a large corpus of anonymized user search sessions.</p>
+						<p>We hope the community can use this corpus to explore what conversations with search engines look like.</p>
+						<h4>Tasks</h4>
+						<ol>
+							<li>Given a session with a masked query and a candidate list of 100 potential queries rerank by the most likley query</li>
+						</ol>
+						<h4>Relevant Links</h4>
 						<a class="btn btn-primary btn-md" style='margin-right: 3px;' href="https://github.com/microsoft/MSMARCO-Conversational-Search">Conversational Search Github Repo</a>
 						<h3>Dataset Download links</h3>
 						<div id="conversationaldata"></div>
+						<h4>Conversational Search Leaderboard(03/2020-Present)</h4>
+						<table class="table table-striped">
+							<thead>
+								<tr>
+									<th>Rank</th>
+									<th class="col-md-6">Model</th>
+									<th class="col-md-1">Submission Date</th>
+									<th class="col-md-1">MRR@100 On Eval</th>
+									<th class="col-md-1">MRR@100 On Dev</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tbody>
+									<tr>
+									   <td>1</td>
+									   <td><strong>BM25 Baseline</strong> MSMARCO Team</td>
+									   <td><a href="https://twitter.com/MSMarcoAI/">February 2020</a></td>
+									   <td>-</td>
+									   <td>-</td>
+								   </tr>
+							</tbody>
+						</table>
 					</div>
 				</div>
 			</div>
@@ -1562,9 +1641,47 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12 mx-auto">
+						<h2>Optimal Crawling</h2>
+						<p>The dataset used for <a href='https://www.microsoft.com/en-us/research/publication/optimal-freshness-crawl-under-politeness-constraints/'>Optimal Freshness Crawl Under Politeness Constraints</a> and <a href='https://papers.nips.cc/paper/8348-staying-up-to-date-with-online-content-changes-using-reinforcement-learning-for-scheduling'>Staying up to Date with Online Content Changes Using Reinforcement Learning for Scheduling</a> which are both focused on providing an optimal crawling schedule for a search engine based ont he changing nature of the internet.</p>
+						<p>There is currently no public task associated with this dataset</p>
+						<h4>Relevant Links</h4>
+						<a class="btn btn-primary btn-md" style='margin-right: 3px;' href="https://www.microsoft.com/en-us/research/publication/optimal-freshness-crawl-under-politeness-constraints/">Paper</a>
+						<a class="btn btn-primary btn-md" style='margin-right: 3px;' href="https://papers.nips.cc/paper/8348-staying-up-to-date-with-online-content-changes-using-reinforcement-learning-for-scheduling">Paper 2</a>
 						<a class="btn btn-primary btn-md" style='margin-right: 3px;' href="https://github.com/microsoft/Optimal-Freshness-Crawl-Scheduling">Optimal Crawl Github Repo</a>
 						<h3>Dataset Download links</h3>
 						<div id="ocdata"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="updates" class="bg-light">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 mx-auto">
+						<h3>Changes To Dataset</h3>
+						<p><strong>10.22.2019:</strong>New Datasets</p>
+						1. Released OpenKP Keyphrase Extraction dataset! 
+						2. Released Optimal Crawling Dataset!
+						<p><strong>05.06.2019:</strong>Fixed Encoding issues with Ranking Dataset</p>
+						1. Updated various encoding issues in ranking dataset.<br>
+						<p><strong>04.23.2019:</strong>We have released a conversational search dataset</p>
+						1. Brand new conversational search Dataset <br>
+						<p><strong>10.26.2018:</strong>We have released a new ranking dataset based on the v2.1 dataset</p>
+						1. Brand new Ranking Dataset <br>
+						2. Basic Baseline and evaluation function <br>
+						<p><strong>04.23.2018:</strong>We have released an updated to the dataset. V2.1 Includes the following: <br>
+						1. Over 1 million queries <br>
+						2. ~182k Well Formed Answers <br>
+						3. Query type is now included for every query. <br>
+						4. Bias in Evaluation set fixed(a small portion of answers for the V2.0 Evaluation set were able to be found in the v1.1 set and the v2.0 well formed sets, these have been removed from eval and added to train). <br>
+						5. Utilities and Readme now availible.</p>
+						<p><strong>03.01.2018:</strong>We have released an updated to the dataset. V2.0 Includes the following: <br>
+						1. ~900,000 unique queries <br>
+						2. ~160k Well Formed Answers</p>
+						<p><strong>01.30.2017:</strong>We have released an update to the dataset! V1.1 contains the follwing: <br>
+						1. Improvments to dataset and evaluation scripts</p>
+						<p><strong>12.01.2016:</strong>We have released our dataset! V1.0 contains the follwing: <br>
+						1. 100,000 unique query answer pairs
 					</div>
 				</div>
 			</div>
