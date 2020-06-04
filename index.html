@@ -156,7 +156,7 @@
 		<section id="ranking" class="bg-light">
 			<div class="container">
 				<div class="row">
-					<div class="table-responsive">
+					<div class="col-md-12 mx-auto">
 						<h2>Passage and Document Retrieval(10/26/2018-Present)</h2>
 						<p>Based on the passages and questions in the <a href='#qna'>Question Answering Dataset</a>, a passage and document ranking task was formulated. There are 8.8 million passages, 3.2 million documents and the goal is to rank based on their relevance.</p>
 						<p>Relevance labels are derived from what passages was marked as having the answer in the QnA dataset making this one of the largest relevance datasets ever.</p>
@@ -179,622 +179,627 @@
 						<div id="rankingdata"> </div>
 						<h3>Not Yet Open</h3>
 						<h4>Document Ranking Leaderboard(05/01/2020-Present) ranked by MRR on Eval</h4>
-						<table class="table table-striped" id='docrankingtable'>
-							<thead>
-								<tr>
-									<th>Rank</th>
-									<th class="col-md-9">Model</th>
-									<th class="col-md-1">Submission Date</th>
-									<th class="col-md-1">MRR@10 On Eval</th>
-									<th class="col-md-1">MRR@10 On Dev</th>
-								</tr>
-							</thead>
-							<tbody>
+
+						<div class="table-responsive">
+							<table class="table table-striped" id='docrankingtable'>
+								<thead>
+									<tr>
+										<th>Rank</th>
+										<th class="col-md-9">Model</th>
+										<th class="col-md-1">Submission Date</th>
+										<th class="col-md-1">MRR@10 On Eval</th>
+										<th class="col-md-1">MRR@10 On Dev</th>
+									</tr>
+								</thead>
 								<tbody>
-									<!--<tr>
-									   <td><strong>BM25 Baseline</strong> MSMARCO Team</td>
-									   <td><a href="https://twitter.com/MSMarcoAI/">May 2020</a></td>
-									   <td>-</td>
-									   <td>-</td>
-								   </tr>-->
-							</tbody>
-						</table>
+									<tbody>
+										<!--<tr>
+										<td><strong>BM25 Baseline</strong> MSMARCO Team</td>
+										<td><a href="https://twitter.com/MSMarcoAI/">May 2020</a></td>
+										<td>-</td>
+										<td>-</td>
+									</tr>-->
+								</tbody>
+							</table>
+						</div>
 						<h4>Passage Ranking Leaderboard(10/26/2018-Present) ranked by MRR on Eval</h4>
-						<table class="table table-striped" id='passagerankingtable'>
-							<thead>
-								<tr>
-									<th>Rank</th>
-									<th class="col-md-5">Model</th>
-									<th class="col-md-1">Ranking Style</th>
-									<th class="col-md-1">Submission Date</th>
-									<th class="col-md-1">MRR@10 On Eval</th>
-									<th class="col-md-1">MRR@10 On Dev</th>
-								</tr>
-							</thead>
-							<body>
-                                                                <tr>
-									<td><strong>DR-BERT</strong> X.W. S of <a href='https://about.meituan.com/en' >Meituan-Dianping NLP-KG Group</a></td>
-									<td>Full Ranking</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1263190550900957184?s=20">May 20th, 2020</a></td>
-									<td>0.419</td>
-									<td>0.420</td>
-								</tr> 
-								<tr>
-									<td><strong>expando-mono-duo-T5</strong> Ronak Pradeep, Rodrigo Nogueira, Zhiying Jiang, and Jimmy Lin - University of Waterloo</td>
-									<td>Full Ranking</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1262822416293609474?s=20">May 19th, 2020</a></td>
-									<td>0.408</td>
-									<td>0.420</td>
-								</tr>
-								<tr>
-									<td><strong>DeepCT + TF-Ranking Ensemble of BERT, ROBERTA and ELECTRA</strong> (1) Shuguang Han, (2) Zhuyun Dai, (1) Xuanhui Wang, (1) Michael Bendersky and (1) Marc Najork - 1) Google Research, (2) Carnegie Mellon - <a href='https://arxiv.org/abs/2004.08476'>Paper</a> and <a href='https://github.com/tensorflow/ranking'>Code</a> </td>
-									<td>Full Ranking</td>
-									<td><a href="https://twitter.com/MSMarcoAI">June 2nd, 2020</a></td>
-									<td>0.407</td>
-									<td>0.421</td>
-								</tr>
-								<tr>
-									<td><strong>UED</strong> Anonymous</td>
-									<td>Full Ranking</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1220065918979469312">May 5th, 2020</a></td>
-									<td>0.405</td>
-									<td>0.414</td>
-								</tr>
-								<tr>
-									<td><strong>TABLE Model</strong> X.W. S of <a href='https://about.meituan.com/en' >Meituan-Dianping NLP-KG Group</a></td>
-									<td>Full Ranking</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1220065918979469312">May 11th, 2020</a></td>
-									<td>0.401</td>
-									<td>0.412</td>
-								</tr> 
-								<tr>
-									<td><strong>TABLE Model</strong> X.W. S of <a href='https://about.meituan.com/en' >Meituan-Dianping NLP-KG Group</a></td>
-									<td>Full Ranking</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1220065918979469312">January 21th, 2020</a></td>
-									<td>0.400</td>
-									<td>0.401</td>
-								</tr> 
-								<tr>
-									<td><strong>TABLE Model</strong> X.W. S of <a href='https://about.meituan.com/en' >Meituan-Dianping NLP-KG Group</a></td>
-									<td>Full Ranking</td>
-									<td><a href="https://twitter.com/MSMarcoAI/">May 8th, 2020</a></td>
-									<td>0.400</td>
-									<td>0.401</td>
-								</tr> 
-								<tr>
-									<td><strong>DeepCT Retrieval + TF-Ranking BERT Ensemble</strong> 1) Shuguang Han, (2) Zhuyun Dai, (1) Xuanhui Wang, (1) Michael Bendersky and (1) Marc Najork - (1) Google Research, (2) Carnegie Mellon University - Paper [<a href='https://arxiv.org/abs/2004.08476'>Han, et al. '20</a>]<a href='https://github.com/tensorflow/ranking'>Code</a></td>
-									<td>Full Ranking</td>
-									<td><a href="https://twitter.com/MSMarcoAI/">April 10th, 2020</a></td>
-									<td>0.395</td>
-									<td>0.405</td>
-								</tr>
-								<tr>
-									<td><strong>DeepCT + Bart</strong> Binsheng Liu - RMIT University</td>
-									<td>Full Ranking</td>
-									<td><a href="https://twitter.com/MSMarcoAI/">May 6th, 2020</a></td>
-									<td>0.394</td>
-									<td>0.408</td>
-								</tr>
-								<tr>
-									<td><strong>Enriched BERT base + AOA index + CAS</strong> Ming Yan of Alibaba Damo NLP</td>
-									<td>Full Ranking</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1163941565141700608">August 20th, 2019</a></td>
-									<td>0.393</td>
-									<td>0.408</td>
-								</tr>
-								<tr>
-									<td><strong>TF-Ranking Ensemble of BERT, ROBERTA and ELECTRA</strong> (1) Shuguang Han, (2) Zhuyun Dai, (1) Xuanhui Wang, (1) Michael Bendersky and (1) Marc Najork - 1) Google Research, (2) Carnegie Mellon - <a href='https://arxiv.org/abs/2004.08476'>Paper</a> and <a href='https://github.com/tensorflow/ranking'>Code</a> </td>
-									<td>ReRanking</td>
-									<td><a href="https://twitter.com/MSMarcoAI">June 2nd, 2020</a></td>
-									<td>0.391</td>
-									<td>0.405</td>
-								</tr>
-								<tr>
-									<td><strong>W-Index retrieval + BERT-F re-rank</strong> Zhuyun Dai of Carnegie Mellon University</td>
-									<td>Full Ranking</td>
-									<td><a href="https://twitter.com/MSMarcoAI/">September 12th,2019</a></td>
-									<td>0.388</td>
-									<td>0.394</td>
-								</tr>
-								<tr>
-									<td><strong>BM25 + Bert-C</strong> sookienlane</td>
-									<td>Full Ranking</td>
-									<td><a href="https://twitter.com/MSMarcoAI/">February 21st,2019</a></td>
-									<td>0.388</td>
-									<td>0.394</td>
-								</tr>
-								<tr>
-									<td><strong>Enriched BERT base + AOA index V1</strong> Ming Yan of Alibaba Damo NLP</td>
-									<td>Full Ranking</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1128027313940062208">May 13th, 2019</a></td>
-									<td>0.383</td>
-									<td>0.397</td>
-								</tr>
-								<tr>
-									<td><strong>BERTter pretraining</strong> (1)Rodrigo Nogueira, (2)Wei Yang, (3)Jimmy Lin, (4)Kyunghyun Cho - New York University(1,4), University of Waterloo(2,3), Facebook AI Research(4)</td>
-									<td>Full Ranking</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1130975164470943746">May 21st, 2019</a></td>
-									<td>0.383</td>
-									<td>0.395</td>
-								</tr>
-								<tr>
-									<td><strong>R-Index and R-BERT</strong> X.W. S</td>
-									<td>Full Ranking</td>
-									<td><a href="https://twitter.com/MSMarcoAI/">Jan 14th,2020</a></td>
-									<td>0.382</td>
-									<td>0.429</td>
-								</tr>
-								<tr>
-									<td><strong>Enriched BERT base + AOA index V2</strong> Ming Yan of Alibaba Damo NLP </td>
-									<td>Full Ranking</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1128027313940062208">May 13th, 2019</a></td>
-									<td>0.380</td>
-									<td>0.389</td>
-								</tr>
-								<tr>
-									<td><strong>BM25 + monoBERT + duoBERT + TCP</strong> (1)Rodrigo Nogueira, (2)Wei Yang, (3)Jimmy Lin, (4)Kyunghyun Cho - New York University(1,4), University of Waterloo(2,3), Facebook AI Research(4) [<a href="https://arxiv.org/abs/1910.14424">Nogueira, et al. '19</a>] and <a href='https://github.com/castorini/duobert'>Code</a></td>
-									<td>Full Ranking</td>
-									<td><a href="https://twitter.com/MSMarcoAI/">June 26th, 2019</a></td>
-									<td>0.379</td>
-									<td>0.390</td>
-								</tr>
-								<tr>
-									<td><strong>TF-Ranking + BERT(Ensemble of pointwise, pairwise and listwise losses)</strong>TF-Ranking team (Shuguang Han, Xuanhui Wang, Michael Bendersky and Marc Najork) of Google Research - Paper [<a href='https://arxiv.org/abs/2004.08476'>Han, et al. '20</a>] and [<a href="https://github.com/tensorflow/ranking">Code</a>]</td>
-									<td>Re Ranking</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1239751545199063041">March 30th, 2020</a></td>
-									<td>0.375</td>
-									<td>0.388</td>
-								</tr>
-								<tr>
-									<td><strong>BERT^2</strong> (1)Rodrigo Nogueira, (2)Wei Yang, (3)Jimmy Lin, (4)Kyunghyun Cho - New York University(1,4), University of Waterloo(2,3), Facebook AI Research(4)</td>
-									<td>Full Ranking</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1128028693689856000">May 13th, 2019</a></td>
-									<td>0.375</td>
-									<td>0.386</td>
-								</tr>
-								<tr>
-									<td><strong>Enriched BERT base + AOA index</strong> Ming Yan of Alibaba Damo NLP</td>
-									<td>Full Ranking</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1125476534012088320">May 6th, 2019</a></td>
-									<td>0.373</td>
-									<td>0.387</td>
-								</tr>
-								<tr>
-									<td><strong>BM25 + monoBERT + duoBERT</strong> (1)Rodrigo Nogueira, (2)Wei Yang, (3)Jimmy Lin, (4)Kyunghyun Cho - New York University(1,4), University of Waterloo(2,3), Facebook AI Research(4) [<a href="https://arxiv.org/abs/1910.14424">Nogueira, et al. '19</a>]</td>
-									<td>Full Ranking</td>
-									<td><a href="https://twitter.com/MSMarcoAI/">June 26th, 2019</a></td>
-									<td>0.370</td>
-									<td>0.382</td>
-								</tr>
-								<tr>
-									<td><strong>ReinforcedQGen+BERTRank</strong> Rajarshee Mitra of Microsoft STCI </td>
-									<td>Full Ranking</td>
-									<td><a href="https://twitter.com/MSMarcoAI/">August 5th, 2019</a></td>
-									<td>0.369</td>
-									<td>-</td>
-								</tr>
-								<tr>
-									<td><strong>BERTter Indexing</strong> (1)Rodrigo Nogueira, (2)Wei Yang, (3)Jimmy Lin, (4)Kyunghyun Cho - New York University(1,4), University of Waterloo(2,3), Facebook AI Research(4) [<a href="https://arxiv.org/abs/1904.08375">Nogueira et al. '19</a>] and [<a href="https://github.com/nyu-dl/dl4ir-doc2query">Code</a>]</td>
-									<td>Full Ranking</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1115403036191481856">April 8th, 2019</a></td>
-									<td>0.368</td>
-									<td>0.375</td>
-								</tr>
-								<tr>
-									<td><strong>Enriched BERT base + AOA index</strong> Ming Yan of Alibaba Damo NLP</td>
-									<td>ReRanking</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1125476534012088320">May 6th, 2019</a></td>
-									<td>0.368</td>
-									<td>0.373</td>
-								</tr>
-								<tr>
-									<td><strong>ELECTRA-Large</strong> Jheng-Hong Yang(1), Sheng-Chieh Lin(1), Rodrigo Nogueira(2), Jimmy Lin(2) - Academia Sinica(1), University of Waterloo(2)</td>
-									<td>ReRanking</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1242143936883245056?s=20">March 23rd, 2020</a></td>
-									<td>0.367</td>
-									<td>0.376</td>
-								</tr>
-								<tr>
-									<td><strong>TF-Ranking + BERT(Softmax Loss, List size 6, 200k steps)</strong>TF-Ranking team (Shuguang Han, Xuanhui Wang, Michael Bendersky and Marc Najork) of Google Research - Paper [<a href='https://arxiv.org/abs/2004.08476'>Han, et al. '20</a>] and [<a href="https://github.com/tensorflow/ranking">Code</a>]</td>
-									<td>Re Ranking</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1239751545199063041">March 16th, 2020</a></td>
-									<td>0.366</td>
-									<td>0.378</td>
-								</tr>
-								<tr>
-									<td><strong>BM25 + monoBERT</strong> (1)Rodrigo Nogueira, (2)Wei Yang, (3)Jimmy Lin, (4)Kyunghyun Cho - New York University(1,4), University of Waterloo(2,3), Facebook AI Research(4) [<a href="https://arxiv.org/abs/1910.14424">Nogueira, et al. '19</a>]</td>
-									<td>Full Ranking</td>
-									<td><a href="https://twitter.com/MSMarcoAI/">June 26th, 2019</a></td>
-									<td>0.365</td>
-									<td>0.372</td>
-								</tr>
-								<tr>
-									<td><strong>BERT base + attention ranking </strong> anonymous </td>
-									<td>ReRanking</td>
-									<td><a href="https://twitter.com/MSMarcoAI/">August 26th, 2019</a></td>
-									<td>0.364</td>
-									<td>0.377</td>
-								</tr>
-								<tr>
-									<td><strong>SAN + BERT base </strong> Yu Wang, Xiaodong Liu, Jianfeng Gao - Deep Learning Group, Microsoft Research AI [<a href="https://arxiv.org/pdf/1804.07888.pdf">Xiaodong, et al. '18</a>]</td>
-									<td>ReRanking</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1087870025870893056">January 22th, 2019</a></td>
-									<td>0.359</td>
-									<td>0.370</td>
-								</tr>
-								<tr>
-									<td><strong>BERT + Small Training </strong> Rodrigo Nogueira(1) and Kyunghyun Cho(2) - New York University(1,2), Facebook AI Research(2)  [<a href="https://arxiv.org/abs/1901.04085">Nogueira, et al. '19</a>] and [<a href="https://github.com/nyu-dl/dl4marco-bert">Code</a>]</td>
-									<td>ReRanking</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1082389174227849216">January 7th, 2019</a></td>
-									<td>0.359</td>
-									<td>0.365</td>
-								</tr>
-								<tr>
-									<td><strong>BERT base + L2R </strong> Ming Yan of Alibaba Damo NLP</td>
-									<td>ReRanking</td>
-									<td><a href="https://twitter.com/MSMarcoAI">March 16th,2019</a></td>
-									<td>0.356</td>
-									<td>0.364</td>
-								</tr>
-								 <tr>
-									<td><strong>BERT + Projected Matching </strong> Yifan Qiao(1), Chenyan Xiong(2), Zhenghao Liu(3), Zhiyuan Lui(4) - Tsinghua University(1,3,4), Microsoft Research(2) [<a href="https://arxiv.org/abs/1904.07531"> Qiao et al. '19</a>] </td>
-									<td>ReRanking</td>
-									<td><a href="https://twitter.com/MSMarcoAI">February 7th,2019</a></td>
-									<td>0.356</td>
-									<td>-</td>
-								</tr>
-								<tr>
-									<td><strong>LBERT-base  </strong> anonymous </td>
-									<td>ReRanking</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1095035433375821824">March 1st, 2019</a></td>
-									<td>0.349</td>
-									<td>-</td>
-								</tr>
-								<tr>
-									<td><strong>BERT-Base</strong> Jingtao Zhan, Jiaxin Mao, Yiqun Liu, Min Zhang, Shaoping Ma of the Information Retrieval Group, Tsinghua University</td>
-									<td>ReRanking</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1247220943140708352?s=20">April 8th, 2020</a></td>
-									<td>0.349</td>
-									<td>0.358</td>
-								</tr>
-								<tr>
-									<td><strong>BERT base + attention ranking </strong> anonymous </td>
-									<td>ReRanking</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1095035433375821824">March 1st, 2019</a></td>
-									<td>0.347</td>
-									<td>0.317</td>
-								</tr>
-								<tr>
-									<td><strong>BERT + Small Training</strong> Xue-He Wang, Chia-Hung Yuan, Bing-Han Chiang, Dong-Ze Wu, Lu-Dan Ruan, Shan-Hung Wu of National Tsing Hua University  </td>
-									<td>ReRanking</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1143239849987604480">June 20th, 2019</a></td>
-									<td>0.347</td>
-									<td>0.361</td>
-								</tr>
-								<tr>
-									<td><strong>BERT-base +ranking loss + horovod </strong> Milk&amp;Cereal </td>
-									<td>ReRanking</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1125477051559845889">May 6th, 2019</a></td>
-									<td>0.346</td>
-									<td>0.352</td>
-								</tr>
-								<tr>
-									<td><strong>BERT-base fine-tune </strong>ICT-NLU </td>
-									<td>ReRanking</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1131691521328070656">May 23rd, 2019</a></td>
-									<td>0.346</td>
-									<td>0.349</td>
-								</tr>
-								<tr>
-									<td><strong>BERT base + attention ranking </strong> anonymous </td>
-									<td>ReRanking</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1095035433375821824">March 11th, 2019</a></td>
-									<td>0.344</td>
-									<td>-</td>
-								</tr>
-								<tr>
-									<td><strong>BERT base + attention ranking </strong> anonymous </td>
-									<td>ReRanking</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1095035433375821824">March 4th, 2019</a></td>
-									<td>0.343</td>
-									<td>-</td>
-								</tr>
-								<tr>
-									<td><strong>Bert-base + hinge ranking loss</strong> Milk&amp;Cereral</td>
-									<td>ReRanking</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1121157606020501504">April 24th, 2019</a></td>
-									<td>0.342</td>
-									<td>0.345</td>
-								</tr>
-								<tr>
-									<td><strong>BERT + L2R </strong> ICT-NLU</td>
-									<td>ReRanking</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1138516368674869248">June 11th, 2019</a></td>
-									<td>0.342</td>
-									<td>0.348</td>
-								</tr>
-								<tr>
-									<td><strong>BERT-LLR</strong> Jingtao Zhan, Jiaxin Mao, Yiqun Liu, Min Zhang, Shaoping Ma of the Information Retrieval Group, Tsinghua University</td>
-									<td>ReRanking</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1247220943140708352?s=20">April 6th, 2020</a></td>
-									<td>0.342</td>
-									<td>0.352</td>
-								</tr>
-								<tr>
-									<td><strong>BERT-RI</strong> Jingtao Zhan, Jiaxin Mao, Yiqun Liu, Min Zhang, Shaoping Ma of the Information Retrieval Group, Tsinghua University</td>
-									<td>ReRanking</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1247220943140708352?s=20">April 7th, 2020</a></td>
-									<td>0.340</td>
-									<td>0.352</td>
-								</tr>
-								<tr>
-									<td><strong>BERT+ENA</strong> Di Zhao, Hui Fang, UD Infolab</td>
-									<td>ReRanking</td>
-									<td><a href="https://twitter.com/MSMarcoAI/">August 11th, 2019</a></td>
-									<td>0.339</td>
-									<td>-</td>
-								</tr>
-								<tr>
-									<td><strong>BERT Base + Highway+Cross Entropy Loss + Axioms</strong> Di Zhao, Hui Fang, UD Infolab</td>
-									<td>ReRanking</td>
-									<td><a href="https://twitter.com/MSMarcoAI/">August 11th, 2019</a></td>
-									<td>0.336</td>
-									<td>-</td>
-								</tr>
-								<tr>
-									<td><strong>BERT Base + Highway + Cross Entropy Loss + Axioms</strong> Di Zhao, Hui Fang, UD Infolab</td>
-									<td>ReRanking</td>
-									<td><a href="https://twitter.com/MSMarcoAI/">August 9th, 2019</a></td>
-									<td>0.336</td>
-									<td>0.340</td>
-								</tr>
-								<tr>
-									<td><strong>BERT base + attention ranking </strong> anonymous </td>
-									<td>ReRanking</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1095035433375821824">March 2nd, 2019</a></td>
-									<td>0.335</td>
-									<td>-</td>
-								</tr>
-								<tr>
-									<td><strong>BERT Base Finetuned 400k steps </strong> Chaitanya Sai Alaparthi of IIIT-Hyderabad</td>
-									<td>ReRanking</td>
-									<td><a href="https://twitter.com/MSMarcoAI/">February 13th, 2020</a></td>
-									<td>0.335</td>
-									<td>-</td>
-								</tr>
-								<tr>
-									<td><strong>BERT + CNN </strong>Chia-Hung Yuan, Bing-Han Chiang,  Xue-He Wang, Dong-Ze Wu, Lu-Dan Ruan, Shan-Hung Wu of National Tsing Hua University </td>
-									<td>ReRanking</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1139896318669643777">June 15th, 2019</a></td>
-									<td>0.333</td>
-									<td>0.346</td>
-								</tr>
-								<tr>
-									<td><strong>BERT + Multilayer Interaction </strong> Yifan Qiao(1), Chenyan Xiong(2), Zhenghao Liu(3), Zhiyuan Lui(4) - Tsinghua University(1,3,4), Microsoft Research(2) [<a href="https://arxiv.org/abs/1904.07531"> Qiao et al. '19</a>] </td>
-									<td>ReRanking</td>
-									<td><a href="https://twitter.com/MSMarcoAI">February 19th,2019</a></td>
-									<td>0.329</td>
-									<td>0.311</td>
-								</tr>
-								<tr>
-									<td><strong>BERT base + ranking </strong> Yifan Qiao(1), Chenyan Xiong(2), Zhenghao Liu(3), Zhiyuan Lui(4) - Tsinghua University(1,3,4), Microsoft Research(2) [<a href="https://arxiv.org/abs/1904.07531"> Qiao et al. '19</a>]</td>
-									<td>ReRanking</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1095035433375821824">February 8th, 2019</a></td>
-									<td>0.326</td>
-									<td>0.316</td>
-								</tr>
-								<tr>
-									<td><strong>BERT Base + Highway + Ranking Loss</strong> Di Zhao, Hui Fang, UD Infolab</td>
-									<td>ReRanking</td>
-									<td><a href="https://twitter.com/MSMarcoAI/">August 9th, 2019</a></td>
-									<td>0.323</td>
-									<td>-</td>
-								</tr>
-								<tr>
-									<td><strong>RDBERT-Embedding </strong>Jingtao Zhan, Jiaxin Mao, Yiqun Liu, Min Zhang, Shaoping Ma - Information Retrieval Group, Tsinghua University</td>
-									<td>ReRanking</td>
-									<td><a href="https://twitter.com/MSMarcoAI/s">May 13th, 2020</a></td>
-									<td>0.313</td>
-									<td>0.320</td>
-								</tr>
-								<tr>
-									<td><strong>FastText + Conv-KNRM (Ensemble) </strong>Sebastian Hofstätter (1), Navid Rekabsaz (2), Carsten Eickhoff (3), and Allan Hanbury (1) - TU Wien(1), Idiap Research Institute(2), Brown University(3) [<a href="https://arxiv.org/abs/1904.12683"> Hofstätter et al. '19</a>] and [<a href="https://github.com/sebastian-hofstaetter/sigir19-neural-ir">Code</a>]</td>
-									<td>ReRanking</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1126201629751988224">May 8th, 2019</a></td>
-									<td>0.309</td>
-									<td>0.318</td>
-								</tr>
-								<tr>
-									<td><strong>BiLSTM + Co-attention on n-grams </strong> Chaitanya Sai Alaparthi of IIIT-Hyderabad</td>
-									<td>ReRanking</td>
-									<td><a href="https://twitter.com/MSMarcoAI/">May 14th, 2020</a></td>
-									<td>0.299</td>
-									<td>0.310</td>
-								</tr>
-								<tr>
-									<td><strong>BiLSTM + Co-Attention + self attention based document scorer</strong>Chaitanya Sai Alaparthi - IIIT-Hyderabad - <a href='https://arxiv.org/abs/1906.06056'>[Alaparthi et al '19]</a></td>
-									<td>ReRanking</td>
-									<td><a href="https://twitter.com/MSMarcoAI">April 29th, 2020</a></td>
-									<td>0.291</td>
-									<td>0.298</td>
-								</tr>
-								<tr>
-									<td><strong>BiLSTM + CoAttention  </strong>Chaitanya Sai Alaparthi - IIIT-Hyderabad  <a href='https://arxiv.org/abs/1906.06056'>[Alaparthi et al '19]</a></td>
-									<td>ReRanking</td>
-									<td><a href="https://twitter.com/MSMarcoAI">April 13th, 2020</a></td>
-									<td>0.286</td>
-									<td>0.288</td>
-								</tr>
-								<tr>
-									<td><strong>IRNet (Deep CNN/IR Hybrid Network) </strong> Dave DeBarr, Navendu Jain, Robert Sim, Justin Wang, Nirupama Chandrasekaran – Microsoft</td>
-									<td>ReRanking</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1080951220150231040">January 2nd, 2019</a></td>
-									<td>0.281</td>
-									<td>0.278</td>
-								</tr>
-								<tr>
-									<td><strong>FastText + Conv-KNRM (Single)</strong>Sebastian Hofstätter (1), Navid Rekabsaz (2), Carsten Eickhoff (3), and Allan Hanbury (1) - TU Wien(1), Idiap Research Institute(2), Brown University(3) [<a href="https://arxiv.org/abs/1904.12683"> Hofstätter et al. '19</a>] and [<a href="https://github.com/sebastian-hofstaetter/sigir19-neural-ir">Code</a>]</td>
-									<td>ReRanking</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1126201629751988224">May 8th, 2019</a></td>
-									<td>0.277</td>
-									<td>0.290</td>
-								</tr>
-								<tr>
-									<td><strong>docTTTTTquery</strong> Rodrigo Nogueira (Epistemic AI), Jimmy Lin (University of Waterloo) [<a href="https://cs.uwaterloo.ca/~jimmylin/publications/Nogueira_Lin_2019_docTTTTTquery.pdf">Paper</a>] and [<a href="https://github.com/castorini/docTTTTTquery">Code</a>]</td>
-									<td>Full Ranking</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1199814043696975872?s=20">November 27th, 2019</a></td>
-									<td>0.272</td>
-									<td>0.277</td>
-								</tr>
-								<tr>
-									<td><strong>Neural Kernel Match IR (Conv-KNRM) (Ensembled)</strong>(1)Yifan Qiao, (2)Chenyan Xiong, (3)Zhenghao Liu, (4)Zhiyuan Liu-Tsinghua University(1, 3, 4); Microsoft Research AI(2) [<a href="https://dl.acm.org/citation.cfm?doid=3159652.3159659">Dai et al. '18</a>]</td>
-									<td>ReRanking</td>
-									<td><a href="https://twitter.com/MSMarcoAI"> Novmeber 28th, 2018</a></td>
-									<td>0.271</td>
-									<td>0.290</td>
-								</tr>
-								<tr>
-									<td><strong>Axiom-Regularized Conv-KNRM</strong> Corby Rosset, Bhaskar Mitra, Chenyan Xiong, Nick Craswell, Xia Song, Saurabh Tiwary - Microsoft AI &amp; Research[<a href="https://www.microsoft.com/en-us/research/publication/an-axiomatic-approach-to-regularizing-neural-ranking-models/">Rosset et al. '19] </a></td>
-									<td>ReRanking</td>
-									<td><a href="https://twitter.com/MSMarcoAI"> February 19, 2019</a></td>
-									<td>0.263</td>
-									<td>0.262</td>
-								</tr>
-								<tr>
-									<td><strong>Encoder-Decoder model with attention + multi loss</strong> Youngjin Jang </td>
-									<td>ReRanking</td>
-									<td><a href="https://twitter.com/MSMarcoAI">June 3rd, 2020</a></td>
-									<td>0.261</td>
-									<td>0.273</td>
-								</tr>
-								<tr>
-									<td><strong>R3D</strong> anonymous</td>
-									<td>ReRanking</td>
-									<td><a href="https://twitter.com/MSMarcoAI"> March 4th, 2020</a></td>
-									<td>0.260</td>
-									<td>0.243</td>
-								</tr>
-								<tr>
-									<td><strong>[Official Baseline] Duet V2 (Ensembled)</strong> Bhaskar Mitra, Fernando Diaz, Nick Craswell - Microsoft AI &amp; Research [<a href="https://arxiv.org/abs/1903.07666">Mitra et al. '19</a>] and [<a href="https://github.com/dfcf93/MSMARCO/tree/master/Ranking/Baselines">Code</a>]</td>
-									<td>ReRanking</td>
-									<td><a href="https://twitter.com/MSMarcoAI">February 19, 2019</a></td>
-									<td>0.253</td>
-									<td>0.252</td>
-								</tr>
-								<tr>
-									<td><strong>Duet with query term independence assumption (Single)</strong> Bhaskar Mitra (1, 2), Corby Rosset (1), David Hawking (1), Nick Craswell (1), Fernando Diaz (1), and Emine Yilmaz (2) of (1) Microsoft &amp; (2) UCL <a href="https://arxiv.org/pdf/1907.03693.pdf">Paper</a></td>
-									<td>ReRanking</td>
-									<td><a href="https://twitter.com/MSMarcoAI">March 14th, 2019</a></td>
-									<td>0.252</td>
-									<td>0.254</td>
-								</tr>
-								<tr>
-									<td><strong>Neural Kernel Match IR (Conv-KNRM) (Single)</strong>(1)Yifan Qiao, (2)Chenyan Xiong, (3)Zhenghao Liu, (4)Zhiyuan Liu-Tsinghua University(1, 3, 4); Microsoft Research AI(2) [<a href="https://dl.acm.org/citation.cfm?doid=3159652.3159659">Dai et al. '18</a>]</td>
-									<td>ReRanking</td>
-									<td><a href="https://twitter.com/MSMarcoAI"> February 19, 2019</a></td>
-									<td>0.247</td>
-									<td>0.247</td>
-								</tr>
-								<tr>
-									<td><strong>BM25 (Anserini) + ALBERT Bi-encoder for First-stage Ranking</strong> Marco Wrzalik of the <a href'http://lavis.cs.hs-rm.de'>LAVIS Group</a> at  RheinMain University of Applied Sciences</td>
-									<td>Full Ranking</td>
-									<td><a href="https://twitter.com/MSMarcoAI">April 24th, 2020</a></td>
-									<td>0.247</td>
-									<td>0.249</td>
-								</tr>
-								<tr>
-									<td><strong>[Official Baseline] Duet V2 (Single)</strong> Bhaskar Mitra, Fernando Diaz, Nick Craswell - Microsoft AI &amp; Research [<a href="https://arxiv.org/abs/1903.07666">Mitra et al. '19s</a>] and [<a href="https://github.com/dfcf93/MSMARCO/tree/master/Ranking/Baselines">Code</a>]</td>
-									<td>ReRanking</td>
-									<td><a href="https://twitter.com/MSMarcoAI">February 20, 2019</a></td>
-									<td>0.245</td>
-									<td>0.243</td>
-								</tr>
-								<tr>
-									<td><strong>DW Index + BM25</strong> anonymous</td>
-									<td>Full Ranking</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1123009273494040577">April 29th, 2019</a></td>
-									<td>0.239</td>
-									<td>0.243</td>
-								</tr>
-								<tr>
-									<td><strong>BERT Base + Highway + Cross Entropy Loss + Axioms</strong> Di Zhao, Hui Fang, UD Infolab</td>
-									<td>ReRanking</td>
-									<td><a href="https://twitter.com/MSMarcoAI/">August 5th, 2019</a></td>
-									<td>0.223</td>
-									<td>0.340</td>
-								</tr>
-								<tr>
-									<td><strong>BERT Base + Highway + Ranking Loss</strong> Di Zhao, Hui Fang, UD Infolab</td>
-									<td>ReRanking</td>
-									<td><a href="https://twitter.com/MSMarcoAI/">August 5th, 2019</a></td>
-									<td>0.222</td>
-									<td>0.340</td>
-								</tr>
-								<tr>
-									<td><strong>BM25 (Anserini) + doc2query</strong> (1)Rodrigo Nogueira, (2)Wei Yang, (3)Jimmy Lin, (4)Kyunghyun Cho - New York University(1,4), University of Waterloo(2,3), Facebook AI Research(4) [<a href="https://arxiv.org/abs/1904.08375">Nogueira et al. '19</a>] and [<a href="https://github.com/nyu-dl/dl4ir-doc2query">Code</a>]</td>
-									<td>Full Ranking</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1116147016298459136">April 10th, 2019</a></td>
-									<td>0.218</td>
-									<td>0.215</td>
-								</tr>
-								<tr>
-									<td><strong>Neural Kernel Match IR (Conv-KNRM) (Ensembled)</strong>(1)Yifan Qiao, (2)Chenyan Xiong, (3)Zhenghao Liu, (4)Zhiyuan Liu-Tsinghua University(1, 3, 4); Microsoft Research AI(2) [<a href="https://dl.acm.org/citation.cfm?doid=3159652.3159659">Dai et al. '18</a>]</td>
-									<td>ReRanking</td>
-									<td><a href="https://twitter.com/MSMarcoAI"> Novmeber 26th, 2018</a></td>
-									<td>0.199</td>
-									<td>0.199</td>
-								</tr>
-								<tr>
-									<td><strong>Neural Kernel Match IR (KNRM) </strong>((1)Yifan Qiao, (2)Chenyan Xiong, (3)Zhenghao Liu, (4)Zhiyuan Liu-Tsinghua University(1, 3, 4); Microsoft Research AI(2) [<a href="https://arxiv.org/abs/1706.06613"> Xiong et al. '17</a>]</td>
-									<td>ReRanking</td>
-									<td><a href="https://twitter.com/MSMarcoAI">December 10th, 2018</a></td>
-									<td>0.198</td>
-									<td>0.218</td>
-								</tr>
-								<tr>
-									<td><strong>Feature-based LeToR: simple-feature based RankSVM</strong>(1)Yifan Qiao, (2)Chenyan Xiong, (3)Zhenghao Liu, (4)Zhiyuan Liu-Tsinghua University(1, 3, 4); Microsoft Research AI(2) </td>
-									<td>ReRanking</td>
-									<td><a href="https://twitter.com/MSMarcoAI">December 10th, 2018</a></td>
-									<td>0.191</td>
-									<td>0.195</td>
-								</tr>
-								<tr>
-									<td><strong>BM25 (Lucene8, tuned)</strong> (1)Rodrigo Nogueira, (2)Wei Yang, (3)Jimmy Lin, (4)Kyunghyun Cho - New York University(1,4), University of Waterloo(2,3), Facebook AI Research(4) [<a href="https://arxiv.org/abs/1910.14424">Nogueira, et al. '19</a>]</td>
-									<td>Full Ranking</td>
-									<td><a href="https://twitter.com/MSMarcoAI/">June 26th, 2019</a></td>
-									<td>0.190</td>
-									<td>0.187</td>
-								</tr>
-								<tr>
-									<td><strong>BM25 (Anserini)</strong> (1)Rodrigo Nogueira, (2)Wei Yang, (3)Jimmy Lin, (4)Kyunghyun Cho - New York University(1,4), University of Waterloo(2,3), Facebook AI Research(4) [<a href="https://arxiv.org/abs/1904.08375">Nogueira et al. '19</a>]  and [<a href="https://github.com/nyu-dl/dl4ir-doc2query">Code</a>]</td>
-									<td>Full Ranking</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1116147015417651200">April 10th, 2019</a></td>
-									<td>0.186</td>
-									<td>0.184</td>
-								</tr>
-								<tr>
-									<td><strong>Unnamed </strong> Hongyin Zhu</td>
-									<td>ReRanking</td>
-									<td><a href="https://twitter.com/MSMarcoAI">June 26th, 2019</a></td>
-									<td>0.174</td>
-									<td>-</td>
-								</tr>
-								<tr>
-									<td><strong>[Official Baseline]BM25</strong> Stephen E. Robertson; Steve Walker; Susan Jones; Micheline Hancock-Beaulieu &amp; Mike Gatford (Implemented by MSMARCO Team) [<a href="https://trec.nist.gov/pubs/trec3/papers/city.ps.gz"> Robertson et al. '94</a>]</td>
-									<td>Full Ranking</td>
-									<td><a href="https://twitter.com/MSMarcoAI">Novmeber 1st, 2018</a></td>
-									<td>0.165</td>
-									<td>0.167</td>
-								</tr>
-								<tr>
-									<td><strong>BERT Represenatation </strong> Yifan Qiao(1), Chenyan Xiong(2), Zhenghao Liu(3), Zhiyuan Lui(4) - Tsinghua University(1,3,4), Microsoft Research(2) [<a href="https://arxiv.org/abs/1904.07531">Qiao et al. '19</a>] </td>
-									<td>ReRanking</td>
-									<td><a href="https://twitter.com/MSMarcoAI">February 19th,2019</a></td>
-									<td>0.015</td>
-									<td>0.043</td>
-								</tr>
-							</tbody>
-						</table>
+						<div class="table-responsive">
+							<table class="table table-striped" id='passagerankingtable'>
+								<thead>
+									<tr>
+										<th>Rank</th>
+										<th class="col-md-5">Model</th>
+										<th class="col-md-1">Ranking Style</th>
+										<th class="col-md-1">Submission Date</th>
+										<th class="col-md-1">MRR@10 On Eval</th>
+										<th class="col-md-1">MRR@10 On Dev</th>
+									</tr>
+								</thead>
+								<body>
+																	<tr>
+										<td><strong>DR-BERT</strong> X.W. S of <a href='https://about.meituan.com/en' >Meituan-Dianping NLP-KG Group</a></td>
+										<td>Full Ranking</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1263190550900957184?s=20">May 20th, 2020</a></td>
+										<td>0.419</td>
+										<td>0.420</td>
+									</tr> 
+									<tr>
+										<td><strong>expando-mono-duo-T5</strong> Ronak Pradeep, Rodrigo Nogueira, Zhiying Jiang, and Jimmy Lin - University of Waterloo</td>
+										<td>Full Ranking</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1262822416293609474?s=20">May 19th, 2020</a></td>
+										<td>0.408</td>
+										<td>0.420</td>
+									</tr>
+									<tr>
+										<td><strong>DeepCT + TF-Ranking Ensemble of BERT, ROBERTA and ELECTRA</strong> (1) Shuguang Han, (2) Zhuyun Dai, (1) Xuanhui Wang, (1) Michael Bendersky and (1) Marc Najork - 1) Google Research, (2) Carnegie Mellon - <a href='https://arxiv.org/abs/2004.08476'>Paper</a> and <a href='https://github.com/tensorflow/ranking'>Code</a> </td>
+										<td>Full Ranking</td>
+										<td><a href="https://twitter.com/MSMarcoAI">June 2nd, 2020</a></td>
+										<td>0.407</td>
+										<td>0.421</td>
+									</tr>
+									<tr>
+										<td><strong>UED</strong> Anonymous</td>
+										<td>Full Ranking</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1220065918979469312">May 5th, 2020</a></td>
+										<td>0.405</td>
+										<td>0.414</td>
+									</tr>
+									<tr>
+										<td><strong>TABLE Model</strong> X.W. S of <a href='https://about.meituan.com/en' >Meituan-Dianping NLP-KG Group</a></td>
+										<td>Full Ranking</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1220065918979469312">May 11th, 2020</a></td>
+										<td>0.401</td>
+										<td>0.412</td>
+									</tr> 
+									<tr>
+										<td><strong>TABLE Model</strong> X.W. S of <a href='https://about.meituan.com/en' >Meituan-Dianping NLP-KG Group</a></td>
+										<td>Full Ranking</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1220065918979469312">January 21th, 2020</a></td>
+										<td>0.400</td>
+										<td>0.401</td>
+									</tr> 
+									<tr>
+										<td><strong>TABLE Model</strong> X.W. S of <a href='https://about.meituan.com/en' >Meituan-Dianping NLP-KG Group</a></td>
+										<td>Full Ranking</td>
+										<td><a href="https://twitter.com/MSMarcoAI/">May 8th, 2020</a></td>
+										<td>0.400</td>
+										<td>0.401</td>
+									</tr> 
+									<tr>
+										<td><strong>DeepCT Retrieval + TF-Ranking BERT Ensemble</strong> 1) Shuguang Han, (2) Zhuyun Dai, (1) Xuanhui Wang, (1) Michael Bendersky and (1) Marc Najork - (1) Google Research, (2) Carnegie Mellon University - Paper [<a href='https://arxiv.org/abs/2004.08476'>Han, et al. '20</a>]<a href='https://github.com/tensorflow/ranking'>Code</a></td>
+										<td>Full Ranking</td>
+										<td><a href="https://twitter.com/MSMarcoAI/">April 10th, 2020</a></td>
+										<td>0.395</td>
+										<td>0.405</td>
+									</tr>
+									<tr>
+										<td><strong>DeepCT + Bart</strong> Binsheng Liu - RMIT University</td>
+										<td>Full Ranking</td>
+										<td><a href="https://twitter.com/MSMarcoAI/">May 6th, 2020</a></td>
+										<td>0.394</td>
+										<td>0.408</td>
+									</tr>
+									<tr>
+										<td><strong>Enriched BERT base + AOA index + CAS</strong> Ming Yan of Alibaba Damo NLP</td>
+										<td>Full Ranking</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1163941565141700608">August 20th, 2019</a></td>
+										<td>0.393</td>
+										<td>0.408</td>
+									</tr>
+									<tr>
+										<td><strong>TF-Ranking Ensemble of BERT, ROBERTA and ELECTRA</strong> (1) Shuguang Han, (2) Zhuyun Dai, (1) Xuanhui Wang, (1) Michael Bendersky and (1) Marc Najork - 1) Google Research, (2) Carnegie Mellon - <a href='https://arxiv.org/abs/2004.08476'>Paper</a> and <a href='https://github.com/tensorflow/ranking'>Code</a> </td>
+										<td>ReRanking</td>
+										<td><a href="https://twitter.com/MSMarcoAI">June 2nd, 2020</a></td>
+										<td>0.391</td>
+										<td>0.405</td>
+									</tr>
+									<tr>
+										<td><strong>W-Index retrieval + BERT-F re-rank</strong> Zhuyun Dai of Carnegie Mellon University</td>
+										<td>Full Ranking</td>
+										<td><a href="https://twitter.com/MSMarcoAI/">September 12th,2019</a></td>
+										<td>0.388</td>
+										<td>0.394</td>
+									</tr>
+									<tr>
+										<td><strong>BM25 + Bert-C</strong> sookienlane</td>
+										<td>Full Ranking</td>
+										<td><a href="https://twitter.com/MSMarcoAI/">February 21st,2019</a></td>
+										<td>0.388</td>
+										<td>0.394</td>
+									</tr>
+									<tr>
+										<td><strong>Enriched BERT base + AOA index V1</strong> Ming Yan of Alibaba Damo NLP</td>
+										<td>Full Ranking</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1128027313940062208">May 13th, 2019</a></td>
+										<td>0.383</td>
+										<td>0.397</td>
+									</tr>
+									<tr>
+										<td><strong>BERTter pretraining</strong> (1)Rodrigo Nogueira, (2)Wei Yang, (3)Jimmy Lin, (4)Kyunghyun Cho - New York University(1,4), University of Waterloo(2,3), Facebook AI Research(4)</td>
+										<td>Full Ranking</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1130975164470943746">May 21st, 2019</a></td>
+										<td>0.383</td>
+										<td>0.395</td>
+									</tr>
+									<tr>
+										<td><strong>R-Index and R-BERT</strong> X.W. S</td>
+										<td>Full Ranking</td>
+										<td><a href="https://twitter.com/MSMarcoAI/">Jan 14th,2020</a></td>
+										<td>0.382</td>
+										<td>0.429</td>
+									</tr>
+									<tr>
+										<td><strong>Enriched BERT base + AOA index V2</strong> Ming Yan of Alibaba Damo NLP </td>
+										<td>Full Ranking</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1128027313940062208">May 13th, 2019</a></td>
+										<td>0.380</td>
+										<td>0.389</td>
+									</tr>
+									<tr>
+										<td><strong>BM25 + monoBERT + duoBERT + TCP</strong> (1)Rodrigo Nogueira, (2)Wei Yang, (3)Jimmy Lin, (4)Kyunghyun Cho - New York University(1,4), University of Waterloo(2,3), Facebook AI Research(4) [<a href="https://arxiv.org/abs/1910.14424">Nogueira, et al. '19</a>] and <a href='https://github.com/castorini/duobert'>Code</a></td>
+										<td>Full Ranking</td>
+										<td><a href="https://twitter.com/MSMarcoAI/">June 26th, 2019</a></td>
+										<td>0.379</td>
+										<td>0.390</td>
+									</tr>
+									<tr>
+										<td><strong>TF-Ranking + BERT(Ensemble of pointwise, pairwise and listwise losses)</strong>TF-Ranking team (Shuguang Han, Xuanhui Wang, Michael Bendersky and Marc Najork) of Google Research - Paper [<a href='https://arxiv.org/abs/2004.08476'>Han, et al. '20</a>] and [<a href="https://github.com/tensorflow/ranking">Code</a>]</td>
+										<td>Re Ranking</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1239751545199063041">March 30th, 2020</a></td>
+										<td>0.375</td>
+										<td>0.388</td>
+									</tr>
+									<tr>
+										<td><strong>BERT^2</strong> (1)Rodrigo Nogueira, (2)Wei Yang, (3)Jimmy Lin, (4)Kyunghyun Cho - New York University(1,4), University of Waterloo(2,3), Facebook AI Research(4)</td>
+										<td>Full Ranking</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1128028693689856000">May 13th, 2019</a></td>
+										<td>0.375</td>
+										<td>0.386</td>
+									</tr>
+									<tr>
+										<td><strong>Enriched BERT base + AOA index</strong> Ming Yan of Alibaba Damo NLP</td>
+										<td>Full Ranking</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1125476534012088320">May 6th, 2019</a></td>
+										<td>0.373</td>
+										<td>0.387</td>
+									</tr>
+									<tr>
+										<td><strong>BM25 + monoBERT + duoBERT</strong> (1)Rodrigo Nogueira, (2)Wei Yang, (3)Jimmy Lin, (4)Kyunghyun Cho - New York University(1,4), University of Waterloo(2,3), Facebook AI Research(4) [<a href="https://arxiv.org/abs/1910.14424">Nogueira, et al. '19</a>]</td>
+										<td>Full Ranking</td>
+										<td><a href="https://twitter.com/MSMarcoAI/">June 26th, 2019</a></td>
+										<td>0.370</td>
+										<td>0.382</td>
+									</tr>
+									<tr>
+										<td><strong>ReinforcedQGen+BERTRank</strong> Rajarshee Mitra of Microsoft STCI </td>
+										<td>Full Ranking</td>
+										<td><a href="https://twitter.com/MSMarcoAI/">August 5th, 2019</a></td>
+										<td>0.369</td>
+										<td>-</td>
+									</tr>
+									<tr>
+										<td><strong>BERTter Indexing</strong> (1)Rodrigo Nogueira, (2)Wei Yang, (3)Jimmy Lin, (4)Kyunghyun Cho - New York University(1,4), University of Waterloo(2,3), Facebook AI Research(4) [<a href="https://arxiv.org/abs/1904.08375">Nogueira et al. '19</a>] and [<a href="https://github.com/nyu-dl/dl4ir-doc2query">Code</a>]</td>
+										<td>Full Ranking</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1115403036191481856">April 8th, 2019</a></td>
+										<td>0.368</td>
+										<td>0.375</td>
+									</tr>
+									<tr>
+										<td><strong>Enriched BERT base + AOA index</strong> Ming Yan of Alibaba Damo NLP</td>
+										<td>ReRanking</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1125476534012088320">May 6th, 2019</a></td>
+										<td>0.368</td>
+										<td>0.373</td>
+									</tr>
+									<tr>
+										<td><strong>ELECTRA-Large</strong> Jheng-Hong Yang(1), Sheng-Chieh Lin(1), Rodrigo Nogueira(2), Jimmy Lin(2) - Academia Sinica(1), University of Waterloo(2)</td>
+										<td>ReRanking</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1242143936883245056?s=20">March 23rd, 2020</a></td>
+										<td>0.367</td>
+										<td>0.376</td>
+									</tr>
+									<tr>
+										<td><strong>TF-Ranking + BERT(Softmax Loss, List size 6, 200k steps)</strong>TF-Ranking team (Shuguang Han, Xuanhui Wang, Michael Bendersky and Marc Najork) of Google Research - Paper [<a href='https://arxiv.org/abs/2004.08476'>Han, et al. '20</a>] and [<a href="https://github.com/tensorflow/ranking">Code</a>]</td>
+										<td>Re Ranking</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1239751545199063041">March 16th, 2020</a></td>
+										<td>0.366</td>
+										<td>0.378</td>
+									</tr>
+									<tr>
+										<td><strong>BM25 + monoBERT</strong> (1)Rodrigo Nogueira, (2)Wei Yang, (3)Jimmy Lin, (4)Kyunghyun Cho - New York University(1,4), University of Waterloo(2,3), Facebook AI Research(4) [<a href="https://arxiv.org/abs/1910.14424">Nogueira, et al. '19</a>]</td>
+										<td>Full Ranking</td>
+										<td><a href="https://twitter.com/MSMarcoAI/">June 26th, 2019</a></td>
+										<td>0.365</td>
+										<td>0.372</td>
+									</tr>
+									<tr>
+										<td><strong>BERT base + attention ranking </strong> anonymous </td>
+										<td>ReRanking</td>
+										<td><a href="https://twitter.com/MSMarcoAI/">August 26th, 2019</a></td>
+										<td>0.364</td>
+										<td>0.377</td>
+									</tr>
+									<tr>
+										<td><strong>SAN + BERT base </strong> Yu Wang, Xiaodong Liu, Jianfeng Gao - Deep Learning Group, Microsoft Research AI [<a href="https://arxiv.org/pdf/1804.07888.pdf">Xiaodong, et al. '18</a>]</td>
+										<td>ReRanking</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1087870025870893056">January 22th, 2019</a></td>
+										<td>0.359</td>
+										<td>0.370</td>
+									</tr>
+									<tr>
+										<td><strong>BERT + Small Training </strong> Rodrigo Nogueira(1) and Kyunghyun Cho(2) - New York University(1,2), Facebook AI Research(2)  [<a href="https://arxiv.org/abs/1901.04085">Nogueira, et al. '19</a>] and [<a href="https://github.com/nyu-dl/dl4marco-bert">Code</a>]</td>
+										<td>ReRanking</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1082389174227849216">January 7th, 2019</a></td>
+										<td>0.359</td>
+										<td>0.365</td>
+									</tr>
+									<tr>
+										<td><strong>BERT base + L2R </strong> Ming Yan of Alibaba Damo NLP</td>
+										<td>ReRanking</td>
+										<td><a href="https://twitter.com/MSMarcoAI">March 16th,2019</a></td>
+										<td>0.356</td>
+										<td>0.364</td>
+									</tr>
+									<tr>
+										<td><strong>BERT + Projected Matching </strong> Yifan Qiao(1), Chenyan Xiong(2), Zhenghao Liu(3), Zhiyuan Lui(4) - Tsinghua University(1,3,4), Microsoft Research(2) [<a href="https://arxiv.org/abs/1904.07531"> Qiao et al. '19</a>] </td>
+										<td>ReRanking</td>
+										<td><a href="https://twitter.com/MSMarcoAI">February 7th,2019</a></td>
+										<td>0.356</td>
+										<td>-</td>
+									</tr>
+									<tr>
+										<td><strong>LBERT-base  </strong> anonymous </td>
+										<td>ReRanking</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1095035433375821824">March 1st, 2019</a></td>
+										<td>0.349</td>
+										<td>-</td>
+									</tr>
+									<tr>
+										<td><strong>BERT-Base</strong> Jingtao Zhan, Jiaxin Mao, Yiqun Liu, Min Zhang, Shaoping Ma of the Information Retrieval Group, Tsinghua University</td>
+										<td>ReRanking</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1247220943140708352?s=20">April 8th, 2020</a></td>
+										<td>0.349</td>
+										<td>0.358</td>
+									</tr>
+									<tr>
+										<td><strong>BERT base + attention ranking </strong> anonymous </td>
+										<td>ReRanking</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1095035433375821824">March 1st, 2019</a></td>
+										<td>0.347</td>
+										<td>0.317</td>
+									</tr>
+									<tr>
+										<td><strong>BERT + Small Training</strong> Xue-He Wang, Chia-Hung Yuan, Bing-Han Chiang, Dong-Ze Wu, Lu-Dan Ruan, Shan-Hung Wu of National Tsing Hua University  </td>
+										<td>ReRanking</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1143239849987604480">June 20th, 2019</a></td>
+										<td>0.347</td>
+										<td>0.361</td>
+									</tr>
+									<tr>
+										<td><strong>BERT-base +ranking loss + horovod </strong> Milk&amp;Cereal </td>
+										<td>ReRanking</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1125477051559845889">May 6th, 2019</a></td>
+										<td>0.346</td>
+										<td>0.352</td>
+									</tr>
+									<tr>
+										<td><strong>BERT-base fine-tune </strong>ICT-NLU </td>
+										<td>ReRanking</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1131691521328070656">May 23rd, 2019</a></td>
+										<td>0.346</td>
+										<td>0.349</td>
+									</tr>
+									<tr>
+										<td><strong>BERT base + attention ranking </strong> anonymous </td>
+										<td>ReRanking</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1095035433375821824">March 11th, 2019</a></td>
+										<td>0.344</td>
+										<td>-</td>
+									</tr>
+									<tr>
+										<td><strong>BERT base + attention ranking </strong> anonymous </td>
+										<td>ReRanking</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1095035433375821824">March 4th, 2019</a></td>
+										<td>0.343</td>
+										<td>-</td>
+									</tr>
+									<tr>
+										<td><strong>Bert-base + hinge ranking loss</strong> Milk&amp;Cereral</td>
+										<td>ReRanking</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1121157606020501504">April 24th, 2019</a></td>
+										<td>0.342</td>
+										<td>0.345</td>
+									</tr>
+									<tr>
+										<td><strong>BERT + L2R </strong> ICT-NLU</td>
+										<td>ReRanking</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1138516368674869248">June 11th, 2019</a></td>
+										<td>0.342</td>
+										<td>0.348</td>
+									</tr>
+									<tr>
+										<td><strong>BERT-LLR</strong> Jingtao Zhan, Jiaxin Mao, Yiqun Liu, Min Zhang, Shaoping Ma of the Information Retrieval Group, Tsinghua University</td>
+										<td>ReRanking</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1247220943140708352?s=20">April 6th, 2020</a></td>
+										<td>0.342</td>
+										<td>0.352</td>
+									</tr>
+									<tr>
+										<td><strong>BERT-RI</strong> Jingtao Zhan, Jiaxin Mao, Yiqun Liu, Min Zhang, Shaoping Ma of the Information Retrieval Group, Tsinghua University</td>
+										<td>ReRanking</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1247220943140708352?s=20">April 7th, 2020</a></td>
+										<td>0.340</td>
+										<td>0.352</td>
+									</tr>
+									<tr>
+										<td><strong>BERT+ENA</strong> Di Zhao, Hui Fang, UD Infolab</td>
+										<td>ReRanking</td>
+										<td><a href="https://twitter.com/MSMarcoAI/">August 11th, 2019</a></td>
+										<td>0.339</td>
+										<td>-</td>
+									</tr>
+									<tr>
+										<td><strong>BERT Base + Highway+Cross Entropy Loss + Axioms</strong> Di Zhao, Hui Fang, UD Infolab</td>
+										<td>ReRanking</td>
+										<td><a href="https://twitter.com/MSMarcoAI/">August 11th, 2019</a></td>
+										<td>0.336</td>
+										<td>-</td>
+									</tr>
+									<tr>
+										<td><strong>BERT Base + Highway + Cross Entropy Loss + Axioms</strong> Di Zhao, Hui Fang, UD Infolab</td>
+										<td>ReRanking</td>
+										<td><a href="https://twitter.com/MSMarcoAI/">August 9th, 2019</a></td>
+										<td>0.336</td>
+										<td>0.340</td>
+									</tr>
+									<tr>
+										<td><strong>BERT base + attention ranking </strong> anonymous </td>
+										<td>ReRanking</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1095035433375821824">March 2nd, 2019</a></td>
+										<td>0.335</td>
+										<td>-</td>
+									</tr>
+									<tr>
+										<td><strong>BERT Base Finetuned 400k steps </strong> Chaitanya Sai Alaparthi of IIIT-Hyderabad</td>
+										<td>ReRanking</td>
+										<td><a href="https://twitter.com/MSMarcoAI/">February 13th, 2020</a></td>
+										<td>0.335</td>
+										<td>-</td>
+									</tr>
+									<tr>
+										<td><strong>BERT + CNN </strong>Chia-Hung Yuan, Bing-Han Chiang,  Xue-He Wang, Dong-Ze Wu, Lu-Dan Ruan, Shan-Hung Wu of National Tsing Hua University </td>
+										<td>ReRanking</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1139896318669643777">June 15th, 2019</a></td>
+										<td>0.333</td>
+										<td>0.346</td>
+									</tr>
+									<tr>
+										<td><strong>BERT + Multilayer Interaction </strong> Yifan Qiao(1), Chenyan Xiong(2), Zhenghao Liu(3), Zhiyuan Lui(4) - Tsinghua University(1,3,4), Microsoft Research(2) [<a href="https://arxiv.org/abs/1904.07531"> Qiao et al. '19</a>] </td>
+										<td>ReRanking</td>
+										<td><a href="https://twitter.com/MSMarcoAI">February 19th,2019</a></td>
+										<td>0.329</td>
+										<td>0.311</td>
+									</tr>
+									<tr>
+										<td><strong>BERT base + ranking </strong> Yifan Qiao(1), Chenyan Xiong(2), Zhenghao Liu(3), Zhiyuan Lui(4) - Tsinghua University(1,3,4), Microsoft Research(2) [<a href="https://arxiv.org/abs/1904.07531"> Qiao et al. '19</a>]</td>
+										<td>ReRanking</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1095035433375821824">February 8th, 2019</a></td>
+										<td>0.326</td>
+										<td>0.316</td>
+									</tr>
+									<tr>
+										<td><strong>BERT Base + Highway + Ranking Loss</strong> Di Zhao, Hui Fang, UD Infolab</td>
+										<td>ReRanking</td>
+										<td><a href="https://twitter.com/MSMarcoAI/">August 9th, 2019</a></td>
+										<td>0.323</td>
+										<td>-</td>
+									</tr>
+									<tr>
+										<td><strong>RDBERT-Embedding </strong>Jingtao Zhan, Jiaxin Mao, Yiqun Liu, Min Zhang, Shaoping Ma - Information Retrieval Group, Tsinghua University</td>
+										<td>ReRanking</td>
+										<td><a href="https://twitter.com/MSMarcoAI/s">May 13th, 2020</a></td>
+										<td>0.313</td>
+										<td>0.320</td>
+									</tr>
+									<tr>
+										<td><strong>FastText + Conv-KNRM (Ensemble) </strong>Sebastian Hofstätter (1), Navid Rekabsaz (2), Carsten Eickhoff (3), and Allan Hanbury (1) - TU Wien(1), Idiap Research Institute(2), Brown University(3) [<a href="https://arxiv.org/abs/1904.12683"> Hofstätter et al. '19</a>] and [<a href="https://github.com/sebastian-hofstaetter/sigir19-neural-ir">Code</a>]</td>
+										<td>ReRanking</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1126201629751988224">May 8th, 2019</a></td>
+										<td>0.309</td>
+										<td>0.318</td>
+									</tr>
+									<tr>
+										<td><strong>BiLSTM + Co-attention on n-grams </strong> Chaitanya Sai Alaparthi of IIIT-Hyderabad</td>
+										<td>ReRanking</td>
+										<td><a href="https://twitter.com/MSMarcoAI/">May 14th, 2020</a></td>
+										<td>0.299</td>
+										<td>0.310</td>
+									</tr>
+									<tr>
+										<td><strong>BiLSTM + Co-Attention + self attention based document scorer</strong>Chaitanya Sai Alaparthi - IIIT-Hyderabad - <a href='https://arxiv.org/abs/1906.06056'>[Alaparthi et al '19]</a></td>
+										<td>ReRanking</td>
+										<td><a href="https://twitter.com/MSMarcoAI">April 29th, 2020</a></td>
+										<td>0.291</td>
+										<td>0.298</td>
+									</tr>
+									<tr>
+										<td><strong>BiLSTM + CoAttention  </strong>Chaitanya Sai Alaparthi - IIIT-Hyderabad  <a href='https://arxiv.org/abs/1906.06056'>[Alaparthi et al '19]</a></td>
+										<td>ReRanking</td>
+										<td><a href="https://twitter.com/MSMarcoAI">April 13th, 2020</a></td>
+										<td>0.286</td>
+										<td>0.288</td>
+									</tr>
+									<tr>
+										<td><strong>IRNet (Deep CNN/IR Hybrid Network) </strong> Dave DeBarr, Navendu Jain, Robert Sim, Justin Wang, Nirupama Chandrasekaran – Microsoft</td>
+										<td>ReRanking</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1080951220150231040">January 2nd, 2019</a></td>
+										<td>0.281</td>
+										<td>0.278</td>
+									</tr>
+									<tr>
+										<td><strong>FastText + Conv-KNRM (Single)</strong>Sebastian Hofstätter (1), Navid Rekabsaz (2), Carsten Eickhoff (3), and Allan Hanbury (1) - TU Wien(1), Idiap Research Institute(2), Brown University(3) [<a href="https://arxiv.org/abs/1904.12683"> Hofstätter et al. '19</a>] and [<a href="https://github.com/sebastian-hofstaetter/sigir19-neural-ir">Code</a>]</td>
+										<td>ReRanking</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1126201629751988224">May 8th, 2019</a></td>
+										<td>0.277</td>
+										<td>0.290</td>
+									</tr>
+									<tr>
+										<td><strong>docTTTTTquery</strong> Rodrigo Nogueira (Epistemic AI), Jimmy Lin (University of Waterloo) [<a href="https://cs.uwaterloo.ca/~jimmylin/publications/Nogueira_Lin_2019_docTTTTTquery.pdf">Paper</a>] and [<a href="https://github.com/castorini/docTTTTTquery">Code</a>]</td>
+										<td>Full Ranking</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1199814043696975872?s=20">November 27th, 2019</a></td>
+										<td>0.272</td>
+										<td>0.277</td>
+									</tr>
+									<tr>
+										<td><strong>Neural Kernel Match IR (Conv-KNRM) (Ensembled)</strong>(1)Yifan Qiao, (2)Chenyan Xiong, (3)Zhenghao Liu, (4)Zhiyuan Liu-Tsinghua University(1, 3, 4); Microsoft Research AI(2) [<a href="https://dl.acm.org/citation.cfm?doid=3159652.3159659">Dai et al. '18</a>]</td>
+										<td>ReRanking</td>
+										<td><a href="https://twitter.com/MSMarcoAI"> Novmeber 28th, 2018</a></td>
+										<td>0.271</td>
+										<td>0.290</td>
+									</tr>
+									<tr>
+										<td><strong>Axiom-Regularized Conv-KNRM</strong> Corby Rosset, Bhaskar Mitra, Chenyan Xiong, Nick Craswell, Xia Song, Saurabh Tiwary - Microsoft AI &amp; Research[<a href="https://www.microsoft.com/en-us/research/publication/an-axiomatic-approach-to-regularizing-neural-ranking-models/">Rosset et al. '19] </a></td>
+										<td>ReRanking</td>
+										<td><a href="https://twitter.com/MSMarcoAI"> February 19, 2019</a></td>
+										<td>0.263</td>
+										<td>0.262</td>
+									</tr>
+									<tr>
+										<td><strong>Encoder-Decoder model with attention + multi loss</strong> Youngjin Jang </td>
+										<td>ReRanking</td>
+										<td><a href="https://twitter.com/MSMarcoAI">June 3rd, 2020</a></td>
+										<td>0.261</td>
+										<td>0.273</td>
+									</tr>
+									<tr>
+										<td><strong>R3D</strong> anonymous</td>
+										<td>ReRanking</td>
+										<td><a href="https://twitter.com/MSMarcoAI"> March 4th, 2020</a></td>
+										<td>0.260</td>
+										<td>0.243</td>
+									</tr>
+									<tr>
+										<td><strong>[Official Baseline] Duet V2 (Ensembled)</strong> Bhaskar Mitra, Fernando Diaz, Nick Craswell - Microsoft AI &amp; Research [<a href="https://arxiv.org/abs/1903.07666">Mitra et al. '19</a>] and [<a href="https://github.com/dfcf93/MSMARCO/tree/master/Ranking/Baselines">Code</a>]</td>
+										<td>ReRanking</td>
+										<td><a href="https://twitter.com/MSMarcoAI">February 19, 2019</a></td>
+										<td>0.253</td>
+										<td>0.252</td>
+									</tr>
+									<tr>
+										<td><strong>Duet with query term independence assumption (Single)</strong> Bhaskar Mitra (1, 2), Corby Rosset (1), David Hawking (1), Nick Craswell (1), Fernando Diaz (1), and Emine Yilmaz (2) of (1) Microsoft &amp; (2) UCL <a href="https://arxiv.org/pdf/1907.03693.pdf">Paper</a></td>
+										<td>ReRanking</td>
+										<td><a href="https://twitter.com/MSMarcoAI">March 14th, 2019</a></td>
+										<td>0.252</td>
+										<td>0.254</td>
+									</tr>
+									<tr>
+										<td><strong>Neural Kernel Match IR (Conv-KNRM) (Single)</strong>(1)Yifan Qiao, (2)Chenyan Xiong, (3)Zhenghao Liu, (4)Zhiyuan Liu-Tsinghua University(1, 3, 4); Microsoft Research AI(2) [<a href="https://dl.acm.org/citation.cfm?doid=3159652.3159659">Dai et al. '18</a>]</td>
+										<td>ReRanking</td>
+										<td><a href="https://twitter.com/MSMarcoAI"> February 19, 2019</a></td>
+										<td>0.247</td>
+										<td>0.247</td>
+									</tr>
+									<tr>
+										<td><strong>BM25 (Anserini) + ALBERT Bi-encoder for First-stage Ranking</strong> Marco Wrzalik of the <a href'http://lavis.cs.hs-rm.de'>LAVIS Group</a> at  RheinMain University of Applied Sciences</td>
+										<td>Full Ranking</td>
+										<td><a href="https://twitter.com/MSMarcoAI">April 24th, 2020</a></td>
+										<td>0.247</td>
+										<td>0.249</td>
+									</tr>
+									<tr>
+										<td><strong>[Official Baseline] Duet V2 (Single)</strong> Bhaskar Mitra, Fernando Diaz, Nick Craswell - Microsoft AI &amp; Research [<a href="https://arxiv.org/abs/1903.07666">Mitra et al. '19s</a>] and [<a href="https://github.com/dfcf93/MSMARCO/tree/master/Ranking/Baselines">Code</a>]</td>
+										<td>ReRanking</td>
+										<td><a href="https://twitter.com/MSMarcoAI">February 20, 2019</a></td>
+										<td>0.245</td>
+										<td>0.243</td>
+									</tr>
+									<tr>
+										<td><strong>DW Index + BM25</strong> anonymous</td>
+										<td>Full Ranking</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1123009273494040577">April 29th, 2019</a></td>
+										<td>0.239</td>
+										<td>0.243</td>
+									</tr>
+									<tr>
+										<td><strong>BERT Base + Highway + Cross Entropy Loss + Axioms</strong> Di Zhao, Hui Fang, UD Infolab</td>
+										<td>ReRanking</td>
+										<td><a href="https://twitter.com/MSMarcoAI/">August 5th, 2019</a></td>
+										<td>0.223</td>
+										<td>0.340</td>
+									</tr>
+									<tr>
+										<td><strong>BERT Base + Highway + Ranking Loss</strong> Di Zhao, Hui Fang, UD Infolab</td>
+										<td>ReRanking</td>
+										<td><a href="https://twitter.com/MSMarcoAI/">August 5th, 2019</a></td>
+										<td>0.222</td>
+										<td>0.340</td>
+									</tr>
+									<tr>
+										<td><strong>BM25 (Anserini) + doc2query</strong> (1)Rodrigo Nogueira, (2)Wei Yang, (3)Jimmy Lin, (4)Kyunghyun Cho - New York University(1,4), University of Waterloo(2,3), Facebook AI Research(4) [<a href="https://arxiv.org/abs/1904.08375">Nogueira et al. '19</a>] and [<a href="https://github.com/nyu-dl/dl4ir-doc2query">Code</a>]</td>
+										<td>Full Ranking</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1116147016298459136">April 10th, 2019</a></td>
+										<td>0.218</td>
+										<td>0.215</td>
+									</tr>
+									<tr>
+										<td><strong>Neural Kernel Match IR (Conv-KNRM) (Ensembled)</strong>(1)Yifan Qiao, (2)Chenyan Xiong, (3)Zhenghao Liu, (4)Zhiyuan Liu-Tsinghua University(1, 3, 4); Microsoft Research AI(2) [<a href="https://dl.acm.org/citation.cfm?doid=3159652.3159659">Dai et al. '18</a>]</td>
+										<td>ReRanking</td>
+										<td><a href="https://twitter.com/MSMarcoAI"> Novmeber 26th, 2018</a></td>
+										<td>0.199</td>
+										<td>0.199</td>
+									</tr>
+									<tr>
+										<td><strong>Neural Kernel Match IR (KNRM) </strong>((1)Yifan Qiao, (2)Chenyan Xiong, (3)Zhenghao Liu, (4)Zhiyuan Liu-Tsinghua University(1, 3, 4); Microsoft Research AI(2) [<a href="https://arxiv.org/abs/1706.06613"> Xiong et al. '17</a>]</td>
+										<td>ReRanking</td>
+										<td><a href="https://twitter.com/MSMarcoAI">December 10th, 2018</a></td>
+										<td>0.198</td>
+										<td>0.218</td>
+									</tr>
+									<tr>
+										<td><strong>Feature-based LeToR: simple-feature based RankSVM</strong>(1)Yifan Qiao, (2)Chenyan Xiong, (3)Zhenghao Liu, (4)Zhiyuan Liu-Tsinghua University(1, 3, 4); Microsoft Research AI(2) </td>
+										<td>ReRanking</td>
+										<td><a href="https://twitter.com/MSMarcoAI">December 10th, 2018</a></td>
+										<td>0.191</td>
+										<td>0.195</td>
+									</tr>
+									<tr>
+										<td><strong>BM25 (Lucene8, tuned)</strong> (1)Rodrigo Nogueira, (2)Wei Yang, (3)Jimmy Lin, (4)Kyunghyun Cho - New York University(1,4), University of Waterloo(2,3), Facebook AI Research(4) [<a href="https://arxiv.org/abs/1910.14424">Nogueira, et al. '19</a>]</td>
+										<td>Full Ranking</td>
+										<td><a href="https://twitter.com/MSMarcoAI/">June 26th, 2019</a></td>
+										<td>0.190</td>
+										<td>0.187</td>
+									</tr>
+									<tr>
+										<td><strong>BM25 (Anserini)</strong> (1)Rodrigo Nogueira, (2)Wei Yang, (3)Jimmy Lin, (4)Kyunghyun Cho - New York University(1,4), University of Waterloo(2,3), Facebook AI Research(4) [<a href="https://arxiv.org/abs/1904.08375">Nogueira et al. '19</a>]  and [<a href="https://github.com/nyu-dl/dl4ir-doc2query">Code</a>]</td>
+										<td>Full Ranking</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1116147015417651200">April 10th, 2019</a></td>
+										<td>0.186</td>
+										<td>0.184</td>
+									</tr>
+									<tr>
+										<td><strong>Unnamed </strong> Hongyin Zhu</td>
+										<td>ReRanking</td>
+										<td><a href="https://twitter.com/MSMarcoAI">June 26th, 2019</a></td>
+										<td>0.174</td>
+										<td>-</td>
+									</tr>
+									<tr>
+										<td><strong>[Official Baseline]BM25</strong> Stephen E. Robertson; Steve Walker; Susan Jones; Micheline Hancock-Beaulieu &amp; Mike Gatford (Implemented by MSMARCO Team) [<a href="https://trec.nist.gov/pubs/trec3/papers/city.ps.gz"> Robertson et al. '94</a>]</td>
+										<td>Full Ranking</td>
+										<td><a href="https://twitter.com/MSMarcoAI">Novmeber 1st, 2018</a></td>
+										<td>0.165</td>
+										<td>0.167</td>
+									</tr>
+									<tr>
+										<td><strong>BERT Represenatation </strong> Yifan Qiao(1), Chenyan Xiong(2), Zhenghao Liu(3), Zhiyuan Lui(4) - Tsinghua University(1,3,4), Microsoft Research(2) [<a href="https://arxiv.org/abs/1904.07531">Qiao et al. '19</a>] </td>
+										<td>ReRanking</td>
+										<td><a href="https://twitter.com/MSMarcoAI">February 19th,2019</a></td>
+										<td>0.015</td>
+										<td>0.043</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -816,118 +821,120 @@
 						<h3>Dataset Download links</h3>
 						<div id="keyphrasedata"> </div>
 						<h4>KeyPhrase Extraction(10/18/2019) ranked by F1 @3 on Eval</h4>
-						<table class="table table-striped" id='kptable'>
-							<thead>
-								<tr>
-									<th>Rank</th>
-									<th class="col-lg-6">Model</th>
-									<th class="col-md-1">Submission Date</th>
-									<th class="col-md-5">F1 @1,<strong>@3</strong>,@5</th>
-								</tr>
-							</thead>
-							<tbody> 
-								<tr>
-									<td><strong>ETC-large</strong> anonymous</td>
-									<td><a href="https://twitter.com/MSMarcoAI/">May31 st, 2020</a></td>
-									<td>0.393, <strong>0.420</strong>, 0.360</td>
-								</tr>
-								<tr>
-									<td><strong>RoBERTa-JointKPE (Base)</strong> Si Sun(1), Chenyan Xiong(2), Zhenghao Liu(3), Zhiyuan Liu(4), Jie Bao(5) - Tsinghua University(1,3,4,5), MSR AI(2)- <a href='https://arxiv.org/pdf/2004.13639.pdf'>[Sun et al '20]</a> and [<a href = 'https://github.com/thunlp/BERT-KPE'>Code</a>] </td>
-									<td><a href="https://twitter.com/MSMarcoAI/">February 6th, 2020</a></td>
-									<td>0.364, <strong>0.391</strong>, 0.338</td>
-								</tr>
-								<tr>
-									<td><strong>RoBERTa-RankKPE (Base)</strong>  Si Sun(1), Chenyan Xiong(2), Zhenghao Liu(3), Zhiyuan Liu(4), Jie Bao(5) - Tsinghua University(1,3,4,5), MSR AI(2)- <a href='https://arxiv.org/pdf/2004.13639.pdf'>[Sun et al '20]</a> and [<a href = 'https://github.com/thunlp/BERT-KPE'>Code</a>]</td>
-									<td><a href="https://twitter.com/MSMarcoAI/">February 6th, 2020</a></td>
-									<td>0.361, <strong>0.390</strong>, 0.337</td>
-								</tr>
-								<tr>
-									<td><strong>SpanBERT-JointKPE (Base)</strong>  Si Sun(1), Chenyan Xiong(2), Zhenghao Liu(3), Zhiyuan Liu(4), Jie Bao(5) - Tsinghua University(1,3,4,5), MSR AI(2)- <a href='https://arxiv.org/pdf/2004.13639.pdf'>[Sun et al '20]</a> and [<a href = 'https://github.com/thunlp/BERT-KPE'>Code</a>]</td>
-									<td><a href="https://twitter.com/MSMarcoAI/">February 6th, 2020</a></td>
-									<td>0.359, <strong>0.385</strong>, 0.335</td>
-								</tr>
-								<tr>
-									<td><strong>RoBERTa-TagKPE (Base)</strong>  Si Sun(1), Chenyan Xiong(2), Zhenghao Liu(3), Zhiyuan Liu(4), Jie Bao(5) - Tsinghua University(1,3,4,5), MSR AI(2)- <a href='https://arxiv.org/pdf/2004.13639.pdf'>[Sun et al '20]</a> and [<a href = 'https://github.com/thunlp/BERT-KPE'>Code</a>]</td>
-									<td><a href="https://twitter.com/MSMarcoAI/">February 6th, 2020</a></td>
-									<td>0.356, <strong>0.381</strong>, 0.332</td>
-								</tr>
-								<tr>
-									<td><strong>SpanBERT-RankKPE (Base)</strong> Si Sun(1), Chenyan Xiong(2), Zhenghao Liu(3), Zhiyuan Liu(4), Jie Bao(5) - Tsinghua University(1,3,4,5), MSR AI(2)- <a href='https://arxiv.org/pdf/2004.13639.pdf'>[Sun et al '20]</a> and [<a href = 'https://github.com/thunlp/BERT-KPE'>Code</a>]</td>
-									<td><a href="https://twitter.com/MSMarcoAI/">February 6th, 2020</a></td>
-									<td>0.355, <strong>0.380</strong>, 0.331</td>
-								</tr>
-								<tr>
-									<td><strong>BERT-JointKPE (Base)</strong> Si Sun(1), Chenyan Xiong(2), Zhenghao Liu(3), Zhiyuan Liu(4), Jie Bao(5) - Tsinghua University(1,3,4,5), MSR AI(2)- <a href='https://arxiv.org/pdf/2004.13639.pdf'>[Sun et al '20]</a> and [<a href = 'https://github.com/thunlp/BERT-KPE'>Code</a>]</td>
-									<td><a href="https://twitter.com/MSMarcoAI/">February 6th, 2020</a></td>
-									<td>0.349, <strong>0.376</strong>, 0.325</td>
-								</tr>
-								<tr>
-									<td><strong>SpanBERT-TagKPE (Base)</strong>  Si Sun(1), Chenyan Xiong(2), Zhenghao Liu(3), Zhiyuan Liu(4), Jie Bao(5) - Tsinghua University(1,3,4,5), MSR AI(2)- <a href='https://arxiv.org/pdf/2004.13639.pdf'>[Sun et al '20]</a> and [<a href = 'https://github.com/thunlp/BERT-KPE'>Code</a>]</td>
-									<td><a href="https://twitter.com/MSMarcoAI/">February 6th, 2020</a></td>
-									<td>0.351, <strong>0.374</strong>, 0.325</td>
-								</tr>
-								<tr>
-									<td><strong>BERT-RankKPE (Base)</strong>  Si Sun(1), Chenyan Xiong(2), Zhenghao Liu(3), Zhiyuan Liu(4), Jie Bao(5) - Tsinghua University(1,3,4,5), MSR AI(2)- <a href='https://arxiv.org/pdf/2004.13639.pdf'>[Sun et al '20]</a> and [<a href = 'https://github.com/thunlp/BERT-KPE'>Code</a>]</td>
-									<td><a href="https://twitter.com/MSMarcoAI/">February 6th, 2020</a></td>
-									<td>0.342, <strong>0.374</strong>, 0.325</td>
-								</tr>
-								<tr>
-									<td><strong>RoBERTa-ChunkKPE (Base)</strong> Si Sun(1), Chenyan Xiong(2), Zhenghao Liu(3), Zhiyuan Liu(4), Jie Bao(5) - Tsinghua University(1,3,4,5), MSR AI(2)- <a href='https://arxiv.org/pdf/2004.13639.pdf'>[Sun et al '20]</a> and [<a href = 'https://github.com/thunlp/BERT-KPE'>Code</a>]</td>
-									<td><a href="https://twitter.com/MSMarcoAI/">February 6th, 2020</a></td>
-									<td>0.355, <strong>0.373</strong>, 0.324</td>
-								</tr>
-								<tr>
-									<td><strong>SpanBERT-ChunkKPE (Base)</strong>  Si Sun(1), Chenyan Xiong(2), Zhenghao Liu(3), Zhiyuan Liu(4), Jie Bao(5) - Tsinghua University(1,3,4,5), MSR AI(2)- <a href='https://arxiv.org/pdf/2004.13639.pdf'>[Sun et al '20]</a> and [<a href = 'https://github.com/thunlp/BERT-KPE'>Code</a>]</td>
-									<td><a href="https://twitter.com/MSMarcoAI/">February 6th, 2020</a></td>
-									<td>0.348, <strong>0.372</strong>, 0.324</td>
-								</tr>
-								<tr>
-									<td><strong>BERT-TagKPE (Base)</strong>  Si Sun(1), Chenyan Xiong(2), Zhenghao Liu(3), Zhiyuan Liu(4), Jie Bao(5) - Tsinghua University(1,3,4,5), MSR AI(2)- <a href='https://arxiv.org/pdf/2004.13639.pdf'>[Sun et al '20]</a> and [<a href = 'https://github.com/thunlp/BERT-KPE'>Code</a>]</td>
-									<td><a href="https://twitter.com/MSMarcoAI/">February 6th, 2020</a></td>
-									<td>0.343, <strong>0.364</strong>, 0.318</td>
-								</tr>
-								<tr>
-									<td><strong>BERT (Base) Sequence Tagging Baseline</strong> Si Sun (Tsinghua University), Chenyan Xiong (MSR AI), Zhiyuan Liu (Tsinghua University) [<a href="https://github.com/thunlp/Bert2Tag">Code</a>]</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1191781706832867328">November 5th, 2019</a></td>
-									<td>0.321, <strong>0.361</strong>, 0.314</td>
-								</tr>
-								<tr>
-									<td><strong>BERT-ChunkKPE (base)</strong>  Si Sun(1), Chenyan Xiong(2), Zhenghao Liu(3), Zhiyuan Liu(4), Jie Bao(5) - Tsinghua University(1,3,4,5), MSR AI(2)- <a href='https://arxiv.org/pdf/2004.13639.pdf'>[Sun et al '20]</a> and [<a href = 'https://github.com/thunlp/BERT-KPE'>Code</a>]</td>
-									<td><a href="https://twitter.com/MSMarcoAI/">February 6th, 2020</a></td>
-									<td>0.340, <strong>0.355</strong>, 0.311</td>
-								</tr>
-								<tr>
-									<td><strong>SpanBERT-SpanKPE (base)</strong>Si Sun(1), Chenyan Xiong(2), Zhenghao Liu(3), Zhiyuan Liu(4), Jie Bao(5) - Tsinghua University(1,3,4,5), MSR AI(2)- <a href='https://arxiv.org/pdf/2004.13639.pdf'>[Sun et al '20]</a> and [<a href = 'https://github.com/thunlp/BERT-KPE'>Code</a>]</td>
-									<td><a href="https://twitter.com/MSMarcoAI/">February 6th, 2020</a></td>
-									<td>0.329, <strong>0.351</strong>, 0.304</td>
-								</tr>
-								<tr>
-									<td><strong>RoBERTa-SpanKPE (base)</strong>  Si Sun(1), Chenyan Xiong(2), Zhenghao Liu(3), Zhiyuan Liu(4), Jie Bao(5) - Tsinghua University(1,3,4,5), MSR AI(2)- <a href='https://arxiv.org/pdf/2004.13639.pdf'>[Sun et al '20]</a> and [<a href = 'https://github.com/thunlp/BERT-KPE'>Code</a>]</td>
-									<td><a href="https://twitter.com/MSMarcoAI/">February 6th, 2020</a></td>
-									<td>0.330, <strong>0.350</strong>, 0.305</td>
-								</tr>
-								<tr>
-									<td><strong>LLbeBack</strong> Rodrigo Nogueira (Epistemic AI), Jimmy Lin (University of Waterloo)</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1196862630738006018">November 19th, 2019</a></td>
-									<td>0.349, <strong>0.341</strong>, 0.246</td>
-								</tr>
-								<tr>
-									<td><strong>BERT-SpanKPE (base)</strong>  Si Sun(1), Chenyan Xiong(2), Zhenghao Liu(3), Zhiyuan Liu(4), Jie Bao(5) - Tsinghua University(1,3,4,5), MSR AI(2)- <a href='https://arxiv.org/pdf/2004.13639.pdf'>[Sun et al '20]</a> and [<a href = 'https://github.com/thunlp/BERT-KPE'>Code</a>]</td>
-									<td><a href="https://twitter.com/MSMarcoAI/">February 6th, 2020</a></td>
-									<td>0.317, <strong>0.332</strong>, 0.289</td>
-								</tr>
-								<tr>
-									<td><strong>Baseline finetuned on Bing Queries</strong> MSMARCO Team [<a href="https://www.aclweb.org/anthology/D19-1521/ ">Xiong, et al. '19</a>]</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1186755348188676096">October 19th, 2019</a></td>
-									<td>0.267, <strong>0.292</strong>, 0.209</td>
-								</tr>
-								<tr>
-									<td><strong>Baseline</strong> MSMARCO Team [<a href="https://www.aclweb.org/anthology/D19-1521/ ">Xiong, et al. '19</a>]</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1186755348188676096">October 19th, 2019</a></td>
-									<td>0.244, <strong>0.277</strong>, 0.198</td>
-								</tr>
-							</tbody>
-						</table>
+						<div class="table-responsive">
+							<table class="table table-striped" id='kptable'>
+								<thead>
+									<tr>
+										<th>Rank</th>
+										<th class="col-lg-6">Model</th>
+										<th class="col-md-1">Submission Date</th>
+										<th class="col-md-5">F1 @1,<strong>@3</strong>,@5</th>
+									</tr>
+								</thead>
+								<tbody> 
+									<tr>
+										<td><strong>ETC-large</strong> anonymous</td>
+										<td><a href="https://twitter.com/MSMarcoAI/">May31 st, 2020</a></td>
+										<td>0.393, <strong>0.420</strong>, 0.360</td>
+									</tr>
+									<tr>
+										<td><strong>RoBERTa-JointKPE (Base)</strong> Si Sun(1), Chenyan Xiong(2), Zhenghao Liu(3), Zhiyuan Liu(4), Jie Bao(5) - Tsinghua University(1,3,4,5), MSR AI(2)- <a href='https://arxiv.org/pdf/2004.13639.pdf'>[Sun et al '20]</a> and [<a href = 'https://github.com/thunlp/BERT-KPE'>Code</a>] </td>
+										<td><a href="https://twitter.com/MSMarcoAI/">February 6th, 2020</a></td>
+										<td>0.364, <strong>0.391</strong>, 0.338</td>
+									</tr>
+									<tr>
+										<td><strong>RoBERTa-RankKPE (Base)</strong>  Si Sun(1), Chenyan Xiong(2), Zhenghao Liu(3), Zhiyuan Liu(4), Jie Bao(5) - Tsinghua University(1,3,4,5), MSR AI(2)- <a href='https://arxiv.org/pdf/2004.13639.pdf'>[Sun et al '20]</a> and [<a href = 'https://github.com/thunlp/BERT-KPE'>Code</a>]</td>
+										<td><a href="https://twitter.com/MSMarcoAI/">February 6th, 2020</a></td>
+										<td>0.361, <strong>0.390</strong>, 0.337</td>
+									</tr>
+									<tr>
+										<td><strong>SpanBERT-JointKPE (Base)</strong>  Si Sun(1), Chenyan Xiong(2), Zhenghao Liu(3), Zhiyuan Liu(4), Jie Bao(5) - Tsinghua University(1,3,4,5), MSR AI(2)- <a href='https://arxiv.org/pdf/2004.13639.pdf'>[Sun et al '20]</a> and [<a href = 'https://github.com/thunlp/BERT-KPE'>Code</a>]</td>
+										<td><a href="https://twitter.com/MSMarcoAI/">February 6th, 2020</a></td>
+										<td>0.359, <strong>0.385</strong>, 0.335</td>
+									</tr>
+									<tr>
+										<td><strong>RoBERTa-TagKPE (Base)</strong>  Si Sun(1), Chenyan Xiong(2), Zhenghao Liu(3), Zhiyuan Liu(4), Jie Bao(5) - Tsinghua University(1,3,4,5), MSR AI(2)- <a href='https://arxiv.org/pdf/2004.13639.pdf'>[Sun et al '20]</a> and [<a href = 'https://github.com/thunlp/BERT-KPE'>Code</a>]</td>
+										<td><a href="https://twitter.com/MSMarcoAI/">February 6th, 2020</a></td>
+										<td>0.356, <strong>0.381</strong>, 0.332</td>
+									</tr>
+									<tr>
+										<td><strong>SpanBERT-RankKPE (Base)</strong> Si Sun(1), Chenyan Xiong(2), Zhenghao Liu(3), Zhiyuan Liu(4), Jie Bao(5) - Tsinghua University(1,3,4,5), MSR AI(2)- <a href='https://arxiv.org/pdf/2004.13639.pdf'>[Sun et al '20]</a> and [<a href = 'https://github.com/thunlp/BERT-KPE'>Code</a>]</td>
+										<td><a href="https://twitter.com/MSMarcoAI/">February 6th, 2020</a></td>
+										<td>0.355, <strong>0.380</strong>, 0.331</td>
+									</tr>
+									<tr>
+										<td><strong>BERT-JointKPE (Base)</strong> Si Sun(1), Chenyan Xiong(2), Zhenghao Liu(3), Zhiyuan Liu(4), Jie Bao(5) - Tsinghua University(1,3,4,5), MSR AI(2)- <a href='https://arxiv.org/pdf/2004.13639.pdf'>[Sun et al '20]</a> and [<a href = 'https://github.com/thunlp/BERT-KPE'>Code</a>]</td>
+										<td><a href="https://twitter.com/MSMarcoAI/">February 6th, 2020</a></td>
+										<td>0.349, <strong>0.376</strong>, 0.325</td>
+									</tr>
+									<tr>
+										<td><strong>SpanBERT-TagKPE (Base)</strong>  Si Sun(1), Chenyan Xiong(2), Zhenghao Liu(3), Zhiyuan Liu(4), Jie Bao(5) - Tsinghua University(1,3,4,5), MSR AI(2)- <a href='https://arxiv.org/pdf/2004.13639.pdf'>[Sun et al '20]</a> and [<a href = 'https://github.com/thunlp/BERT-KPE'>Code</a>]</td>
+										<td><a href="https://twitter.com/MSMarcoAI/">February 6th, 2020</a></td>
+										<td>0.351, <strong>0.374</strong>, 0.325</td>
+									</tr>
+									<tr>
+										<td><strong>BERT-RankKPE (Base)</strong>  Si Sun(1), Chenyan Xiong(2), Zhenghao Liu(3), Zhiyuan Liu(4), Jie Bao(5) - Tsinghua University(1,3,4,5), MSR AI(2)- <a href='https://arxiv.org/pdf/2004.13639.pdf'>[Sun et al '20]</a> and [<a href = 'https://github.com/thunlp/BERT-KPE'>Code</a>]</td>
+										<td><a href="https://twitter.com/MSMarcoAI/">February 6th, 2020</a></td>
+										<td>0.342, <strong>0.374</strong>, 0.325</td>
+									</tr>
+									<tr>
+										<td><strong>RoBERTa-ChunkKPE (Base)</strong> Si Sun(1), Chenyan Xiong(2), Zhenghao Liu(3), Zhiyuan Liu(4), Jie Bao(5) - Tsinghua University(1,3,4,5), MSR AI(2)- <a href='https://arxiv.org/pdf/2004.13639.pdf'>[Sun et al '20]</a> and [<a href = 'https://github.com/thunlp/BERT-KPE'>Code</a>]</td>
+										<td><a href="https://twitter.com/MSMarcoAI/">February 6th, 2020</a></td>
+										<td>0.355, <strong>0.373</strong>, 0.324</td>
+									</tr>
+									<tr>
+										<td><strong>SpanBERT-ChunkKPE (Base)</strong>  Si Sun(1), Chenyan Xiong(2), Zhenghao Liu(3), Zhiyuan Liu(4), Jie Bao(5) - Tsinghua University(1,3,4,5), MSR AI(2)- <a href='https://arxiv.org/pdf/2004.13639.pdf'>[Sun et al '20]</a> and [<a href = 'https://github.com/thunlp/BERT-KPE'>Code</a>]</td>
+										<td><a href="https://twitter.com/MSMarcoAI/">February 6th, 2020</a></td>
+										<td>0.348, <strong>0.372</strong>, 0.324</td>
+									</tr>
+									<tr>
+										<td><strong>BERT-TagKPE (Base)</strong>  Si Sun(1), Chenyan Xiong(2), Zhenghao Liu(3), Zhiyuan Liu(4), Jie Bao(5) - Tsinghua University(1,3,4,5), MSR AI(2)- <a href='https://arxiv.org/pdf/2004.13639.pdf'>[Sun et al '20]</a> and [<a href = 'https://github.com/thunlp/BERT-KPE'>Code</a>]</td>
+										<td><a href="https://twitter.com/MSMarcoAI/">February 6th, 2020</a></td>
+										<td>0.343, <strong>0.364</strong>, 0.318</td>
+									</tr>
+									<tr>
+										<td><strong>BERT (Base) Sequence Tagging Baseline</strong> Si Sun (Tsinghua University), Chenyan Xiong (MSR AI), Zhiyuan Liu (Tsinghua University) [<a href="https://github.com/thunlp/Bert2Tag">Code</a>]</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1191781706832867328">November 5th, 2019</a></td>
+										<td>0.321, <strong>0.361</strong>, 0.314</td>
+									</tr>
+									<tr>
+										<td><strong>BERT-ChunkKPE (base)</strong>  Si Sun(1), Chenyan Xiong(2), Zhenghao Liu(3), Zhiyuan Liu(4), Jie Bao(5) - Tsinghua University(1,3,4,5), MSR AI(2)- <a href='https://arxiv.org/pdf/2004.13639.pdf'>[Sun et al '20]</a> and [<a href = 'https://github.com/thunlp/BERT-KPE'>Code</a>]</td>
+										<td><a href="https://twitter.com/MSMarcoAI/">February 6th, 2020</a></td>
+										<td>0.340, <strong>0.355</strong>, 0.311</td>
+									</tr>
+									<tr>
+										<td><strong>SpanBERT-SpanKPE (base)</strong>Si Sun(1), Chenyan Xiong(2), Zhenghao Liu(3), Zhiyuan Liu(4), Jie Bao(5) - Tsinghua University(1,3,4,5), MSR AI(2)- <a href='https://arxiv.org/pdf/2004.13639.pdf'>[Sun et al '20]</a> and [<a href = 'https://github.com/thunlp/BERT-KPE'>Code</a>]</td>
+										<td><a href="https://twitter.com/MSMarcoAI/">February 6th, 2020</a></td>
+										<td>0.329, <strong>0.351</strong>, 0.304</td>
+									</tr>
+									<tr>
+										<td><strong>RoBERTa-SpanKPE (base)</strong>  Si Sun(1), Chenyan Xiong(2), Zhenghao Liu(3), Zhiyuan Liu(4), Jie Bao(5) - Tsinghua University(1,3,4,5), MSR AI(2)- <a href='https://arxiv.org/pdf/2004.13639.pdf'>[Sun et al '20]</a> and [<a href = 'https://github.com/thunlp/BERT-KPE'>Code</a>]</td>
+										<td><a href="https://twitter.com/MSMarcoAI/">February 6th, 2020</a></td>
+										<td>0.330, <strong>0.350</strong>, 0.305</td>
+									</tr>
+									<tr>
+										<td><strong>LLbeBack</strong> Rodrigo Nogueira (Epistemic AI), Jimmy Lin (University of Waterloo)</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1196862630738006018">November 19th, 2019</a></td>
+										<td>0.349, <strong>0.341</strong>, 0.246</td>
+									</tr>
+									<tr>
+										<td><strong>BERT-SpanKPE (base)</strong>  Si Sun(1), Chenyan Xiong(2), Zhenghao Liu(3), Zhiyuan Liu(4), Jie Bao(5) - Tsinghua University(1,3,4,5), MSR AI(2)- <a href='https://arxiv.org/pdf/2004.13639.pdf'>[Sun et al '20]</a> and [<a href = 'https://github.com/thunlp/BERT-KPE'>Code</a>]</td>
+										<td><a href="https://twitter.com/MSMarcoAI/">February 6th, 2020</a></td>
+										<td>0.317, <strong>0.332</strong>, 0.289</td>
+									</tr>
+									<tr>
+										<td><strong>Baseline finetuned on Bing Queries</strong> MSMARCO Team [<a href="https://www.aclweb.org/anthology/D19-1521/ ">Xiong, et al. '19</a>]</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1186755348188676096">October 19th, 2019</a></td>
+										<td>0.267, <strong>0.292</strong>, 0.209</td>
+									</tr>
+									<tr>
+										<td><strong>Baseline</strong> MSMARCO Team [<a href="https://www.aclweb.org/anthology/D19-1521/ ">Xiong, et al. '19</a>]</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1186755348188676096">October 19th, 2019</a></td>
+										<td>0.244, <strong>0.277</strong>, 0.198</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -952,931 +959,935 @@
 						<h3>Dataset Download links</h3>
 						<div id="qnadataset"> </div>
 						<h4>Question Answering Task(03/01/2018-Present) Leaderboard</h4>
-						<table class="table table-striped" id='qnav2table'>
-							<thead>
-								<tr>
-									<th>Rank</th>
-									<th class="col-md-5">Model</th>
-									<th class="col-md-2">Submission Date</th>
-									<th class="col-md-1">Rouge-L</th>
-									<th class="col-md-1">Bleu-1</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td><strong>Multi-doc Enriched BERT </strong>Ming Yan of Alibaba Damo NLP</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1108072710259634176">June 20th, 2019</a></td>
-									<td>0.540</td>
-									<td>0.565</td>
-								</tr>
-								<tr>
-									<td><strong>Human Performance</strong></td>
-									<td>April 23th, 2018</td>
-									<td>0.539</td>
-									<td>0.485</td>
-								</tr>
-									<td><strong>BERT Encoded T-Net</strong> Y. Zhang, C. Wang, X.L. Chen</td>
-									<td><a href="https://twitter.com/MSMarcoAI">August 5th, 2019</a></td>
-									<td>0.526</td>
-									<td>0.539</td>
-								</tr>
-								<tr>
-									<td><strong>Selector+Combine-Content-Generator QA Model</strong> Shengjie Qian of Caiyun xiaoyi AI and BUPT</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1108072710259634176">March 19th, 2019</a></td>
-									<td>0.525</td>
-									<td>0.544</td>
-								</tr>
-								<tr>
-									<td><strong>LM+Generator</strong> Alibaba Damo NLP </td>
-									<td><a href="https://twitter.com/MSMarcoAI/">November 25th,2019</a> </td>
-									<td>0.522</td>
-									<td>0.516</td>
-								</tr>
-								<tr>
-									<td><strong>Masque Q&amp;A Style</strong> NTT Media Intelligence Laboratories [<a href="https://arxiv.org/abs/1901.02262">Nishida et al. '19</a>]</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1037765491140452352">January 3rd, 2019</a></td>
-									<td>0.522</td>
-									<td>0.437</td>
-								</tr>
-								<tr>
-									<td><strong>Deep Cascade QA</strong> Ming Yan of Alibaba Damo NLP [<a href="https://arxiv.org/abs/1811.11374">Yan et al. '18</a>]</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1055570991458410497">December 12th, 2018</a> </td>
-									<td>0.520</td>
-									<td>0.546</td>
-								</tr>
-								<tr>
-									<td><strong>Unnamed</strong> anonymous </td>
-									<td><a href="https://twitter.com/MSMarcoAI/">December 9th,2019</a> </td>
-									<td>0.518</td>
-									<td>0.507</td>
-								</tr>
-								<tr>
-									<td><strong>PALM</strong> Alibaba Damo NLP </td>
-									<td><a href="https://twitter.com/MSMarcoAI/">December 9th,2019</a> </td>
-									<td>0.518</td>
-									<td>0.507</td>
-								</tr>
-								<tr>
-									<td><strong>VNET</strong> Baidu NLP [<a href="https://arxiv.org/pdf/1805.02220.pdf">Wang et al. '18</a>]</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1063472881940815874">November 8th, 2018</a></td>
-									<td>0.516</td>
-									<td>0.543</td>
-								</tr>
-								<tr>
-									<td><strong>LNET</strong> S.L. Liu of NEUKG </td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1248087073153679360?s=20">April 8th, 2020</a></td>
-									<td>0.514</td>
-									<td>0.553</td>
-								</tr>
-								<tr>
-									<td><strong>MultiLM QnA Model</strong> anonymous</td>
-									<td><a href="https://twitter.com/MSMarcoAI">December 2nd, 2019</a></td>
-									<td>0.514</td>
-									<td>0.498</td>
-								</tr>
-								<tr>
-									<td><strong>LNET</strong>S.L. Liu of NEUKG</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1242155084340809731?s=20">March 23rd,2020</a></td>
-									<td>0.506</td>
-									<td>0.542</td>
-								</tr>
-								<tr>
-									<td><strong>BERT Encoded T-NET</strong> Y. Zhang, C. Wang, X.L. Chen</td>
-									<td><a href="https://twitter.com/MSMarcoAI">July 12th, 2019</a></td>
-									<td>0.506</td>
-									<td>0.525</td>
-								</tr>
-								<tr>
-									<td><strong>MultiLM QnA Model</strong> anonymous</td>
-									<td><a href="https://twitter.com/MSMarcoAI">December 5th, 2019</a></td>
-									<td>0.499</td>
-									<td>0.430</td>
-								</tr>
-								<tr>
-									<td><strong>BERT+ Multi-Pointer-Generator</strong> Tongjun Li of the ColorfulClouds Tech and BUPT </td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1079864997323321344">June 11th, 2019</a> </td>
-									<td>0.498</td>
-									<td>0.525</td>
-								</tr>
-								<tr>
-									<td><strong>Selector+Combine-Content-Generator NL Model</strong> Shengjie Qian of Caiyun xiaoyi AI and BUPT</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1100265573768933376">March 11th, 2019</a></td>
-									<td>0.496</td>
-									<td>0.535</td>
-								</tr>
-								<tr>
-									<td><strong>REAG</strong> Anonymous</td>
-									<td><a href="https://twitter.com/MSMarcoAI/">March 27th, 2020</a></td>
-									<td>0.495</td>
-									<td>0.500</td>
-								</tr>
-								<tr>
-									<td><strong>CompLM</strong> Alibaba Damo NLP</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1201632732473769984">December 2nd, 2019</a></td>
-									<td>0.495</td>
-									<td>0.516</td>
-								</tr>
-								<tr>
-									<td><strong>LM+Generator</strong> anonymous </td>
-									<td><a href="https://twitter.com/MSMarcoAI/">November 21st,2019</a> </td>
-									<td>0.494</td>
-									<td>0.529</td>
-								</tr>
-								 <tr>
-									<td><strong>PALM</strong> Alibaba Damo NLP </td>
-									<td><a href="https://twitter.com/MSMarcoAI/">December 9th,2019</a> </td>
-									<td>0.492</td>
-									<td>0.510</td>
-								</tr>
-								<tr>
-									<td><strong>anonymous</strong> anonymous</td>
-									<td><a href="https://twitter.com/MSMarcoAI/">December 16th,2019</a> </td>
-									<td>0.492</td>
-									<td>0.499</td>
-								</tr>
-								<tr>
-									<td><strong>LNET</strong> S.L. Liu of the NEUKG </td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1196863805554192384">Nov 19th, 2019</a> </td>
-									<td>0.491</td>
-									<td>0.530</td>
-								</tr>
-								<tr>
-									<td><strong>BERT+ Multi-Pointer-Generator</strong> Tongjun Li of the ColorfulClouds Tech and BUPT </td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1079864997323321344">May 21st, 2019</a> </td>
-									<td>0.491</td>
-									<td>0.520</td>
-								</tr>
-								<tr>
-									<td><strong>MUSST-NLG</strong> Anonymous</td>
-									<td><a href="https://twitter.com/MSMarcoAI">May 15th, 2020</a></td>
-									<td>0.490</td>
-									<td>0.516</td>
-								</tr>
-								<tr>
-									<td><strong>CompLM</strong> Alibaba Damo NLP</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1201632732473769984">December 3rd, 2019</a></td>
-									<td>0.490</td>
-									<td>0.502</td>
-								</tr>
-								<tr>
-									<td><strong>Masque NLGEN Style</strong> NTT Media Intelligence Laboratories [<a href="https://arxiv.org/abs/1901.02262">Nishida et al. '19</a>]</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1037765491140452352">January 3rd, 2019</a></td>
-									<td>0.489</td>
-									<td>0.488</td>
-								</tr>
-								<tr>
-									<td><strong>roberta_T_tlcd_18k </strong> Anonymous</td>
-									<td><a href="https://twitter.com/MSMarcoAI">May 14th, 2020</a></td>
-									<td>0.483</td>
-									<td>0.516</td>
-								</tr>
-								<tr>
-									<td><strong>Communicating BERT </strong> Xuan Liang of RIDLL from the University of Technology Sydney</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1180233411245436928">October 4th, 2019</a></td>
-									<td>0.483</td>
-									<td>0.506</td>
-								</tr>
-								<tr>
-									<td><strong>MDC-Generator</strong> Ssk-nlp</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1253391936976650240?s=20">April 23rd, 2020</a></td>
-									<td>0.482</td>
-									<td>0.516</td>
-								</tr>
-								<tr>
-									<td><strong>MultiLM NLGen Model</strong> anonymous</td>
-									<td><a href="https://twitter.com/MSMarcoAI">December 2nd, 2019</a></td>
-									<td>0.482</td>
-									<td>0.514</td>
-								</tr>
+						<div class="table-responsive">
+							<table class="table table-striped" id='qnav2table'>
+								<thead>
+									<tr>
+										<th>Rank</th>
+										<th class="col-md-5">Model</th>
+										<th class="col-md-2">Submission Date</th>
+										<th class="col-md-1">Rouge-L</th>
+										<th class="col-md-1">Bleu-1</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><strong>Multi-doc Enriched BERT </strong>Ming Yan of Alibaba Damo NLP</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1108072710259634176">June 20th, 2019</a></td>
+										<td>0.540</td>
+										<td>0.565</td>
+									</tr>
+									<tr>
+										<td><strong>Human Performance</strong></td>
+										<td>April 23th, 2018</td>
+										<td>0.539</td>
+										<td>0.485</td>
+									</tr>
+										<td><strong>BERT Encoded T-Net</strong> Y. Zhang, C. Wang, X.L. Chen</td>
+										<td><a href="https://twitter.com/MSMarcoAI">August 5th, 2019</a></td>
+										<td>0.526</td>
+										<td>0.539</td>
+									</tr>
+									<tr>
+										<td><strong>Selector+Combine-Content-Generator QA Model</strong> Shengjie Qian of Caiyun xiaoyi AI and BUPT</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1108072710259634176">March 19th, 2019</a></td>
+										<td>0.525</td>
+										<td>0.544</td>
+									</tr>
+									<tr>
+										<td><strong>LM+Generator</strong> Alibaba Damo NLP </td>
+										<td><a href="https://twitter.com/MSMarcoAI/">November 25th,2019</a> </td>
+										<td>0.522</td>
+										<td>0.516</td>
+									</tr>
+									<tr>
+										<td><strong>Masque Q&amp;A Style</strong> NTT Media Intelligence Laboratories [<a href="https://arxiv.org/abs/1901.02262">Nishida et al. '19</a>]</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1037765491140452352">January 3rd, 2019</a></td>
+										<td>0.522</td>
+										<td>0.437</td>
+									</tr>
+									<tr>
+										<td><strong>Deep Cascade QA</strong> Ming Yan of Alibaba Damo NLP [<a href="https://arxiv.org/abs/1811.11374">Yan et al. '18</a>]</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1055570991458410497">December 12th, 2018</a> </td>
+										<td>0.520</td>
+										<td>0.546</td>
+									</tr>
+									<tr>
+										<td><strong>Unnamed</strong> anonymous </td>
+										<td><a href="https://twitter.com/MSMarcoAI/">December 9th,2019</a> </td>
+										<td>0.518</td>
+										<td>0.507</td>
+									</tr>
+									<tr>
+										<td><strong>PALM</strong> Alibaba Damo NLP </td>
+										<td><a href="https://twitter.com/MSMarcoAI/">December 9th,2019</a> </td>
+										<td>0.518</td>
+										<td>0.507</td>
+									</tr>
+									<tr>
+										<td><strong>VNET</strong> Baidu NLP [<a href="https://arxiv.org/pdf/1805.02220.pdf">Wang et al. '18</a>]</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1063472881940815874">November 8th, 2018</a></td>
+										<td>0.516</td>
+										<td>0.543</td>
+									</tr>
+									<tr>
+										<td><strong>LNET</strong> S.L. Liu of NEUKG </td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1248087073153679360?s=20">April 8th, 2020</a></td>
+										<td>0.514</td>
+										<td>0.553</td>
+									</tr>
+									<tr>
+										<td><strong>MultiLM QnA Model</strong> anonymous</td>
+										<td><a href="https://twitter.com/MSMarcoAI">December 2nd, 2019</a></td>
+										<td>0.514</td>
+										<td>0.498</td>
+									</tr>
+									<tr>
+										<td><strong>LNET</strong>S.L. Liu of NEUKG</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1242155084340809731?s=20">March 23rd,2020</a></td>
+										<td>0.506</td>
+										<td>0.542</td>
+									</tr>
+									<tr>
+										<td><strong>BERT Encoded T-NET</strong> Y. Zhang, C. Wang, X.L. Chen</td>
+										<td><a href="https://twitter.com/MSMarcoAI">July 12th, 2019</a></td>
+										<td>0.506</td>
+										<td>0.525</td>
+									</tr>
+									<tr>
+										<td><strong>MultiLM QnA Model</strong> anonymous</td>
+										<td><a href="https://twitter.com/MSMarcoAI">December 5th, 2019</a></td>
+										<td>0.499</td>
+										<td>0.430</td>
+									</tr>
+									<tr>
+										<td><strong>BERT+ Multi-Pointer-Generator</strong> Tongjun Li of the ColorfulClouds Tech and BUPT </td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1079864997323321344">June 11th, 2019</a> </td>
+										<td>0.498</td>
+										<td>0.525</td>
+									</tr>
+									<tr>
+										<td><strong>Selector+Combine-Content-Generator NL Model</strong> Shengjie Qian of Caiyun xiaoyi AI and BUPT</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1100265573768933376">March 11th, 2019</a></td>
+										<td>0.496</td>
+										<td>0.535</td>
+									</tr>
+									<tr>
+										<td><strong>REAG</strong> Anonymous</td>
+										<td><a href="https://twitter.com/MSMarcoAI/">March 27th, 2020</a></td>
+										<td>0.495</td>
+										<td>0.500</td>
+									</tr>
+									<tr>
+										<td><strong>CompLM</strong> Alibaba Damo NLP</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1201632732473769984">December 2nd, 2019</a></td>
+										<td>0.495</td>
+										<td>0.516</td>
+									</tr>
+									<tr>
+										<td><strong>LM+Generator</strong> anonymous </td>
+										<td><a href="https://twitter.com/MSMarcoAI/">November 21st,2019</a> </td>
+										<td>0.494</td>
+										<td>0.529</td>
+									</tr>
+									<tr>
+										<td><strong>PALM</strong> Alibaba Damo NLP </td>
+										<td><a href="https://twitter.com/MSMarcoAI/">December 9th,2019</a> </td>
+										<td>0.492</td>
+										<td>0.510</td>
+									</tr>
+									<tr>
+										<td><strong>anonymous</strong> anonymous</td>
+										<td><a href="https://twitter.com/MSMarcoAI/">December 16th,2019</a> </td>
+										<td>0.492</td>
+										<td>0.499</td>
+									</tr>
+									<tr>
+										<td><strong>LNET</strong> S.L. Liu of the NEUKG </td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1196863805554192384">Nov 19th, 2019</a> </td>
+										<td>0.491</td>
+										<td>0.530</td>
+									</tr>
+									<tr>
+										<td><strong>BERT+ Multi-Pointer-Generator</strong> Tongjun Li of the ColorfulClouds Tech and BUPT </td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1079864997323321344">May 21st, 2019</a> </td>
+										<td>0.491</td>
+										<td>0.520</td>
+									</tr>
+									<tr>
+										<td><strong>MUSST-NLG</strong> Anonymous</td>
+										<td><a href="https://twitter.com/MSMarcoAI">May 15th, 2020</a></td>
+										<td>0.490</td>
+										<td>0.516</td>
+									</tr>
+									<tr>
+										<td><strong>CompLM</strong> Alibaba Damo NLP</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1201632732473769984">December 3rd, 2019</a></td>
+										<td>0.490</td>
+										<td>0.502</td>
+									</tr>
+									<tr>
+										<td><strong>Masque NLGEN Style</strong> NTT Media Intelligence Laboratories [<a href="https://arxiv.org/abs/1901.02262">Nishida et al. '19</a>]</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1037765491140452352">January 3rd, 2019</a></td>
+										<td>0.489</td>
+										<td>0.488</td>
+									</tr>
+									<tr>
+										<td><strong>roberta_T_tlcd_18k </strong> Anonymous</td>
+										<td><a href="https://twitter.com/MSMarcoAI">May 14th, 2020</a></td>
+										<td>0.483</td>
+										<td>0.516</td>
+									</tr>
+									<tr>
+										<td><strong>Communicating BERT </strong> Xuan Liang of RIDLL from the University of Technology Sydney</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1180233411245436928">October 4th, 2019</a></td>
+										<td>0.483</td>
+										<td>0.506</td>
+									</tr>
+									<tr>
+										<td><strong>MDC-Generator</strong> Ssk-nlp</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1253391936976650240?s=20">April 23rd, 2020</a></td>
+										<td>0.482</td>
+										<td>0.516</td>
+									</tr>
+									<tr>
+										<td><strong>MultiLM NLGen Model</strong> anonymous</td>
+										<td><a href="https://twitter.com/MSMarcoAI">December 2nd, 2019</a></td>
+										<td>0.482</td>
+										<td>0.514</td>
+									</tr>
 
-								<tr>
-									<td><strong>LM+Generator</strong> anonymous </td>
-									<td><a href="https://twitter.com/MSMarcoAI/">November 19th,2019</a> </td>
-									<td>0.478</td>
-									<td>0.481</td>
-								</tr>
-								<tr>
-									<td><strong>MultiLM NLGen Model</strong> anonymous</td>
-									<td><a href="https://twitter.com/MSMarcoAI">December 5th, 2019</a></td>
-									<td>0.475</td>
-									<td>0.479</td>
-								</tr>
-								<tr>
-									<td><strong>BERT + Transfer</strong> anonymous</td>
-									<td><a href="https://twitter.com/">October 16th, 2019</a></td>
-									<td>0.474</td>
-									<td>0.499</td>
-								</tr>
-								<tr>
-									<td><strong>Bert Based Multi-task</strong>ZhangY &amp; WangC</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1144116547176169472">June 26th, 2019</a></td>
-									<td>0.471</td>
-									<td>0.512</td>
-								</tr>
-								<tr>
-									<td><strong>T-RoBERTa-wf-BERTbaseA-120k</strong> Anonymous </td>
-									<td><a href="https://twitter.com/MSMarcoAI/">February 13th, 2020</a></td>
-									<td>0.471</td>
-									<td>0.483</td>
-								</tr>
-								<tr>
-									<td><strong>BERT-SS-K1-100k </strong>Anonymous</td>
-									<td><a href="https://twitter.com/MSMarcoAI/">January 26th, 2020</a></td>
-									<td>0.470</td>
-									<td>0.493</td>
-								</tr>
-								<tr>
-									<td><strong>T-RoBERTa-wf-BERTbaseA-80k</strong> Anonymous </td>
-									<td><a href="https://twitter.com/MSMarcoAI/">February 21st, 2020</a></td>
-									<td>0.468</td>
-									<td>0.500</td>
-								</tr>
-								<tr>
-									<td><strong>BERT-SS-K1-100k </strong>Anonymous</td>
-									<td><a href="https://twitter.com/MSMarcoAI/">February 2nd, 2020</a></td>
-									<td>0.464</td>
-									<td>0.485</td>
-								</tr>
-								<tr>
-									<td><strong>BERT-RGLM </strong>Anonymous</td>
-									<td><a href="https://twitter.com/MSMarcoAI/">April 22nd, 2020</a></td>
-									<td>0.457</td>
-									<td>0.479</td>
-								</tr>
-								<tr>
-									<td><strong>REAG </strong>Anonymous</td>
-									<td><a href="https://twitter.com/MSMarcoAI/">May 28th, 2020</a></td>
-									<td>0.456</td>
-									<td>0.449</td>
-								</tr>
-								<tr>
-									<td><strong>SNET + CES2S</strong> Bo Shao of SYSU University</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1021861819592335360">July 24th, 2018</a></td>
-									<td>0.450</td>
-									<td>0.464</td>
-								</tr>
-								<tr>
-									<td><strong>ranking+nlg</strong> anonymous</td>
-									<td><a href="https://twitter.com/">October 9th, 2019</a></td>
-									<td>0.449</td>
-									<td>0.468</td>
-								</tr>
-								<tr>
-									<td><strong>ranker-reader</strong> RCZoo of UCAS</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1128738595215298560">May 15th, 2019</a></td>
-									<td>0.441</td>
-									<td>0.371</td>
-								</tr>
-								<tr>
-									<td><strong>Extraction-net</strong> zlsh80826</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1024382804380057601">October 20th, 2018</a></td>
-									<td>0.437</td>
-									<td>0.444</td>
-								</tr>
-								<tr>
-									<td><strong>SNET</strong> JY Zhao</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1001601302885879808">August 30th, 2018</a></td>
-									<td>0.436</td>
-									<td>0.463</td>
-								</tr>
-								<tr>
-									<td><strong>BIDAF+ELMo+SofterMax</strong> Wang Changbao</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1063472543372378112">November 16th, 2018</a></td>
-									<td>0.436</td>
-									<td>0.459</td>
-								</tr>
-								<tr>
-									<td><strong>ranking+nlg</strong> anonymous</td>
-									<td><a href="https://twitter.com/MSMarcoAI">August 12th, 2019</a></td>
-									<td>0.434</td>
-									<td>0.411</td>
-								</tr>
-								<tr>
-									<td><strong>DNET</strong> QA Geeks</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1004425343602577408">August 1st, 2018</a></td>
-									<td>0.432</td>
-									<td>0.479</td>
-								</tr>
-								<tr>
-									<td><strong>T-RoBERTa-wf-BERTbaseA-120k</strong> Anonymous </td>
-									<td><a href="https://twitter.com/MSMarcoAI/">February 13th, 2020</a></td>
-									<td>0.431</td>
-									<td>0.424</td>
-								</tr>
-								<tr>
-									<td><strong>KIGN-QA</strong> Chenliang Li</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1067188900894957568">April 22nd, 2019</a></td>
-									<td>0.429</td>
-									<td>0.404</td>
-								</tr>
-								<tr>
-									<td><strong>MaRCo-da-GAAMA</strong> IBM Research AI Multilingual NLP Group</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1247606676049416192?s=20">April 7th, 2020</a></td>
-									<td>0.426</td>
-									<td>0.462</td>
-								</tr>
-								<tr>
-									<td><strong>Reader-Writer</strong> Microsoft Business Applications Group AI Research  </td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1037764974410588160">September 16th, 2018</a></td>
-									<td>0.421</td>
-									<td>0.436</td>
-								</tr>
-								<tr>
-									<td><strong>BERT+Multi-Loss</strong> S.L. Liu of NEUKG  </td>
-									<td><a href="https://twitter.com/MSMarcoAI">November 4th, 2019</a></td>
-									<td>0.413</td>
-									<td>0.422</td>
-								</tr>
-								<tr>
-									<td><strong>REAG(based on PALM)</strong>anonymous</td>
-									<td><a href="https://twitter.com/MSMarcoAI/">June 1st,2020</a></td>
-									<td>0.410</td>
-									<td>0.430</td>
-								</tr>
-								<tr>
-									<td><strong>RGLM</strong> anonymous</td>
-									<td><a href="https://twitter.com/MSMarcoAI">May 5th, 2020</a></td>
-									<td>0.406</td>
-									<td>0.455</td>
-								</tr>
-								<tr>
-									<td><strong>SNET+seq2seq</strong> Yihan Ni of the CAS Key Lab of Web Data Science and Technology, ICT, CAS </td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1001627093438902272">June 1st, 2018</a></td>
-									<td>0.398</td>
-									<td>0.423</td>
-								</tr>
-								<tr>
-									<td><strong>SSK3+BERTBaseAnswerGenerator</strong> anonymous </td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/">Jan 21st, 2020</a></td>
-									<td>0.391</td>
-									<td>0.413</td>
-								</tr>
-								<tr>
-									<td><strong>MUSST</strong> anonymous </td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/">March 31st, 2020</a></td>
-									<td>0.376</td>
-									<td>0.405</td>
-								</tr>
-								<tr>
-    									<td><strong>Generation with latent retrieval per answer</strong> anonymous</td>
-								    	<td><a href="https://twitter.com/MSMarcoAI">May 11th, 2020</a></td>
-								    	<td>0.335</td>
-								    	<td>0.290</td>
-								</tr>
-								<tr>
-									<td><strong>MUSST-NLG</strong> Anonymous</td>
-									<td><a href="https://twitter.com/MSMarcoAI">June 2nd, 2020</a></td>
-									<td>0.334</td>
-									<td>0.388</td>
-								</tr>
-								<tr>
-								    	<td><strong>Generation with latent retrieval Baseline 2</strong> anonymous</td>
-								    	<td><a href="https://twitter.com/MSMarcoAI">May 11th, 2020</a></td>
-								    	<td>0.331</td>
-								    	<td>0.307</td>
-								</tr>
-								<tr>
-								    	<td><strong>Generation with latent retrieval Baseline 1</strong> anonymous</td>
-								    	<td><a href="https://twitter.com/MSMarcoAI">May 11th, 2020</a></td>
-								    	<td>0.305</td>
-								    	<td>0.275</td>
-								</tr>
-								<tr>
-									<td><strong>MultiTask+DataAug+Unlikelihood </strong> UvA</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/">June 3rd, 2020</a></td>
-									<td>0.300</td>
-									<td>0.332</td>
-								</tr>
-								<tr>
-									<td><strong>MUSST-QA </strong> Anonymous</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/">June 1st, 2020</a></td>
-									<td>0.298</td>
-									<td>0.354</td>
-								</tr>
-								<tr>
-									<td><strong>lightNLP+BiDAF</strong> Enliple AI</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1091935023442219018">February 1st, 2019</a></td>
-									<td>0.298</td>
-									<td>0.156</td>
-								</tr>
-								<tr>
-									<td><strong>BIDAF+seq2seq</strong> Yihan Ni of the CAS Key Lab of Web Data Science and Technology, ICT, CAS </td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1001627093438902272">May 29th, 2018</a></td>
-									<td>0.276</td>
-									<td>0.288</td>
-								</tr>
-								<tr>
-									<td><strong>BiDaF Baseline(Implemented By MSMARCO Team)</strong><br>
-										Allen Institute for AI &amp; University of Washington [<a href="https://arxiv.org/abs/1611.01603">Seo et al. '16</a>]</td>
-									<td>April 23th, 2018</td>
-									<td>0.240</td>
-									<td>0.106</td>
-								</tr>
-								<tr>
-									<td><strong>TrioNLP +　BiDAF</strong> Trio.AI of the CCNU</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1044091698442326021">September 23rd, 2018</a></td>
-									<td>0.205</td>
-									<td>0.232</td>
-								</tr>
-								<tr>
-									<td><strong>BiDAF + LSTM</strong> Meefly</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1085088144083566592">January 15th,2019</a></td>
-									<td>0.153</td>
-									<td>0.120</td>
-								</tr>
-							</tbody>
-						</table>
+									<tr>
+										<td><strong>LM+Generator</strong> anonymous </td>
+										<td><a href="https://twitter.com/MSMarcoAI/">November 19th,2019</a> </td>
+										<td>0.478</td>
+										<td>0.481</td>
+									</tr>
+									<tr>
+										<td><strong>MultiLM NLGen Model</strong> anonymous</td>
+										<td><a href="https://twitter.com/MSMarcoAI">December 5th, 2019</a></td>
+										<td>0.475</td>
+										<td>0.479</td>
+									</tr>
+									<tr>
+										<td><strong>BERT + Transfer</strong> anonymous</td>
+										<td><a href="https://twitter.com/">October 16th, 2019</a></td>
+										<td>0.474</td>
+										<td>0.499</td>
+									</tr>
+									<tr>
+										<td><strong>Bert Based Multi-task</strong>ZhangY &amp; WangC</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1144116547176169472">June 26th, 2019</a></td>
+										<td>0.471</td>
+										<td>0.512</td>
+									</tr>
+									<tr>
+										<td><strong>T-RoBERTa-wf-BERTbaseA-120k</strong> Anonymous </td>
+										<td><a href="https://twitter.com/MSMarcoAI/">February 13th, 2020</a></td>
+										<td>0.471</td>
+										<td>0.483</td>
+									</tr>
+									<tr>
+										<td><strong>BERT-SS-K1-100k </strong>Anonymous</td>
+										<td><a href="https://twitter.com/MSMarcoAI/">January 26th, 2020</a></td>
+										<td>0.470</td>
+										<td>0.493</td>
+									</tr>
+									<tr>
+										<td><strong>T-RoBERTa-wf-BERTbaseA-80k</strong> Anonymous </td>
+										<td><a href="https://twitter.com/MSMarcoAI/">February 21st, 2020</a></td>
+										<td>0.468</td>
+										<td>0.500</td>
+									</tr>
+									<tr>
+										<td><strong>BERT-SS-K1-100k </strong>Anonymous</td>
+										<td><a href="https://twitter.com/MSMarcoAI/">February 2nd, 2020</a></td>
+										<td>0.464</td>
+										<td>0.485</td>
+									</tr>
+									<tr>
+										<td><strong>BERT-RGLM </strong>Anonymous</td>
+										<td><a href="https://twitter.com/MSMarcoAI/">April 22nd, 2020</a></td>
+										<td>0.457</td>
+										<td>0.479</td>
+									</tr>
+									<tr>
+										<td><strong>REAG </strong>Anonymous</td>
+										<td><a href="https://twitter.com/MSMarcoAI/">May 28th, 2020</a></td>
+										<td>0.456</td>
+										<td>0.449</td>
+									</tr>
+									<tr>
+										<td><strong>SNET + CES2S</strong> Bo Shao of SYSU University</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1021861819592335360">July 24th, 2018</a></td>
+										<td>0.450</td>
+										<td>0.464</td>
+									</tr>
+									<tr>
+										<td><strong>ranking+nlg</strong> anonymous</td>
+										<td><a href="https://twitter.com/">October 9th, 2019</a></td>
+										<td>0.449</td>
+										<td>0.468</td>
+									</tr>
+									<tr>
+										<td><strong>ranker-reader</strong> RCZoo of UCAS</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1128738595215298560">May 15th, 2019</a></td>
+										<td>0.441</td>
+										<td>0.371</td>
+									</tr>
+									<tr>
+										<td><strong>Extraction-net</strong> zlsh80826</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1024382804380057601">October 20th, 2018</a></td>
+										<td>0.437</td>
+										<td>0.444</td>
+									</tr>
+									<tr>
+										<td><strong>SNET</strong> JY Zhao</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1001601302885879808">August 30th, 2018</a></td>
+										<td>0.436</td>
+										<td>0.463</td>
+									</tr>
+									<tr>
+										<td><strong>BIDAF+ELMo+SofterMax</strong> Wang Changbao</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1063472543372378112">November 16th, 2018</a></td>
+										<td>0.436</td>
+										<td>0.459</td>
+									</tr>
+									<tr>
+										<td><strong>ranking+nlg</strong> anonymous</td>
+										<td><a href="https://twitter.com/MSMarcoAI">August 12th, 2019</a></td>
+										<td>0.434</td>
+										<td>0.411</td>
+									</tr>
+									<tr>
+										<td><strong>DNET</strong> QA Geeks</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1004425343602577408">August 1st, 2018</a></td>
+										<td>0.432</td>
+										<td>0.479</td>
+									</tr>
+									<tr>
+										<td><strong>T-RoBERTa-wf-BERTbaseA-120k</strong> Anonymous </td>
+										<td><a href="https://twitter.com/MSMarcoAI/">February 13th, 2020</a></td>
+										<td>0.431</td>
+										<td>0.424</td>
+									</tr>
+									<tr>
+										<td><strong>KIGN-QA</strong> Chenliang Li</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1067188900894957568">April 22nd, 2019</a></td>
+										<td>0.429</td>
+										<td>0.404</td>
+									</tr>
+									<tr>
+										<td><strong>MaRCo-da-GAAMA</strong> IBM Research AI Multilingual NLP Group</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1247606676049416192?s=20">April 7th, 2020</a></td>
+										<td>0.426</td>
+										<td>0.462</td>
+									</tr>
+									<tr>
+										<td><strong>Reader-Writer</strong> Microsoft Business Applications Group AI Research  </td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1037764974410588160">September 16th, 2018</a></td>
+										<td>0.421</td>
+										<td>0.436</td>
+									</tr>
+									<tr>
+										<td><strong>BERT+Multi-Loss</strong> S.L. Liu of NEUKG  </td>
+										<td><a href="https://twitter.com/MSMarcoAI">November 4th, 2019</a></td>
+										<td>0.413</td>
+										<td>0.422</td>
+									</tr>
+									<tr>
+										<td><strong>REAG(based on PALM)</strong>anonymous</td>
+										<td><a href="https://twitter.com/MSMarcoAI/">June 1st,2020</a></td>
+										<td>0.410</td>
+										<td>0.430</td>
+									</tr>
+									<tr>
+										<td><strong>RGLM</strong> anonymous</td>
+										<td><a href="https://twitter.com/MSMarcoAI">May 5th, 2020</a></td>
+										<td>0.406</td>
+										<td>0.455</td>
+									</tr>
+									<tr>
+										<td><strong>SNET+seq2seq</strong> Yihan Ni of the CAS Key Lab of Web Data Science and Technology, ICT, CAS </td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1001627093438902272">June 1st, 2018</a></td>
+										<td>0.398</td>
+										<td>0.423</td>
+									</tr>
+									<tr>
+										<td><strong>SSK3+BERTBaseAnswerGenerator</strong> anonymous </td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/">Jan 21st, 2020</a></td>
+										<td>0.391</td>
+										<td>0.413</td>
+									</tr>
+									<tr>
+										<td><strong>MUSST</strong> anonymous </td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/">March 31st, 2020</a></td>
+										<td>0.376</td>
+										<td>0.405</td>
+									</tr>
+									<tr>
+											<td><strong>Generation with latent retrieval per answer</strong> anonymous</td>
+											<td><a href="https://twitter.com/MSMarcoAI">May 11th, 2020</a></td>
+											<td>0.335</td>
+											<td>0.290</td>
+									</tr>
+									<tr>
+										<td><strong>MUSST-NLG</strong> Anonymous</td>
+										<td><a href="https://twitter.com/MSMarcoAI">June 2nd, 2020</a></td>
+										<td>0.334</td>
+										<td>0.388</td>
+									</tr>
+									<tr>
+											<td><strong>Generation with latent retrieval Baseline 2</strong> anonymous</td>
+											<td><a href="https://twitter.com/MSMarcoAI">May 11th, 2020</a></td>
+											<td>0.331</td>
+											<td>0.307</td>
+									</tr>
+									<tr>
+											<td><strong>Generation with latent retrieval Baseline 1</strong> anonymous</td>
+											<td><a href="https://twitter.com/MSMarcoAI">May 11th, 2020</a></td>
+											<td>0.305</td>
+											<td>0.275</td>
+									</tr>
+									<tr>
+										<td><strong>MultiTask+DataAug+Unlikelihood </strong> UvA</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/">June 3rd, 2020</a></td>
+										<td>0.300</td>
+										<td>0.332</td>
+									</tr>
+									<tr>
+										<td><strong>MUSST-QA </strong> Anonymous</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/">June 1st, 2020</a></td>
+										<td>0.298</td>
+										<td>0.354</td>
+									</tr>
+									<tr>
+										<td><strong>lightNLP+BiDAF</strong> Enliple AI</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1091935023442219018">February 1st, 2019</a></td>
+										<td>0.298</td>
+										<td>0.156</td>
+									</tr>
+									<tr>
+										<td><strong>BIDAF+seq2seq</strong> Yihan Ni of the CAS Key Lab of Web Data Science and Technology, ICT, CAS </td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1001627093438902272">May 29th, 2018</a></td>
+										<td>0.276</td>
+										<td>0.288</td>
+									</tr>
+									<tr>
+										<td><strong>BiDaF Baseline(Implemented By MSMARCO Team)</strong><br>
+											Allen Institute for AI &amp; University of Washington [<a href="https://arxiv.org/abs/1611.01603">Seo et al. '16</a>]</td>
+										<td>April 23th, 2018</td>
+										<td>0.240</td>
+										<td>0.106</td>
+									</tr>
+									<tr>
+										<td><strong>TrioNLP +　BiDAF</strong> Trio.AI of the CCNU</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1044091698442326021">September 23rd, 2018</a></td>
+										<td>0.205</td>
+										<td>0.232</td>
+									</tr>
+									<tr>
+										<td><strong>BiDAF + LSTM</strong> Meefly</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1085088144083566592">January 15th,2019</a></td>
+										<td>0.153</td>
+										<td>0.120</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
 						<br>
 						<h4>Natural Language Generation Task(03/01/2018-Present)</h4>
-						<table class="table table-striped" id='nlgentable'>
-							<thead>
-								<tr>
-									<th>Rank</th>
-									<th class="col-md-5">Model</th>
-									<th class="col-md-2">Submission Date</th>
-									<th class="col-md-1">Rouge-L</th>
-									<th class="col-md-1">Bleu-1</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td><strong>Human Performance</strong></td>
-									<td>April 23th, 2018</td>
-									<td>0.632</td>
-									<td>0.530</td>
-								</tr>
-								<tr>
-									<td><strong>PALM</strong> Alibaba Damo NLP</td>
-									<td><a href="https://twitter.com/MSMarcoAI/">December 16th,2019</a> </td>
-									<td>0.498</td>
-									<td>0.499</td>
-								</tr>
-								<tr>
-									<td><strong>REAG</strong> Anonymous</td>
-									<td><a href="https://twitter.com/MSMarcoAI/">March 27th, 2020</a></td>
-									<td>0.498</td>
-									<td>0.497</td>
-								</tr>
-								<tr>
-									<td><strong>Masque NLGEN Style</strong> NTT Media Intelligence Laboratories [<a href="https://arxiv.org/abs/1901.02262">Nishida et al. '19</a>]</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1037765491140452352">January 3rd, 2019</a></td>
-									<td>0.496</td>
-									<td>0.501</td>
-								</tr>
-								<tr>
-									<td><strong>CompLM</strong> Alibaba Damo NLP</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1201632732473769984">December 3rd, 2019</a></td>
-									<td>0.496</td>
-									<td>0.489</td>
-								</tr>
-								<tr>
-									<td><strong>PALM</strong> Alibaba Damo NLP </td>
-									<td><a href="https://twitter.com/MSMarcoAI/">December 9th,2019</a> </td>
-									<td>0.496</td>
-									<td>0.484</td>
-								</tr>
-								<tr>
-									<td><strong>BERT+ Multi-Pointer-Generator</strong> Tongjun Li of the ColorfulClouds Tech and BUPT </td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1079864997323321344">June 11th,2019</a> </td>
-									<td>0.495</td>
-									<td>0.476</td>
-								</tr>
-								<tr>
-									<td><strong>CompLM</strong> Alibaba Damo NLP </td>
-									<td><a href="https://twitter.com/MSMarcoAI/">November 19th,2019</a> </td>
-									<td>0.495</td>
-									<td>0.470</td>
-								</tr>
-								<tr>
-									<td><strong>CompLM</strong> Alibaba Damo NLP</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1201632732473769984">December 2nd, 2019</a></td>
-									<td>0.493</td>
-									<td>0.475</td>
-								</tr>
-								<tr>
-									<td><strong>BERT+ Multi-Pointer-Generator</strong> Tongjun Li of the ColorfulClouds Tech and BUPT </td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1079864997323321344">May 21st,2019</a> </td>
-									<td>0.491</td>
-									<td>0.474</td>
-								</tr>
-								<tr>
-									<td><strong>CompLM</strong> Alibaba Damo NLP</td>
-									<td><a href="https://twitter.com/MSMarcoAI/">November 19th,2019</a> </td>
-									<td>0.488</td>
-									<td>0.485</td>
-								</tr>
-								<tr>
-									<td><strong>roberta_T_tlcd_18k </strong> Anonymous</td>
-									<td><a href="https://twitter.com/MSMarcoAI">May 14th, 2020</a></td>
-									<td>0.487</td>
-									<td>0.468</td>
-								</tr>
-								<tr>
-									<td><strong>BERT+ Multi-Pointer-Generator</strong> Tongjun Li of the ColorfulClouds Tech and BUPT </td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1079864997323321344">March 26th,2019</a> </td>
-									<td>0.487</td>
-									<td>0.465</td>
-								</tr>
-								<tr>
-									<td><strong>Selector+Combine-Content-Generator NLGEN Model</strong> Shengjie Qian of Caiyun xiaoyi AI and BUPT</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1100265573768933376">March 11th, 2019</a></td>
-									<td>0.487</td>
-									<td>0.449</td>
-								</tr>
-								<tr>
-									<td><strong>VNET</strong> Baidu NLP [<a href="https://arxiv.org/pdf/1805.02220.pdf">Wang et al. '18</a>]</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1009163361773240320">November 8th, 2018</a></td>
-									<td>0.484</td>
-									<td>0.468</td>
-								</tr>
-								<tr>
-									<td><strong>BERT+ Multi-Pointer-Generator (Single) </strong> Tongjun Li of the ColorfulClouds Tech and BUPT </td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1079864997323321344">March 19th,2019</a> </td>
-									<td>0.484</td>
-									<td>0.459</td>
-								</tr>
-								<tr>
-									<td><strong>Communicating BERT </strong> Xuan Liang of RIDLL from the University of Technology Sydney</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1180233411245436928">October 4th, 2019</a></td>
-									<td>0.483</td>
-									<td>0.472</td>
-								</tr>
-								<tr>
-									<td><strong>MultiLM NLGen Model</strong> anonymous</td>
-									<td><a href="https://twitter.com/MSMarcoAI">December 2nd, 2019</a></td>
-									<td>0.483</td>
-									<td>0.461</td>
-								</tr>
-								<tr>
-									<td><strong>ranking+nlg</strong> anonymous</td>
-									<td><a href="https://twitter.com/">October 9th, 2019</a></td>
-									<td>0.481</td>
-									<td>0.468</td>
-								</tr>
-								<tr>
-									<td><strong>MUSST-NLG</strong> Anonymous</td>
-									<td><a href="https://twitter.com/MSMarcoAI">May 15th, 2020</a></td>
-									<td>0.480</td>
-									<td>0.458</td>
-								</tr>
-								<tr>
-									<td><strong>MultiLM NLGen Model</strong> anonymous</td>
-									<td><a href="https://twitter.com/MSMarcoAI">December 5th, 2019</a></td>
-									<td>0.478</td>
-									<td>0.481</td>
-								</tr>
-								<tr>
-									<td><strong>BERT-RGLM </strong>Anonymous</td>
-									<td><a href="https://twitter.com/MSMarcoAI/">April 22nd, 2020</a></td>
-									<td>0.470</td>
-									<td>0.452</td>
-								</tr>
-								<tr>
-									<td><strong>BERT-SS-K1-100k</strong> anonymous</td>
-									<td><a href="https://twitter.com/MSMarcoAI">January 26th, 2020</a></td>
-									<td>0.470</td>
-									<td>0.437</td>
-								</tr>
-								<tr>
-									<td><strong>MDC-Generator</strong> Ssk-nlp</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1253391936976650240?s=20">April 23rd, 2020</a></td>
-									<td>0.466</td>
-									<td>0.446</td>
-								</tr>
-								<tr>
-									<td><strong>BERT-SS-K1-100k</strong> anonymous</td>
-									<td><a href="https://twitter.com/MSMarcoAI">February 2nd, 2020</a></td>
-									<td>0.465</td>
-									<td>0.427</td>
-								</tr>
-								<tr>
-									<td><strong>T-RoBERTa-wf-BERTbaseA-120k</strong> Anonymous </td>
-									<td><a href="https://twitter.com/MSMarcoAI/">February 17th, 2020</a></td>
-									<td>0.464</td>
-									<td>0.420</td>
-								</tr>
-								<tr>
-									<td><strong>T-RoBERTa-wf-BERTbaseA-80k</strong> Anonymous </td>
-									<td><a href="https://twitter.com/MSMarcoAI/">February 21st, 2020</a></td>
-									<td>0.463</td>
-									<td>0.438</td>
-								</tr>
-								<tr>
-									<td><strong>ranking+nlg</strong> anonymous</td>
-									<td><a href="https://twitter.com/">October 9th, 2019</a></td>
-									<td>0.462</td>
-									<td>0.451</td>
-								</tr>
-                                                                <tr>
-									<td><strong>PM-MUG-1</strong> anonymous</td>
-									<td><a href="https://twitter.com/MSMarcoAI/">May 20th, 2020</a></td>
-									<td>0.453</td>
-									<td>0.441</td>
-								</tr>
-                                                                <tr>
-									<td><strong>PM-MUG-2</strong> anonymous</td>
-									<td><a href="https://twitter.com/MSMarcoAI/">May 20th, 2020</a></td>
-									<td>0.452</td>
-									<td>0.449</td>
-								</tr>
-								<tr>
-									<td><strong>SNET + CES2S</strong> Bo Shao of SYSU University</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1021861819592335360">July 24th, 2018</a></td>
-									<td>0.450</td>
-									<td>0.406</td>
-								</tr>
-								<tr>
-									<td><strong>MaRCo-da-GAAMA</strong> IBM Research AI Multilingual NLP Group</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1247606676049416192?s=20">April 7th, 2020</a></td>
-									<td>0.448</td>
-									<td>0.402</td>
-								</tr>
-								<tr>
-									<td><strong>REAG(based on PALM)</strong>anonymous</td>
-									<td><a href="https://twitter.com/MSMarcoAI/">June 1st,2020</a></td>
-									<td>0.447</td>
-									<td>0.444</td>
-								</tr>
-								<tr>
-									<td><strong>KIGN-QA</strong> Chenliang Li</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1067188900894957568">April 22nd, 2019</a></td>
-									<td>0.441</td>
-									<td>0.462</td>
-								</tr>
-								<tr>
-									<td><strong>Reader-Writer</strong> Microsoft Business Applications Group AI Research  </td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1037764974410588160">September 16th, 2018</a></td>
-									<td>0.439</td>
-									<td>0.426</td>
-								</tr>
-								<tr>
-									<td><strong>ranking+nlg</strong> anonymous</td>
-									<td><a href="https://twitter.com/MSMarcoAI">August 12th, 2019</a></td>
-									<td>0.439</td>
-									<td>0.411</td>
-								</tr>
-								<tr>
-									<td><strong>RGLM</strong> anonymous</td>
-									<td><a href="https://twitter.com/MSMarcoAI">May 5th, 2020</a></td>
-									<td>0.435</td>
-									<td>0.413</td>
-								</tr>
-								<tr>
-									<td><strong>T-RoBERTa-wf-BERTbaseA-120k</strong> Anonymous </td>
-									<td><a href="https://twitter.com/MSMarcoAI/">February 13th, 2020</a></td>
-									<td>0.427</td>
-									<td>0.364</td>
-								</tr>
-								<tr>
-									<td><strong>ConZNet</strong> Samsung Research  [<a href="https://aclanthology.info/papers/D18-1054/d18-1054">Indurthi et al. '18</a>] </td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1007328684330532864">July 16th, 2018</a></td>
-									<td>0.421</td>
-									<td>0.386</td>
-								</tr>
-								<tr>
-									<td><strong>Anonymous</strong> Anonymous</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/">November 21st, 2019</a></td>
-									<td>0.412</td>
-									<td>0.410</td>
-								</tr>
-								<tr>
-									<td><strong>Bayes QA</strong> Bin Bi of Alibaba NLP</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1007324430123450369">June 14st, 2018</a></td>
-									<td>0.411</td>
-									<td>0.435</td>
-								</tr>
-								<tr>
-								    	<td><strong>Generation with latent retrieval per answer</strong> anonymous</td>
-								    	<td><a href="https://twitter.com/MSMarcoAI">May 11th, 2020</a></td>
-								    	<td>0.408</td>
-								    	<td>0.442</td>
-								</tr>
-								<tr>
-								    	<td><strong>Generation with latent retrieval Baseline 2</strong> anonymous</td>
-								    	<td><a href="https://twitter.com/MSMarcoAI">May 11th, 2020</a></td>
-								    	<td>0.401</td>
-								    	<td>0.415</td>
-								</tr>
-								<tr>
-									<td><strong>SNET+seq2seq</strong> Yihan Ni of the CAS Key Lab of Web Data Science and Technology, ICT, CAS </td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1004424111492247552">June 1st, 2018</a></td>
-									<td>0.401</td>
-									<td>0.375</td>
-								</tr>
-								
-								<tr>
-									<td><strong>MUSST</strong> anonymous </td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/">March 31, 2020</a></td>
-									<td>0.392</td>
-									<td>0.359</td>
-								</tr>
-								<tr>
-									<td><strong>SSK3+BERTBaseAnswerGenerator</strong> Anonymous</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status">Jan 21st, 2020</a></td>
-									<td>0.384</td>
-									<td>0.356</td>
-								</tr>
-								<tr>
-    									<td><strong>Generation with latent retrieval Baseline 1</strong> anonymous</td>
-								    	<td><a href="https://twitter.com/MSMarcoAI">May 11th, 2020</a></td>
-								    	<td>0.382</td>
-								    	<td>0.416</td>
-								</tr>
-								<tr>
-									<td><strong>BPG-NET</strong> Zhijie Sang of the Center for Intelligence Science and Technology Research(CIST) of the Beijing University of Posts and Telecommunications (BUPT)</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1024821030190239745">August 1st, 2018</a></td>
-									<td>0.382</td>
-									<td>0.347</td>
-								</tr>
-								<tr>
-									<td><strong>GUM</strong> anonymous from anonymous</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1169324139166892033">September 4th, 2019</a></td>
-									<td>0.375</td>
-									<td>0.438</td>
-								</tr>
-								<tr>
-									<td><strong>Deep Cascade QA</strong> Ming Yan of Alibaba Damo NLP</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1055570991458410497">October 25th, 2018</a></td>
-									<td>0.351</td>
-									<td>0.374</td>
-								</tr>
-								<tr>
-									<td><strong>MUSST-NLG</strong> Anonymous</td>
-									<td><a href="https://twitter.com/MSMarcoAI">June 2nd, 2020</a></td>
-									<td>0.340</td>
-									<td>0.358</td>
-								</tr>
-								<tr>
-									<td><strong>AE + ReRanking + Bert Based Multi-task</strong> ZhangY &amp; WangC</td>
-									<td><a href="https://twitter.com/MSMarcoAI">July 12th, 2019</a></td>
-									<td>0.331</td>
-									<td>0.376</td>
-								</tr>
-								<tr>
-									<td><strong>BERT Encoded T-Net</strong> Y. Zhang, C. Wang, X.L. Chen</td>
-									<td><a href="https://twitter.com/MSMarcoAI">August 5th, 2019</a></td>
-									<td>0.329</td>
-									<td>0.373</td>
-								</tr>
-								<tr>
-									<td><strong>MultiTask+DataAug+Unlikelihood </strong> UvA</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/">June 3rd, 2020</a></td>
-									<td>0.327</td>
-									<td>0.347</td>
-								</tr>
-								<tr>
-									<td><strong>Multi-doc Enriched BERT </strong>Ming Yan of Alibaba Damo NLP</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1108072710259634176">June 20th, 2019</a></td>
-									<td>0.325</td>
-									<td>0.377</td>
-								</tr>
-								<tr>
-									<td><strong>BIDAF+seq2seq</strong> Yihan Ni of the CAS Key Lab of Web Data Science and Technology, ICT, CAS </td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1001627093438902272">May 29th, 2018</a></td>
-									<td>0.322</td>
-									<td>0.283</td>
-								</tr>
-								<tr>
-									<td><strong>BERT Encoded T-Net</strong> Y. Zhang, C. Wang, X.L. Chen</td>
-									<td><a href="https://twitter.com/MSMarcoAI">July 12th, 2019</a></td>
-									<td>0.320</td>
-									<td>0.361</td>
-								</tr>
-								<tr>
-									<td><strong>Unnamed</strong> Anonymous </td>
-									<td><a href="https://twitter.com/MSMarcoAI/">December 9th,2019</a> </td>
-									<td>0.318</td>
-									<td>0.384</td>
-								</tr>
-								<tr>
-									<td><strong>LM+Generator</strong> anonymous </td>
-									<td><a href="https://twitter.com/MSMarcoAI/">November 25th,2019</a> </td>
-									<td>0.299</td>
-									<td>0.372</td>
-								</tr>
-								<tr>
-									<td><strong>LNET</strong> S.L. Liu of NEUKG </td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1248087073153679360?s=20">April 8th, 2020</a></td>
-									<td>0.294</td>
-									<td>0.352</td>
-								</tr>
-								<tr>
-									<td><strong>LNET</strong>S.L. Liu of NEUKG</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1242155084340809731?s=20">March 23rd,2020</a></td>
-									<td>0.293</td>
-									<td>0.347</td>
-								</tr>
-								<tr>
-									<td><strong>Masque Q&amp;A Style</strong> NTT Media Intelligence Laboratories [<a href="https://arxiv.org/abs/1901.02262">Nishida et al. '19</a>]</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1037765491140452352">January 3rd, 2019</a></td>
-									<td>0.285</td>
-									<td>0.399</td>
-								</tr>
-								<tr>
-									<td><strong>Bert Based Multi-task</strong>ZhangY &amp; WangC</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1144116547176169472">June 26th, 2019</a></td>
-									<td>0.284</td>
-									<td>0.349</td>
-								</tr>
-								<tr>
-									<td><strong>Selector+Combine-Content-Generator QA Model</strong> Shengjie Qian of Caiyun xiaoyi AI and BUPT</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1100265573768933376">March 11th, 2019</a></td>
-									<td>0.281</td>
-									<td>0.337</td>
-								</tr>
-								<tr>
-									<td><strong>DNET</strong> QA Geeks</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1004425343602577408">August 1st, 2018</a></td>
-									<td>0.275</td>
-									<td>0.332</td>
-								</tr>
-								<tr>
-									<td><strong>ranker-reader</strong> RCZoo of UCAS</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1128738595215298560">May 15th, 2019</a></td>
-									<td>0.271</td>
-									<td>0.382</td>
-								</tr>
-								<tr>
-									<td><strong>BIDAF+ELMo+SofterMax</strong> Wang Changbao</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1063472543372378112">November 16th, 2018</a></td>
-									<td>0.268</td>
-									<td>0.346</td>
-								</tr>
-								<tr>
-									<td><strong>BERT+Multi-Loss</strong> S.L. Liu of NEUKG  </td>
-									<td><a href="https://twitter.com/MSMarcoAI/">November 4th, 2019</a></td>
-									<td>0.266</td>
-									<td>0.422</td>
-								</tr>
-								<tr>
-									<td><strong>LNET</strong> S.L. Liu of the NEUKG </td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1196863805554192384">Nov 19th, 2019</a> </td>
-									<td>0.266</td>
-									<td>0.339</td>
-								</tr>
-								<tr>
-									<td><strong>MultiLM QnA Model</strong> anonymous</td>
-									<td><a href="https://twitter.com/MSMarcoAI">December 2nd, 2019</a></td>
-									<td>0.266</td>
-									<td>0.340</td>
-								</tr>
-								<tr>
-									<td><strong>MultiLM NLGen Model</strong> anonymous</td>
-									<td><a href="https://twitter.com/MSMarcoAI">December 5th, 2019</a></td>
-									<td>0.257</td>
-									<td>0.360</td>
-								</tr>
-								<tr>
-									<td><strong>SNET</strong> JY Zhao</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1001601302885879808">May 29th, 2018</a></td>
-									<td>0.247</td>
-									<td>0.308</td>
-								</tr>
-								<tr>
-									<td><strong>REAG </strong>Anonymous</td>
-									<td><a href="https://twitter.com/MSMarcoAI/">May 28th, 2020</a></td>
-									<td>0.247</td>
-									<td>0.328</td>
-								</tr>
-								<tr>
-									<td><strong>Extraction-net</strong> zlsh80826</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1024382804380057601">August 14th, 2018</a></td>
-									<td>0.247</td>
-									<td>0.321</td>
-								</tr>
-								<tr>
-									<td><strong>lightNLP+BiDAF</strong> Enliple AI </td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1091935023442219018">February 1st, 2019</a></td>
-									<td>0.210</td>
-									<td>0.108</td>
-								</tr>
-								<tr>
-									<td><strong>MUSST-QA </strong> Anonymous</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/">June 1st, 2020</a></td>
-									<td>0.187</td>
-									<td>0.285</td>
-								</tr>
-								<tr>
-									<td><strong>BiDaF Baseline(Implemented By MSMARCO Team)</strong><br>
-										Allen Institute for AI &amp; University of Washington [<a href="https://arxiv.org/abs/1611.01603">Seo et al. '16</a>]</td>
-									<td>April 23th, 2018</td>
-									<td>0.169</td>
-									<td>0.093</td>
-								</tr>
-								<tr>
-									<td><strong>TrioNLP +　BiDAF</strong> Trio.AI of the CCNU</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1044091698442326021">September 23rd, 2018</a></td>
-									<td>0.142</td>
-									<td>0.160</td>
-								</tr>
-								<tr>
-									<td><strong>BiDAF + LSTM</strong> Meefly</td>
-									<td><a href="https://twitter.com/MSMarcoAI/status/1085088144083566592">January 15th,2019</a></td>
-									<td>0.119</td>
-									<td>0.173</td>
-								</tr>
-							</tbody>
-						</table>
+						<div class="table-responsive">
+							<table class="table table-striped" id='nlgentable'>
+								<thead>
+									<tr>
+										<th>Rank</th>
+										<th class="col-md-5">Model</th>
+										<th class="col-md-2">Submission Date</th>
+										<th class="col-md-1">Rouge-L</th>
+										<th class="col-md-1">Bleu-1</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><strong>Human Performance</strong></td>
+										<td>April 23th, 2018</td>
+										<td>0.632</td>
+										<td>0.530</td>
+									</tr>
+									<tr>
+										<td><strong>PALM</strong> Alibaba Damo NLP</td>
+										<td><a href="https://twitter.com/MSMarcoAI/">December 16th,2019</a> </td>
+										<td>0.498</td>
+										<td>0.499</td>
+									</tr>
+									<tr>
+										<td><strong>REAG</strong> Anonymous</td>
+										<td><a href="https://twitter.com/MSMarcoAI/">March 27th, 2020</a></td>
+										<td>0.498</td>
+										<td>0.497</td>
+									</tr>
+									<tr>
+										<td><strong>Masque NLGEN Style</strong> NTT Media Intelligence Laboratories [<a href="https://arxiv.org/abs/1901.02262">Nishida et al. '19</a>]</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1037765491140452352">January 3rd, 2019</a></td>
+										<td>0.496</td>
+										<td>0.501</td>
+									</tr>
+									<tr>
+										<td><strong>CompLM</strong> Alibaba Damo NLP</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1201632732473769984">December 3rd, 2019</a></td>
+										<td>0.496</td>
+										<td>0.489</td>
+									</tr>
+									<tr>
+										<td><strong>PALM</strong> Alibaba Damo NLP </td>
+										<td><a href="https://twitter.com/MSMarcoAI/">December 9th,2019</a> </td>
+										<td>0.496</td>
+										<td>0.484</td>
+									</tr>
+									<tr>
+										<td><strong>BERT+ Multi-Pointer-Generator</strong> Tongjun Li of the ColorfulClouds Tech and BUPT </td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1079864997323321344">June 11th,2019</a> </td>
+										<td>0.495</td>
+										<td>0.476</td>
+									</tr>
+									<tr>
+										<td><strong>CompLM</strong> Alibaba Damo NLP </td>
+										<td><a href="https://twitter.com/MSMarcoAI/">November 19th,2019</a> </td>
+										<td>0.495</td>
+										<td>0.470</td>
+									</tr>
+									<tr>
+										<td><strong>CompLM</strong> Alibaba Damo NLP</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1201632732473769984">December 2nd, 2019</a></td>
+										<td>0.493</td>
+										<td>0.475</td>
+									</tr>
+									<tr>
+										<td><strong>BERT+ Multi-Pointer-Generator</strong> Tongjun Li of the ColorfulClouds Tech and BUPT </td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1079864997323321344">May 21st,2019</a> </td>
+										<td>0.491</td>
+										<td>0.474</td>
+									</tr>
+									<tr>
+										<td><strong>CompLM</strong> Alibaba Damo NLP</td>
+										<td><a href="https://twitter.com/MSMarcoAI/">November 19th,2019</a> </td>
+										<td>0.488</td>
+										<td>0.485</td>
+									</tr>
+									<tr>
+										<td><strong>roberta_T_tlcd_18k </strong> Anonymous</td>
+										<td><a href="https://twitter.com/MSMarcoAI">May 14th, 2020</a></td>
+										<td>0.487</td>
+										<td>0.468</td>
+									</tr>
+									<tr>
+										<td><strong>BERT+ Multi-Pointer-Generator</strong> Tongjun Li of the ColorfulClouds Tech and BUPT </td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1079864997323321344">March 26th,2019</a> </td>
+										<td>0.487</td>
+										<td>0.465</td>
+									</tr>
+									<tr>
+										<td><strong>Selector+Combine-Content-Generator NLGEN Model</strong> Shengjie Qian of Caiyun xiaoyi AI and BUPT</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1100265573768933376">March 11th, 2019</a></td>
+										<td>0.487</td>
+										<td>0.449</td>
+									</tr>
+									<tr>
+										<td><strong>VNET</strong> Baidu NLP [<a href="https://arxiv.org/pdf/1805.02220.pdf">Wang et al. '18</a>]</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1009163361773240320">November 8th, 2018</a></td>
+										<td>0.484</td>
+										<td>0.468</td>
+									</tr>
+									<tr>
+										<td><strong>BERT+ Multi-Pointer-Generator (Single) </strong> Tongjun Li of the ColorfulClouds Tech and BUPT </td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1079864997323321344">March 19th,2019</a> </td>
+										<td>0.484</td>
+										<td>0.459</td>
+									</tr>
+									<tr>
+										<td><strong>Communicating BERT </strong> Xuan Liang of RIDLL from the University of Technology Sydney</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1180233411245436928">October 4th, 2019</a></td>
+										<td>0.483</td>
+										<td>0.472</td>
+									</tr>
+									<tr>
+										<td><strong>MultiLM NLGen Model</strong> anonymous</td>
+										<td><a href="https://twitter.com/MSMarcoAI">December 2nd, 2019</a></td>
+										<td>0.483</td>
+										<td>0.461</td>
+									</tr>
+									<tr>
+										<td><strong>ranking+nlg</strong> anonymous</td>
+										<td><a href="https://twitter.com/">October 9th, 2019</a></td>
+										<td>0.481</td>
+										<td>0.468</td>
+									</tr>
+									<tr>
+										<td><strong>MUSST-NLG</strong> Anonymous</td>
+										<td><a href="https://twitter.com/MSMarcoAI">May 15th, 2020</a></td>
+										<td>0.480</td>
+										<td>0.458</td>
+									</tr>
+									<tr>
+										<td><strong>MultiLM NLGen Model</strong> anonymous</td>
+										<td><a href="https://twitter.com/MSMarcoAI">December 5th, 2019</a></td>
+										<td>0.478</td>
+										<td>0.481</td>
+									</tr>
+									<tr>
+										<td><strong>BERT-RGLM </strong>Anonymous</td>
+										<td><a href="https://twitter.com/MSMarcoAI/">April 22nd, 2020</a></td>
+										<td>0.470</td>
+										<td>0.452</td>
+									</tr>
+									<tr>
+										<td><strong>BERT-SS-K1-100k</strong> anonymous</td>
+										<td><a href="https://twitter.com/MSMarcoAI">January 26th, 2020</a></td>
+										<td>0.470</td>
+										<td>0.437</td>
+									</tr>
+									<tr>
+										<td><strong>MDC-Generator</strong> Ssk-nlp</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1253391936976650240?s=20">April 23rd, 2020</a></td>
+										<td>0.466</td>
+										<td>0.446</td>
+									</tr>
+									<tr>
+										<td><strong>BERT-SS-K1-100k</strong> anonymous</td>
+										<td><a href="https://twitter.com/MSMarcoAI">February 2nd, 2020</a></td>
+										<td>0.465</td>
+										<td>0.427</td>
+									</tr>
+									<tr>
+										<td><strong>T-RoBERTa-wf-BERTbaseA-120k</strong> Anonymous </td>
+										<td><a href="https://twitter.com/MSMarcoAI/">February 17th, 2020</a></td>
+										<td>0.464</td>
+										<td>0.420</td>
+									</tr>
+									<tr>
+										<td><strong>T-RoBERTa-wf-BERTbaseA-80k</strong> Anonymous </td>
+										<td><a href="https://twitter.com/MSMarcoAI/">February 21st, 2020</a></td>
+										<td>0.463</td>
+										<td>0.438</td>
+									</tr>
+									<tr>
+										<td><strong>ranking+nlg</strong> anonymous</td>
+										<td><a href="https://twitter.com/">October 9th, 2019</a></td>
+										<td>0.462</td>
+										<td>0.451</td>
+									</tr>
+																	<tr>
+										<td><strong>PM-MUG-1</strong> anonymous</td>
+										<td><a href="https://twitter.com/MSMarcoAI/">May 20th, 2020</a></td>
+										<td>0.453</td>
+										<td>0.441</td>
+									</tr>
+																	<tr>
+										<td><strong>PM-MUG-2</strong> anonymous</td>
+										<td><a href="https://twitter.com/MSMarcoAI/">May 20th, 2020</a></td>
+										<td>0.452</td>
+										<td>0.449</td>
+									</tr>
+									<tr>
+										<td><strong>SNET + CES2S</strong> Bo Shao of SYSU University</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1021861819592335360">July 24th, 2018</a></td>
+										<td>0.450</td>
+										<td>0.406</td>
+									</tr>
+									<tr>
+										<td><strong>MaRCo-da-GAAMA</strong> IBM Research AI Multilingual NLP Group</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1247606676049416192?s=20">April 7th, 2020</a></td>
+										<td>0.448</td>
+										<td>0.402</td>
+									</tr>
+									<tr>
+										<td><strong>REAG(based on PALM)</strong>anonymous</td>
+										<td><a href="https://twitter.com/MSMarcoAI/">June 1st,2020</a></td>
+										<td>0.447</td>
+										<td>0.444</td>
+									</tr>
+									<tr>
+										<td><strong>KIGN-QA</strong> Chenliang Li</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1067188900894957568">April 22nd, 2019</a></td>
+										<td>0.441</td>
+										<td>0.462</td>
+									</tr>
+									<tr>
+										<td><strong>Reader-Writer</strong> Microsoft Business Applications Group AI Research  </td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1037764974410588160">September 16th, 2018</a></td>
+										<td>0.439</td>
+										<td>0.426</td>
+									</tr>
+									<tr>
+										<td><strong>ranking+nlg</strong> anonymous</td>
+										<td><a href="https://twitter.com/MSMarcoAI">August 12th, 2019</a></td>
+										<td>0.439</td>
+										<td>0.411</td>
+									</tr>
+									<tr>
+										<td><strong>RGLM</strong> anonymous</td>
+										<td><a href="https://twitter.com/MSMarcoAI">May 5th, 2020</a></td>
+										<td>0.435</td>
+										<td>0.413</td>
+									</tr>
+									<tr>
+										<td><strong>T-RoBERTa-wf-BERTbaseA-120k</strong> Anonymous </td>
+										<td><a href="https://twitter.com/MSMarcoAI/">February 13th, 2020</a></td>
+										<td>0.427</td>
+										<td>0.364</td>
+									</tr>
+									<tr>
+										<td><strong>ConZNet</strong> Samsung Research  [<a href="https://aclanthology.info/papers/D18-1054/d18-1054">Indurthi et al. '18</a>] </td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1007328684330532864">July 16th, 2018</a></td>
+										<td>0.421</td>
+										<td>0.386</td>
+									</tr>
+									<tr>
+										<td><strong>Anonymous</strong> Anonymous</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/">November 21st, 2019</a></td>
+										<td>0.412</td>
+										<td>0.410</td>
+									</tr>
+									<tr>
+										<td><strong>Bayes QA</strong> Bin Bi of Alibaba NLP</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1007324430123450369">June 14st, 2018</a></td>
+										<td>0.411</td>
+										<td>0.435</td>
+									</tr>
+									<tr>
+											<td><strong>Generation with latent retrieval per answer</strong> anonymous</td>
+											<td><a href="https://twitter.com/MSMarcoAI">May 11th, 2020</a></td>
+											<td>0.408</td>
+											<td>0.442</td>
+									</tr>
+									<tr>
+											<td><strong>Generation with latent retrieval Baseline 2</strong> anonymous</td>
+											<td><a href="https://twitter.com/MSMarcoAI">May 11th, 2020</a></td>
+											<td>0.401</td>
+											<td>0.415</td>
+									</tr>
+									<tr>
+										<td><strong>SNET+seq2seq</strong> Yihan Ni of the CAS Key Lab of Web Data Science and Technology, ICT, CAS </td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1004424111492247552">June 1st, 2018</a></td>
+										<td>0.401</td>
+										<td>0.375</td>
+									</tr>
+									
+									<tr>
+										<td><strong>MUSST</strong> anonymous </td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/">March 31, 2020</a></td>
+										<td>0.392</td>
+										<td>0.359</td>
+									</tr>
+									<tr>
+										<td><strong>SSK3+BERTBaseAnswerGenerator</strong> Anonymous</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status">Jan 21st, 2020</a></td>
+										<td>0.384</td>
+										<td>0.356</td>
+									</tr>
+									<tr>
+											<td><strong>Generation with latent retrieval Baseline 1</strong> anonymous</td>
+											<td><a href="https://twitter.com/MSMarcoAI">May 11th, 2020</a></td>
+											<td>0.382</td>
+											<td>0.416</td>
+									</tr>
+									<tr>
+										<td><strong>BPG-NET</strong> Zhijie Sang of the Center for Intelligence Science and Technology Research(CIST) of the Beijing University of Posts and Telecommunications (BUPT)</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1024821030190239745">August 1st, 2018</a></td>
+										<td>0.382</td>
+										<td>0.347</td>
+									</tr>
+									<tr>
+										<td><strong>GUM</strong> anonymous from anonymous</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1169324139166892033">September 4th, 2019</a></td>
+										<td>0.375</td>
+										<td>0.438</td>
+									</tr>
+									<tr>
+										<td><strong>Deep Cascade QA</strong> Ming Yan of Alibaba Damo NLP</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1055570991458410497">October 25th, 2018</a></td>
+										<td>0.351</td>
+										<td>0.374</td>
+									</tr>
+									<tr>
+										<td><strong>MUSST-NLG</strong> Anonymous</td>
+										<td><a href="https://twitter.com/MSMarcoAI">June 2nd, 2020</a></td>
+										<td>0.340</td>
+										<td>0.358</td>
+									</tr>
+									<tr>
+										<td><strong>AE + ReRanking + Bert Based Multi-task</strong> ZhangY &amp; WangC</td>
+										<td><a href="https://twitter.com/MSMarcoAI">July 12th, 2019</a></td>
+										<td>0.331</td>
+										<td>0.376</td>
+									</tr>
+									<tr>
+										<td><strong>BERT Encoded T-Net</strong> Y. Zhang, C. Wang, X.L. Chen</td>
+										<td><a href="https://twitter.com/MSMarcoAI">August 5th, 2019</a></td>
+										<td>0.329</td>
+										<td>0.373</td>
+									</tr>
+									<tr>
+										<td><strong>MultiTask+DataAug+Unlikelihood </strong> UvA</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/">June 3rd, 2020</a></td>
+										<td>0.327</td>
+										<td>0.347</td>
+									</tr>
+									<tr>
+										<td><strong>Multi-doc Enriched BERT </strong>Ming Yan of Alibaba Damo NLP</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1108072710259634176">June 20th, 2019</a></td>
+										<td>0.325</td>
+										<td>0.377</td>
+									</tr>
+									<tr>
+										<td><strong>BIDAF+seq2seq</strong> Yihan Ni of the CAS Key Lab of Web Data Science and Technology, ICT, CAS </td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1001627093438902272">May 29th, 2018</a></td>
+										<td>0.322</td>
+										<td>0.283</td>
+									</tr>
+									<tr>
+										<td><strong>BERT Encoded T-Net</strong> Y. Zhang, C. Wang, X.L. Chen</td>
+										<td><a href="https://twitter.com/MSMarcoAI">July 12th, 2019</a></td>
+										<td>0.320</td>
+										<td>0.361</td>
+									</tr>
+									<tr>
+										<td><strong>Unnamed</strong> Anonymous </td>
+										<td><a href="https://twitter.com/MSMarcoAI/">December 9th,2019</a> </td>
+										<td>0.318</td>
+										<td>0.384</td>
+									</tr>
+									<tr>
+										<td><strong>LM+Generator</strong> anonymous </td>
+										<td><a href="https://twitter.com/MSMarcoAI/">November 25th,2019</a> </td>
+										<td>0.299</td>
+										<td>0.372</td>
+									</tr>
+									<tr>
+										<td><strong>LNET</strong> S.L. Liu of NEUKG </td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1248087073153679360?s=20">April 8th, 2020</a></td>
+										<td>0.294</td>
+										<td>0.352</td>
+									</tr>
+									<tr>
+										<td><strong>LNET</strong>S.L. Liu of NEUKG</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1242155084340809731?s=20">March 23rd,2020</a></td>
+										<td>0.293</td>
+										<td>0.347</td>
+									</tr>
+									<tr>
+										<td><strong>Masque Q&amp;A Style</strong> NTT Media Intelligence Laboratories [<a href="https://arxiv.org/abs/1901.02262">Nishida et al. '19</a>]</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1037765491140452352">January 3rd, 2019</a></td>
+										<td>0.285</td>
+										<td>0.399</td>
+									</tr>
+									<tr>
+										<td><strong>Bert Based Multi-task</strong>ZhangY &amp; WangC</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1144116547176169472">June 26th, 2019</a></td>
+										<td>0.284</td>
+										<td>0.349</td>
+									</tr>
+									<tr>
+										<td><strong>Selector+Combine-Content-Generator QA Model</strong> Shengjie Qian of Caiyun xiaoyi AI and BUPT</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1100265573768933376">March 11th, 2019</a></td>
+										<td>0.281</td>
+										<td>0.337</td>
+									</tr>
+									<tr>
+										<td><strong>DNET</strong> QA Geeks</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1004425343602577408">August 1st, 2018</a></td>
+										<td>0.275</td>
+										<td>0.332</td>
+									</tr>
+									<tr>
+										<td><strong>ranker-reader</strong> RCZoo of UCAS</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1128738595215298560">May 15th, 2019</a></td>
+										<td>0.271</td>
+										<td>0.382</td>
+									</tr>
+									<tr>
+										<td><strong>BIDAF+ELMo+SofterMax</strong> Wang Changbao</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1063472543372378112">November 16th, 2018</a></td>
+										<td>0.268</td>
+										<td>0.346</td>
+									</tr>
+									<tr>
+										<td><strong>BERT+Multi-Loss</strong> S.L. Liu of NEUKG  </td>
+										<td><a href="https://twitter.com/MSMarcoAI/">November 4th, 2019</a></td>
+										<td>0.266</td>
+										<td>0.422</td>
+									</tr>
+									<tr>
+										<td><strong>LNET</strong> S.L. Liu of the NEUKG </td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1196863805554192384">Nov 19th, 2019</a> </td>
+										<td>0.266</td>
+										<td>0.339</td>
+									</tr>
+									<tr>
+										<td><strong>MultiLM QnA Model</strong> anonymous</td>
+										<td><a href="https://twitter.com/MSMarcoAI">December 2nd, 2019</a></td>
+										<td>0.266</td>
+										<td>0.340</td>
+									</tr>
+									<tr>
+										<td><strong>MultiLM NLGen Model</strong> anonymous</td>
+										<td><a href="https://twitter.com/MSMarcoAI">December 5th, 2019</a></td>
+										<td>0.257</td>
+										<td>0.360</td>
+									</tr>
+									<tr>
+										<td><strong>SNET</strong> JY Zhao</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1001601302885879808">May 29th, 2018</a></td>
+										<td>0.247</td>
+										<td>0.308</td>
+									</tr>
+									<tr>
+										<td><strong>REAG </strong>Anonymous</td>
+										<td><a href="https://twitter.com/MSMarcoAI/">May 28th, 2020</a></td>
+										<td>0.247</td>
+										<td>0.328</td>
+									</tr>
+									<tr>
+										<td><strong>Extraction-net</strong> zlsh80826</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1024382804380057601">August 14th, 2018</a></td>
+										<td>0.247</td>
+										<td>0.321</td>
+									</tr>
+									<tr>
+										<td><strong>lightNLP+BiDAF</strong> Enliple AI </td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1091935023442219018">February 1st, 2019</a></td>
+										<td>0.210</td>
+										<td>0.108</td>
+									</tr>
+									<tr>
+										<td><strong>MUSST-QA </strong> Anonymous</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/">June 1st, 2020</a></td>
+										<td>0.187</td>
+										<td>0.285</td>
+									</tr>
+									<tr>
+										<td><strong>BiDaF Baseline(Implemented By MSMARCO Team)</strong><br>
+											Allen Institute for AI &amp; University of Washington [<a href="https://arxiv.org/abs/1611.01603">Seo et al. '16</a>]</td>
+										<td>April 23th, 2018</td>
+										<td>0.169</td>
+										<td>0.093</td>
+									</tr>
+									<tr>
+										<td><strong>TrioNLP +　BiDAF</strong> Trio.AI of the CCNU</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1044091698442326021">September 23rd, 2018</a></td>
+										<td>0.142</td>
+										<td>0.160</td>
+									</tr>
+									<tr>
+										<td><strong>BiDAF + LSTM</strong> Meefly</td>
+										<td><a href="https://twitter.com/MSMarcoAI/status/1085088144083566592">January 15th,2019</a></td>
+										<td>0.119</td>
+										<td>0.173</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
 						<br>
 						<h4>MS MARCO V1(12/01/2016-03/31/2018)</h4>
 						<div class="table-responsive">
