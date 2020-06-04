@@ -47,8 +47,14 @@ img.full-width {
 }
 
 .nav-item {
-	font-size: 18px;
+	font-size: 16px;
 }
+
+/** Increase clickable target of nav items **/
+.nav-item a{
+	padding: 20px 0px;
+}
+
 
 .navbar-brand {
 	font-size: 24px;
