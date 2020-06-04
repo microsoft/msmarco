@@ -13,7 +13,7 @@ body {
 	padding-top: 70px;
 	position: relative;
 	font-family: Helvetica, Arial, sans-serif;
-	font-size: 12pt;
+	font-size: 16px; 
 	text-align: justify;
 }
 
@@ -47,11 +47,11 @@ img.full-width {
 }
 
 .nav-item {
-	font-size: 13pt;
+	font-size: 18px;
 }
 
 .navbar-brand {
-	font-size: 18pt;
+	font-size: 24px;
 }
 
 .topnav {
