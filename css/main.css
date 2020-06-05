@@ -80,3 +80,10 @@ p.citation {
   /* color: #2a6496; */
 	color: var(--purple);
 }
+
+/** Specify logos sizes **/
+#intro img {
+	width: 200px;
+	max-width: 50%;
+	height: auto;
+}
