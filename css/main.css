@@ -4,7 +4,7 @@ html {
 }
 
 :root {
-	--gold: #b7a57a;
+	--gold: #866006;
 	--purple: #4b2e83;
 	--orange: #d14c00;
 }
@@ -13,7 +13,7 @@ body {
 	padding-top: 70px;
 	position: relative;
 	font-family: Helvetica, Arial, sans-serif;
-	font-size: 12pt;
+	font-size: 16px; 
 	text-align: justify;
 }
 
@@ -47,11 +47,17 @@ img.full-width {
 }
 
 .nav-item {
-	font-size: 13pt;
+	font-size: 16px;
 }
 
+/** Increase clickable target of nav items **/
+.nav-item a{
+	padding: 20px 0px;
+}
+
+
 .navbar-brand {
-	font-size: 18pt;
+	font-size: 24px;
 }
 
 .topnav {
@@ -73,4 +79,11 @@ p.citation {
 .journaltitle {
   /* color: #2a6496; */
 	color: var(--purple);
+}
+
+/** Specify logos sizes **/
+#intro img {
+	width: 200px;
+	max-width: 50%;
+	height: auto;
 }
