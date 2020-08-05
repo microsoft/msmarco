@@ -38,6 +38,9 @@ window.addEventListener('load', () => {
                 {text: 'Top 1000 Train(05/06/2019)', href: 'https://msmarco.blob.core.windows.net/msmarcoranking/top1000.train.tar.gz'},
                 {text: 'Top 1000 Dev(05/02/2019)', href: 'https://msmarco.blob.core.windows.net/msmarcoranking/top1000.dev.tar.gz'},
                 {text: 'Top 1000 Eval(05/02/2019)', href: 'https://msmarco.blob.core.windows.net/msmarcoranking/top1000.eval.tar.gz'},
+                {text: 'ORCAS QRELS (08/05/2020)', href: 'https://msmarco.blob.core.windows.net/msmarcoranking/orcas-doctrain-qrels.tsv.gz'},
+                {text: 'ORCAS Queries (08/05/2020)', href: 'https://msmarco.blob.core.windows.net/msmarcoranking/orcas-doctrain-queries.tsv.gz'},
+                {text: 'ORCAS Top 100 (08/05/2020)', href: 'https://msmarco.blob.core.windows.net/msmarcoranking/orcas-doctrain-top100.gz'},
             ],
         },
         { 
