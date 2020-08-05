@@ -30,9 +30,6 @@
 							<a class="nav-link js-scroll-trigger" href="#page-top">Home</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link js-scroll-trigger" href="#usefulness">Usefulness</a>
-						</li>
-						<li class="nav-item">
 							<a class="nav-link js-scroll-trigger" href="#ranking">Ranking</a>
 						</li>
 						<li class="nav-item">
@@ -40,6 +37,9 @@
 						</li>
 						<li class="nav-item">
 							<a class="nav-link js-scroll-trigger" href="#qna">QnA</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link js-scroll-trigger" href="#usefulness">Usefulness</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link js-scroll-trigger" href="#cs">Conversational Search</a>
@@ -91,20 +91,6 @@
 				</div>
 			</div>
 		</section>
-		<section id="usefulness" class="bg-light">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12 mx-auto">
-						<h2>Usefulness Data(02/02/2020-Present)</h2>
-						<p>Data associated with the WebConf 2020's paper Leading Conversational Search by Suggesting Useful Questions</p>
-						<h4>Relevant Links</h4>
-						<a style="background-color:#000000;border-color:#000000;" class="btn btn-primary btn-md mb-4 mr-2" href="https://github.com/microsoft/LeadingConversationalSearchbySuggestingUsefulQuestions">Usefulness Github Repo</a>
-						<h3>Dataset Download links</h3>
-						<div id="usefulnessdata"> </div>
-					</div>
-				</div>
-			</div>
-		</section>
 		<section id="ranking" class="bg-light">
 			<div class="container">
 				<div class="row">
@@ -128,6 +114,7 @@
 						<a style="background-color:#000000;border-color:#000000;" class="btn btn-primary btn-md mb-4 mr-2" href="https://github.com/microsoft/TREC-2020-Deep-Learning">TREC 2020 Deep Learning</a>
 						<a style="background-color:#000000;border-color:#000000;" class="btn btn-primary btn-md mb-4 mr-2" href="https://github.com/microsoft/TREC-2019-Deep-Learning">TREC 2019 Deep Learning</a>
 						<h3>Dataset Download links</h3>
+						<!--
 						<div id="rankingdata"> </div>
 						<h3>Not Yet Open</h3>
 						<h4>Document Ranking Leaderboard(05/01/2020-Present) ranked by MRR on Eval</h4>
@@ -145,15 +132,16 @@
 								</thead>
 								<tbody>
 									<tbody>
-										<!--<tr>
+										<tr>
 										<td><strong>BM25 Baseline</strong> MSMARCO Team</td>
 										<td><a href="https://twitter.com/MSMarcoAI/">May 2020</a></td>
 										<td>-</td>
 										<td>-</td>
-									</tr>-->
+									</tr>
 								</tbody>
 							</table>
 						</div>
+						--->
 						<h4>Passage Ranking Leaderboard(10/26/2018-Present) ranked by MRR on Eval</h4>
 						<div class="table-responsive">
 							<table class="table table-striped" id='passagerankingtable'>
@@ -2014,6 +2002,20 @@
 				</div>
 			</div>
 		</section>
+		<section id="usefulness" class="bg-light">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 mx-auto">
+						<h2>Usefulness Data(02/02/2020-Present)</h2>
+						<p>Data associated with the WebConf 2020's paper Leading Conversational Search by Suggesting Useful Questions</p>
+						<h4>Relevant Links</h4>
+						<a style="background-color:#000000;border-color:#000000;" class="btn btn-primary btn-md mb-4 mr-2" href="https://github.com/microsoft/LeadingConversationalSearchbySuggestingUsefulQuestions">Usefulness Github Repo</a>
+						<h3>Dataset Download links</h3>
+						<div id="usefulnessdata"> </div>
+					</div>
+				</div>
+			</div>
+		</section>
 		<section id="cs" class="bg-light">
 			<div class="container">
 				<div class="row">
@@ -2021,10 +2023,6 @@
 						<h2>Conversational Search</h2>
 						<p>Truly Conversational Search is the next logic step in the journey to generate intelligent and useful AI. To understand what this may mean, researchers have voiced a continuous desire to study how people currently converse with search engines. As a result we have released a large corpus of anonymized user search sessions.</p>
 						<p>We hope the community can use this corpus to explore what conversations with search engines look like.</p>
-						<h4>Tasks</h4>
-						<ol>
-							<li>Given a session with a masked query and a candidate list of 1000 potential queries rerank by the most likley query</li>
-						</ol>
 						<h4>Relevant Links</h4>
 						<a style="background-color:#000000;border-color:#000000;" class="btn btn-primary btn-md mb-4 mr-2" href="https://github.com/microsoft/MSMARCO-Conversational-Search">Conversational Search Github Repo</a>
 						<h3>Dataset Download links</h3>
@@ -2055,7 +2053,9 @@
 				<div class="row">
 					<div class="col-md-12 mx-auto">
 						<h3>Changes To Dataset</h3>
-						<p><strong>02.11.2020</strong>New Data</p>
+						<p><strong>07.30.2020</strong>New Data</p>
+						1. Released ORCAS Click data
+						<p><strong>02.11.2020:</strong>New Data</p>
 						1. Released Usefulness Data
 						<p><strong>10.22.2019:</strong>New Datasets</p>
 						1. Released OpenKP Keyphrase Extraction dataset! 
