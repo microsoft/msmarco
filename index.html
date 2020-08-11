@@ -30,7 +30,10 @@
 							<a class="nav-link js-scroll-trigger" href="#page-top">Home</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link js-scroll-trigger" href="#ranking">Ranking</a>
+							<a class="nav-link js-scroll-trigger" href="#docranking">Document Ranking</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link js-scroll-trigger" href="#ranking">Passage Ranking</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link js-scroll-trigger" href="#kp">KeyPhrase</a>
@@ -95,8 +98,72 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12 mx-auto">
-						<h2>Passage and Document Retrieval(10/26/2018-Present)</h2>
-						<p>Based on the passages and questions in the <a href='#qna'>Question Answering Dataset</a>, a passage and document ranking task was formulated. There are 8.8 million passages, 3.2 million documents and the goal is to rank based on their relevance.</p>
+						<h2>Document Retrieval(08/11/2020-Present)</h2>
+						<p>Based the questions in the <a href='#qna'>Question Answering Dataset</a> and the documents which answered the questions a document ranking task was formulated. There are 3.2 million documents and the goal is to rank based on their relevance.</p>
+						<p>Relevance labels are derived from what passages was marked as having the answer in the QnA dataset making this one of the largest relevance datasets ever.</p>
+						<p>This dataset is the focus of the <a href='https://trec.nist.gov/'>2020 and 2019 TREC Deep Learning Track</a> and has been used as a teaching aid for <a href='http://sigir.org/afirm2020/'>ACM SIGIR/SIGKDD AFIRM Summer School on Machine Learning for Data Mining and Search</a>.</p>
+						<p>In 2020 we release a set of cleaned and formated clicks for all documents in the collection. This collection of 20 million clicks is called ORCAS.</p>
+						<h4>Tasks</h4>
+						<ol>
+							<li>Document Re-Ranking:Given a candidate top 1000 document as retrieved by BM25, re-rank documents by relevance.</li>
+							<li>Document Full Ranking:Given a corpus of 3.2m documents generate a candidate top 1000 documents sorted by relevance.</li>
+						</ol>
+						<h4>Relevant Links</h4>
+						<a style="background-color:#000000;border-color:#000000;" class="btn btn-primary btn-md mb-4 mr-2" href="https://github.com/microsoft/MSMARCO-Document-Ranking">MSMARCO Document Ranking Github</a>
+						<a style="background-color:#000000;border-color:#000000;" class="btn btn-primary btn-md mb-4 mr-2" href="https://trec.nist.gov/data/deep2019.html">NIST Judgments for TREC 2019 Deep Learning Track</a>
+						<a style="background-color:#000000;border-color:#000000;" class="btn btn-primary btn-md mb-4 mr-2" href="https://arxiv.org/abs/2003.07820">Overview of the TREC 2019 deep learning track</a>
+						<a style="background-color:#000000;border-color:#000000;" class="btn btn-primary btn-md mb-4 mr-2" href="https://arxiv.org/abs/1611.09268">Paper</a>
+						<a style="background-color:#000000;border-color:#000000;" class="btn btn-primary btn-md mb-4 mr-2" href="https://arxiv.org/pdf/2006.05324.pdf">ORCAS Dataset</a>
+						<a style="background-color:#000000;border-color:#000000;" class="btn btn-primary btn-md mb-4 mr-2" href="https://github.com/microsoft/TREC-2020-Deep-Learning">TREC 2020 Deep Learning</a>
+						<a style="background-color:#000000;border-color:#000000;" class="btn btn-primary btn-md mb-4 mr-2" href="https://github.com/microsoft/TREC-2019-Deep-Learning">TREC 2019 Deep Learning</a>
+						<h3>Dataset Download links</h3>
+						<div id="docrankingdata"> </div>
+						<h4>Document Ranking Leaderboard(August 11th, 2020-Present) ranked by MRR@100 on Eval</h4>
+						<div class="table-responsive">
+							<table class="table table-striped" id='docrankingtable'>
+								<thead>
+									<tr>
+										<th>Rank</th>
+										<th class="col-md-9">Model</th>
+										<th class="col-md-1">Ranking Style</th>
+										<th class="col-md-1">Submission Date</th>
+										<th class="col-md-1">MRR@100 On Eval</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tbody>
+										<tr>
+											<td><strong>[Official Baseline] Conformer-Kernel with QTI (NDRM1)</strong> Bhaskar Mitra (Microsoft), Sebastian Hofstätter (TU Wien), Hamed Zamani (Microsoft), and Nick Craswell (Microsoft) - [<a href='https://github.com/bmitra-msft/TREC-Deep-Learning-Quick-Start'>code</a>] - [<a href='https://arxiv.org/pdf/2007.10434.pdf'>Mitra et Al. '20</a>]</td>
+											<td>ReRanking</td>
+											<td><a href="https://twitter.com/MSMarcoAI/status/1293306436399685632">August 11th 2020</a></td>
+											<td>0.307</td>
+										</tr>
+										<tr>
+											<td><strong>[Official Baseline] Conformer-Kernel with QTI (NDRM3)</strong> Bhaskar Mitra (Microsoft), Sebastian Hofstätter (TU Wien), Hamed Zamani (Microsoft), and Nick Craswell (Microsoft) - [<a href='https://github.com/bmitra-msft/TREC-Deep-Learning-Quick-Start'>code</a>] - [<a href='https://arxiv.org/pdf/2007.10434.pdf'>Mitra et Al. '20</a>]</td>
+											<td>ReRanking</td>
+											<td><a href="https://twitter.com/MSMarcoAI/status/1293306436399685632">August 11th 2020</a></td>
+											<td>0.293</td>
+										</tr>
+										<tr>
+											<td><strong>[Official Baseline] IndriQueryLikelihood</strong> MSMARCO Team - [<a href='http://www.lemurproject.org/indri.php'>code</a>]</td>
+											<td>ReRanking</td>
+											<td><a href="https://twitter.com/MSMarcoAI/status/1293306436399685632">August 11th 2020</a></td>
+											<td>0.192</td>
+										</tr>
+								</tbody>
+							</table>
+						</div>
+					
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="ranking" class="bg-light">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 mx-auto">
+						<h2>Passage Retrieval(10/26/2018-Present)</h2>
+						<p>Based on the passages and questions in the <a href='#qna'>Question Answering Dataset</a>, a passage ranking task was formulated. There are 8.8 million passages and the goal is to rank based on their relevance.</p>
 						<p>Relevance labels are derived from what passages was marked as having the answer in the QnA dataset making this one of the largest relevance datasets ever.</p>
 						<p>This dataset is the focus of the <a href='https://trec.nist.gov/'>2020 and 2019 TREC Deep Learning Track</a> and has been used as a teaching aid for <a href='http://sigir.org/afirm2020/'>ACM SIGIR/SIGKDD AFIRM Summer School on Machine Learning for Data Mining and Search</a>.</p>
 						<p>In 2020 we release a set of cleaned and formated clicks for all documents in the collection. This collection of 20 million clicks is called ORCAS.</p>
@@ -104,46 +171,17 @@
 						<ol>
 							<li>Passage Re-Ranking:Given a candidate top 1000 passages as retrieved by BM25, re-rank passage by relevance.</li>
 							<li>Passage Full Ranking:Given a corpus of 8.8m passages generate a candidate top 1000 passages sorted by relevance.</li>
-							<li>Document Re-Ranking:Given a candidate top 1000 document as retrieved by BM25, re-rank documents by relevance.</li>
-							<li>Document Full Ranking:Given a corpus of 3.2m documents generate a candidate top 1000 documents sorted by relevance.</li>
 						</ol>
 						<h4>Relevant Links</h4>
 						<a style="background-color:#000000;border-color:#000000;" class="btn btn-primary btn-md mb-4 mr-2" href="https://trec.nist.gov/data/deep2019.html">NIST Judgments for TREC 2019 Deep Learning Track</a>
 						<a style="background-color:#000000;border-color:#000000;" class="btn btn-primary btn-md mb-4 mr-2" href="https://arxiv.org/abs/2003.07820">Overview of the TREC 2019 deep learning track</a>
 						<a style="background-color:#000000;border-color:#000000;" class="btn btn-primary btn-md mb-4 mr-2" href="https://arxiv.org/abs/1611.09268">Paper</a>
 						<a style="background-color:#000000;border-color:#000000;" class="btn btn-primary btn-md mb-4 mr-2" href="https://arxiv.org/pdf/2006.05324.pdf">ORCAS Dataset</a>
-				
 						<a style="background-color:#000000;border-color:#000000;" class="btn btn-primary btn-md mb-4 mr-2" href="https://github.com/microsoft/MSMARCO-Passage-Ranking">MSMARCO Passage Ranking Github</a>
-						<a style="background-color:#000000;border-color:#000000;" class="btn btn-primary btn-md mb-4 mr-2" href="https://github.com/microsoft/MSMARCO-Document-Ranking">MSMARCO Document Ranking Github</a>
 						<a style="background-color:#000000;border-color:#000000;" class="btn btn-primary btn-md mb-4 mr-2" href="https://github.com/microsoft/TREC-2020-Deep-Learning">TREC 2020 Deep Learning</a>
 						<a style="background-color:#000000;border-color:#000000;" class="btn btn-primary btn-md mb-4 mr-2" href="https://github.com/microsoft/TREC-2019-Deep-Learning">TREC 2019 Deep Learning</a>
 						<h3>Dataset Download links</h3>
 						<div id="rankingdata"> </div>
-						<h3>Not Yet Open</h3>
-						<h4>Document Ranking Leaderboard(TBD-Present) ranked by MRR on Eval</h4>
-
-						<div class="table-responsive">
-							<table class="table table-striped" id='docrankingtable'>
-								<thead>
-									<tr>
-										<th>Rank</th>
-										<th class="col-md-9">Model</th>
-										<th class="col-md-1">Submission Date</th>
-										<th class="col-md-1">MRR@10 On Eval</th>
-										<th class="col-md-1">MRR@10 On Dev</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tbody>
-										<tr>
-										<td><strong>BM25 Baseline</strong> MSMARCO Team</td>
-										<td><a href="https://twitter.com/MSMarcoAI/">August 2020</a></td>
-										<td>-</td>
-										<td>-</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
 					
 						<h4>Passage Ranking Leaderboard(10/26/2018-Present) ranked by MRR on Eval</h4>
 						<div class="table-responsive">

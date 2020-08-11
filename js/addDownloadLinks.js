@@ -44,6 +44,17 @@ window.addEventListener('load', () => {
             ],
         },
         { 
+            nodeSelector: '#docrankingdata',
+            links: [
+                {text: 'Collection(05/02/2019)', href: 'https://msmarco.blob.core.windows.net/msmarcoranking/fulldocs.tsv.gz'},
+                {text: 'Queries(08/11/2020)', href: 'https://msmarco.blob.core.windows.net/msmarcoranking/docleaderboard-queries.tsv.gz'},
+                {text: 'Top 100 Eval(08/11/2020)', href:'https://msmarco.blob.core.windows.net/msmarcoranking/docleaderboard-top100.tsv.gz'},
+                {text: 'ORCAS QRELS (08/05/2020)', href: 'https://msmarco.blob.core.windows.net/msmarcoranking/orcas-doctrain-qrels.tsv.gz'},
+                {text: 'ORCAS Queries (08/05/2020)', href: 'https://msmarco.blob.core.windows.net/msmarcoranking/orcas-doctrain-queries.tsv.gz'},
+                {text: 'ORCAS Top 100 (08/05/2020)', href: 'https://msmarco.blob.core.windows.net/msmarcoranking/orcas-doctrain-top100.gz'},
+            ],
+        },
+        { 
             nodeSelector: '#qnadataset',
             title : 'Question Answering V2.1',
             links: [
