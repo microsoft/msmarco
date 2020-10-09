@@ -10,7 +10,8 @@ window.addEventListener('load', () => {
             links: [
                 {text: 'Train(10/22/2019)', href: 'https://msmarco.blob.core.windows.net/openkp/OpenKPTrain.jsonl'},
                 {text: 'Dev(10/22/2019)', href: 'https://msmarco.blob.core.windows.net/openkp/OpenKPDev.jsonl'},
-                {text: 'Eval(10/22/2019)', href: 'https://msmarco.blob.core.windows.net/openkp/OpenKPEvalPublic.jsonl'},
+                {text: 'Eval Public(10/22/2019)', href: 'https://msmarco.blob.core.windows.net/openkp/OpenKPEvalPublic.jsonl'},
+                {text: 'Eval(10/09/2019)', href: 'https://msmarco.blob.core.windows.net/openkp/OpenKPEval.jsonl'}
             ],
         },
 
