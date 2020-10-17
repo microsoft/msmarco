@@ -36,19 +36,7 @@
 							<a class="nav-link js-scroll-trigger" href="#ranking">Passage Ranking</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link js-scroll-trigger" href="#kp">KeyPhrase</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link js-scroll-trigger" href="#qna">QnA</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link js-scroll-trigger" href="#usefulness">Usefulness</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link js-scroll-trigger" href="#cs">Conversational Search</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link js-scroll-trigger" href="#oc">Optimal Crawling</a>
+							<a class="nav-link js-scroll-trigger" href="#retirement">DataSet Retirement</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link js-scroll-trigger" href="#updates">Updates</a>
@@ -77,6 +65,7 @@
 						<p>Starting with a paper released at <a href="https://arxiv.org/pdf/1611.09268.pdf"> NIPS 2016</a>, MS MARCO is a collection of datasets focused on deep learning in search.</p>
 						<p>The first dataset was a question answering dataset featuring 100,000 real Bing questions and a human generated answer. Since then we released a 1,000,000 question dataset, a natural langauge generation dataset, a passage ranking dataset, keyphrase extraction dataset, crawling dataset, and a conversational search.</p>
 						<div id ='currentstats'></div>
+						<p><strong>The NLGEN and QnA Leaderboard will close on 10/30/2020. see <a class="nav-link js-scroll-trigger" href="#retirement">DataSet Retirement</a> for details. If you would like to evaluate a model please submit before then</strong></p>
 					</div>
 					<div class="col-12">
 						<h3>Terms and Conditions</h3>
@@ -1128,7 +1117,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12 mx-auto">
-						<h2>KeyPhrase Extraction(10/18/2019-10/9/2020)</h2>
+						<h2>KeyPhrase Extraction:RETIRED(10/18/2019-10/9/2020)</h2>
 						<p>Keyphrase extraction on open domain document is an up and coming area that can be used for many NLP tasks like document ranking, Topic Clusetring, etc. To enable the research community to build performant KeyPhrase Extraction systems we have build OpenKP a human annotated extraction of Keyphrases on a wide variety of documents.</p>
 						<p>The dataset features 148,124 real world web documents along with a human annotation indicating the 1-3 most relevant keyphrases. More information about the dataset and our initial experiments can be found in the paper <a href='https://www.aclweb.org/anthology/D19-1521/'>Open Domain Web Keyphrase Extraction Beyond Language Modeling</a> which was an oral presentation at <a href='https://www.emnlp-ijcnlp2019.org/'>EMNLP-IJCNLP 2019</a>. It is part of the MSMARCO dataset family and research projects like this power the core document understanding pipeline that Bing uses.</p>
 						<h4>Tasks</h4>
@@ -1263,7 +1252,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12 mx-auto">
-						<h2>Question Answering and Natural Langauge Generation(12/01/2016-Present)</h2>
+						<h2>Question Answering and Natural Langauge Generation: RETIRED(12/01/2016-10/30/2020)</h2>
 						<p>The original focus of MSMARCO was to provide a corpus for training and testing systems which given a real domain user query systems would then provide the most likley candidate answer and do so in language which was natural and conversational.</p>
 						<p>This data comes in three tasks/forms: Original QnA dataset(v1.1), Question Answering(v2.1), Natural Language Generation(v2.1). The original question answering datset featured 100,000 examples and was released in 2016. Leaderboard is now closed but data is availible below.</p>
 						<p>The current competitive tasks are Question Answering and Natural Language Generation. Question Answering features over 1,000,000 queries and is much like the original QnA dataset but bigger and with higher quality. The Natural Language Generation dataset features 180,000 examples and builds upon the QnA dataset to deliver answers that could be spoken by a smart speaker.</p>
@@ -1278,7 +1267,7 @@
 						<a style="background-color:#000000;border-color:#000000;" class="btn btn-primary btn-md mb-4 mr-2" href="https://github.com/microsoft/MSMARCO-Question-Answering">Question Answering Github Repo</a>
 						<h3>Dataset Download links</h3>
 						<div id="qnadataset"> </div>
-						<h4>Question Answering Task(03/01/2018-Present) Leaderboard</h4>
+						<h4>Question Answering Task: RETIRED(03/01/2018-10/30/2020) Leaderboard</h4>
 						<div class="table-responsive">
 							<table class="table table-striped" id='qnav2table'>
 								<thead>
@@ -1781,7 +1770,7 @@
 							</table>
 						</div>
 						<br>
-						<h4>Natural Language Generation Task(03/01/2018-Present)</h4>
+						<h4>Natural Language Generation Task:RETIRED(03/01/2018-10/30/2020)</h4>
 						<div class="table-responsive">
 							<table class="table table-striped" id='nlgentable'>
 								<thead>
@@ -2340,7 +2329,7 @@
 							</table>
 						</div>
 						<br>
-						<h4>MS MARCO V1(12/01/2016-03/31/2018)</h4>
+						<h4>MS MARCO V1:RETIRED(12/01/2016-03/31/2018)</h4>
 						<div class="table-responsive">
 							<table class="table table-striped" id='qnav1table'>
 								<thead>
@@ -2454,7 +2443,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12 mx-auto">
-						<h2>Usefulness Data(02/02/2020-Present)</h2>
+						<h2>Usefulness Data(Released 02/02/2020)</h2>
 						<p>Data associated with the WebConf 2020's paper Leading Conversational Search by Suggesting Useful Questions</p>
 						<h4>Relevant Links</h4>
 						<a style="background-color:#000000;border-color:#000000;" class="btn btn-primary btn-md mb-4 mr-2" href="https://github.com/microsoft/LeadingConversationalSearchbySuggestingUsefulQuestions">Usefulness Github Repo</a>
@@ -2468,7 +2457,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12 mx-auto">
-						<h2>Conversational Search</h2>
+						<h2>Conversational Search(Released 04/23/2019)</h2>
 						<p>Truly Conversational Search is the next logic step in the journey to generate intelligent and useful AI. To understand what this may mean, researchers have voiced a continuous desire to study how people currently converse with search engines. As a result we have released a large corpus of anonymized user search sessions.</p>
 						<p>We hope the community can use this corpus to explore what conversations with search engines look like.</p>
 						<h4>Relevant Links</h4>
@@ -2483,7 +2472,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12 mx-auto">
-						<h2>Optimal Crawling</h2>
+						<h2>Optimal Crawling(Released 04/23/2019)</h2>
 						<p>The dataset used for <a href='https://www.microsoft.com/en-us/research/publication/optimal-freshness-crawl-under-politeness-constraints/'>Optimal Freshness Crawl Under Politeness Constraints</a> and <a href='https://papers.nips.cc/paper/8348-staying-up-to-date-with-online-content-changes-using-reinforcement-learning-for-scheduling'>Staying up to Date with Online Content Changes Using Reinforcement Learning for Scheduling</a> which are both focused on providing an optimal crawling schedule for a search engine based ont he changing nature of the internet.</p>
 						<p>There is currently no public task associated with this dataset</p>
 						<h4>Relevant Links</h4>
@@ -2496,11 +2485,25 @@
 				</div>
 			</div>
 		</section>
+		<section id='retirement' class='bg-light'>
+			<div class='container'>
+				<div class='row'>
+					<div class='col-md-12 mx-auto'>
+						<h2>Message to NLP community and MSMARCO Community</h2>
+						<p>TLDR: We are closing the MSMARCO QnA and NLGEN Leaderboard. Last Submissions 10/30.</br></br>Dear NLP community and Question Answering enthusiasts,</br>When we released MSMARCO v2 back in March of 2018 we did not expect how much love this dataset would receive from the community. Needless to say we have been humbled by not only the number of submissions to the leaderboard but also all the remarkable research that incorporated this dataset as part of their benchmarking efforts. While we originally envisioned that this dataset will be useful to the NLP and QnA communities, we were again humbled by how the dataset was adopted and evolved by the IR community for document and passage retrieval tasks. However, as you may have guessed, maintaining a public resource like the MS MARCO leaderboard takes significant time and effort and we are grateful to our small but dedicated team of volunteers that maintain this website. As we look forward to the future, we believe that given the small size of this team and the limited resources, it is time to refocus our energy and time on the scenarios where MS MARCO can provide the most value to the research community moving forward. Towards that goal, we have made the hard (but what we believe is the right) decision to retire the Question answering and Language Generation leaderboard. Both tasks have not made large leaps in quality in the last year and we want to refocus our efforts on the document and passage retrieval tasks where the engagement with the research communities are actively growing in the present. As a result, the last day for any submissions to the MSMARCO Question Answering, Natural Language Generation, and KeyPhrase Extraction leaderboards is October 23, 2020. Submissions to both the document and passage retrieval leaderboards will continue as usual. We will continue to host all the datasets (including those specifically for the tasks being retired), as we believe they can still serve as valuable resources for future research. We want to again thank all the participants for their submissions and support for MS MARCO and we hope to see the community around the IR tasks continue to grow more in the future. We are always listening for feedback, so please continue to send us your suggestions and requests.</br></br>Sincerely</br>The MS MARCO Team</p>
+					</div>
+				</div>
+			</div>
+		</section>
 		<section id="updates" class="bg-light">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12 mx-auto">
 						<h3>Changes To Dataset</h3>
+						<p><strong>10.30.2020</strong>Task Retirement</p>
+						1. Retire QnA V2 Task
+						2. Retire NLGEN V2 Task
+						3. Retire OpenKP Task
 						<p><strong>08.11.2020</strong>New Task</p>
 						1. Released Document Ranking task and 3 baselines.
 						<p><strong>07.30.2020</strong>New Data</p>
