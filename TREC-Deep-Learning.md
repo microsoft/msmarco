@@ -89,7 +89,11 @@ The main type of TREC submission is _automatic_, which means there was not manua
 
 ## Coordinators
 
-Nick Craswell (Microsoft), Bhaskar Mitra (Microsoft & UCL), Emine Yilmaz (UCL), Daniel Campos (Microsoft), and Jimmy Lin (University of Waterloo)
+* Nick Craswell (Microsoft)
+* Bhaskar Mitra (Microsoft)
+* Emine Yilmaz (UCL)
+* Daniel Campos (University of Illinois at Urbana-Champaign)
+* Jimmy Lin (University of Waterloo)
 
 # Contributing
 
