@@ -58,6 +58,8 @@ IMPORTANT NOTE: It is prohibited to use any datasets from msmarco.org in your su
 
 We are in the process of finalizing the datasets for TREC 2021 Deep Learning track. This section will be updated soon. Please check back soon!
 
+In the meantime, you can find the datasets from the last year's track here: [https://microsoft.github.io/msmarco/TREC-Deep-Learning-2020](https://microsoft.github.io/msmarco/TREC-Deep-Learning-2020)
+
 ## Submission, evaluation and judging
 
 We will be following a similar format as the ones used by most TREC submissions, which is repeated below. White space is used to separate columns. The width of the columns in the format is not important, but it is important to have exactly six columns per line with at least one space between the columns.
