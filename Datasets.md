@@ -15,3 +15,5 @@ If you use the ORCAS dataset, or any dataset derived from it, please cite the [p
 }  
 
 <iframe src="https://microsoft.github.io/msmarco/Notice" title="" style="width:100%; height:300px"></iframe>
+
+{% include_relative Notice.md %}
