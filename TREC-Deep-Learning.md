@@ -1,4 +1,4 @@
-# TREC 2020 Deep Learning Track Guidelines
+# TREC 2021 Deep Learning Track Guidelines
 
 ## Timetable
 
@@ -21,12 +21,6 @@ The Deep Learning Track studies information retrieval in a *large training data*
 Certain machine learning based methods, such as methods based on deep learning are known to require very large datasets for training. Lack of such large scale datasets has been a limitation for developing such methods for common information retrieval tasks, such as document ranking. The Deep Learning Track organised in 2019 aimed at providing large scale datasets to TREC, and create a focused research effort with a rigorous blind evaluation of ranker for the passage ranking and document ranking tasks. 
 
 In 2020, the track will continue to have the same tasks (document ranking and passage ranking) and goals. Similar to the previous year, one of the main goals of the track in 2020 is to study what methods work best when a large amount of training data is available. For example, do the same methods that work on small data also work on large data? How much do methods improve when given more training data? What external data and models can be brought in to bear in this scenario, and how useful is it to combine full supervision with other forms of supervision? 
-
-### ORCAS click data
-
-This year we also release a large scale click dataset constructed from the logs of a major search engine. The [ORCAS data](https://microsoft.github.io/TREC-2020-Deep-Learning/ORCAS). The data could be used in a variety of ways, for example as additional training data (almost 50 times larger than the main training set) or as a document field in addition to title, URL and body text.
-
-ORCAS data: [https://microsoft.github.io/TREC-2020-Deep-Learning/ORCAS](https://microsoft.github.io/TREC-2020-Deep-Learning/ORCAS)
 
 ## Deep Learning Track Tasks
 
@@ -62,50 +56,7 @@ IMPORTANT NOTE: It is prohibited to use any datasets from msmarco.org in your su
 
 ### Datasets
 
-This year we have a document ranking dataset and a passage ranking dataset. The two datasets will share the same set of test queries, which will be released later.
-
-#### Document ranking dataset
-
-The document ranking dataset is based on source documents, which contained passages in the passage task. Although we have an incomplete set of documents that was gathered some time later than the passage data, the corpus is 3.2 million documents and our training set has 367,013 queries. For each training query, we map from a positive passage ID to the corresponding document ID in our 3.2 million. We do so on the assumption that a document that produced a relevant passage is usually a relevant document.
-
-| Type   | Filename                                                                                                              | File size |              Num Records | Format                                                         |
-|--------|-----------------------------------------------------------------------------------------------------------------------|----------:|-------------------------:|----------------------------------------------------------------|
-| Corpus | [msmarco-docs.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/msmarco-docs.tsv.gz)                          |     22 GB |               3,213,835  | tsv: docid, url, title, body                                   |
-| Corpus | [msmarco-docs.trec](https://msmarco.blob.core.windows.net/msmarcoranking/msmarco-docs.trec.gz)                        |     22 GB |               3,213,835  | TREC DOC format (same content as msmarco-docs.tsv)                                               |
-| Corpus | [msmarco-docs-lookup.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/msmarco-docs-lookup.tsv.gz)            |    101 MB |               3,213,835  | tsv: docid, offset_trec, offset_tsv                            |
-| Train  | [msmarco-doctrain-queries.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/msmarco-doctrain-queries.tsv.gz)  |     15 MB |                 367,013  | tsv: qid, query                                                |
-| Train  | [msmarco-doctrain-top100](https://msmarco.blob.core.windows.net/msmarcoranking/msmarco-doctrain-top100.gz)            |    1.8 GB |              36,701,116  | TREC submission: qid, "Q0", docid, rank, score, runstring      |
-| Train  | [msmarco-doctrain-qrels.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/msmarco-doctrain-qrels.tsv.gz)      |    7.6 MB |                 384,597  | TREC qrels format                                              |
-| Dev    | [msmarco-docdev-queries.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/msmarco-docdev-queries.tsv.gz)      |    216 KB |                   5,193  | tsv: qid, query                                                |
-| Dev    | [msmarco-docdev-top100](https://msmarco.blob.core.windows.net/msmarcoranking/msmarco-docdev-top100.gz)        |       27 MB |                     519,300  | TREC submission: qid, "Q0", docid, rank, score, runstring      |
-| Dev    | [msmarco-docdev-qrels.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/msmarco-docdev-qrels.tsv.gz)          |    112 KB |                   5,478  | TREC qrels format                                              |
-| Validation (Test 2019)    | [msmarco-test2019-queries.tsv.gz](https://msmarco.blob.core.windows.net/msmarcoranking/msmarco-test2019-queries.tsv.gz)          |     12K |                   200  | tsv: qid, query                                              |
-| Validation (Test 2019)    | [msmarco-doctest2019-top100.gz](https://msmarco.blob.core.windows.net/msmarcoranking/msmarco-doctest2019-top100.gz)          |   1.1M |                  20,000  | TREC submission: qid, "Q0", docid, rank, score, runstring       |
-| Validation (Test 2019)    | [2019qrels-docs](https://trec.nist.gov/data/deep/2019qrels-docs.txt)          |   331K |                  16,258  | qid, "Q0", docid, rating       |
-| Test (2020)    | [msmarco-test2020-queries.tsv.gz](https://msmarco.blob.core.windows.net/msmarcoranking/msmarco-test2020-queries.tsv.gz)          |  12K    |   200                  | tsv: qid, query                                              |
-| Test (2020)    | [msmarco-doctest2020-top100.gz](https://msmarco.blob.core.windows.net/msmarcoranking/msmarco-doctest2020-top100.gz)          |  1.1M  |         20,000           | TREC submission: qid, "Q0", docid, rank, score, runstring       |
-
-#### Passage ranking dataset
-
-This passage dataset is based on the public MS MARCO dataset, although our evaluation will be quite different. We will use a different set of test queries and we will use relevance judges to evaluate the quality of passage rankings in much more detail.
-
-| Description                                           | Filename                                                                                                                | File size |                        Num Records | Format                                                         |
-|-------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------|----------:|-----------------------------------:|----------------------------------------------------------------|
-| Collection                                | [collection.tar.gz](https://msmarco.blob.core.windows.net/msmarcoranking/collection.tar.gz)                             |    2.9 GB |                         8,841,823  | tsv: pid, passage |
-| Queries                                   | [queries.tar.gz](https://msmarco.blob.core.windows.net/msmarcoranking/queries.tar.gz)                                   |   42.0 MB |                         1,010,916  | tsv: qid, query |
-| Qrels Dev                                 | [qrels.dev.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/qrels.dev.tsv)                                     |    1.1 MB |                            59,273  | TREC qrels format |
-| Qrels Train                               | [qrels.train.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/qrels.train.tsv)                                 |   10.1 MB |                           532,761  | TREC qrels format |
-| Queries, Passages, and Relevance   Labels | [collectionandqueries.tar.gz](https://msmarco.blob.core.windows.net/msmarcoranking/collectionandqueries.tar.gz)         |    2.9 GB |                        10,406,754  | |
-| Train Triples Small                       | [triples.train.small.tar.gz](https://msmarco.blob.core.windows.net/msmarcoranking/triples.train.small.tar.gz)           |   27.1 GB |                        39,780,811  | tsv: query, positive passage, negative passage |
-| Train Triples Large                      | [triples.train.full.tsv.gz](https://msmarco.blob.core.windows.net/msmarcoranking/triples.train.full.tsv.gz)             |  272.2 GB |                       397,756,691  | tsv: query, positive passage, negative passage |
-| Train Triples QID PID Format               | [qidpidtriples.train.full.2.tsv.gz](https://msmarco.blob.core.windows.net/msmarcoranking/qidpidtriples.train.full.2.tsv.gz) |    5.7 GB |                       397,768,673  | tsv: qid, positive pid, negative pid |
-| Top 1000 Train                            | [top1000.train.tar.gz](https://msmarco.blob.core.windows.net/msmarcoranking/top1000.train.tar.gz)                       |  175.0 GB |                       478,002,393  | tsv: qid, pid, query, passage |
-| Top 1000 Dev                              | [top1000.dev.tar.gz](https://msmarco.blob.core.windows.net/msmarcoranking/top1000.dev.tar.gz)                           |    2.5 GB |                         6,668,967  | tsv: qid, pid, query, passage |
-| Validation (Test 2019)    | [msmarco-test2019-queries.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/msmarco-test2019-queries.tsv.gz)          |     12K |                   200  | tsv: qid, query                                              |
-| Validation (Test 2019)    | [msmarco-passagetest2019-top1000.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/msmarco-passagetest2019-top1000.tsv.gz)          |     71M |                  189,877  | tsv: qid, pid, query, passage                                              |
-| Validation (Test 2019)    | [2019qrels-pass.txt](https://trec.nist.gov/data/deep/2019qrels-pass.txt)          |     182K |                  9,260  | qid, "Q0", docid, rating                                              |
-| Test (2020)    | [msmarco-test2020-queries.tsv.gz](https://msmarco.blob.core.windows.net/msmarcoranking/msmarco-test2020-queries.tsv.gz)          |  12K    |   200                  | tsv: qid, query                                              |
-| Test (2020)    | [msmarco-passagetest2020-top1000.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/msmarco-passagetest2020-top1000.tsv.gz)          |    72M  |              190,699 | tsv: qid, pid, query, passage                    |
+We are in the process of finalizing the datasets for TREC 2021 Deep Learning track. This section will be updated soon. Please check back soon!
 
 ## Submission, evaluation and judging
 
@@ -137,49 +88,6 @@ The main type of TREC submission is _automatic_, which means there was not manua
 ## Coordinators
 
 Nick Craswell (Microsoft), Bhaskar Mitra (Microsoft & UCL), Emine Yilmaz (UCL) and Daniel Campos (Microsoft)
-
-## Dataset files: Size on disk and md5sum
-
-Since these are large files to download, here are the size in bytes and md5sum, as a reference.
-
-### Document ranking
-
-| Filename       | Bytes | md5sum        |
-|---------------------------------|----------------:|----------------------------------|
-| msmarco-docdev-qrels.tsv.gz     |           40,960 | 2e00fe62ebfc29eb7ed219ba15f788c9 |
-| msmarco-docdev-queries.tsv.gz   |           94,208 | ac20593d71b9c32ab2633230f9cdf10d |
-| msmarco-docdev-top100.gz        |         5,705,728 | ac10255edf321821b0ccd0f123037780 |
-| msmarco-docs.trec.gz            |      8,501,800,960 | d4863e4f342982b51b9a8fc668b2d0c0 |
-| msmarco-docs.tsv.gz             |      8,446,275,584 | 103b19e21ad324d8a5f1ab562425c0b4 |
-| msmarco-docs-lookup.tsv.gz      |        40,378,368 | abe791080058a3d3161b213cfea36a45 |
-| msmarco-doctrain-qrels.tsv.gz   |         2,387,968 | e2b108a4f79ae1be3f97c356baff2ea0 |
-| msmarco-doctrain-queries.tsv.gz |         6,459,392 | 4086d31a9cf2d7b69c4932609058111d |
-| msmarco-doctrain-top100.gz      |       403,566,592 | be32fa12eb71e93014c84775d7465976 |
-| msmarco-test2019-queries.tsv.gz |            8,192 | eda71eccbe4d251af83150abe065368c |
-| msmarco-doctest2019-top100.gz   |          221,184 | 91071b89dd52124057a87d53cd22028d |
-| 2019qrels-docs                  |          339,438 | d7ef53b995ef7e01676ea85d7ec01dda |
-| msmarco-test2020-queries.tsv.gz    |         8,192 | 00a406fb0d14ed3752d70d1e4eb98600 |
-| msmarco-doctest2020-top100.gz      | 221,184 | aa02eb17d428690ffb41e83cc9daa1d0 |
-
-### Passage ranking
-
-| Filename       | Bytes | md5sum        |
-|---------------------------------|----------------:|----------------------------------|
-| collection.tar.gz               |      1,035,010,048 | 87dd01826da3e2ad45447ba5af577628 |
-| collectionandqueries.tar.gz     |      1,057,718,272 | 31644046b18952c1386cd4564ba2ae69 |
-| qidpidtriples.train.full.2.tsv.gz |      1,841,693,309 | 219083e80a0a751c08b968c2f31a4e0b |
-| qrels.dev.tsv                   |         1,204,224 | 9157ccaeaa8227f91722ba5770787b16 |
-| qrels.train.tsv                 |        10,592,256 | 733fb9fe12d93e497f7289409316eccf |
-| queries.tar.gz                  |        18,882,560 | c177b2795d5f2dcc524cf00fcd973be1 |
-| top1000.dev.tar.gz              |       687,415,296 | 8c140662bdf123a98fbfe3bb174c5831 |
-| top1000.train.tar.gz            |     11,519,984,492  | d99fdbd5b2ea84af8aa23194a3263052 |
-| triples.train.full.tsv.gz       |     77,877,731,328 | 8d509d484ea1971e792b812ae4800c6f |
-| triples.train.small.tar.gz      |      7,930,881,353 | c13bf99ff23ca691105ad12eab837f84 |
-| msmarco-test2019-queries.tsv.gz |            8,192 | eda71eccbe4d251af83150abe065368c |
-| msmarco-passagetest2019-top1000.tsv.gz | 26,636,288 | ec9e012746aa9763c7ff10b3336a3ce1 |
-| 2019qrels-pass.txt              |           187,092 | 2f4be390198da108f6845c822e5ada14 |
-| msmarco-test2020-queries.tsv.gz    |         8,192 | 00a406fb0d14ed3752d70d1e4eb98600 |
-| msmarco-passagetest2020-top1000.tsv.gz |         26,230,784  | aa6fbc51d66bd1dc745964c0e140a727 |
 
 # Contributing
 
