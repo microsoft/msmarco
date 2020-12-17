@@ -25,7 +25,7 @@ In 2020, the track will continue to have the same tasks (document ranking and pa
 
 This year we also release a large scale click dataset constructed from the logs of a major search engine. The [ORCAS data](https://microsoft.github.io/TREC-2020-Deep-Learning/ORCAS). The data could be used in a variety of ways, for example as additional training data (almost 50 times larger than the main training set) or as a document field in addition to title, URL and body text.
 
-ORCAS data: [https://microsoft.github.io/TREC-2020-Deep-Learning/ORCAS](https://microsoft.github.io/TREC-2020-Deep-Learning/ORCAS)
+ORCAS data: [https://microsoft.github.io/msmarco/ORCAS](https://microsoft.github.io/msmarco/ORCAS)
 
 ## Deep Learning Track Tasks
 
