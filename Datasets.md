@@ -14,4 +14,4 @@ If you use the ORCAS dataset, or any dataset derived from it, please cite the [p
   year={2016}  
 }  
 
-<iframe src="https://microsoft.github.io/msmarco/README" title=""></iframe>
+<iframe src="https://microsoft.github.io/msmarco/README" title="" style="width:100%; height:300px"></iframe>
