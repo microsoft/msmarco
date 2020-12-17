@@ -1,5 +1,5 @@
 
-# Terms and Conditions
+## Terms and Conditions
 
 The MS MARCO and ORCAS datasets are intended for non-commercial research purposes only to promote advancement in the field of artificial intelligence and related areas, and is made available free of charge without extending any license or other intellectual property rights.
 The datasets are provided "as is" without warranty and usage of the data has risks since we may not own the underlying rights in the documents.
@@ -13,7 +13,7 @@ We will remove the data accordingly.
 If you have questions about use of the dataset or any research outputs in your products or services, we encourage you to undertake your own independent legal review.
 For other questions, please feel free to contact us.
 
-# Contributing
+## Contributing
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
 Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
@@ -27,7 +27,7 @@ This project has adopted the [Microsoft Open Source Code of Conduct](https://ope
 For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
 contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
 
-# Legal Notices
+## Legal Notices
 
 Microsoft and any contributors grant you a license to the Microsoft documentation and other content
 in this repository under the [Creative Commons Attribution 4.0 International Public License](https://creativecommons.org/licenses/by/4.0/legalcode),
