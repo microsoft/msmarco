@@ -48,17 +48,22 @@ In context of full ranking (retrieval) subtask, given a question, you are expect
 
 In context of top-1000 reranking subtask, we provide you with an initial ranking of 1000 passages and you are expected to rerank these passages based on their likelihood of containing an answer to the question. In this subtask, we can compare different reranking methods based on the same initial set of 1000 candidates, with the same rationale as described for the document reranking subtask.
 
-### Use of external information
-
-You are allowed to use external information while developing your runs. When you submit your runs, please fill in a form listing what resources you used. This could include an external corpus such as Wikipedia or a pretrained model (e.g. word embeddings, BERT). This could also include the provided set of document ranking training data, but also optionally other data such as the passage ranking task labels or external labels or pretrained models. This will allow us to analyze the runs and break they down into types.
-
-IMPORTANT NOTE: It is prohibited to use any datasets from msmarco.org in your submission except those listed below. The original MS MARCO dataset reveals some minor details of how they were constructed that would not be available in a real-world search engine; hence, should be avoided.
-
-### Datasets
+## Datasets
 
 We are in the process of finalizing the datasets for TREC 2021 Deep Learning track. This section will be updated soon. Please check back soon!
 
 In the meantime, you can find the datasets from the last year's track here: [https://microsoft.github.io/msmarco/TREC-Deep-Learning-2020](https://microsoft.github.io/msmarco/TREC-Deep-Learning-2020)
+
+### Use of external information
+
+You are allowed to use external information while developing your runs.
+When you submit your runs, please fill in a form listing what resources you used.
+This could include an external corpus such as Wikipedia or a pretrained model (e.g. word embeddings, BERT).
+This could also include the provided set of document ranking training data, but also optionally other data such as the passage ranking task labels or external labels or pretrained models.
+This will allow us to analyze the runs and break they down into types.
+
+IMPORTANT NOTE: It is prohibited to use any datasets from msmarco.org in your submission except those listed above.
+The original MS MARCO dataset reveals some minor details of how they were constructed that would not be available in a real-world search engine; hence, should be avoided.
 
 ## Submission, evaluation and judging
 
