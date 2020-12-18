@@ -57,5 +57,4 @@ To ensure this, we request participants to submit:
 
 Participants who may want to run ablation studies on their models are encouraged to do so on the dev set, but not on the Test set.
 
-
-
+{% include_relative Notice.md %}
