@@ -11,7 +11,7 @@ This corresponds to real-world scenarios such as training based on click logs an
 Certain machine learning based methods, such as methods based on deep learning are known to require very large datasets for training.
 Lack of such large scale datasets has been a limitation for developing such methods for common information retrieval tasks, such as document ranking.
 The [TREC Deep Learning Track](https://microsoft.github.io/msmarco/TREC-Deep-Learning) aims at providing large scale datasets to TREC, and create a focused research effort with a rigorous blind evaluation of ranker for the passage ranking and document ranking tasks.
-The MS MARCO document and passage ranking leaderboards complements TREC Deep Learning Track by providing on-going evaluation of submissions using sparse pre-collected judgments.
+The MS MARCO document and passage ranking leaderboards complements the TREC Deep Learning Track by providing on-going evaluation of submissions using pre-collected sparse judgments.
 
 Similar to TREC, one of the main goals of the leaderboard is to study what methods work best when a large amount of training data is available.
 For example, do the same methods that work on small data also work on large data?
