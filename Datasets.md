@@ -55,7 +55,7 @@ This is a very common real-world scenario, since many end-to-end systems are imp
 The reranking subtask allows participants to focus on reranking only, without needing to implement an end-to-end system.
 It also makes those reranking runs more comparable, because they all start from the same set of 100 candidates.
 
-### Passage Ranking Rask
+### Passage Ranking Task
 
 Similar to the document ranking task, the passage ranking task also has a full ranking and reranking subtasks.
 
