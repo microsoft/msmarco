@@ -1,3 +1,5 @@
+# MS MARCO Leaderboard Datasets
+
 ## Introduction
 
 MS MARCO (**M**icro**S**oft **MA**chine **R**eading **CO**mprehension) is a large-scale dataset focused on machine reading comprehension.
@@ -13,7 +15,5 @@ If you use the ORCAS dataset, or any dataset derived from it, please cite the [p
   journal={arXiv preprint arXiv:1611.09268},  
   year={2016}  
 }  
-
-<iframe src="https://microsoft.github.io/msmarco/Notice" title="" style="width:100%; height:300px"></iframe>
 
 {% include_relative Notice.md %}
