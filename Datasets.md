@@ -7,7 +7,7 @@ Since its initial release, benchmarking efforts for several NLP and IR tasks hav
 
 ## Citation
 
-If you use the ORCAS dataset, or any dataset derived from it, please cite the [paper](https://arxiv.org/abs/2006.05324):
+If you use the ORCAS dataset, or any dataset derived from it, please cite the [paper](https://arxiv.org/abs/1611.09268):
 
 @article{bajaj2016ms,  
   title={Ms marco: A human generated machine reading comprehension dataset},  
