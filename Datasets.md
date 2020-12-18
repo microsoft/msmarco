@@ -64,4 +64,10 @@ In context of full ranking (retrieval) subtask, given a question, you are expect
 In context of top-1000 reranking subtask, we provide you with an initial ranking of 1000 passages and you are expected to rerank these passages based on their likelihood of containing an answer to the question.
 In this subtask, we can compare different reranking methods based on the same initial set of 1000 candidates, with the same rationale as described for the document reranking subtask.
 
+### Use of external information
+
+IMPORTANT NOTE: You are allowed to use external information while developing your runs.
+However, it is prohibited to use any datasets from msmarco.org in your submission except those listed below.
+The original MS MARCO question-answering dataset reveals minor details of how the dataset was constructed that would not be available in a real-world search engine; hence, should be avoided.
+
 {% include_relative Notice.md %}
