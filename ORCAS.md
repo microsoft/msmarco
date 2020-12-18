@@ -6,7 +6,16 @@ One ORCAS use case is Web mining, to find clusters of related queries and/or rel
 
 The other use case is in TREC ranking. Compared to the existing training data ORCAS has 28x more queries and 49x more query-document pairs, and covers 4.4x more documents in the corpus. It can also be used as a document field, in addition to title, URL and body text. In general the ORCAS data can be treated as a kind of relevance feedback, which can be used in multiple ways.
 
-Paper describing the dataset: [https://arxiv.org/abs/2006.05324](https://arxiv.org/abs/2006.05324)
+## Citation
+
+If you use the ORCAS dataset, or any dataset derived from it, please cite the [paper](https://arxiv.org/abs/2006.05324):
+
+@article{craswell2020orcas,  
+title={ORCAS: 18 Million Clicked Query-Document Pairs for Analyzing Search},  
+author={Craswell, Nick and Campos, Daniel and Mitra, Bhaskar and Yilmaz, Emine and Billerbeck, Bodo},  
+journal={arXiv preprint arXiv:2006.05324},  
+year={2020}  
+}
 
 ## Dataset
 
@@ -24,16 +33,5 @@ We provide the dataset in a single file *orcas.tsv.gz* and also in TREC format t
 | Queries | [orcas-doctrain-queries.tsv.gz](https://msmarco.blob.core.windows.net/msmarcoranking/orcas-doctrain-queries.tsv.gz) | 10,405,342 | 104,209,356 | tsv: qid, query | 519c5f522294406e3b0574d7d53cf233 |
 | QRELs | [orcas-doctrain-qrels.tsv.gz](https://msmarco.blob.core.windows.net/msmarcoranking/orcas-doctrain-qrels.tsv.gz) | 18,823,602 | 109,824,304 | TREC qrels format | 3f94db106374be649782022c3018acd0 |
 | Top 100 candidates | [orcas-doctrain-top100.gz](https://msmarco.blob.core.windows.net/msmarcoranking/orcas-doctrain-top100.gz) | 982,951,086 | 10,724,320,629 | TREC submission: qid, "Q0", docid, rank, score, runstring | 118d0884638fd405e111157a124ef0b2 |
-
-## Citation
-
-If you use the ORCAS dataset, or any dataset derived from it, please cite the [paper](https://arxiv.org/abs/2006.05324):
-
-@article{craswell2020orcas,  
-title={ORCAS: 18 Million Clicked Query-Document Pairs for Analyzing Search},  
-author={Craswell, Nick and Campos, Daniel and Mitra, Bhaskar and Yilmaz, Emine and Billerbeck, Bodo},  
-journal={arXiv preprint arXiv:2006.05324},  
-year={2020}  
-}
 
 {% include_relative Notice.md %}
