@@ -19,7 +19,7 @@ How much do methods improve when given more training data? What external data an
 
 ## Citation
 
-If you use the ORCAS dataset, or any dataset derived from it, please cite the [paper](https://arxiv.org/abs/1611.09268):
+If you use the MS MARCO dataset, or any dataset derived from it, please cite the [paper](https://arxiv.org/abs/1611.09268):
 
 @article{bajaj2016ms,  
   title={Ms marco: A human generated machine reading comprehension dataset},  
@@ -27,5 +27,41 @@ If you use the ORCAS dataset, or any dataset derived from it, please cite the [p
   journal={arXiv preprint arXiv:1611.09268},  
   year={2016}  
 }  
+
+## Ranking Tasks
+
+There are two tasks: Passage ranking and document ranking; and two subtasks in each case: full ranking and reranking.
+
+Each task uses a large human-generated set of training labels.
+The two tasks have different sets of test queries.
+Both tasks use similar form of training data with usually one positive training document/passage per training query.
+In the case of passage ranking, there is a direct human label that says the passage can be used to answer the query, whereas for training the document ranking task we transfer the same passage-level labels to document-level labels.
+Participants can also use external corpora for large scale language model pretraining, or adapt algorithms built for one task (e.g. passage ranking) to the other task (e.g. document ranking).
+This allows participants to study a variety of transfer learning strategies.
+
+Below the two tasks are described in more detail.
+
+### Document Ranking Task
+
+The first task focuses on document ranking.
+We have two subtasks related to this: Full ranking and top-100 reranking.
+
+In the full ranking (retrieval) subtask, you are expected to rank documents based on their relevance to the query, where documents can be retrieved from the full document collection provided.
+You can submit up to **100 documents** for this task.
+It models a scenario where you are building an end-to-end retrieval system.
+
+In the reranking subtask, we provide you with an initial ranking of 100 documents from a simple IR system, and you are expected to rerank the documents in terms of their relevance to the question.
+This is a very common real-world scenario, since many end-to-end systems are implemented as retrieval followed by top-k reranking.
+The reranking subtask allows participants to focus on reranking only, without needing to implement an end-to-end system.
+It also makes those reranking runs more comparable, because they all start from the same set of 100 candidates.
+
+### Passage Ranking Rask
+
+Similar to the document ranking task, the passage ranking task also has a full ranking and reranking subtasks.
+
+In context of full ranking (retrieval) subtask, given a question, you are expected to rank passages from the full collection in terms of their likelihood of containing an answer to the question. You can submit up to **1,000 passages** for this end-to-end retrieval task.
+
+In context of top-1000 reranking subtask, we provide you with an initial ranking of 1000 passages and you are expected to rerank these passages based on their likelihood of containing an answer to the question.
+In this subtask, we can compare different reranking methods based on the same initial set of 1000 candidates, with the same rationale as described for the document reranking subtask.
 
 {% include_relative Notice.md %}
