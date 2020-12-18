@@ -39,7 +39,7 @@ Please find the submission guidelines for the document ranking task here: <https
 
 ### Passage ranking
 For the passage ranking task, we will move to a GitHub pull request based submission process in the near future.
-But currently, please generate your results file for the Dev and Test sets, and then submit the following information by [email](mailto:ms-marco@microsoft.com?subject=MS%20Marco%20Submission)
+But currently, please generate your results file for the Dev and Test sets, and then submit the following information by [email](mailto:ms-marco@microsoft.com?subject=MS%20Marco%20Submission).
 * Individual/Team Name: Name of the individual or the team to appear in the leaderboard [Required]
 * Individual/Team Institution: Name of the institution of the individual or the team to appear in the leaderboard [Optional]
 * Model information: Name of the model/technique to appear in the leaderboard [Required]
