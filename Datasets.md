@@ -1,4 +1,4 @@
-# MS MARCO Datasets for Document and Passage Ranking Leadboards
+# Datasets for Document and Passage Ranking Leadboards
 
 ## Introduction
 
