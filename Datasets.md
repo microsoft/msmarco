@@ -64,9 +64,9 @@ In context of full ranking (retrieval) subtask, given a question, you are expect
 In context of top-1000 reranking subtask, we provide you with an initial ranking of 1000 passages and you are expected to rerank these passages based on their likelihood of containing an answer to the question.
 In this subtask, we can compare different reranking methods based on the same initial set of 1000 candidates, with the same rationale as described for the document reranking subtask.
 
-### Datasets
+## Datasets
 
-#### Document ranking dataset
+### Document ranking dataset
 
 The document ranking dataset is based on source documents, which contained passages in the passage task.
 Although we have an incomplete set of documents that was gathered some time later than the passage data, the corpus is 3.2 million documents and our training set has 367,013 queries.
@@ -88,7 +88,7 @@ We do so on the assumption that a document that produced a relevant passage is u
 | Test    | [docleaderboard-queries.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/docleaderboard-queries.tsv.gz)          |     124K |                   5,793  | tsv: qid, query                                              |
 | Test    | [docleaderboard-top100](https://msmarco.blob.core.windows.net/msmarcoranking/docleaderboard-top100.tsv.gz)          |   2.9M |                  579,300  | TREC submission: qid, "Q0", docid, rank, score, runstring       |
 
-#### Passage ranking dataset
+### Passage ranking dataset
 
 This passage dataset is based on the public MS MARCO dataset, although our evaluation will be quite different.
 We will use a different set of test queries and we will use relevance judges to evaluate the quality of passage rankings in much more detail.
@@ -110,7 +110,7 @@ We will use a different set of test queries and we will use relevance judges to 
 ### Use of external information
 
 IMPORTANT NOTE: You are allowed to use external information while developing your runs.
-However, it is prohibited to use any datasets from msmarco.org in your submission except those listed below.
+However, it is prohibited to use any datasets from msmarco.org in your submission except those listed above.
 The original MS MARCO question-answering dataset reveals minor details of how the dataset was constructed that would not be available in a real-world search engine; hence, should be avoided.
 
 {% include_relative Notice.md %}
