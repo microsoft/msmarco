@@ -35,7 +35,7 @@ To submit your model for official evaluation on the test set, follow the steps c
 ### Document ranking
 
 For the document ranking task, we follow a GitHub pull request based submission process.
-Please find the submission guidelines for the document ranking task here: <https://microsoft.github.io/MSMARCO-Document-Ranking-Submissions/>
+Please find the submission guidelines for the document ranking task here: <https://microsoft.github.io/MSMARCO-Document-Ranking-Submissions/>.
 
 ### Passage ranking
 For the passage ranking task, we will move to a GitHub pull request based submission process in the near future.
