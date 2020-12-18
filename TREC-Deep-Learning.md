@@ -24,7 +24,7 @@ In 2020, the track will continue to have the same tasks (document ranking and pa
 
 ## Deep Learning Track Tasks
 
-The Deep Learning Track has two tasks: Passage ranking and document ranking; and two subtasks in each case: full ranking and re-ranking. You can submit up to three runs for each of the subtasks.
+The Deep Learning Track has two tasks: Passage ranking and document ranking; and two subtasks in each case: full ranking and reranking. You can submit up to three runs for each of the subtasks.
 
 Each task uses a large human-generated set of training labels, from the [MS MARCO](http://msmarco.org) dataset. The two tasks use the same test queries. They also use the same form of training data with usually one positive training document/passage per training query. In the case of passage ranking, there is a direct human label that says the passage can be used to answer the query, whereas for training the document ranking task we transfer the same passage-level labels to document-level labels.
 
@@ -34,23 +34,23 @@ Below the two tasks are described in more detail.
 
 ### Document Ranking Task
 
-The first task focuses on document ranking. We have two subtasks related to this: Full ranking and top-100 re-ranking.
+The first task focuses on document ranking. We have two subtasks related to this: Full ranking and top-100 reranking.
 
 In the full ranking (retrieval) subtask, you are expected to rank documents based on their relevance to the question, where documents can be retrieved from the full document collection provided. You can submit up to **100 documents** for this task. It models a scenario where you are building an end-to-end retrieval system.
 
-In the re-ranking subtask, we provide you with an initial ranking of 100 documents from a simple IR system, and you are expected to re-rank the documents in terms of their relevance to the question. This is a very common real-world scenario, since many end-to-end systems are implemented as retrieval followed by top-k re-ranking. The re-ranking subtask allows participants to focus on re-ranking only, without needing to implement an end-to-end system. It also makes those re-ranking runs more comparable, because they all start from the same set of 100 candidates.
+In the reranking subtask, we provide you with an initial ranking of 100 documents from a simple IR system, and you are expected to rerank the documents in terms of their relevance to the question. This is a very common real-world scenario, since many end-to-end systems are implemented as retrieval followed by top-k reranking. The reranking subtask allows participants to focus on reranking only, without needing to implement an end-to-end system. It also makes those reranking runs more comparable, because they all start from the same set of 100 candidates.
 
 ### Passage Ranking Rask
 
-Similar to the document ranking task, the passage ranking task also has a full ranking and re-ranking subtasks.
+Similar to the document ranking task, the passage ranking task also has a full ranking and reranking subtasks.
 
 In context of full ranking (retrieval) subtask, given a question, you are expected to rank passages from the full collection in terms of their likelihood of containing an answer to the question. You can submit up to **1,000 passages** for this end-to-end retrieval task.
 
-In context of top-1000 re-ranking subtask, we provide you with an initial ranking of 1000 passages and you are expected to re-rank these passages based on their likelihood of containing an answer to the question. In this subtask, we can compare different re-ranking methods based on the same initial set of 1000 candidates, with the same rationale as described for the document re-ranking subtask.
+In context of top-1000 reranking subtask, we provide you with an initial ranking of 1000 passages and you are expected to rerank these passages based on their likelihood of containing an answer to the question. In this subtask, we can compare different reranking methods based on the same initial set of 1000 candidates, with the same rationale as described for the document reranking subtask.
 
 ### Use of external information
 
-You are allowed to use external information while developing your runs. When you submit your runs, please fill in a form listing what resources you used. This could include an external corpus such as Wikipedia or a pre-trained model (e.g. word embeddings, BERT). This could also include the provided set of document ranking training data, but also optionally other data such as the passage ranking task labels or external labels or pretrained models. This will allow us to analyze the runs and break they down into types.
+You are allowed to use external information while developing your runs. When you submit your runs, please fill in a form listing what resources you used. This could include an external corpus such as Wikipedia or a pretrained model (e.g. word embeddings, BERT). This could also include the provided set of document ranking training data, but also optionally other data such as the passage ranking task labels or external labels or pretrained models. This will allow us to analyze the runs and break they down into types.
 
 IMPORTANT NOTE: It is prohibited to use any datasets from msmarco.org in your submission except those listed below. The original MS MARCO dataset reveals some minor details of how they were constructed that would not be available in a real-world search engine; hence, should be avoided.
 
