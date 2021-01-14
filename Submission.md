@@ -23,7 +23,7 @@ We report MRR@10 for both tasks. Therefore, to minimize the size of your test re
 
 The official evaluation script for the two tasks are available at the below locations:
 * Document ranking: <https://github.com/microsoft/MSMARCO-Document-Ranking/blob/main/ms_marco_eval.py>
-* Passage ranking: <https://github.com/dfcf93/MSMARCOV2/blob/master/Ranking/Baselines/msmarco_eval.py>
+* Passage ranking: <https://github.com/microsoft/MSMARCO-Passage-Ranking/blob/master/ms_marco_eval.py>
 
 ## Submission process
 
