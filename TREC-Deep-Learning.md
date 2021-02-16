@@ -8,7 +8,7 @@
 ## Previous edition
 
 * 2019 [website](https://microsoft.github.io/msmarco/TREC-Deep-Learning-2019) and [overview paper](https://arxiv.org/pdf/2003.07820.pdf)
-* 2020 [website](https://microsoft.github.io/msmarco/TREC-Deep-Learning-2020) (overview paper coming soon)
+* 2020 [website](https://microsoft.github.io/msmarco/TREC-Deep-Learning-2020) and [overview paper](https://arxiv.org/pdf/2102.07662.pdf)
 
 ## Registration
 
