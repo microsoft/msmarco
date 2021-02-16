@@ -1,6 +1,6 @@
 # TREC 2020 Deep Learning Track Guidelines
 
-**Overview paper:** https://arxiv.org/pdf/2102.07662.pdf
+**Overview paper:** [https://arxiv.org/pdf/2102.07662.pdf]
 
 **Note:** You are viewing the guidelines for the 2020 edition of the TREC Deep Learning track. Please visit [https://microsoft.github.io/msmarco/TREC-Deep-Learning](https://microsoft.github.io/msmarco/TREC-Deep-Learning) for the upcoming / latest edition of the track.
 
