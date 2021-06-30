@@ -79,10 +79,33 @@ In this subtask, we can compare different reranking methods based on the same in
 ## Datasets
 
 We are in the process of finalizing the datasets for TREC 2021 Deep Learning track.
-This section will be updated soon.
-Please check back soon!
+We are first releasing the document ranking dataset, **except for the test queries for this year's track**.
+We will subsequently release the test queries for the document ranking task and the passage ranking datasets.
 
-In the meantime, you can find the datasets from the last year's track here: [https://microsoft.github.io/msmarco/TREC-Deep-Learning-2020](https://microsoft.github.io/msmarco/TREC-Deep-Learning-2020)
+#### Document ranking dataset
+
+| Type   | Filename                                                                                                              | File size |              Num Records | Format                                                         |
+|--------|-----------------------------------------------------------------------------------------------------------------------|----------:|-------------------------:|----------------------------------------------------------------|
+| Corpus | [msmarco_v2_doc.tar](https://msmarco.blob.core.windows.net/msmarcoranking/msmarco_v2_doc.tar) | 32.3 GB | 11,959,635 | tar of 60 gzipped jsonl files each containing a portion of the collection|
+| Train | [docv2_train_queries.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/docv2_train_queries.tsv) | 12.9 MB | 322,196 | tsv: qid, query |
+| Train | [docv2_train_top100.txt.gz](https://msmarco.blob.core.windows.net/msmarcoranking/docv2_train_top100.txt.gz) | 404.5 MB | 32,218,809 | TREC submission: qid, "Q0", docid, rank, score, runstring |
+| Train | [docv2_train_qrels.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/docv2_train_qrels.tsv) | 12.0 MB | 336,355 | TREC qrels format |
+| Dev 1 | [docv2_dev_queries.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/docv2_dev_queries.tsv) | 187.5 KB | 4,552 | tsv: qid, query |
+| Dev 1 | [docv2_dev_top100.txt.gz](https://msmarco.blob.core.windows.net/msmarcoranking/docv2_dev_top100.txt.gz) | 5.6 MB | 455,200 | TREC submission: qid, "Q0", docid, rank, score, runstring |
+| Dev 1| [docv2_dev_qrels.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/docv2_dev_qrels.tsv) | 176.2 KB | 4,777 | TREC qrels format |
+| Dev 2 | [docv2_dev2_queries.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/docv2_dev2_queries.tsv) | 205.0 KB | 5,000 | tsv: qid, query |
+| Dev 2 | [docv2_dev2_top100.txt.gz](https://msmarco.blob.core.windows.net/msmarcoranking/docv2_dev2_top100.txt.gz) | 6.1 MB | 500,000 | TREC submission: qid, "Q0", docid, rank, score, runstring |
+| Dev 2| [docv2_dev2_qrels.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/docv2_dev2_qrels.tsv) | 192.8 KB | 5,231 | TREC qrels format |
+
+| Validation 1 (TREC test 2019) | [msmarco-test2019-queries.tsv.gz](https://msmarco.blob.core.windows.net/msmarcoranking/msmarco-test2019-queries.tsv.gz) | 4.2 KB | 200 | tsv: qid, query |
+| Validation 1 (TREC test 2019) |  |  KB |  | TREC submission: qid, "Q0", docid, rank, score, runstring |
+| Validation 1 (TREC test 2019) | [docv2_trec2019_qrels.txt.gz](https://msmarco.blob.core.windows.net/msmarcoranking/docv2_trec2019_qrels.txt.gz) | 105 KB | 13,940 | qid, "Q0", docid, rating |
+
+| Validation 2 (TREC test 2020) | [msmarco-test2020-queries.tsv.gz](https://msmarco.blob.core.windows.net/msmarcoranking/msmarco-test2020-queries.tsv.gz) | 8.2 KB | 200 | tsv: qid, query |
+| Validation 2 (TREC test 2020) |  |  KB |  | TREC submission: qid, "Q0", docid, rank, score, runstring |
+| Validation 2 (TREC test 2020) | [docv2_trec2020_qrels.txt.gz](https://msmarco.blob.core.windows.net/msmarcoranking/docv2_trec2020_qrels.txt.gz) | 60.9 KB | 7,942 | qid, "Q0", docid, rating |
+| Test (TREC test 2021) |  |  KB |  | tsv: qid, query |
+| Test (TREC test 2021) |  |  KB |  | TREC submission: qid, "Q0", docid, rank, score, runstring |
 
 ### Use of external information
 
