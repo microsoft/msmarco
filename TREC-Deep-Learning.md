@@ -96,11 +96,9 @@ We will subsequently release the test queries for the document ranking task and 
 | Dev 2 | [docv2_dev2_queries.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/docv2_dev2_queries.tsv) | 205.0 KB | 5,000 | tsv: qid, query |
 | Dev 2 | [docv2_dev2_top100.txt.gz](https://msmarco.blob.core.windows.net/msmarcoranking/docv2_dev2_top100.txt.gz) | 6.1 MB | 500,000 | TREC submission: qid, "Q0", docid, rank, score, runstring |
 | Dev 2| [docv2_dev2_qrels.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/docv2_dev2_qrels.tsv) | 192.8 KB | 5,231 | TREC qrels format |
-
 | Validation 1 (TREC test 2019) | [msmarco-test2019-queries.tsv.gz](https://msmarco.blob.core.windows.net/msmarcoranking/msmarco-test2019-queries.tsv.gz) | 4.2 KB | 200 | tsv: qid, query |
 | Validation 1 (TREC test 2019) |  |  KB |  | TREC submission: qid, "Q0", docid, rank, score, runstring |
 | Validation 1 (TREC test 2019) | [docv2_trec2019_qrels.txt.gz](https://msmarco.blob.core.windows.net/msmarcoranking/docv2_trec2019_qrels.txt.gz) | 105 KB | 13,940 | qid, "Q0", docid, rating |
-
 | Validation 2 (TREC test 2020) | [msmarco-test2020-queries.tsv.gz](https://msmarco.blob.core.windows.net/msmarcoranking/msmarco-test2020-queries.tsv.gz) | 8.2 KB | 200 | tsv: qid, query |
 | Validation 2 (TREC test 2020) |  |  KB |  | TREC submission: qid, "Q0", docid, rank, score, runstring |
 | Validation 2 (TREC test 2020) | [docv2_trec2020_qrels.txt.gz](https://msmarco.blob.core.windows.net/msmarcoranking/docv2_trec2020_qrels.txt.gz) | 60.9 KB | 7,942 | qid, "Q0", docid, rating |
