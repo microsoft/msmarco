@@ -5,8 +5,8 @@ We are excited to announce that for TREC 2021 Deep Learning Track we are refresh
 The new collections are larger, cleaner, and fixes a bunch of known issues with the previous version of the corpus.
 We are working hard on the releasing the document ranking dataset first followed by the passage ranking dataset that should be ready in the following days.
 
-**Disclaimer**: If you are reading this message, then we are actively editing the guidelines below.
-So, to avoid any confusion please check back tomorrow.
+**Disclaimer: If you are reading this message, then we are actively editing the guidelines below.
+So, to avoid any confusion please check back tomorrow.**
 
 ## Timetable
 
