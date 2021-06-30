@@ -99,8 +99,6 @@ Participants should be careful about using those datasets and must adhere to the
 We are planning for a bigger ORCAS data refresh corresponding to the refreshed document collection.
 In the meantime, the older ORCAS data **should not** be used for this year's runs because its document coverage may leak some ground truth information.
 * You are **PROHIBITED** from using any other datasets from [msmarco.org](http://msmarco.org) in your submission except those listed above.
-
-It is prohibited to use any datasets from msmarco.org in your submission except those listed above.
 The original MS MARCO dataset reveals some minor details of how they were constructed that would not be available in a real-world search engine; hence, should be avoided.
 
 ## Submission, evaluation and judging
