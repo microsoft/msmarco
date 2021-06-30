@@ -28,10 +28,10 @@ The Deep Learning Track studies information retrieval in a *large training data*
 This corresponds to real-world scenarios such as training based on click logs and training based on labels from shallow pools (such as the pooling in the TREC Million Query Track or the evaluation of search engines based on early precision).
 
 Certain machine learning based methods, such as methods based on deep learning are known to require very large datasets for training. Lack of such large scale datasets has been a limitation for developing such methods for common information retrieval tasks, such as document ranking.
-The Deep Learning Track organised in 2019 aimed at providing large scale datasets to TREC, and create a focused research effort with a rigorous blind evaluation of ranker for the passage ranking and document ranking tasks. 
+The Deep Learning Track organised in 2019 and 2020 aimed at providing large scale datasets to TREC, and create a focused research effort with a rigorous blind evaluation of ranker for the passage ranking and document ranking tasks. 
 
-In 2020, the track will continue to have the same tasks (document ranking and passage ranking) and goals.
-Similar to the previous year, one of the main goals of the track in 2020 is to study what methods work best when a large amount of training data is available.
+In 2021, the track will continue to have the same tasks (document ranking and passage ranking) and goals.
+Similar to the previous year, one of the main goals of the track in 2021 is to study what methods work best when a large amount of training data is available.
 For example, do the same methods that work on small data also work on large data?
 How much do methods improve when given more training data? What external data and models can be brought in to bear in this scenario, and how useful is it to combine full supervision with other forms of supervision? 
 
