@@ -10,7 +10,7 @@ So, to avoid any confusion please check back tomorrow.
 
 ## Timetable
 
-* July-August (exact date TBA): Deadline for submitting runs for document and passage ranking tasks
+* August 12: Deadline for submitting runs for document and passage ranking tasks
 * November 17-19: TREC conference
 
 ## Previous edition
@@ -41,7 +41,8 @@ The Deep Learning Track has two tasks: Passage ranking and document ranking; and
 You can submit up to three runs for each of the subtasks.
 
 Each task uses a large human-generated set of training labels, from the [MS MARCO](http://msmarco.org) dataset.
-The two tasks use the same test queries. They also use the same form of training data with usually one positive training document/passage per training query.
+The two tasks use the same test queries.
+They also use the same form of training data with usually one positive training document/passage per training query.
 In the case of passage ranking, there is a direct human label that says the passage can be used to answer the query, whereas for training the document ranking task we transfer the same passage-level labels to document-level labels.
 
 For both tasks, the participants are encouraged to study the efficacy of transfer learning methods.
@@ -70,10 +71,10 @@ It also makes those reranking runs more comparable, because they all start from 
 
 Similar to the document ranking task, the passage ranking task also has a full ranking and reranking subtasks.
 
-In context of full ranking (retrieval) subtask, given a question, you are expected to rank passages from the full collection in terms of their likelihood of containing an answer to the question. You can submit up to **1,000 passages** for this end-to-end retrieval task.
+In context of full ranking (retrieval) subtask, given a question, you are expected to rank passages from the full collection in terms of their likelihood of containing an answer to the question. You can submit up to **100 passages** for this end-to-end retrieval task.
 
-In context of top-1000 reranking subtask, we provide you with an initial ranking of 1000 passages and you are expected to rerank these passages based on their likelihood of containing an answer to the question.
-In this subtask, we can compare different reranking methods based on the same initial set of 1000 candidates, with the same rationale as described for the document reranking subtask.
+In context of top-100 reranking subtask, we provide you with an initial ranking of 100 passages and you are expected to rerank these passages based on their likelihood of containing an answer to the question.
+In this subtask, we can compare different reranking methods based on the same initial set of 100 candidates, with the same rationale as described for the document reranking subtask.
 
 ## Datasets
 
