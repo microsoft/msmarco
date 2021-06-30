@@ -82,6 +82,8 @@ We are in the process of finalizing the datasets for TREC 2021 Deep Learning tra
 We are first releasing the document ranking dataset, **except for the test queries for this year's track**.
 We will subsequently release the test queries for the document ranking task and the passage ranking datasets.
 
+For the larger files, we recommend [AzCopy](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10) for download (see [instructions](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-blobs-download)).
+
 #### Document ranking dataset
 
 | Type | Filename | File size | Num Records | Format | md5sum |
