@@ -97,7 +97,7 @@ Participants should be careful about using those datasets and must adhere to the
 * You are **PERMITTED** to use any data listed above or from the [TREC 2020 Deep Learning Track](https://microsoft.github.io/msmarco/TREC-Deep-Learning-2020) (but please note the exception about ORCAS next).
 * You are **PROHIBITED** from using the [ORCAS data](https://microsoft.github.io/msmarco/ORCAS) this year.
 We are planning for a bigger ORCAS data refresh corresponding to the refreshed document collection.
-In the meantime, the older ORCAS data **should not** be used for this year's runs because its document coverage may leak some ground truth information.
+In the meantime, the older ORCAS data **should not** be used for this year's runs because its document coverage may leak some ground truth information that would not be available in a real-world search engine; hence, should be avoided.
 * You are **PROHIBITED** from using any other datasets from [msmarco.org](http://msmarco.org) in your submission except those listed above.
 The original MS MARCO dataset reveals some minor details of how they were constructed that would not be available in a real-world search engine; hence, should be avoided.
 
