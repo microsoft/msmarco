@@ -94,7 +94,7 @@ This will allow us to analyze the runs and break they down into types.
 
 IMPORTANT NOTE: Over the years, we have released several different datasets under msmarco.org.
 Participants should be careful about using those datasets and must adhere to the following guidelines:
-* You are **PERMITTED** to use any data listed above or from [https://microsoft.github.io/msmarco/TREC-Deep-Learning-2020](https://microsoft.github.io/msmarco/TREC-Deep-Learning-2020) (but please note the exception about ORCAS next).
+* You are **PERMITTED** to use any data listed above or from the [TREC 2020 Deep Learning Track](https://microsoft.github.io/msmarco/TREC-Deep-Learning-2020) (but please note the exception about ORCAS next).
 * You are **PROHIBITED** from using the [ORCAS data](https://microsoft.github.io/msmarco/ORCAS) this year.
 We are planning for a bigger ORCAS data refresh corresponding to the refreshed document collection.
 In the meantime, the older ORCAS data **should not** be used for this year's runs because its document coverage may leak some ground truth information.
