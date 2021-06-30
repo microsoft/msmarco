@@ -86,13 +86,21 @@ In the meantime, you can find the datasets from the last year's track here: [htt
 
 ### Use of external information
 
-You are allowed to use external information while developing your runs.
+You are generally allowed to use external information while developing your runs.
 When you submit your runs, please fill in a form listing what resources you used.
 This could include an external corpus such as Wikipedia or a pretrained model (e.g. word embeddings, BERT).
 This could also include the provided set of document ranking training data, but also optionally other data such as the passage ranking task labels or external labels or pretrained models.
 This will allow us to analyze the runs and break they down into types.
 
-IMPORTANT NOTE: It is prohibited to use any datasets from msmarco.org in your submission except those listed above.
+IMPORTANT NOTE: Over the years, we have released several different datasets under msmarco.org.
+Participants should be careful about using those datasets and must adhere to the following guidelines:
+* You are **PERMITTED** to use any data listed above or from [https://microsoft.github.io/msmarco/TREC-Deep-Learning-2020] (but please note the exception about ORCAS next).
+* You are **PROHIBITED** from using the [ORCAS data](https://microsoft.github.io/msmarco/ORCAS) this year.
+We are planning for a bigger ORCAS data refresh corresponding to the refreshed document collection.
+In the meantime, the older ORCAS data **should not** be used for this year's runs because its document coverage may leak some ground truth information.
+* You are **PROHIBITED** from using any other datasets from msmarco.org in your submission except those listed above.
+
+It is prohibited to use any datasets from msmarco.org in your submission except those listed above.
 The original MS MARCO dataset reveals some minor details of how they were constructed that would not be available in a real-world search engine; hence, should be avoided.
 
 ## Submission, evaluation and judging
