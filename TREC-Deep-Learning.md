@@ -84,8 +84,8 @@ We will subsequently release the test queries for the document ranking task and 
 
 #### Document ranking dataset
 
-| Type   | Filename                                                                                                              | File size |              Num Records | Format                                                         |
-|--------|-----------------------------------------------------------------------------------------------------------------------|----------:|-------------------------:|----------------------------------------------------------------|
+| Type | Filename | File size | Num Records | Format | md5sum |
+|------|----------|----------:|------------:|--------|--------|
 | Corpus | [msmarco_v2_doc.tar](https://msmarco.blob.core.windows.net/msmarcoranking/msmarco_v2_doc.tar) | 32.3 GB | 11,959,635 | tar of 60 gzipped jsonl files each containing a portion of the collection|
 | Train | [docv2_train_queries.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/docv2_train_queries.tsv) | 12.9 MB | 322,196 | tsv: qid, query |
 | Train | [docv2_train_top100.txt.gz](https://msmarco.blob.core.windows.net/msmarcoranking/docv2_train_top100.txt.gz) | 404.5 MB | 32,218,809 | TREC submission: qid, "Q0", docid, rank, score, runstring |
