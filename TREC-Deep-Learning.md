@@ -10,7 +10,7 @@ So, to avoid any confusion please check back tomorrow.**
 
 ## Timetable
 
-* August 12: Deadline for submitting runs for document and passage ranking tasks
+* (Early?) August: Deadline for submitting runs for document and passage ranking tasks
 * November 17-19: TREC conference
 
 ## Previous edition
@@ -80,9 +80,18 @@ In this subtask, we can compare different reranking methods based on the same in
 
 We are in the process of finalizing the datasets for TREC 2021 Deep Learning track.
 We are first releasing the document ranking dataset, **except for the test queries for this year's track**.
-We will subsequently release the test queries for the document ranking task and the passage ranking datasets.
+We will subsequently release the test queries for the document ranking task and the passage ranking dataset.
 
-For the larger files, we recommend [AzCopy](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10) for download (see [instructions](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-blobs-download)).
+Since the main asset in MS MARCO is the training data, and we do not have any new training data, the main purpose of this data release is to make the document/passage data larger, cleaner and more realistic. Some notes:
+
+* Documents now have fewer problems with missing whitespace and character encoding. They are laid out in a way that is easier for relevance judges to read. These cleaner documents are also more amenable to document processing such as answer extraction.
+* The document dataset is 3.7 times larger than the old document dataset. The passage dataset is 15.6 times larger than the old passage dataset.
+* The old dataset had 2.8 passages per document, and the passages were selected in a way that reveals information about our train-dev-eval queries. With the old dataset, we did not release a passage-document mapping and asked participants not to generate such a mapping.
+* The new dataset has 11.6 passages per document, selected using an algorithm that identifies the most promising passage candidates in a query-independent fashion.
+* The new dataset has a known passage-document mapping, encouraging participants to consider how passage information may be used in document ranking and document information may be used in passage ranking.
+* The release of larger, cleaner and more realistic data can form the basis of future tasks and MS MARCO leaderboard refreshes, but their first use is in TREC 2021.
+
+For downloading the larger files, we recommend using [AzCopy](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10) (see [instructions](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-blobs-download)).
 
 #### Document ranking dataset
 
@@ -91,13 +100,13 @@ For the larger files, we recommend [AzCopy](https://docs.microsoft.com/en-us/azu
 | Corpus | [msmarco_v2_doc.tar](https://msmarco.blob.core.windows.net/msmarcoranking/msmarco_v2_doc.tar) | 32.3 GB | 11,959,635 | tar of 60 gzipped jsonl files each containing a portion of the collection|
 | Train | [docv2_train_queries.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/docv2_train_queries.tsv) | 12.9 MB | 322,196 | tsv: qid, query |
 | Train | [docv2_train_top100.txt.gz](https://msmarco.blob.core.windows.net/msmarcoranking/docv2_train_top100.txt.gz) | 404.5 MB | 32,218,809 | TREC submission: qid, "Q0", docid, rank, score, runstring |
-| Train | [docv2_train_qrels.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/docv2_train_qrels.tsv) | 12.0 MB | 336,355 | TREC qrels format |
+| Train | [docv2_train_qrels.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/docv2_train_qrels.tsv) | 11.9 MB | 331,956 | TREC qrels format |
 | Dev 1 | [docv2_dev_queries.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/docv2_dev_queries.tsv) | 187.5 KB | 4,552 | tsv: qid, query |
 | Dev 1 | [docv2_dev_top100.txt.gz](https://msmarco.blob.core.windows.net/msmarcoranking/docv2_dev_top100.txt.gz) | 5.6 MB | 455,200 | TREC submission: qid, "Q0", docid, rank, score, runstring |
-| Dev 1| [docv2_dev_qrels.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/docv2_dev_qrels.tsv) | 176.2 KB | 4,777 | TREC qrels format |
+| Dev 1| [docv2_dev_qrels.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/docv2_dev_qrels.tsv) | 173.4 KB | 4,702 | TREC qrels format |
 | Dev 2 | [docv2_dev2_queries.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/docv2_dev2_queries.tsv) | 205.0 KB | 5,000 | tsv: qid, query |
 | Dev 2 | [docv2_dev2_top100.txt.gz](https://msmarco.blob.core.windows.net/msmarcoranking/docv2_dev2_top100.txt.gz) | 6.1 MB | 500,000 | TREC submission: qid, "Q0", docid, rank, score, runstring |
-| Dev 2| [docv2_dev2_qrels.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/docv2_dev2_qrels.tsv) | 192.8 KB | 5,231 | TREC qrels format |
+| Dev 2| [docv2_dev2_qrels.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/docv2_dev2_qrels.tsv) | 190.9 KB | 5,178 | TREC qrels format |
 | Validation 1 (TREC test 2019) | [msmarco-test2019-queries.tsv.gz](https://msmarco.blob.core.windows.net/msmarcoranking/msmarco-test2019-queries.tsv.gz) | 4.2 KB | 200 | tsv: qid, query |
 | Validation 1 (TREC test 2019) |  |  KB |  | TREC submission: qid, "Q0", docid, rank, score, runstring |
 | Validation 1 (TREC test 2019) | [docv2_trec2019_qrels.txt.gz](https://msmarco.blob.core.windows.net/msmarcoranking/docv2_trec2019_qrels.txt.gz) | 105 KB | 13,940 | qid, "Q0", docid, rating |
@@ -107,6 +116,41 @@ For the larger files, we recommend [AzCopy](https://docs.microsoft.com/en-us/azu
 | Test (TREC test 2021) |  |  KB |  | tsv: qid, query |
 | Test (TREC test 2021) |  |  KB |  | TREC submission: qid, "Q0", docid, rank, score, runstring |
 
+
+The document corpus is in jsonl format. Each document has:
+
+* docid: Encodes the filename and starting position of the document in the corpus. For example `msmarco_doc_31_726131` is in the file `msmarco_v2_doc/msmarco_doc_31` at position `726131`.
+* url: The URL of the document
+* title: The title of the document
+* headings: A newline-separated list of headings that were extracted from the document, where the first heading may be a generated heading that describes the whole document (an alternate title).
+* body: The body text of the document
+
+If you unzip the corpus, you can quickly access a document using:
+
+```
+import json
+
+def get_document(document_id):
+    (string1, string2, bundlenum, position) = document_id.split('_')
+    assert string1 == 'msmarco' and string2 == 'doc'
+
+    with open(f'./msmarco_v2_doc/msmarco_doc_{bundlenum}', 'rt', encoding='utf8') as in_fh:
+        in_fh.seek(int(position))
+        json_string = in_fh.readline()
+        document = json.loads(json_string)
+        assert document['docid'] == document_id
+        return document
+
+document = get_document('msmarco_doc_31_726131')
+print(document.keys())
+```
+
+Producing output:
+
+```
+dict_keys(['url', 'title', 'headings', 'body', 'docid'])
+```
+
 ### Use of external information
 
 You are generally allowed to use external information while developing your runs.
@@ -115,13 +159,17 @@ This could include an external corpus such as Wikipedia or a pretrained model (e
 This could also include the provided set of document ranking training data, but also optionally other data such as the passage ranking task labels or external labels or pretrained models.
 This will allow us to analyze the runs and break they down into types.
 
-IMPORTANT NOTE: Over the years, we have released several different datasets under msmarco.org.
-Participants should be careful about using those datasets and must adhere to the following guidelines:
-* You are **PERMITTED** to use any data listed above or from the [TREC 2020 Deep Learning Track](https://microsoft.github.io/msmarco/TREC-Deep-Learning-2020) (but please note the exception about ORCAS next).
+IMPORTANT NOTE: We are now dealing with multiple versions of MS MARCO ranking data, and all the other MS MARCO tasks as well. This new data release changes what is available and usable.  Participants should be careful about using those datasets and must adhere to the following guidelines:
+
+* You now are **PERMITTED** to use the passage-document mapping in your runs.
+For example, a passage ranking could be generated by first ranking the documents, then identifying all the passages from the top-k documents, then applying a passage reranking algorithm. 
+In previous MS MARCO data, no passage-document mapping was available and we discouraged participants from generating such a mapping, so this approach was not possible.
 * You are **PROHIBITED** from using the [ORCAS data](https://microsoft.github.io/msmarco/ORCAS) this year.
-We are planning for a bigger ORCAS data refresh corresponding to the refreshed document collection.
-In the meantime, the older ORCAS data **should not** be used for this year's runs because its document coverage may leak some ground truth information that would not be available in a real-world search engine; hence, should be avoided.
-* You are **PROHIBITED** from using any other datasets from [msmarco.org](http://msmarco.org) in your submission except those listed above.
+You are also **PROHIBITED** from using any other information that tells us which of this year's documents (or passages) were also present in last year's corpus.
+We will study whether use of such information could cause some bias or leakage of ground truth, but for now it's prohibited.
+We may release an ORCAS update.
+* Other than ORCAS you are **PERMITTED** to use any data listed above or from the [TREC 2020 Deep Learning Track](https://microsoft.github.io/msmarco/TREC-Deep-Learning-2020).
+* You are **PROHIBITED** from using any other datasets from [msmarco.org](http://msmarco.org), such as the original QnA and NLGEN tasks, in your submission.
 The original MS MARCO dataset reveals some minor details of how they were constructed that would not be available in a real-world search engine; hence, should be avoided.
 
 ## Submission, evaluation and judging
