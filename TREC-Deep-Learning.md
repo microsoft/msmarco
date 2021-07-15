@@ -71,10 +71,6 @@ In this subtask, we can compare different reranking methods based on the same in
 
 ## Datasets
 
-We are in the process of finalizing the datasets for TREC 2021 Deep Learning track.
-We are first releasing the document ranking dataset, **except for the test queries for this year's track**.
-We will subsequently release the test queries for the document ranking task and the passage ranking dataset.
-
 Since the main asset in MS MARCO is the training data, and we do not have any new training data, the main purpose of this data release is to make the document/passage data larger, cleaner and more realistic. Some notes:
 
 * Documents now have fewer problems with missing whitespace and character encoding. They are laid out in a way that is easier for relevance judges to read. These cleaner documents are also more amenable to document processing such as answer extraction.
