@@ -209,10 +209,10 @@ The width of the columns in the format is not important, but it is important to 
 
 ```text
 1 Q0 pid1    1 2.73 runid1
-1 Q0 pid2    1 2.71 runid1
-1 Q0 pid3    1 2.61 runid1
-1 Q0 pid4    1 2.05 runid1
-1 Q0 pid5    1 1.89 runid1
+1 Q0 pid2    2 2.71 runid1
+1 Q0 pid3    3 2.61 runid1
+1 Q0 pid4    4 2.05 runid1
+1 Q0 pid5    5 1.89 runid1
 ```
 
 , where:
