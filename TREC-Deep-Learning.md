@@ -157,13 +157,13 @@ dict_keys(['url', 'title', 'headings', 'body', 'docid'])
 | Corpus | [msmarco_v2_passage.tar](https://msmarco.blob.core.windows.net/msmarcoranking/msmarco_v2_passage.tar) | 20.3 GB | 138,354,198 | tar of 70 gzipped jsonl files |
 | Train | [passv2_train_queries.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/passv2_train_queries.tsv) | 11.1 MB | 277,144 | tsv: qid, query |
 | Train | [passv2_train_top100.txt.gz](https://msmarco.blob.core.windows.net/msmarcoranking/passv2_train_top100.txt.gz) | 324.9 MB | 27,713,673 | TREC submission: qid, "Q0", docid, rank, score, runstring |
-| Train | [passv2_train_qrels.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/passv2_train_qrels.tsv) | 11.2 MB | 287,889 | TREC qrels format |
+| Train | [passv2_train_qrels.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/passv2_train_qrels.tsv) | 11.1 MB | 287,889 | TREC qrels format |
 | Dev 1 | [passv2_dev_queries.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/passv2_dev_queries.tsv) | 160.7 KB | 3,903 | tsv: qid, query |
 | Dev 1 | [passv2_dev_top100.txt.gz](https://msmarco.blob.core.windows.net/msmarcoranking/passv2_dev_top100.txt.gz) | 4.7 MB | 390,300 | TREC submission: qid, "Q0", docid, rank, score, runstring |
-| Dev 1| [passv2_dev_qrels.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/passv2_dev_qrels.tsv) | 163.8 KB | 4,074 | TREC qrels format |
+| Dev 1| [passv2_dev_qrels.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/passv2_dev_qrels.tsv) | 161.2 KB | 4,074 | TREC qrels format |
 | Dev 2 | [passv2_dev2_queries.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/passv2_dev2_queries.tsv) | 175.4 KB | 4.281 | tsv: qid, query |
 | Dev 2 | [passv2_dev2_top100.txt.gz](https://msmarco.blob.core.windows.net/msmarcoranking/passv2_dev2_top100.txt.gz) | 5.1 MB | 428,100 | TREC submission: qid, "Q0", docid, rank, score, runstring |
-| Dev 2| [passv2_dev2_qrels.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/passv2_dev2_qrels.tsv) | 179.1 KB | 4,456 | TREC qrels format |
+| Dev 2| [passv2_dev2_qrels.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/passv2_dev2_qrels.tsv) | 177.4 KB | 4,456 | TREC qrels format |
 
 The passage corpus is also in jsonl format. Each passage has:
 
@@ -255,13 +255,13 @@ To check your downloads, compare to our md5sum data:
 | b4d5915172d5f54bd23c31e966c114de | docv2_train_top100.txt.gz |
 | eea90100409a254fdb157b8e4e349deb | msmarco_v2_doc.tar |
 | 05946bac48a8ffee62e160213eab3fda | msmarco_v2_passage.tar |
-| 04fb0edd7ad8bf26ca8b7d4880c671d1 | passv2_dev2_qrels.tsv |
+| 8ed8577fa459d34b59cf69b4daa2baeb | passv2_dev2_qrels.tsv |
 | 565b84dfa7ccd2f4251fa2debea5947a | passv2_dev2_queries.tsv |
 | da532bf26169a3a2074fae774471cc9f | passv2_dev2_top100.txt.gz |
-| e3610e344dac10adee03db1882916adf | passv2_dev_qrels.tsv |
+| 10f9263260d206d8fb8f13864aea123a | passv2_dev_qrels.tsv |
 | 0fa4c6d64a653142ade9fc61d7484239 | passv2_dev_queries.tsv |
 | fee817a3ee273be8623379e5d3108c0b | passv2_dev_top100.txt.gz |
-| abf1fd024b6aca203364d2138c241a6d | passv2_train_qrels.tsv |
+| a2e37e9a9c7ca13d6e38be0512a52017 | passv2_train_qrels.tsv |
 | 1835f44e6792c51aa98eed722a8dcc11 | passv2_train_queries.tsv |
 | 7cd731ed984fccb2396f11a284cea800 | passv2_train_top100.txt.gz |
 
