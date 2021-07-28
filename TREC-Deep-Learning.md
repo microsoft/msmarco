@@ -154,7 +154,7 @@ dict_keys(['url', 'title', 'headings', 'body', 'docid'])
 
 | Type | Filename | File size | Num Records | Format |
 |------|----------|----------:|------------:|--------|
-| Corpus | [msmarco_v2_passage.tar](https://msmarco.blob.core.windows.net/msmarcoranking/msmarco_v2_passage.tar) | 20.3 GB | 138,354,198 | tar of 70 gzipped jsonl files |
+| Corpus | [msmarco_v2_passage.tar](https://msmarco.blob.core.windows.net/msmarcoranking/msmarco_v2_passage.tar) | 20.3 GB | 138,364,198 | tar of 70 gzipped jsonl files |
 | Train | [passv2_train_queries.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/passv2_train_queries.tsv) | 11.1 MB | 277,144 | tsv: qid, query |
 | Train | [passv2_train_top100.txt.gz](https://msmarco.blob.core.windows.net/msmarcoranking/passv2_train_top100.txt.gz) | 324.9 MB | 27,713,673 | TREC submission: qid, "Q0", docid, rank, score, runstring |
 | Train | [passv2_train_qrels.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/passv2_train_qrels.tsv) | 11.1 MB | 287,889 | TREC qrels format |
