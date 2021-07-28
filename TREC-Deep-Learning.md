@@ -197,7 +197,8 @@ In previous MS MARCO data, no passage-document mapping was available and we disc
 You are also **PROHIBITED** from using any other information that tells us which of this year's documents (or passages) were also present in last year's corpus.
 We will study whether use of such information could cause some bias or leakage of ground truth, but for now it's prohibited.
 We may release an ORCAS update.
-* Other than ORCAS you are **PERMITTED** to use any data listed above or from the [TREC 2020 Deep Learning Track](https://microsoft.github.io/msmarco/TREC-Deep-Learning-2020).
+* Other than ORCAS you are **PERMITTED** to use any data listed above and from the [TREC 2020 Deep Learning Track](https://microsoft.github.io/msmarco/TREC-Deep-Learning-2020).
+* You are **PERMITTED** to use any data listed below under the **Additional resources** section.
 * You are **PROHIBITED** from using any other datasets from [msmarco.org](http://msmarco.org), such as the original QnA and NLGEN tasks, in your submission.
 The original MS MARCO dataset reveals some minor details of how they were constructed that would not be available in a real-world search engine; hence, should be avoided.
 
@@ -237,6 +238,10 @@ The main type of TREC submission is _automatic_, which means there was not manua
 This means you should not adjust your runs, rewrite the query, retrain your model, or make any other sorts of manual adjustments after you see the test queries.
 The ideal case is that you only look at the test queries to check that they ran properly (i.e. no bugs) then you submit your automatic runs.
 However, if you want to have a human in the loop for your run, or do anything else that uses the test queries to adjust your model or ranking, you can mark your run as _manual_. Manual runs are interesting, and we may learn a lot, but these are distinct from our main scenario which is a system that responds to unseen queries automatically.
+
+## Additional resources
+We are sharing the following additional resources which we hope will be useful for the community.
+* [Segmented document collection](https://github.com/castorini/anserini/blob/master/docs/experiments-msmarco-v2.md#document-collection-segmented)
 
 ## MD5Sum
 
