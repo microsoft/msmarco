@@ -198,7 +198,7 @@ You are also **PROHIBITED** from using any other information that tells us which
 We will study whether use of such information could cause some bias or leakage of ground truth, but for now it's prohibited.
 We may release an ORCAS update.
 * Other than ORCAS you are **PERMITTED** to use any data listed above and from the [TREC 2020 Deep Learning Track](https://microsoft.github.io/msmarco/TREC-Deep-Learning-2020).
-* You are **PERMITTED** to use any data listed below under the **Additional resources** section.
+* You are **PERMITTED** to use any data listed below under the [Additional resources](https://microsoft.github.io/msmarco/TREC-Deep-Learning#additional-resources) section.
 * You are **PROHIBITED** from using any other datasets from [msmarco.org](http://msmarco.org), such as the original QnA and NLGEN tasks, in your submission.
 The original MS MARCO dataset reveals some minor details of how they were constructed that would not be available in a real-world search engine; hence, should be avoided.
 
