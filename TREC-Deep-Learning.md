@@ -241,7 +241,10 @@ However, if you want to have a human in the loop for your run, or do anything el
 
 ## Additional resources
 We are sharing the following additional resources which we hope will be useful for the community.
-* [Segmented document collection](https://github.com/castorini/anserini/blob/master/docs/experiments-msmarco-v2.md#document-collection-segmented)
+
+| Dataset | Filename | File size | Num Records | Format |
+|------|----------|----------:|------------:|--------|
+| [Segmented document collection](https://github.com/castorini/anserini/blob/master/docs/experiments-msmarco-v2.md#document-collection-segmented) | [msmarco_v2_doc_segmented.tar](https://msmarco.blob.core.windows.net//msmarcoranking/msmarco_v2_doc_segmented.tar) | 25.4 GB |  | tar |
 
 ## MD5Sum
 
