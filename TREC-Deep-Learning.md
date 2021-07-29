@@ -244,8 +244,8 @@ We are sharing the following additional resources which we hope will be useful f
 
 | Dataset | Filename | File size | Num Records | Format |
 |------|----------|----------:|------------:|--------|
-| [Segmented document collection](https://github.com/castorini/anserini/blob/master/docs/experiments-msmarco-v2.md#document-collection-segmented) | [msmarco_v2_doc_segmented.tar](https://msmarco.blob.core.windows.net//msmarcoranking/msmarco_v2_doc_segmented.tar) | 25.4 GB |  | tar |
-| [Augmented passage collection](https://github.com/castorini/anserini/blob/master/docs/experiments-msmarco-v2.md#passage-collection-augmented) | [msmarco_v2_passage_augmented.tar](https://msmarco.blob.core.windows.net//msmarcoranking/msmarco_v2_passage_augmented.tar) | 20.0 GB |  | tar |
+| [Segmented document collection](https://github.com/castorini/anserini/blob/master/docs/experiments-msmarco-v2.md#document-collection-segmented) | [msmarco_v2_doc_segmented.tar](https://msmarco.blob.core.windows.net/msmarcoranking/msmarco_v2_doc_segmented.tar) | 25.4 GB |  | tar |
+| [Augmented passage collection](https://github.com/castorini/anserini/blob/master/docs/experiments-msmarco-v2.md#passage-collection-augmented) | [msmarco_v2_passage_augmented.tar](https://msmarco.blob.core.windows.net/msmarcoranking/msmarco_v2_passage_augmented.tar) | 20.0 GB |  | tar |
 
 ## MD5Sum
 
