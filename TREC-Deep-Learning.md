@@ -245,6 +245,7 @@ We are sharing the following additional resources which we hope will be useful f
 | Dataset | Filename | File size | Num Records | Format |
 |------|----------|----------:|------------:|--------|
 | [Segmented document collection](https://github.com/castorini/anserini/blob/master/docs/experiments-msmarco-v2.md#document-collection-segmented) | [msmarco_v2_doc_segmented.tar](https://msmarco.blob.core.windows.net//msmarcoranking/msmarco_v2_doc_segmented.tar) | 25.4 GB |  | tar |
+| [Augmented passage collection](https://github.com/castorini/anserini/blob/master/docs/experiments-msmarco-v2.md#passage-collection-augmented) | [msmarco_v2_passage_augmented.tar](https://msmarco.blob.core.windows.net//msmarcoranking/msmarco_v2_passage_augmented.tar) | 20.0 GB |  | tar |
 
 ## MD5Sum
 
@@ -272,6 +273,9 @@ To check your downloads, compare to our md5sum data:
 | a2e37e9a9c7ca13d6e38be0512a52017 | passv2_train_qrels.tsv |
 | 1835f44e6792c51aa98eed722a8dcc11 | passv2_train_queries.tsv |
 | 7cd731ed984fccb2396f11a284cea800 | passv2_train_top100.txt.gz |
+| f18c3a75eb3426efeb6040dca3e885dc | msmarco_v2_doc_segmented.tar |
+| 69acf3962608b614dbaaeb10282b2ab8 | msmarco_v2_passage_augmented.tar |
+
 
 ## Previous years of TREC DL
 
