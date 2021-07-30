@@ -277,7 +277,9 @@ To check your downloads, compare to our md5sum data:
 | 7cd731ed984fccb2396f11a284cea800 | passv2_train_top100.txt.gz |
 | f18c3a75eb3426efeb6040dca3e885dc | msmarco_v2_doc_segmented.tar |
 | 69acf3962608b614dbaaeb10282b2ab8 | msmarco_v2_passage_augmented.tar |
-
+| 0bc85e3f2a6f798b91e18f0cd4a6bc6b | 2021_document_top100.txt.gz |
+| e2be2d307da26d1a3f76eb95507672a3 | 2021_passage_top100.txt.gz |
+| 46d863434dda18300f5af33ee29c4b28 | 2021_queries.tsv |
 
 ## Previous years of TREC DL
 
