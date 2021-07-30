@@ -113,8 +113,8 @@ wget --header "X-Ms-Version: 2019-12-12" https://msmarco.blob.core.windows.net/m
 | Validation 2 (TREC test 2020) | [msmarco-test2020-queries.tsv.gz](https://msmarco.blob.core.windows.net/msmarcoranking/msmarco-test2020-queries.tsv.gz) | 8.2 KB | 200 | tsv: qid, query |
 | Validation 2 (TREC test 2020) |  |  KB |  | TREC submission: qid, "Q0", docid, rank, score, runstring |
 | Validation 2 (TREC test 2020) | [docv2_trec2020_qrels.txt.gz](https://msmarco.blob.core.windows.net/msmarcoranking/docv2_trec2020_qrels.txt.gz) | 60.9 KB | 7,942 | qid, "Q0", docid, rating |
-| Test (TREC test 2021) |  |  KB |  | tsv: qid, query |
-| Test (TREC test 2021) |  |  KB |  | TREC submission: qid, "Q0", docid, rank, score, runstring |
+| Test (TREC test 2021) | [2021_queries.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/2021_queries.tsv) | 24.0 KB | 477 | tsv: qid, query |
+| Test (TREC test 2021) | [2021_document_top100.txt.gz](https://msmarco.blob.core.windows.net/msmarcoranking/2021_document_top100.txt.gz) | 603.7 KB | 47,700 | TREC submission: qid, "Q0", docid, rank, score, runstring |
 
 The document corpus is in jsonl format. Each document has:
 
@@ -164,6 +164,8 @@ dict_keys(['url', 'title', 'headings', 'body', 'docid'])
 | Dev 2 | [passv2_dev2_queries.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/passv2_dev2_queries.tsv) | 175.4 KB | 4.281 | tsv: qid, query |
 | Dev 2 | [passv2_dev2_top100.txt.gz](https://msmarco.blob.core.windows.net/msmarcoranking/passv2_dev2_top100.txt.gz) | 5.1 MB | 428,100 | TREC submission: qid, "Q0", docid, rank, score, runstring |
 | Dev 2| [passv2_dev2_qrels.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/passv2_dev2_qrels.tsv) | 177.4 KB | 4,456 | TREC qrels format |
+| Test (TREC test 2021) | [2021_queries.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/2021_queries.tsv) | 24.0 KB | 477 | tsv: qid, query |
+| Test (TREC test 2021) | [2021_passage_top100.txt.gz](https://msmarco.blob.core.windows.net/msmarcoranking/2021_passage_top100.txt.gz) | 590.4 KB | 47,700 | TREC submission: qid, "Q0", docid, rank, score, runstring |
 
 The passage corpus is also in jsonl format. Each passage has:
 
