@@ -6,6 +6,11 @@ Our main focus in 2021 is to get started on using a new, larger, cleaner corpus,
 
 This leaves participants less than a month before the submission deadline of August 9th. We hope the community can come together and submit runs by: 1) Submitting standard approaches and baselines from TREC 2020, to see how these perform on the new datasets, 2) Implementing newer approaches too that you are working on now or have developed since TREC 2020, and 3) Trying some hybrid approaches that are enabled by the new document and passage corpus with passage-document mapping. For example, a passage task run could start with full ranking on the document corpus, then identifying candidate passages from top documents that lead in to passage reranking.
 
+## Previous edition
+
+* 2019 [website](https://microsoft.github.io/msmarco/TREC-Deep-Learning-2019) and [overview paper](https://arxiv.org/pdf/2003.07820.pdf)
+* 2020 [website](https://microsoft.github.io/msmarco/TREC-Deep-Learning-2020) and [overview paper](https://arxiv.org/pdf/2102.07662.pdf)
+
 ## Timetable
 
 * August 9: Deadline for submitting runs for document and passage ranking tasks
