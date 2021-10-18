@@ -4,14 +4,14 @@
 
 **Note:** You are viewing the guidelines for the 2020 edition of the TREC Deep Learning track. Please visit [https://microsoft.github.io/msmarco/TREC-Deep-Learning](https://microsoft.github.io/msmarco/TREC-Deep-Learning) for the upcoming / latest edition of the track.
 
+## Previous edition
+
+* 2019 [website](https://microsoft.github.io/msmarco/TREC-Deep-Learning-2019) and [overview paper](https://arxiv.org/pdf/2003.07820.pdf)
+
 ## Timetable
 
 * August 6: Deadline for submitting runs for document and passage ranking tasks
 * November 18-20: TREC conference
-
-## Previous edition
-
-* 2019 [website](https://microsoft.github.io/msmarco/TREC-Deep-Learning-2019) and [overview paper](https://arxiv.org/pdf/2003.07820.pdf)
 
 ## Registration
 
