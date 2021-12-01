@@ -1,4 +1,4 @@
-# TREC 2021 Deep Learning Track Guidelines
+# TREC 2022 Deep Learning Track Guidelines
 
 ## Previous edition
 
