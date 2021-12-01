@@ -286,11 +286,6 @@ To check your downloads, compare to our md5sum data:
 | e2be2d307da26d1a3f76eb95507672a3 | 2021_passage_top100.txt.gz |
 | 46d863434dda18300f5af33ee29c4b28 | 2021_queries.tsv |
 
-## Previous years of TREC DL
-
-* 2019 [guidelines](https://microsoft.github.io/msmarco/TREC-Deep-Learning-2019) and [overview paper](https://arxiv.org/pdf/2003.07820.pdf)
-* 2020 [guidelines](https://microsoft.github.io/msmarco/TREC-Deep-Learning-2020) and [overview paper](https://arxiv.org/pdf/2102.07662.pdf)
-
 ## Coordinators
 
 * Nick Craswell (Microsoft)
