@@ -16,6 +16,8 @@ To participate in TREC please pre-register at the following website: [https://ir
 
 ## Introduction
 
+December 2021 note: Detailed guidelines will be available in 2022. We expect to keep using the v2 data. We may continue to stratify by query length. We may set up judging that focuses on highly-relevant results. Since the training and dev set results were somewhat less predictive of final NDCG@10, we may suggest methods for handling the sparse labels that bring things more in line with NDCG.
+
 The Deep Learning Track studies information retrieval in a *large training data* regime. This is the case where the number of training queries with at least one positive label is at least in the tens of thousands, if not hundreds of thousands or more.
 This corresponds to real-world scenarios such as training based on click logs and training based on labels from shallow pools (such as the pooling in the TREC Million Query Track or the evaluation of search engines based on early precision).
 
