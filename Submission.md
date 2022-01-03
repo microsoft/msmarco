@@ -1,5 +1,9 @@
 # Submit to Document and Passage Ranking Leadboards
 
+## Datasets
+
+Please go to [https://microsoft.github.io/msmarco/Datasets](https://microsoft.github.io/msmarco/Datasets) for all dataset descriptions and pointers.
+
 ## File format
 
 For both tasks, please prepare the test results file in the following TAB-separated (TSV) format: qid\<TAB\>pid\<TAB\>rank.
