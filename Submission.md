@@ -38,6 +38,11 @@ For the document ranking task, we follow a GitHub pull request based submission 
 Please find the submission guidelines for the document ranking task here: <https://microsoft.github.io/MSMARCO-Document-Ranking-Submissions/>.
 
 ### Passage ranking
+
+For the passage ranking task, we follow a GitHub pull request based submission process.
+Please find the submission guidelines for the passage ranking task here: <https://microsoft.github.io/MSMARCO-Passage-Ranking-Submissions/>.
+
+<!---
 For the passage ranking task, we will move to a GitHub pull request based submission process in the near future.
 But currently, please generate your results file for the Dev and Test sets, and then submit the following information by [email](mailto:ms-marco@microsoft.com?subject=MS%20Marco%20Submission).
 * Individual/Team Name: Name of the individual or the team to appear in the leaderboard [Required]
@@ -56,5 +61,6 @@ To ensure this, we request participants to submit:
 2. No more than 1 run with very small changes, such as different random seeds or different hyper-parameters (e.g., small changes in number of layers or number of training epochs).
 
 Participants who may want to run ablation studies on their models are encouraged to do so on the dev set, but not on the Test set.
+-->
 
 {% include_relative Notice.md %}
