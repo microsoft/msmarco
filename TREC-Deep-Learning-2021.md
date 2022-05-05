@@ -1,5 +1,9 @@
 # TREC 2021 Deep Learning Track Guidelines
 
+**Overview paper:** [trec2021-deeplearning-overview.pdf](https://www.microsoft.com/en-us/research/uploads/prod/2022/05/trec2021-deeplearning-overview.pdf)
+
+**Note:** You are viewing the guidelines for the 2021 edition of the TREC Deep Learning track. Please visit [https://microsoft.github.io/msmarco/TREC-Deep-Learning](https://microsoft.github.io/msmarco/TREC-Deep-Learning) for the upcoming / latest edition of the track.
+
 ## Please read: Data refresh
 
 Our main focus in 2021 is to get started on using a new, larger, cleaner corpus, which unifies the passage and document datasets. The new document dataset has been available since early July 2021, and the passage dataset was released in mid July 2021.
