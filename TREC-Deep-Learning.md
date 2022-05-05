@@ -4,7 +4,7 @@
 
 * 2019 [website](https://microsoft.github.io/msmarco/TREC-Deep-Learning-2019) and [overview paper](https://arxiv.org/pdf/2003.07820.pdf)
 * 2020 [website](https://microsoft.github.io/msmarco/TREC-Deep-Learning-2020) and [overview paper](https://arxiv.org/pdf/2102.07662.pdf)
-* 2021 [website](https://microsoft.github.io/msmarco/TREC-Deep-Learning-2021)
+* 2021 [website](https://microsoft.github.io/msmarco/TREC-Deep-Learning-2021) and [overview paper](https://www.microsoft.com/en-us/research/uploads/prod/2022/05/trec2021-deeplearning-overview.pdf)
 
 ## Timetable
 
