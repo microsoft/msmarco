@@ -110,7 +110,8 @@ This passage dataset is based on the public MS MARCO dataset, although our evalu
 | Validation (Test 2019)    | [2019qrels-pass.txt](https://trec.nist.gov/data/deep/2019qrels-pass.txt)          |     182 KB |                  9,260  | qid, "Q0", docid, rating                                              |
 | Test (2020)    | [msmarco-test2020-queries.tsv.gz](https://msmarco.blob.core.windows.net/msmarcoranking/msmarco-test2020-queries.tsv.gz)          |  12 KB    |   200                  | tsv: qid, query                                              |
 | Test (2020)    | [msmarco-passagetest2020-top1000.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/msmarco-passagetest2020-top1000.tsv.gz)          |    72 MB  |              190,699 | tsv: qid, pid, query, passage                    |
-| Test    | [2020qrels-pass.txt](https://trec.nist.gov/data/deep/2020qrels-pass.txt)          |     214 KB |                  11,386  | qid, "Q0", docid, rating                                              |
+| Test    | [2020qrels-pass.txt](https://trec.nist.gov/data/deep/2020qrels-pass.txt)          |     214 KB |                  11,386  | qid, "Q0", docid, rating |
+
 ## Submission, evaluation and judging
 
 We will be following a similar format as the ones used by most TREC submissions, which is repeated below. White space is used to separate columns. The width of the columns in the format is not important, but it is important to have exactly six columns per line with at least one space between the columns.
