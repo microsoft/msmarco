@@ -124,7 +124,7 @@ wget --header "X-Ms-Version: 2019-12-12" https://msmarco.blob.core.windows.net/m
 | Validation 2 (TREC test 2020) | [docv2_trec2020_qrels.txt.gz](https://msmarco.blob.core.windows.net/msmarcoranking/docv2_trec2020_qrels.txt.gz) | 60.9 KB | 7,942 | qid, "Q0", docid, rating |
 | Test (TREC test 2021) | [2021_queries.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/2021_queries.tsv) | 24.0 KB | 477 | tsv: qid, query |
 | Test (TREC test 2021) | [2021_document_top100.txt.gz](https://msmarco.blob.core.windows.net/msmarcoranking/2021_document_top100.txt.gz) | 603.7 KB | 47,700 | TREC submission: qid, "Q0", docid, rank, score, runstring |
-| Test    | [2021.qrels.docs.final.txt](https://trec.nist.gov/data/deep/2021.qrels.docs.final.txt)          |   468KB |                  13,058  | qid, "Q0", docid, rating       |
+| Test    | [2021.qrels.docs.final.txt](https://trec.nist.gov/data/deep/2021.qrels.docs.final.txt)          |   468 KB |                  13,058  | qid, "Q0", docid, rating       |
 
 The document corpus is in jsonl format. Each document has:
 
