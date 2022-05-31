@@ -8,7 +8,8 @@
 
 ## Timetable
 
-TBD.
+June: Test queries released
+August: Deadline for submitting runs for document and passage ranking tasks
 
 ## Registration
 
@@ -16,58 +17,41 @@ To participate in TREC please pre-register at the following website: [https://ir
 
 ## Introduction
 
-December 2021 note: Detailed guidelines will be available in 2022. We expect to keep using the v2 data. We may continue to stratify by query length. We may set up judging that focuses on highly-relevant results. Since the training and dev set results were somewhat less predictive of final NDCG@10, we may suggest methods for handling the sparse labels that bring things more in line with NDCG.
+The Deep Learning Track studies information retrieval in a large training data regime. This is the case where the number of training queries with at least one positive label is at least in the tens of thousands, if not hundreds of thousands or more. This corresponds to real-world scenarios such as training based on click logs and training based on labels from shallow pools (such as the pooling in the TREC Million Query Track or the evaluation of search engines based on early precision).
 
-The Deep Learning Track studies information retrieval in a *large training data* regime. This is the case where the number of training queries with at least one positive label is at least in the tens of thousands, if not hundreds of thousands or more.
-This corresponds to real-world scenarios such as training based on click logs and training based on labels from shallow pools (such as the pooling in the TREC Million Query Track or the evaluation of search engines based on early precision).
+Certain machine learning based methods, such as methods based on deep learning are known to require very large datasets for training. Lack of such large scale datasets has been a limitation for developing such methods for common information retrieval tasks, such as document ranking. The Deep Learning Track organized in the previous years aimed at providing large scale datasets to TREC, and create a focused research effort with a rigorous blind evaluation of ranker for the passage ranking and document ranking tasks.
 
-Certain machine learning based methods, such as methods based on deep learning are known to require very large datasets for training. Lack of such large scale datasets has been a limitation for developing such methods for common information retrieval tasks, such as document ranking.
-The Deep Learning Track organized in 2019 and 2020 aimed at providing large scale datasets to TREC, and create a focused research effort with a rigorous blind evaluation of ranker for the passage ranking and document ranking tasks.
+Similar to the previous years, one of the main goals of the track in 2022 is to study what methods work best when a large amount of training data is available. For example, do the same methods that work on small data also work on large data? How much do methods improve when given more training data? What external data and models can be brought in to bear in this scenario, and how useful is it to combine full supervision with other forms of supervision?
 
-In 2022, the track will continue to have the same tasks (document ranking and passage ranking) and goals.
-Similar to the previous year, one of the main goals of the track in 2022 is to study what methods work best when a large amount of training data is available.
-For example, do the same methods that work on small data also work on large data?
-How much do methods improve when given more training data? What external data and models can be brought in to bear in this scenario, and how useful is it to combine full supervision with other forms of supervision?
 
 ## Deep Learning Track Tasks
 
-The Deep Learning Track has two tasks: Passage ranking and document ranking; and two subtasks in each case: full ranking and reranking.
-You can submit up to three runs for each of the subtasks.
+The Deep Learning Track in 2022 will continue to have the passage ranking and document ranking tasks; and two subtasks in each case: full ranking and reranking. You can submit up to three runs for each of the subtasks. Unlike the previous years, **primary focus of the track will be on the passage ranking task, while keeping the document ranking task as a secondary task**. The definition and evaluation of the document ranking task, details of which can be found later in this page, will be different than the previous years. 
 
-Each task uses a large human-generated set of training labels, from the [MS MARCO](http://msmarco.org) dataset.
-The two tasks use the same test queries.
-They also use the same form of training data with usually one positive training document/passage per training query.
-In the case of passage ranking, there is a direct human label that says the passage can be used to answer the query, whereas for training the document ranking task we infer document-level labels from the passage-level labels. 
+Each task uses a large human-generated set of training labels, from the MS MARCO dataset. The two tasks use the same test queries. They also use the same form of training data with usually one positive training document/passage per training query. In the case of passage ranking, there is a direct human label that says the passage can be used to answer the query, whereas for training the document ranking task we infer document-level labels from the passage-level labels.
 
-For both tasks, the participants are encouraged to study the efficacy of transfer learning methods.
-Our current training labels (from MS MARCO) are generated differently than the test labels (generated by NIST), although some labels from past years (mapped to the new corpus) may also be available.
-Participants can (and are encouraged to) also use external corpora for large scale language model pretraining, or adapt algorithms built for one task of the track (e.g. passage ranking) to the other task (e.g. document ranking).
-This allows participants to study a variety of transfer learning strategies.
-
+For both tasks, the participants are encouraged to study the efficacy of transfer learning methods. Our current training labels (from MS MARCO) are generated differently than the test labels (generated by NIST), although some labels from past years (mapped to the new corpus) may also be available. Participants can (and are encouraged to) also use external corpora for large scale language model pretraining, or adapt algorithms built for one task of the track (e.g. passage ranking) to the other task (e.g. document ranking). This allows participants to study a variety of transfer learning strategies.
 Below the two tasks are described in more detail.
 
-### Document Ranking Task
-
-The first task focuses on document ranking.
-We have two subtasks related to this: Full ranking and top-100 reranking.
-
-In the full ranking (retrieval) subtask, you are expected to rank documents based on their relevance to the question, where documents can be retrieved from the full document collection provided.
-You can submit up to **100 documents** for this task.
-It models a scenario where you are building an end-to-end retrieval system.
-
-In the reranking subtask, we provide you with an initial ranking of 100 documents from a simple IR system, and you are expected to rerank the documents in terms of their relevance to the question.
-This is a very common real-world scenario, since many end-to-end systems are implemented as retrieval followed by top-k reranking.
-The reranking subtask allows participants to focus on reranking only, without needing to implement an end-to-end system.
-It also makes those reranking runs more comparable, because they all start from the same set of 100 candidates.
 
 ### Passage Ranking Task
 
-Similar to the document ranking task, the passage ranking task also has a full ranking and reranking subtasks.
+The primary focus of the Deep Learning Track this is year is on the passage ranking task. We have two subtasks related to this task: Full ranking and top-100 reranking.
 
-In context of full ranking (retrieval) subtask, given a question, you are expected to rank passages from the full collection in terms of their likelihood of containing an answer to the question. You can submit up to **100 passages** for this end-to-end retrieval task.
+In context of full ranking (retrieval) subtask, given a question, you are expected to rank passages from the full collection in terms of their likelihood of containing an answer to the question. It models a scenario where you are building an end-to-end retrieval system for retrieving passages. You can submit up to **100 passages** for this end-to-end retrieval task.
 
-In context of top-100 reranking subtask, we provide you with an initial ranking of 100 passages and you are expected to rerank these passages based on their likelihood of containing an answer to the question.
-In this subtask, we can compare different reranking methods based on the same initial set of 100 candidates, with the same rationale as described for the document reranking subtask.
+In the reranking subtask, we provide you with an initial ranking of 100 passages from a simple IR system, and you are expected to rerank the passages based on their likelihood of containing an answer to the question.  This is a very common real-world scenario, since many end-to-end systems are implemented as retrieval followed by top-k reranking. The reranking subtask allows participants to focus on reranking only, without needing to implement an end-to-end system. It also makes those reranking runs more comparable, because they all start from the same set of 100 candidates.
+
+
+### Document Ranking Task
+
+While the passage ranking task is the primary focus of the Deep Learning Track this year, the track will continue to have the document ranking task. However, the document ranking task is defined and evaluated differently this year: In the previous years, the expectation in the document ranking task was to rank documents based on their relevance to the question. However, this year the expectation is to **rank documents based on their likelihood of containing a passage relevant to the question**. 
+
+Similar to the passage ranking task, the document ranking task also has a full ranking and reranking subtasks.
+In the full ranking (retrieval) subtask, documents can be retrieved from the full document collection provided. You can submit up to **100 documents** for this task. 
+
+In context of top-100 reranking subtask, we provide you with an initial ranking of 100 documents and you are expected to rerank these documents in terms of their likelihood of containing a passage relevant to the question. In this subtask, we can compare different reranking methods based on the same initial set of 100 candidates, with the same rationale as described for the passage reranking subtask.
+
 
 ## Datasets
 
@@ -95,15 +79,11 @@ The width of the columns in the format is not important, but it is important to 
 * the fifth column shows the score (integer or floating point) that generated the ranking. This score **must** be in descending (non-increasing) order.
 * The sixth column is the ID of the run you are submitting.
 
-As the official evaluation set, we provide a set of test queries, where a subset will be judged by NIST assessors.
-For this purpose, NIST will be using depth pooling and construct separate pools for the passage ranking and document ranking tasks.
-Passages/documents in these pools will then be labelled by NIST assessors using multi-graded judgments, allowing us to measure NDCG.
-The same test queries are used for passage retrieval and document retrieval.
+As the official evaluation set, we provide a set of test queries, a subset of which will be used for the final evaluation. The same test queries are used for passage retrieval and document retrieval. Unlike the previous years, different approaches will be used for constructing test collections for the passage ranking and document ranking tasks.
 
-Besides our main evaluation using the **NIST labels and NDCG**, we also have sparse labels for the test queries, which already exist as part of the MS-Marco dataset.
-More information regarding how these sparse labels were obtained can be found at <https://arxiv.org/abs/1611.09268>.
-This allows us to calculate a secondary metric **Mean Reciprocal Rank (MRR)**.
-For the full ranking setting, we also compute **NCG** to evaluate the performance of the candidate generation stage.
+The approach used for test collection construction for the passage retrieval task will be the same as the previous years: NIST will be using depth pooling and construct pools for the queries in the final test set. Passages in these pools will then be labelled by NIST assessors using multi-graded judgments, allowing us to measure NDCG. 
+
+Evaluation for the passage ranking task will be done **using the labels inferred from the passage ranking task**, no additional judgments from NIST will be collected for this task. This is aligned with this year’s definition of the document ranking task, which is focusing on ranking documents based on their likelihood of containing a relevant passage. 
 
 The main type of TREC submission is _automatic_, which means there was not manual intervention in running the test queries.
 This means you should not adjust your runs, rewrite the query, retrain your model, or make any other sorts of manual adjustments after you see the test queries.
