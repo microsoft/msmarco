@@ -86,16 +86,16 @@ wget --header "X-Ms-Version: 2019-12-12" https://msmarco.blob.core.windows.net/m
 | Dev 2 | [docv2_dev2_top100.txt.gz](https://msmarco.blob.core.windows.net/msmarcoranking/docv2_dev2_top100.txt.gz) | 6.1 MB | 500,000 | TREC submission: qid, "Q0", docid, rank, score, runstring |
 | Dev 2| [docv2_dev2_qrels.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/docv2_dev2_qrels.tsv) | 190.9 KB | 5,178 | TREC qrels format |
 | Validation 1 (TREC test 2019) | [msmarco-test2019-queries.tsv.gz](https://msmarco.blob.core.windows.net/msmarcoranking/msmarco-test2019-queries.tsv.gz) | 4.2 KB | 200 | tsv: qid, query |
-| Validation 1 (TREC test 2019) |  |  KB |  | TREC submission: qid, "Q0", docid, rank, score, runstring |
+| Validation 1 (TREC test 2019) | (currently not available) |  |  | TREC submission: qid, "Q0", docid, rank, score, runstring |
 | Validation 1 (TREC test 2019) | [docv2_trec2019_qrels.txt.gz](https://msmarco.blob.core.windows.net/msmarcoranking/docv2_trec2019_qrels.txt.gz) | 105 KB | 13,940 | qid, "Q0", docid, rating |
 | Validation 2 (TREC test 2020) | [msmarco-test2020-queries.tsv.gz](https://msmarco.blob.core.windows.net/msmarcoranking/msmarco-test2020-queries.tsv.gz) | 8.2 KB | 200 | tsv: qid, query |
-| Validation 2 (TREC test 2020) |  |  KB |  | TREC submission: qid, "Q0", docid, rank, score, runstring |
+| Validation 2 (TREC test 2020) | (currently not available) |  KB |  | TREC submission: qid, "Q0", docid, rank, score, runstring |
 | Validation 2 (TREC test 2020) | [docv2_trec2020_qrels.txt.gz](https://msmarco.blob.core.windows.net/msmarcoranking/docv2_trec2020_qrels.txt.gz) | 60.9 KB | 7,942 | qid, "Q0", docid, rating |
 | Validation 3 (TREC test 2021) | [2021_queries.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/2021_queries.tsv) | 24.0 KB | 477 | tsv: qid, query |
 | Validation 3 (TREC test 2021) | [2021_document_top100.txt.gz](https://msmarco.blob.core.windows.net/msmarcoranking/2021_document_top100.txt.gz) | 603.7 KB | 47,700 | TREC submission: qid, "Q0", docid, rank, score, runstring |
 | Validation 3 | [2021.qrels.docs.final.txt](https://trec.nist.gov/data/deep/2021.qrels.docs.final.txt)          |   468 KB |                  13,058  | qid, "Q0", docid, rating       |
-| Test (TREC test 2021) | (coming soon) |  |  | tsv: qid, query |
-| Test (TREC test 2021) | (coming soon) | 603.7 KB | 47,700 | TREC submission: qid, "Q0", docid, rank, score, runstring |
+| Test (TREC test 2022) | (coming soon) |  |  | tsv: qid, query |
+| Test (TREC test 2022) | (coming soon) | 603.7 KB | 47,700 | TREC submission: qid, "Q0", docid, rank, score, runstring |
 
 The document corpus is in jsonl format. Each document has:
 
@@ -145,17 +145,11 @@ dict_keys(['url', 'title', 'headings', 'body', 'docid'])
 | Dev 2 | [passv2_dev2_queries.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/passv2_dev2_queries.tsv) | 175.4 KB | 4.281 | tsv: qid, query |
 | Dev 2 | [passv2_dev2_top100.txt.gz](https://msmarco.blob.core.windows.net/msmarcoranking/passv2_dev2_top100.txt.gz) | 5.1 MB | 428,100 | TREC submission: qid, "Q0", docid, rank, score, runstring |
 | Dev 2| [passv2_dev2_qrels.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/passv2_dev2_qrels.tsv) | 177.4 KB | 4,456 | TREC qrels format |
-| Validation 1 (TREC test 2019) | [msmarco-test2019-queries.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/msmarco-test2019-queries.tsv.gz) | 12 KB | 200 | tsv: qid, query                                              |
-| Validation 1 (TREC test 2019) | [msmarco-passagetest2019-top1000.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/msmarco-passagetest2019-top1000.tsv.gz) | 71 MB | 189,877 | tsv: qid, pid, query, passage                                              |
-| Validation 1 (TREC test 2019) | [2019qrels-pass.txt](https://trec.nist.gov/data/deep/2019qrels-pass.txt) | 182 KB | 9,260  | qid, "Q0", docid, rating |
-| Validation 2 (TREC test 2020)    | [msmarco-test2020-queries.tsv.gz](https://msmarco.blob.core.windows.net/msmarcoranking/msmarco-test2020-queries.tsv.gz)          |  12 KB    |   200                  | tsv: qid, query                                              |
-| Validation 2 (TREC test 2020)    | [msmarco-passagetest2020-top1000.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/msmarco-passagetest2020-top1000.tsv.gz)          |    72 MB  |              190,699 | tsv: qid, pid, query, passage                    |
-| Validation 2 (TREC test 2020)   | [2020qrels-pass.txt](https://trec.nist.gov/data/deep/2020qrels-pass.txt)          |     214 KB |                  11,386  | qid, "Q0", docid, rating |
-| Validation 3 (TREC test 2021) | [2021_queries.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/2021_queries.tsv) | 24.0 KB | 477 | tsv: qid, query |
-| Validation 3 (TREC test 2021) | [2021_passage_top100.txt.gz](https://msmarco.blob.core.windows.net/msmarcoranking/2021_passage_top100.txt.gz) | 590.4 KB | 47,700 | TREC submission: qid, "Q0", docid, rank, score, runstring |
-| Validation 3 (TREC test 2021) | [2021.qrels.pass.final.txt](https://trec.nist.gov/data/deep/2021.qrels.pass.final.txt)          |     424 KB | 10,828  | qid, "Q0", docid, rating |
-| Test (TREC test 2021) | (coming soon) |  |  | tsv: qid, query |
-| Test (TREC test 2021) | (coming soon) |  |  | TREC submission: qid, "Q0", docid, rank, score, runstring |
+| Validation 1 (TREC test 2021) | [2021_queries.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/2021_queries.tsv) | 24.0 KB | 477 | tsv: qid, query |
+| Validation 1 (TREC test 2021) | [2021_passage_top100.txt.gz](https://msmarco.blob.core.windows.net/msmarcoranking/2021_passage_top100.txt.gz) | 590.4 KB | 47,700 | TREC submission: qid, "Q0", docid, rank, score, runstring |
+| Validation 1 (TREC test 2021) | [2021.qrels.pass.final.txt](https://trec.nist.gov/data/deep/2021.qrels.pass.final.txt)          |     424 KB | 10,828  | qid, "Q0", docid, rating |
+| Test (TREC test 2022) | (coming soon) |  |  | tsv: qid, query |
+| Test (TREC test 2022) | (coming soon) |  |  | TREC submission: qid, "Q0", docid, rank, score, runstring |
 
 The passage corpus is also in jsonl format. Each passage has:
 
@@ -218,9 +212,9 @@ The width of the columns in the format is not important, but it is important to 
 
 As the official evaluation set, we provide a set of test queries, a subset of which will be used for the final evaluation. The same test queries are used for passage retrieval and document retrieval. Unlike the previous years, different approaches will be used for constructing test collections for the passage ranking and document ranking tasks.
 
-The approach used for test collection construction for the passage retrieval task will be the same as the previous years: NIST will be using depth pooling and construct pools for the queries in the final test set. Passages in these pools will then be labelled by NIST assessors using multi-graded judgments, allowing us to measure NDCG. This year we will be dedicating all our judging resources to obtain a more completely judged test collection for the passage retrieval task compared to the previous years. 
+The approach used for test collection construction for the passage retrieval task will be the same as the previous years: NIST will be using depth pooling and construct pools for the queries in the final test set. Passages in these pools will then be labelled by NIST assessors using multi-graded judgments, allowing us to measure NDCG. 
 
-Evaluation for the document ranking task will be done **using the labels inferred from the passage ranking task**, no additional judgments from NIST will be collected for this task. This is aligned with this year’s definition of the document ranking task, which is focusing on ranking documents based on their likelihood of containing a relevant passage. 
+Evaluation for the passage ranking task will be done **using the labels inferred from the passage ranking task**, no additional judgments from NIST will be collected for this task. This is aligned with this year’s definition of the document ranking task, which is focusing on ranking documents based on their likelihood of containing a relevant passage. 
 
 The main type of TREC submission is _automatic_, which means there was not manual intervention in running the test queries.
 This means you should not adjust your runs, rewrite the query, retrain your model, or make any other sorts of manual adjustments after you see the test queries.
