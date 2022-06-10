@@ -9,7 +9,7 @@
 ## Timetable
 
 * June: Test queries released
-* August: Deadline for submitting runs for document and passage ranking tasks
+* August 10: Deadline for submitting runs for document and passage ranking tasks
 
 ## Registration
 
