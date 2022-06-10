@@ -218,9 +218,9 @@ The width of the columns in the format is not important, but it is important to 
 
 As the official evaluation set, we provide a set of test queries, a subset of which will be used for the final evaluation. The same test queries are used for passage retrieval and document retrieval. Unlike the previous years, different approaches will be used for constructing test collections for the passage ranking and document ranking tasks.
 
-The approach used for test collection construction for the passage retrieval task will be the same as the previous years: NIST will be using depth pooling and construct pools for the queries in the final test set. Passages in these pools will then be labelled by NIST assessors using multi-graded judgments, allowing us to measure NDCG. 
+The approach used for test collection construction for the passage retrieval task will be the same as the previous years: NIST will be using depth pooling and construct pools for the queries in the final test set. Passages in these pools will then be labelled by NIST assessors using multi-graded judgments, allowing us to measure NDCG. This year we will be dedicating all our judging resources to obtain a more completely judged test collection for the passage retrieval task compared to the previous years. 
 
-Evaluation for the passage ranking task will be done **using the labels inferred from the passage ranking task**, no additional judgments from NIST will be collected for this task. This is aligned with this year’s definition of the document ranking task, which is focusing on ranking documents based on their likelihood of containing a relevant passage. 
+Evaluation for the document ranking task will be done **using the labels inferred from the passage ranking task**, no additional judgments from NIST will be collected for this task. This is aligned with this year’s definition of the document ranking task, which is focusing on ranking documents based on their likelihood of containing a relevant passage. 
 
 The main type of TREC submission is _automatic_, which means there was not manual intervention in running the test queries.
 This means you should not adjust your runs, rewrite the query, retrain your model, or make any other sorts of manual adjustments after you see the test queries.
