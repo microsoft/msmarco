@@ -221,6 +221,14 @@ This means you should not adjust your runs, rewrite the query, retrain your mode
 The ideal case is that you only look at the test queries to check that they ran properly (i.e. no bugs) then you submit your automatic runs.
 However, if you want to have a human in the loop for your run, or do anything else that uses the test queries to adjust your model or ranking, you can mark your run as _manual_. Manual runs are interesting, and we may learn a lot, but these are distinct from our main scenario which is a system that responds to unseen queries automatically.
 
+## Additional resources
+We are sharing the following additional resources which we hope will be useful for the community.
+
+| Dataset | Filename | File size | Num Records | Format |
+|------|----------|----------:|------------:|--------|
+| [Segmented document collection](https://github.com/castorini/anserini/blob/master/docs/experiments-msmarco-v2.md#document-collection-segmented) | [msmarco_v2_doc_segmented.tar](https://msmarco.blob.core.windows.net/msmarcoranking/msmarco_v2_doc_segmented.tar) | 25.4 GB | 124,131,414 | tar |
+| [Augmented passage collection](https://github.com/castorini/anserini/blob/master/docs/experiments-msmarco-v2.md#passage-collection-augmented) | [msmarco_v2_passage_augmented.tar](https://msmarco.blob.core.windows.net/msmarcoranking/msmarco_v2_passage_augmented.tar) | 20.0 GB | 138,364,198 | tar |
+
 ## Coordinators
 
 * Nick Craswell (Microsoft)
