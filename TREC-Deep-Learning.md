@@ -214,7 +214,7 @@ As the official evaluation set, we provide a set of test queries, a subset of wh
 
 The approach used for test collection construction for the passage retrieval task will be the same as the previous years: NIST will be using depth pooling and construct pools for the queries in the final test set. Passages in these pools will then be labelled by NIST assessors using multi-graded judgments, allowing us to measure NDCG. 
 
-Evaluation for the passage ranking task will be done **using the labels inferred from the passage ranking task**, no additional judgments from NIST will be collected for this task. This is aligned with this year’s definition of the document ranking task, which is focusing on ranking documents based on their likelihood of containing a relevant passage. 
+Evaluation for the document ranking task will be done **using the labels inferred from the passage ranking task**, no additional judgments from NIST will be collected for this task. This is aligned with this year’s definition of the document ranking task, which is focusing on ranking documents based on their likelihood of containing a relevant passage. 
 
 The main type of TREC submission is _automatic_, which means there was not manual intervention in running the test queries.
 This means you should not adjust your runs, rewrite the query, retrain your model, or make any other sorts of manual adjustments after you see the test queries.
