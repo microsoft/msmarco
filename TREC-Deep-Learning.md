@@ -233,7 +233,7 @@ We are sharing the following additional resources which we hope will be useful f
 
 * Nick Craswell (Microsoft)
 * Bhaskar Mitra (Microsoft)
-* Emine Yilmaz (UCL)
+* Emine Yilmaz (UCL, Amazon)
 * Daniel Campos (University of Illinois at Urbana-Champaign)
 * Jimmy Lin (University of Waterloo)
 
