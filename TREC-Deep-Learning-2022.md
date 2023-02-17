@@ -1,10 +1,14 @@
 # TREC 2022 Deep Learning Track Guidelines
 
+**Overview paper:** Coming soon!
+
+**Note:** You are viewing the guidelines for the 2022 edition of the TREC Deep Learning track. Please visit [https://microsoft.github.io/msmarco/TREC-Deep-Learning](https://microsoft.github.io/msmarco/TREC-Deep-Learning) for the upcoming / latest edition of the track.
+
 ## Previous edition
 
-* 2019 [website](https://microsoft.github.io/msmarco/TREC-Deep-Learning-2019) and [overview paper](https://arxiv.org/pdf/2003.07820.pdf)
-* 2020 [website](https://microsoft.github.io/msmarco/TREC-Deep-Learning-2020) and [overview paper](https://arxiv.org/pdf/2102.07662.pdf)
-* 2021 [website](https://microsoft.github.io/msmarco/TREC-Deep-Learning-2021) and [overview paper](https://www.microsoft.com/en-us/research/uploads/prod/2022/05/trec2021-deeplearning-overview.pdf)
+* 2019 [website](https://microsoft.github.io/msmarco/TREC-Deep-Learning-2019) and [overview paper](https://trec.nist.gov/pubs/trec28/papers/OVERVIEW.DL.pdf)
+* 2020 [website](https://microsoft.github.io/msmarco/TREC-Deep-Learning-2020) and [overview paper](https://trec.nist.gov/pubs/trec29/papers/OVERVIEW.DL.pdf)
+* 2021 [website](https://microsoft.github.io/msmarco/TREC-Deep-Learning-2021) and [overview paper](https://trec.nist.gov/pubs/trec30/papers/Overview-DL.pdf)
 
 ## Timetable
 
