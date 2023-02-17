@@ -5,7 +5,7 @@
 * 2019 [website](https://microsoft.github.io/msmarco/TREC-Deep-Learning-2019) and [overview paper](https://trec.nist.gov/pubs/trec28/papers/OVERVIEW.DL.pdf)
 * 2020 [website](https://microsoft.github.io/msmarco/TREC-Deep-Learning-2020) and [overview paper](https://trec.nist.gov/pubs/trec29/papers/OVERVIEW.DL.pdf)
 * 2021 [website](https://microsoft.github.io/msmarco/TREC-Deep-Learning-2021) and [overview paper](https://trec.nist.gov/pubs/trec30/papers/Overview-DL.pdf)
-* 2022 [website](https://microsoft.github.io/msmarco/TREC-Deep-Learning-2022)
+* 2022 [website](https://microsoft.github.io/msmarco/TREC-Deep-Learning-2022) (overview paper coming soon!)
 
 ## Timetable (tentative)
 
@@ -22,17 +22,17 @@ The Deep Learning Track studies information retrieval in a large training data r
 
 Certain machine learning based methods, such as methods based on deep learning are known to require very large datasets for training. Lack of such large scale datasets has been a limitation for developing such methods for common information retrieval tasks, such as document ranking. The Deep Learning Track organized in the previous years aimed at providing large scale datasets to TREC, and create a focused research effort with a rigorous blind evaluation of ranker for the passage ranking and document ranking tasks.
 
-Similar to the previous years, one of the main goals of the track in 2022 is to study what methods work best when a large amount of training data is available. For example, do the same methods that work on small data also work on large data? How much do methods improve when given more training data? What external data and models can be brought in to bear in this scenario, and how useful is it to combine full supervision with other forms of supervision?
+Similar to the previous years, one of the main goals of the track in 2023 is to study what methods work best when a large amount of training data is available. For example, do the same methods that work on small data also work on large data? How much do methods improve when given more training data? What external data and models can be brought in to bear in this scenario, and how useful is it to combine full supervision with other forms of supervision?
 
 
 ## Deep Learning Track Tasks
 
-(Coming soon.)
+(Coming soon!)
 
 
 ## Datasets
 
-(Coming soon.)
+(Coming soon!)
 
 ## Submission, evaluation and judging
 
