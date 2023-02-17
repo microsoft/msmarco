@@ -24,6 +24,7 @@ Certain machine learning based methods, such as methods based on deep learning a
 
 Similar to the previous years, one of the main goals of the track in 2023 is to study what methods work best when a large amount of training data is available. For example, do the same methods that work on small data also work on large data? How much do methods improve when given more training data? What external data and models can be brought in to bear in this scenario, and how useful is it to combine full supervision with other forms of supervision?
 
+**This year we are celebrating the 5<sup>th</sup> year anniversary of the TREC Deep Learning Track!** 🥳
 
 ## Deep Learning Track Tasks
 
