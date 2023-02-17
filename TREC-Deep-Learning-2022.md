@@ -4,7 +4,7 @@
 
 **Note:** You are viewing the guidelines for the 2022 edition of the TREC Deep Learning track. Please visit [https://microsoft.github.io/msmarco/TREC-Deep-Learning](https://microsoft.github.io/msmarco/TREC-Deep-Learning) for the upcoming / latest edition of the track.
 
-## Previous edition
+## Previous editions
 
 * 2019 [website](https://microsoft.github.io/msmarco/TREC-Deep-Learning-2019) and [overview paper](https://trec.nist.gov/pubs/trec28/papers/OVERVIEW.DL.pdf)
 * 2020 [website](https://microsoft.github.io/msmarco/TREC-Deep-Learning-2020) and [overview paper](https://trec.nist.gov/pubs/trec29/papers/OVERVIEW.DL.pdf)
