@@ -1,6 +1,6 @@
 # TREC 2023 Deep Learning Track Guidelines
 
-**This year we are celebrating the 5<sup>th</sup> year anniversary of the TREC Deep Learning Track!** 🥳
+**This year we are celebrating the 5<sup>th</sup> anniversary of the TREC Deep Learning Track!** 🥳
 
 ## Previous editions
 
