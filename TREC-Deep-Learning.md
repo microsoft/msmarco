@@ -1,5 +1,7 @@
 # TREC 2023 Deep Learning Track Guidelines
 
+**This year we are celebrating the 5<sup>th</sup> year anniversary of the TREC Deep Learning Track!** 🥳
+
 ## Previous editions
 
 * 2019 [website](https://microsoft.github.io/msmarco/TREC-Deep-Learning-2019) and [overview paper](https://trec.nist.gov/pubs/trec28/papers/OVERVIEW.DL.pdf)
@@ -23,8 +25,6 @@ The Deep Learning Track studies information retrieval in a large training data r
 Certain machine learning based methods, such as methods based on deep learning are known to require very large datasets for training. Lack of such large scale datasets has been a limitation for developing such methods for common information retrieval tasks, such as document ranking. The Deep Learning Track organized in the previous years aimed at providing large scale datasets to TREC, and create a focused research effort with a rigorous blind evaluation of ranker for the passage ranking and document ranking tasks.
 
 Similar to the previous years, one of the main goals of the track in 2023 is to study what methods work best when a large amount of training data is available. For example, do the same methods that work on small data also work on large data? How much do methods improve when given more training data? What external data and models can be brought in to bear in this scenario, and how useful is it to combine full supervision with other forms of supervision?
-
-**This year we are celebrating the 5<sup>th</sup> year anniversary of the TREC Deep Learning Track!** 🥳
 
 ## Deep Learning Track Tasks
 
