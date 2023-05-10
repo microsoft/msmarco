@@ -150,11 +150,15 @@ dict_keys(['url', 'title', 'headings', 'body', 'docid'])
 | Dev 2 | [passv2_dev2_queries.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/passv2_dev2_queries.tsv) | 175.4 KB | 4.281 | tsv: qid, query |
 | Dev 2 | [passv2_dev2_top100.txt.gz](https://msmarco.blob.core.windows.net/msmarcoranking/passv2_dev2_top100.txt.gz) | 5.1 MB | 428,100 | TREC submission: qid, "Q0", docid, rank, score, runstring |
 | Dev 2| [passv2_dev2_qrels.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/passv2_dev2_qrels.tsv) | 177.4 KB | 4,456 | TREC qrels format |
+
 | Validation 1 (TREC test 2021) | [2021_queries.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/2021_queries.tsv) | 24.0 KB | 477 | tsv: qid, query |
 | Validation 1 (TREC test 2021) | [2021_passage_top100.txt.gz](https://msmarco.blob.core.windows.net/msmarcoranking/2021_passage_top100.txt.gz) | 590.4 KB | 47,700 | TREC submission: qid, "Q0", docid, rank, score, runstring |
 | Validation 1 (TREC test 2021) | [2021.qrels.pass.final.txt](https://trec.nist.gov/data/deep/2021.qrels.pass.final.txt)          |     424 KB | 10,828  | qid, "Q0", docid, rating |
-| Test (TREC test 2022) | [2022_queries.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/2022_queries.tsv) | 21.0 | 500 | tsv: qid, query |
-| Test (TREC test 2022) | [2022_passage_top100.txt.gz](https://msmarco.blob.core.windows.net/msmarcoranking/2022_passage_top100.txt.gz) | 615.3 | 50,000 | TREC submission: qid, "Q0", docid, rank, score, runstring |
+| Validation 2 (TREC test 2022) | [2022_queries.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/2022_queries.tsv) | 21.0 | 500 | tsv: qid, query |
+| Validation 2 (TREC test 2022) | [2022_passage_top100.txt.gz](https://msmarco.blob.core.windows.net/msmarcoranking/2022_passage_top100.txt.gz) | 615.3 | 50,000 | TREC submission: qid, "Q0", docid, rank, score, runstring |
+| Validation 2 (TREC test 2022) | [2022.qrels.pass.withDupes.txt](https://trec.nist.gov/data/deep/2022.qrels.pass.withDupes.txt)          |     15 MB | 386,416  | qid, "Q0", docid, rating |
+| Test (TREC test 2023) | (Coming soon!) |  |  | tsv: qid, query |
+| Test (TREC test 2023) | (Coming soon!) |  |  | TREC submission: qid, "Q0", docid, rank, score, runstring |
 
 The passage corpus is also in jsonl format. Each passage has:
 
