@@ -1,6 +1,6 @@
 # TREC 2022 Deep Learning Track Guidelines
 
-**Overview paper:** Coming soon!
+**Overview paper:** [https://trec.nist.gov/pubs/trec31/papers/Overview_deep.pdf](https://trec.nist.gov/pubs/trec31/papers/Overview_deep.pdf)
 
 **Note:** You are viewing the guidelines for the 2022 edition of the TREC Deep Learning track. Please visit [https://microsoft.github.io/msmarco/TREC-Deep-Learning](https://microsoft.github.io/msmarco/TREC-Deep-Learning) for the upcoming / latest edition of the track.
 
