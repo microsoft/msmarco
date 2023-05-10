@@ -7,7 +7,7 @@
 * 2019 [website](https://microsoft.github.io/msmarco/TREC-Deep-Learning-2019) and [overview paper](https://trec.nist.gov/pubs/trec28/papers/OVERVIEW.DL.pdf)
 * 2020 [website](https://microsoft.github.io/msmarco/TREC-Deep-Learning-2020) and [overview paper](https://trec.nist.gov/pubs/trec29/papers/OVERVIEW.DL.pdf)
 * 2021 [website](https://microsoft.github.io/msmarco/TREC-Deep-Learning-2021) and [overview paper](https://trec.nist.gov/pubs/trec30/papers/Overview-DL.pdf)
-* 2022 [website](https://microsoft.github.io/msmarco/TREC-Deep-Learning-2022) (overview paper coming soon!)
+* 2022 [website](https://microsoft.github.io/msmarco/TREC-Deep-Learning-2022) and [overview paper](https://trec.nist.gov/pubs/trec31/papers/Overview_deep.pdf)
 
 ## Timetable (tentative)
 
