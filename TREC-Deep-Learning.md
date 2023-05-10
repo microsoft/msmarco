@@ -57,7 +57,138 @@ In context of top-100 reranking subtask, we provide you with an initial ranking 
 
 ## Datasets
 
-(Coming soon!)
+This year we will be leveraging the same datasets as [last year's track](https://microsoft.github.io/msmarco/TREC-Deep-Learning-2022).
+
+### Downloading the datasets
+
+To download large files more quickly and reliably use [AzCopy](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10) (see [instructions](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-blobs-download)). 
+
+```
+azcopy copy https://msmarco.blob.core.windows.net/msmarcoranking/msmarco_v2_doc.tar msmarco_v2_doc.tar
+```
+
+We also saw a [suggestion](https://github.com/microsoft/msmarco/issues/7#issuecomment-880104882) for speeding up downloads without azcopy:
+
+```
+wget --header "X-Ms-Version: 2019-12-12" https://msmarco.blob.core.windows.net/msmarcoranking/msmarco_v2_doc.tar
+```
+
+### Document ranking dataset
+
+| Type | Filename | File size | Num Records | Format |
+|------|----------|----------:|------------:|--------|
+| Corpus | [msmarco_v2_doc.tar](https://msmarco.blob.core.windows.net/msmarcoranking/msmarco_v2_doc.tar) | 32.3 GB | 11,959,635 | tar of 60 gzipped jsonl files |
+| Train | [docv2_train_queries.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/docv2_train_queries.tsv) | 12.9 MB | 322,196 | tsv: qid, query |
+| Train | [docv2_train_top100.txt.gz](https://msmarco.blob.core.windows.net/msmarcoranking/docv2_train_top100.txt.gz) | 404.5 MB | 32,218,809 | TREC submission: qid, "Q0", docid, rank, score, runstring |
+| Train | [docv2_train_qrels.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/docv2_train_qrels.tsv) | 11.9 MB | 331,956 | TREC qrels format |
+| Dev 1 | [docv2_dev_queries.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/docv2_dev_queries.tsv) | 187.5 KB | 4,552 | tsv: qid, query |
+| Dev 1 | [docv2_dev_top100.txt.gz](https://msmarco.blob.core.windows.net/msmarcoranking/docv2_dev_top100.txt.gz) | 5.6 MB | 455,200 | TREC submission: qid, "Q0", docid, rank, score, runstring |
+| Dev 1| [docv2_dev_qrels.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/docv2_dev_qrels.tsv) | 173.4 KB | 4,702 | TREC qrels format |
+| Dev 2 | [docv2_dev2_queries.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/docv2_dev2_queries.tsv) | 205.0 KB | 5,000 | tsv: qid, query |
+| Dev 2 | [docv2_dev2_top100.txt.gz](https://msmarco.blob.core.windows.net/msmarcoranking/docv2_dev2_top100.txt.gz) | 6.1 MB | 500,000 | TREC submission: qid, "Q0", docid, rank, score, runstring |
+| Dev 2| [docv2_dev2_qrels.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/docv2_dev2_qrels.tsv) | 190.9 KB | 5,178 | TREC qrels format |
+| Validation 1 (TREC test 2019) | [msmarco-test2019-queries.tsv.gz](https://msmarco.blob.core.windows.net/msmarcoranking/msmarco-test2019-queries.tsv.gz) | 4.2 KB | 200 | tsv: qid, query |
+| Validation 1 (TREC test 2019) | (currently not available) |  |  | TREC submission: qid, "Q0", docid, rank, score, runstring |
+| Validation 1 (TREC test 2019) | [docv2_trec2019_qrels.txt.gz](https://msmarco.blob.core.windows.net/msmarcoranking/docv2_trec2019_qrels.txt.gz) | 105 KB | 13,940 | qid, "Q0", docid, rating |
+| Validation 2 (TREC test 2020) | [msmarco-test2020-queries.tsv.gz](https://msmarco.blob.core.windows.net/msmarcoranking/msmarco-test2020-queries.tsv.gz) | 8.2 KB | 200 | tsv: qid, query |
+| Validation 2 (TREC test 2020) | (currently not available) |  KB |  | TREC submission: qid, "Q0", docid, rank, score, runstring |
+| Validation 2 (TREC test 2020) | [docv2_trec2020_qrels.txt.gz](https://msmarco.blob.core.windows.net/msmarcoranking/docv2_trec2020_qrels.txt.gz) | 60.9 KB | 7,942 | qid, "Q0", docid, rating |
+| Validation 3 (TREC test 2021) | [2021_queries.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/2021_queries.tsv) | 24.0 KB | 477 | tsv: qid, query |
+| Validation 3 (TREC test 2021) | [2021_document_top100.txt.gz](https://msmarco.blob.core.windows.net/msmarcoranking/2021_document_top100.txt.gz) | 603.7 KB | 47,700 | TREC submission: qid, "Q0", docid, rank, score, runstring |
+| Validation 3 | [2021.qrels.docs.final.txt](https://trec.nist.gov/data/deep/2021.qrels.docs.final.txt)          |   468 KB |                  13,058  | qid, "Q0", docid, rating       |
+| Test (TREC test 2022) | [2022_queries.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/2022_queries.tsv) | 21.0 KB | 500 | tsv: qid, query |
+| Test (TREC test 2022) | [2022_document_top100.txt.gz](https://msmarco.blob.core.windows.net/msmarcoranking/2022_document_top100.txt.gz) | 627.7 KB | 50,000 | TREC submission: qid, "Q0", docid, rank, score, runstring |
+
+The document corpus is in jsonl format. Each document has:
+
+* docid: Document identifier encodes the filename and starting position of the document's jsonl line in the corpus. For example, `msmarco_doc_31_726131` is in the file `msmarco_v2_doc/msmarco_doc_31` at position `726131`.
+* url: The URL of the document
+* title: The title of the document
+* headings: A newline-separated list of headings that were extracted from the document, where the first heading may be a generated heading that describes the whole document (an alternate title).
+* body: The body text of the document
+
+If you unzip the corpus, you can quickly access a document using:
+
+```python
+import json
+
+def get_document(document_id):
+    (string1, string2, bundlenum, position) = document_id.split('_')
+    assert string1 == 'msmarco' and string2 == 'doc'
+
+    with open(f'./msmarco_v2_doc/msmarco_doc_{bundlenum}', 'rt', encoding='utf8') as in_fh:
+        in_fh.seek(int(position))
+        json_string = in_fh.readline()
+        document = json.loads(json_string)
+        assert document['docid'] == document_id
+        return document
+
+document = get_document('msmarco_doc_31_726131')
+print(document.keys())
+```
+
+Producing output:
+
+```python
+dict_keys(['url', 'title', 'headings', 'body', 'docid'])
+```
+
+### Passage ranking dataset
+
+| Type | Filename | File size | Num Records | Format |
+|------|----------|----------:|------------:|--------|
+| Corpus | [msmarco_v2_passage.tar](https://msmarco.blob.core.windows.net/msmarcoranking/msmarco_v2_passage.tar) | 20.3 GB | 138,364,198 | tar of 70 gzipped jsonl files |
+| Train | [passv2_train_queries.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/passv2_train_queries.tsv) | 11.1 MB | 277,144 | tsv: qid, query |
+| Train | [passv2_train_top100.txt.gz](https://msmarco.blob.core.windows.net/msmarcoranking/passv2_train_top100.txt.gz) | 324.9 MB | 27,713,673 | TREC submission: qid, "Q0", docid, rank, score, runstring |
+| Train | [passv2_train_qrels.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/passv2_train_qrels.tsv) | 11.1 MB | 287,889 | TREC qrels format |
+| Dev 1 | [passv2_dev_queries.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/passv2_dev_queries.tsv) | 160.7 KB | 3,903 | tsv: qid, query |
+| Dev 1 | [passv2_dev_top100.txt.gz](https://msmarco.blob.core.windows.net/msmarcoranking/passv2_dev_top100.txt.gz) | 4.7 MB | 390,300 | TREC submission: qid, "Q0", docid, rank, score, runstring |
+| Dev 1| [passv2_dev_qrels.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/passv2_dev_qrels.tsv) | 161.2 KB | 4,074 | TREC qrels format |
+| Dev 2 | [passv2_dev2_queries.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/passv2_dev2_queries.tsv) | 175.4 KB | 4.281 | tsv: qid, query |
+| Dev 2 | [passv2_dev2_top100.txt.gz](https://msmarco.blob.core.windows.net/msmarcoranking/passv2_dev2_top100.txt.gz) | 5.1 MB | 428,100 | TREC submission: qid, "Q0", docid, rank, score, runstring |
+| Dev 2| [passv2_dev2_qrels.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/passv2_dev2_qrels.tsv) | 177.4 KB | 4,456 | TREC qrels format |
+| Validation 1 (TREC test 2021) | [2021_queries.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/2021_queries.tsv) | 24.0 KB | 477 | tsv: qid, query |
+| Validation 1 (TREC test 2021) | [2021_passage_top100.txt.gz](https://msmarco.blob.core.windows.net/msmarcoranking/2021_passage_top100.txt.gz) | 590.4 KB | 47,700 | TREC submission: qid, "Q0", docid, rank, score, runstring |
+| Validation 1 (TREC test 2021) | [2021.qrels.pass.final.txt](https://trec.nist.gov/data/deep/2021.qrels.pass.final.txt)          |     424 KB | 10,828  | qid, "Q0", docid, rating |
+| Test (TREC test 2022) | [2022_queries.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/2022_queries.tsv) | 21.0 | 500 | tsv: qid, query |
+| Test (TREC test 2022) | [2022_passage_top100.txt.gz](https://msmarco.blob.core.windows.net/msmarcoranking/2022_passage_top100.txt.gz) | 615.3 | 50,000 | TREC submission: qid, "Q0", docid, rank, score, runstring |
+
+The passage corpus is also in jsonl format. Each passage has:
+
+* pid: Passage identifier encodes the filename and starting position of the passage's jsonl line in the corpus. For example, `msmarco_passage_41_45753370` is in the file `msmarco_v2_passage/msmarco_passage_41` at position `45753370`.
+* passage: The text of the passage.
+* spans: The position of the passage sentence(s) in the originating document e.g. `(17789,17900),(17901,18096)`.
+* docid: The document ID of the passage's originating document e.g. `msmarco_doc_35_1343131017`.
+
+The passage corpus can be accessed using the passage id, by adapting the python code listed for the document ID case above.
+
+Passage "spans" use byte offsets, but the document text is in UTF-8, so to extract a span the span `(x,y)` from body text you need to use:
+
+```python
+doc_json['body'].encode()[x:y].decode()
+```
+
+### Use of external information
+
+You are generally allowed to use external information while developing your runs.
+When you submit your runs, please fill in a form listing what resources you used.
+This could include an external corpus such as Wikipedia or a pretrained model (e.g. word embeddings, BERT).
+This could also include the provided set of document ranking training data, but also optionally other data such as the passage ranking task labels or external labels or pretrained models.
+This will allow us to analyze the runs and break they down into types.
+
+IMPORTANT NOTE: We are now dealing with multiple versions of MS MARCO ranking data, and all the other MS MARCO tasks as well. This new data release changes what is available and usable.  Participants should be careful about using those datasets and must adhere to the following guidelines:
+
+* You now are **PERMITTED** to use the passage-document mapping in your runs.
+For example, a passage ranking could be generated by first ranking the documents, then identifying all the passages from the top-k documents, then applying a passage reranking algorithm.
+In previous MS MARCO data, no passage-document mapping was available and we discouraged participants from generating such a mapping, so this approach was not possible.
+* You are **PROHIBITED** from using the [ORCAS data](https://microsoft.github.io/msmarco/ORCAS) again this year.
+You are also **PROHIBITED** from using any other information that tells us which of this year's documents (or passages) were also present in the previous version of the corpus.
+We will study whether use of such information could cause some bias or leakage of ground truth, but for now it's prohibited.
+We may release an ORCAS update.
+* Other than ORCAS you are **PERMITTED** to use any data listed above and from previous years of the track ([2019](https://microsoft.github.io/msmarco/TREC-Deep-Learning-2019), [2020](https://microsoft.github.io/msmarco/TREC-Deep-Learning-2020), [2021](https://microsoft.github.io/msmarco/TREC-Deep-Learning-2021), and [2022](https://microsoft.github.io/msmarco/TREC-Deep-Learning-2022)).
+* You are **PERMITTED** to use any data listed below under the [Additional resources](https://microsoft.github.io/msmarco/TREC-Deep-Learning#additional-resources) section.
+* You are **PROHIBITED** from using any other datasets from [msmarco.org](http://msmarco.org), such as the original QnA and NLGEN tasks, in your submission.
+The original MS MARCO dataset reveals some minor details of how they were constructed that would not be available in a real-world search engine; hence, should be avoided.
 
 ## Submission, evaluation and judging
 
