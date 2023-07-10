@@ -11,7 +11,7 @@
 
 ## Timetable (tentative)
 
-* **June:** Test queries released
+* **July 10th:** Test queries released
 * **July 31st:** Deadline for submitting runs for passage and document ranking tasks
 
 ## Registration
