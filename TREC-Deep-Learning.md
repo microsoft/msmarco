@@ -73,6 +73,44 @@ We also saw a [suggestion](https://github.com/microsoft/msmarco/issues/7#issueco
 wget --header "X-Ms-Version: 2019-12-12" https://msmarco.blob.core.windows.net/msmarcoranking/msmarco_v2_doc.tar
 ```
 
+### Passage ranking dataset
+
+| Type | Filename | File size | Num Records | Format |
+|------|----------|----------:|------------:|--------|
+| Corpus | [msmarco_v2_passage.tar](https://msmarco.blob.core.windows.net/msmarcoranking/msmarco_v2_passage.tar) | 20.3 GB | 138,364,198 | tar of 70 gzipped jsonl files |
+| Train | [passv2_train_queries.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/passv2_train_queries.tsv) | 11.1 MB | 277,144 | tsv: qid, query |
+| Train | [passv2_train_top100.txt.gz](https://msmarco.blob.core.windows.net/msmarcoranking/passv2_train_top100.txt.gz) | 324.9 MB | 27,713,673 | TREC submission: qid, "Q0", docid, rank, score, runstring |
+| Train | [passv2_train_qrels.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/passv2_train_qrels.tsv) | 11.1 MB | 287,889 | TREC qrels format |
+| Dev 1 | [passv2_dev_queries.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/passv2_dev_queries.tsv) | 160.7 KB | 3,903 | tsv: qid, query |
+| Dev 1 | [passv2_dev_top100.txt.gz](https://msmarco.blob.core.windows.net/msmarcoranking/passv2_dev_top100.txt.gz) | 4.7 MB | 390,300 | TREC submission: qid, "Q0", docid, rank, score, runstring |
+| Dev 1| [passv2_dev_qrels.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/passv2_dev_qrels.tsv) | 161.2 KB | 4,074 | TREC qrels format |
+| Dev 2 | [passv2_dev2_queries.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/passv2_dev2_queries.tsv) | 175.4 KB | 4.281 | tsv: qid, query |
+| Dev 2 | [passv2_dev2_top100.txt.gz](https://msmarco.blob.core.windows.net/msmarcoranking/passv2_dev2_top100.txt.gz) | 5.1 MB | 428,100 | TREC submission: qid, "Q0", docid, rank, score, runstring |
+| Dev 2| [passv2_dev2_qrels.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/passv2_dev2_qrels.tsv) | 177.4 KB | 4,456 | TREC qrels format |
+| Validation 1 (TREC test 2021) | [2021_queries.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/2021_queries.tsv) | 24.0 KB | 477 | tsv: qid, query |
+| Validation 1 (TREC test 2021) | [2021_passage_top100.txt.gz](https://msmarco.blob.core.windows.net/msmarcoranking/2021_passage_top100.txt.gz) | 590.4 KB | 47,700 | TREC submission: qid, "Q0", docid, rank, score, runstring |
+| Validation 1 (TREC test 2021) | [2021.qrels.pass.final.txt](https://trec.nist.gov/data/deep/2021.qrels.pass.final.txt)          |     424 KB | 10,828  | qid, "Q0", docid, rating |
+| Validation 2 (TREC test 2022) | [2022_queries.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/2022_queries.tsv) | 21.0 KB | 500 | tsv: qid, query |
+| Validation 2 (TREC test 2022) | [2022_passage_top100.txt.gz](https://msmarco.blob.core.windows.net/msmarcoranking/2022_passage_top100.txt.gz) | 615.3 KB | 50,000 | TREC submission: qid, "Q0", docid, rank, score, runstring |
+| Validation 2 (TREC test 2022) | [2022.qrels.pass.withDupes.txt](https://trec.nist.gov/data/deep/2022.qrels.pass.withDupes.txt)          |     15 MB | 386,416  | qid, "Q0", docid, rating |
+| Test (TREC test 2023) | [2023_queries.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/2023_queries.tsv) | 37.2 KB | 700 | tsv: qid, query |
+| Test (TREC test 2023) | [2023_passage_top100.txt.gz](https://msmarco.blob.core.windows.net/msmarcoranking/2023_passage_top100.txt.gz) | 868.1 KB | 70,000 | TREC submission: qid, "Q0", docid, rank, score, runstring |
+
+The passage corpus is also in jsonl format. Each passage has:
+
+* pid: Passage identifier encodes the filename and starting position of the passage's jsonl line in the corpus. For example, `msmarco_passage_41_45753370` is in the file `msmarco_v2_passage/msmarco_passage_41` at position `45753370`.
+* passage: The text of the passage.
+* spans: The position of the passage sentence(s) in the originating document e.g. `(17789,17900),(17901,18096)`.
+* docid: The document ID of the passage's originating document e.g. `msmarco_doc_35_1343131017`.
+
+The passage corpus can be accessed using the passage id, by adapting the python code listed for the document ID case above.
+
+Passage "spans" use byte offsets, but the document text is in UTF-8, so to extract a span the span `(x,y)` from body text you need to use:
+
+```python
+doc_json['body'].encode()[x:y].decode()
+```
+
 ### Document ranking dataset
 
 | Type | Filename | File size | Num Records | Format |
@@ -99,8 +137,8 @@ wget --header "X-Ms-Version: 2019-12-12" https://msmarco.blob.core.windows.net/m
 | Validation 4 (TREC test 2022) | [2022_queries.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/2022_queries.tsv) | 21.0 KB | 500 | tsv: qid, query |
 | Validation 4 (TREC test 2022) | [2022_document_top100.txt.gz](https://msmarco.blob.core.windows.net/msmarcoranking/2022_document_top100.txt.gz) | 627.7 KB | 50,000 | TREC submission: qid, "Q0", docid, rank, score, runstring |
 | Validation 4 (TREC test 2022) | [2022.qrels.docs.inferred.txt](https://trec.nist.gov/data/deep/2022.qrels.docs.inferred.txt)          |   13.1 MB |                  369,638  | qid, "Q0", docid, rating       |
-| Test (TREC test 2023) | (Coming soon!) |  |  | tsv: qid, query |
-| Test (TREC test 2023) | (Coming soon!) |  |  | TREC submission: qid, "Q0", docid, rank, score, runstring |
+| Test (TREC test 2023) | [2023_queries.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/2023_queries.tsv) | 37.2 KB | 700 | tsv: qid, query |
+| Test (TREC test 2023) | [2023_document_top100.txt.gz](https://msmarco.blob.core.windows.net/msmarcoranking/2023_document_top100.txt.gz) | 881.0 KB | 70,000 | TREC submission: qid, "Q0", docid, rank, score, runstring |
 
 The document corpus is in jsonl format. Each document has:
 
@@ -134,45 +172,6 @@ Producing output:
 
 ```python
 dict_keys(['url', 'title', 'headings', 'body', 'docid'])
-```
-
-### Passage ranking dataset
-
-| Type | Filename | File size | Num Records | Format |
-|------|----------|----------:|------------:|--------|
-| Corpus | [msmarco_v2_passage.tar](https://msmarco.blob.core.windows.net/msmarcoranking/msmarco_v2_passage.tar) | 20.3 GB | 138,364,198 | tar of 70 gzipped jsonl files |
-| Train | [passv2_train_queries.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/passv2_train_queries.tsv) | 11.1 MB | 277,144 | tsv: qid, query |
-| Train | [passv2_train_top100.txt.gz](https://msmarco.blob.core.windows.net/msmarcoranking/passv2_train_top100.txt.gz) | 324.9 MB | 27,713,673 | TREC submission: qid, "Q0", docid, rank, score, runstring |
-| Train | [passv2_train_qrels.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/passv2_train_qrels.tsv) | 11.1 MB | 287,889 | TREC qrels format |
-| Dev 1 | [passv2_dev_queries.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/passv2_dev_queries.tsv) | 160.7 KB | 3,903 | tsv: qid, query |
-| Dev 1 | [passv2_dev_top100.txt.gz](https://msmarco.blob.core.windows.net/msmarcoranking/passv2_dev_top100.txt.gz) | 4.7 MB | 390,300 | TREC submission: qid, "Q0", docid, rank, score, runstring |
-| Dev 1| [passv2_dev_qrels.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/passv2_dev_qrels.tsv) | 161.2 KB | 4,074 | TREC qrels format |
-| Dev 2 | [passv2_dev2_queries.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/passv2_dev2_queries.tsv) | 175.4 KB | 4.281 | tsv: qid, query |
-| Dev 2 | [passv2_dev2_top100.txt.gz](https://msmarco.blob.core.windows.net/msmarcoranking/passv2_dev2_top100.txt.gz) | 5.1 MB | 428,100 | TREC submission: qid, "Q0", docid, rank, score, runstring |
-| Dev 2| [passv2_dev2_qrels.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/passv2_dev2_qrels.tsv) | 177.4 KB | 4,456 | TREC qrels format |
-
-| Validation 1 (TREC test 2021) | [2021_queries.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/2021_queries.tsv) | 24.0 KB | 477 | tsv: qid, query |
-| Validation 1 (TREC test 2021) | [2021_passage_top100.txt.gz](https://msmarco.blob.core.windows.net/msmarcoranking/2021_passage_top100.txt.gz) | 590.4 KB | 47,700 | TREC submission: qid, "Q0", docid, rank, score, runstring |
-| Validation 1 (TREC test 2021) | [2021.qrels.pass.final.txt](https://trec.nist.gov/data/deep/2021.qrels.pass.final.txt)          |     424 KB | 10,828  | qid, "Q0", docid, rating |
-| Validation 2 (TREC test 2022) | [2022_queries.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/2022_queries.tsv) | 21.0 | 500 | tsv: qid, query |
-| Validation 2 (TREC test 2022) | [2022_passage_top100.txt.gz](https://msmarco.blob.core.windows.net/msmarcoranking/2022_passage_top100.txt.gz) | 615.3 | 50,000 | TREC submission: qid, "Q0", docid, rank, score, runstring |
-| Validation 2 (TREC test 2022) | [2022.qrels.pass.withDupes.txt](https://trec.nist.gov/data/deep/2022.qrels.pass.withDupes.txt)          |     15 MB | 386,416  | qid, "Q0", docid, rating |
-| Test (TREC test 2023) | (Coming soon!) |  |  | tsv: qid, query |
-| Test (TREC test 2023) | (Coming soon!) |  |  | TREC submission: qid, "Q0", docid, rank, score, runstring |
-
-The passage corpus is also in jsonl format. Each passage has:
-
-* pid: Passage identifier encodes the filename and starting position of the passage's jsonl line in the corpus. For example, `msmarco_passage_41_45753370` is in the file `msmarco_v2_passage/msmarco_passage_41` at position `45753370`.
-* passage: The text of the passage.
-* spans: The position of the passage sentence(s) in the originating document e.g. `(17789,17900),(17901,18096)`.
-* docid: The document ID of the passage's originating document e.g. `msmarco_doc_35_1343131017`.
-
-The passage corpus can be accessed using the passage id, by adapting the python code listed for the document ID case above.
-
-Passage "spans" use byte offsets, but the document text is in UTF-8, so to extract a span the span `(x,y)` from body text you need to use:
-
-```python
-doc_json['body'].encode()[x:y].decode()
 ```
 
 ### Use of external information
