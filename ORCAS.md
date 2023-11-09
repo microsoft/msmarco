@@ -29,9 +29,9 @@ We provide the dataset in a single file *orcas.tsv.gz* and also in TREC format t
 
 | Type | Filename | Num Records | File size (Bytes) | Format | md5sum |
 |------|----------|-----------|-------------|--------|--------|
-| Click data | [orcas.tsv.gz](https://msmarco.blob.core.windows.net/msmarcoranking/orcas.tsv.gz) | 18,823,602 | 329,653,181 | tsv: qid, query, did, url | 4b9350bf997c5c0eaa562be81c796981 |
-| Queries | [orcas-doctrain-queries.tsv.gz](https://msmarco.blob.core.windows.net/msmarcoranking/orcas-doctrain-queries.tsv.gz) | 10,405,342 | 104,209,356 | tsv: qid, query | 519c5f522294406e3b0574d7d53cf233 |
-| QRELs | [orcas-doctrain-qrels.tsv.gz](https://msmarco.blob.core.windows.net/msmarcoranking/orcas-doctrain-qrels.tsv.gz) | 18,823,602 | 109,824,304 | TREC qrels format | 3f94db106374be649782022c3018acd0 |
-| Top 100 candidates | [orcas-doctrain-top100.gz](https://msmarco.blob.core.windows.net/msmarcoranking/orcas-doctrain-top100.gz) | 982,951,086 | 10,724,320,629 | TREC submission: qid, "Q0", docid, rank, score, runstring | 118d0884638fd405e111157a124ef0b2 |
+| Click data | [orcas.tsv.gz](https://msmarco.z22.web.core.windows.net/msmarcoranking/orcas.tsv.gz) | 18,823,602 | 329,653,181 | tsv: qid, query, did, url | 4b9350bf997c5c0eaa562be81c796981 |
+| Queries | [orcas-doctrain-queries.tsv.gz](https://msmarco.z22.web.core.windows.net/msmarcoranking/orcas-doctrain-queries.tsv.gz) | 10,405,342 | 104,209,356 | tsv: qid, query | 519c5f522294406e3b0574d7d53cf233 |
+| QRELs | [orcas-doctrain-qrels.tsv.gz](https://msmarco.z22.web.core.windows.net/msmarcoranking/orcas-doctrain-qrels.tsv.gz) | 18,823,602 | 109,824,304 | TREC qrels format | 3f94db106374be649782022c3018acd0 |
+| Top 100 candidates | [orcas-doctrain-top100.gz](https://msmarco.z22.web.core.windows.net/msmarcoranking/orcas-doctrain-top100.gz) | 982,951,086 | 10,724,320,629 | TREC submission: qid, "Q0", docid, rank, score, runstring | 118d0884638fd405e111157a124ef0b2 |
 
 {% include_relative Notice.md %}
