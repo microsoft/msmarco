@@ -66,40 +66,40 @@ This year we will be leveraging the same datasets as [last year's track](https:/
 To download large files more quickly and reliably use [AzCopy](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10) (see [instructions](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-blobs-download)). 
 
 ```
-azcopy copy https://msmarco.blob.core.windows.net/msmarcoranking/msmarco_v2_doc.tar msmarco_v2_doc.tar
+azcopy copy https://msmarco.z22.web.core.windows.net/msmarcoranking/msmarco_v2_doc.tar msmarco_v2_doc.tar
 ```
 
 We also saw a [suggestion](https://github.com/microsoft/msmarco/issues/7#issuecomment-880104882) for speeding up downloads without azcopy:
 
 ```
-wget --header "X-Ms-Version: 2019-12-12" https://msmarco.blob.core.windows.net/msmarcoranking/msmarco_v2_doc.tar
+wget --header "X-Ms-Version: 2019-12-12" https://msmarco.z22.web.core.windows.net/msmarcoranking/msmarco_v2_doc.tar
 ```
 
 ### Document ranking dataset
 
 | Type | Filename | File size | Num Records | Format |
 |------|----------|----------:|------------:|--------|
-| Corpus | [msmarco_v2_doc.tar](https://msmarco.blob.core.windows.net/msmarcoranking/msmarco_v2_doc.tar) | 32.3 GB | 11,959,635 | tar of 60 gzipped jsonl files |
-| Train | [docv2_train_queries.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/docv2_train_queries.tsv) | 12.9 MB | 322,196 | tsv: qid, query |
-| Train | [docv2_train_top100.txt.gz](https://msmarco.blob.core.windows.net/msmarcoranking/docv2_train_top100.txt.gz) | 404.5 MB | 32,218,809 | TREC submission: qid, "Q0", docid, rank, score, runstring |
-| Train | [docv2_train_qrels.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/docv2_train_qrels.tsv) | 11.9 MB | 331,956 | TREC qrels format |
-| Dev 1 | [docv2_dev_queries.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/docv2_dev_queries.tsv) | 187.5 KB | 4,552 | tsv: qid, query |
-| Dev 1 | [docv2_dev_top100.txt.gz](https://msmarco.blob.core.windows.net/msmarcoranking/docv2_dev_top100.txt.gz) | 5.6 MB | 455,200 | TREC submission: qid, "Q0", docid, rank, score, runstring |
-| Dev 1| [docv2_dev_qrels.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/docv2_dev_qrels.tsv) | 173.4 KB | 4,702 | TREC qrels format |
-| Dev 2 | [docv2_dev2_queries.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/docv2_dev2_queries.tsv) | 205.0 KB | 5,000 | tsv: qid, query |
-| Dev 2 | [docv2_dev2_top100.txt.gz](https://msmarco.blob.core.windows.net/msmarcoranking/docv2_dev2_top100.txt.gz) | 6.1 MB | 500,000 | TREC submission: qid, "Q0", docid, rank, score, runstring |
-| Dev 2| [docv2_dev2_qrels.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/docv2_dev2_qrels.tsv) | 190.9 KB | 5,178 | TREC qrels format |
-| Validation 1 (TREC test 2019) | [msmarco-test2019-queries.tsv.gz](https://msmarco.blob.core.windows.net/msmarcoranking/msmarco-test2019-queries.tsv.gz) | 4.2 KB | 200 | tsv: qid, query |
+| Corpus | [msmarco_v2_doc.tar](https://msmarco.z22.web.core.windows.net/msmarcoranking/msmarco_v2_doc.tar) | 32.3 GB | 11,959,635 | tar of 60 gzipped jsonl files |
+| Train | [docv2_train_queries.tsv](https://msmarco.z22.web.core.windows.net/msmarcoranking/docv2_train_queries.tsv) | 12.9 MB | 322,196 | tsv: qid, query |
+| Train | [docv2_train_top100.txt.gz](https://msmarco.z22.web.core.windows.net/msmarcoranking/docv2_train_top100.txt.gz) | 404.5 MB | 32,218,809 | TREC submission: qid, "Q0", docid, rank, score, runstring |
+| Train | [docv2_train_qrels.tsv](https://msmarco.z22.web.core.windows.net/msmarcoranking/docv2_train_qrels.tsv) | 11.9 MB | 331,956 | TREC qrels format |
+| Dev 1 | [docv2_dev_queries.tsv](https://msmarco.z22.web.core.windows.net/msmarcoranking/docv2_dev_queries.tsv) | 187.5 KB | 4,552 | tsv: qid, query |
+| Dev 1 | [docv2_dev_top100.txt.gz](https://msmarco.z22.web.core.windows.net/msmarcoranking/docv2_dev_top100.txt.gz) | 5.6 MB | 455,200 | TREC submission: qid, "Q0", docid, rank, score, runstring |
+| Dev 1| [docv2_dev_qrels.tsv](https://msmarco.z22.web.core.windows.net/msmarcoranking/docv2_dev_qrels.tsv) | 173.4 KB | 4,702 | TREC qrels format |
+| Dev 2 | [docv2_dev2_queries.tsv](https://msmarco.z22.web.core.windows.net/msmarcoranking/docv2_dev2_queries.tsv) | 205.0 KB | 5,000 | tsv: qid, query |
+| Dev 2 | [docv2_dev2_top100.txt.gz](https://msmarco.z22.web.core.windows.net/msmarcoranking/docv2_dev2_top100.txt.gz) | 6.1 MB | 500,000 | TREC submission: qid, "Q0", docid, rank, score, runstring |
+| Dev 2| [docv2_dev2_qrels.tsv](https://msmarco.z22.web.core.windows.net/msmarcoranking/docv2_dev2_qrels.tsv) | 190.9 KB | 5,178 | TREC qrels format |
+| Validation 1 (TREC test 2019) | [msmarco-test2019-queries.tsv.gz](https://msmarco.z22.web.core.windows.net/msmarcoranking/msmarco-test2019-queries.tsv.gz) | 4.2 KB | 200 | tsv: qid, query |
 | Validation 1 (TREC test 2019) | (currently not available) |  |  | TREC submission: qid, "Q0", docid, rank, score, runstring |
-| Validation 1 (TREC test 2019) | [docv2_trec2019_qrels.txt.gz](https://msmarco.blob.core.windows.net/msmarcoranking/docv2_trec2019_qrels.txt.gz) | 105 KB | 13,940 | qid, "Q0", docid, rating |
-| Validation 2 (TREC test 2020) | [msmarco-test2020-queries.tsv.gz](https://msmarco.blob.core.windows.net/msmarcoranking/msmarco-test2020-queries.tsv.gz) | 8.2 KB | 200 | tsv: qid, query |
+| Validation 1 (TREC test 2019) | [docv2_trec2019_qrels.txt.gz](https://msmarco.z22.web.core.windows.net/msmarcoranking/docv2_trec2019_qrels.txt.gz) | 105 KB | 13,940 | qid, "Q0", docid, rating |
+| Validation 2 (TREC test 2020) | [msmarco-test2020-queries.tsv.gz](https://msmarco.z22.web.core.windows.net/msmarcoranking/msmarco-test2020-queries.tsv.gz) | 8.2 KB | 200 | tsv: qid, query |
 | Validation 2 (TREC test 2020) | (currently not available) |  KB |  | TREC submission: qid, "Q0", docid, rank, score, runstring |
-| Validation 2 (TREC test 2020) | [docv2_trec2020_qrels.txt.gz](https://msmarco.blob.core.windows.net/msmarcoranking/docv2_trec2020_qrels.txt.gz) | 60.9 KB | 7,942 | qid, "Q0", docid, rating |
-| Validation 3 (TREC test 2021) | [2021_queries.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/2021_queries.tsv) | 24.0 KB | 477 | tsv: qid, query |
-| Validation 3 (TREC test 2021) | [2021_document_top100.txt.gz](https://msmarco.blob.core.windows.net/msmarcoranking/2021_document_top100.txt.gz) | 603.7 KB | 47,700 | TREC submission: qid, "Q0", docid, rank, score, runstring |
+| Validation 2 (TREC test 2020) | [docv2_trec2020_qrels.txt.gz](https://msmarco.z22.web.core.windows.net/msmarcoranking/docv2_trec2020_qrels.txt.gz) | 60.9 KB | 7,942 | qid, "Q0", docid, rating |
+| Validation 3 (TREC test 2021) | [2021_queries.tsv](https://msmarco.z22.web.core.windows.net/msmarcoranking/2021_queries.tsv) | 24.0 KB | 477 | tsv: qid, query |
+| Validation 3 (TREC test 2021) | [2021_document_top100.txt.gz](https://msmarco.z22.web.core.windows.net/msmarcoranking/2021_document_top100.txt.gz) | 603.7 KB | 47,700 | TREC submission: qid, "Q0", docid, rank, score, runstring |
 | Validation 3 (TREC test 2021) | [2021.qrels.docs.final.txt](https://trec.nist.gov/data/deep/2021.qrels.docs.final.txt)          |   468 KB |                  13,058  | qid, "Q0", docid, rating       |
-| Test (TREC test 2022) | [2022_queries.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/2022_queries.tsv) | 21.0 KB | 500 | tsv: qid, query |
-| Test (TREC test 2022) | [2022_document_top100.txt.gz](https://msmarco.blob.core.windows.net/msmarcoranking/2022_document_top100.txt.gz) | 627.7 KB | 50,000 | TREC submission: qid, "Q0", docid, rank, score, runstring |
+| Test (TREC test 2022) | [2022_queries.tsv](https://msmarco.z22.web.core.windows.net/msmarcoranking/2022_queries.tsv) | 21.0 KB | 500 | tsv: qid, query |
+| Test (TREC test 2022) | [2022_document_top100.txt.gz](https://msmarco.z22.web.core.windows.net/msmarcoranking/2022_document_top100.txt.gz) | 627.7 KB | 50,000 | TREC submission: qid, "Q0", docid, rank, score, runstring |
 
 The document corpus is in jsonl format. Each document has:
 
@@ -139,21 +139,21 @@ dict_keys(['url', 'title', 'headings', 'body', 'docid'])
 
 | Type | Filename | File size | Num Records | Format |
 |------|----------|----------:|------------:|--------|
-| Corpus | [msmarco_v2_passage.tar](https://msmarco.blob.core.windows.net/msmarcoranking/msmarco_v2_passage.tar) | 20.3 GB | 138,364,198 | tar of 70 gzipped jsonl files |
-| Train | [passv2_train_queries.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/passv2_train_queries.tsv) | 11.1 MB | 277,144 | tsv: qid, query |
-| Train | [passv2_train_top100.txt.gz](https://msmarco.blob.core.windows.net/msmarcoranking/passv2_train_top100.txt.gz) | 324.9 MB | 27,713,673 | TREC submission: qid, "Q0", docid, rank, score, runstring |
-| Train | [passv2_train_qrels.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/passv2_train_qrels.tsv) | 11.1 MB | 287,889 | TREC qrels format |
-| Dev 1 | [passv2_dev_queries.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/passv2_dev_queries.tsv) | 160.7 KB | 3,903 | tsv: qid, query |
-| Dev 1 | [passv2_dev_top100.txt.gz](https://msmarco.blob.core.windows.net/msmarcoranking/passv2_dev_top100.txt.gz) | 4.7 MB | 390,300 | TREC submission: qid, "Q0", docid, rank, score, runstring |
-| Dev 1| [passv2_dev_qrels.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/passv2_dev_qrels.tsv) | 161.2 KB | 4,074 | TREC qrels format |
-| Dev 2 | [passv2_dev2_queries.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/passv2_dev2_queries.tsv) | 175.4 KB | 4.281 | tsv: qid, query |
-| Dev 2 | [passv2_dev2_top100.txt.gz](https://msmarco.blob.core.windows.net/msmarcoranking/passv2_dev2_top100.txt.gz) | 5.1 MB | 428,100 | TREC submission: qid, "Q0", docid, rank, score, runstring |
-| Dev 2| [passv2_dev2_qrels.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/passv2_dev2_qrels.tsv) | 177.4 KB | 4,456 | TREC qrels format |
-| Validation 1 (TREC test 2021) | [2021_queries.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/2021_queries.tsv) | 24.0 KB | 477 | tsv: qid, query |
-| Validation 1 (TREC test 2021) | [2021_passage_top100.txt.gz](https://msmarco.blob.core.windows.net/msmarcoranking/2021_passage_top100.txt.gz) | 590.4 KB | 47,700 | TREC submission: qid, "Q0", docid, rank, score, runstring |
+| Corpus | [msmarco_v2_passage.tar](https://msmarco.z22.web.core.windows.net/msmarcoranking/msmarco_v2_passage.tar) | 20.3 GB | 138,364,198 | tar of 70 gzipped jsonl files |
+| Train | [passv2_train_queries.tsv](https://msmarco.z22.web.core.windows.net/msmarcoranking/passv2_train_queries.tsv) | 11.1 MB | 277,144 | tsv: qid, query |
+| Train | [passv2_train_top100.txt.gz](https://msmarco.z22.web.core.windows.net/msmarcoranking/passv2_train_top100.txt.gz) | 324.9 MB | 27,713,673 | TREC submission: qid, "Q0", docid, rank, score, runstring |
+| Train | [passv2_train_qrels.tsv](https://msmarco.z22.web.core.windows.net/msmarcoranking/passv2_train_qrels.tsv) | 11.1 MB | 287,889 | TREC qrels format |
+| Dev 1 | [passv2_dev_queries.tsv](https://msmarco.z22.web.core.windows.net/msmarcoranking/passv2_dev_queries.tsv) | 160.7 KB | 3,903 | tsv: qid, query |
+| Dev 1 | [passv2_dev_top100.txt.gz](https://msmarco.z22.web.core.windows.net/msmarcoranking/passv2_dev_top100.txt.gz) | 4.7 MB | 390,300 | TREC submission: qid, "Q0", docid, rank, score, runstring |
+| Dev 1| [passv2_dev_qrels.tsv](https://msmarco.z22.web.core.windows.net/msmarcoranking/passv2_dev_qrels.tsv) | 161.2 KB | 4,074 | TREC qrels format |
+| Dev 2 | [passv2_dev2_queries.tsv](https://msmarco.z22.web.core.windows.net/msmarcoranking/passv2_dev2_queries.tsv) | 175.4 KB | 4.281 | tsv: qid, query |
+| Dev 2 | [passv2_dev2_top100.txt.gz](https://msmarco.z22.web.core.windows.net/msmarcoranking/passv2_dev2_top100.txt.gz) | 5.1 MB | 428,100 | TREC submission: qid, "Q0", docid, rank, score, runstring |
+| Dev 2| [passv2_dev2_qrels.tsv](https://msmarco.z22.web.core.windows.net/msmarcoranking/passv2_dev2_qrels.tsv) | 177.4 KB | 4,456 | TREC qrels format |
+| Validation 1 (TREC test 2021) | [2021_queries.tsv](https://msmarco.z22.web.core.windows.net/msmarcoranking/2021_queries.tsv) | 24.0 KB | 477 | tsv: qid, query |
+| Validation 1 (TREC test 2021) | [2021_passage_top100.txt.gz](https://msmarco.z22.web.core.windows.net/msmarcoranking/2021_passage_top100.txt.gz) | 590.4 KB | 47,700 | TREC submission: qid, "Q0", docid, rank, score, runstring |
 | Validation 1 (TREC test 2021) | [2021.qrels.pass.final.txt](https://trec.nist.gov/data/deep/2021.qrels.pass.final.txt)          |     424 KB | 10,828  | qid, "Q0", docid, rating |
-| Test (TREC test 2022) | [2022_queries.tsv](https://msmarco.blob.core.windows.net/msmarcoranking/2022_queries.tsv) | 21.0 | 500 | tsv: qid, query |
-| Test (TREC test 2022) | [2022_passage_top100.txt.gz](https://msmarco.blob.core.windows.net/msmarcoranking/2022_passage_top100.txt.gz) | 615.3 | 50,000 | TREC submission: qid, "Q0", docid, rank, score, runstring |
+| Test (TREC test 2022) | [2022_queries.tsv](https://msmarco.z22.web.core.windows.net/msmarcoranking/2022_queries.tsv) | 21.0 | 500 | tsv: qid, query |
+| Test (TREC test 2022) | [2022_passage_top100.txt.gz](https://msmarco.z22.web.core.windows.net/msmarcoranking/2022_passage_top100.txt.gz) | 615.3 | 50,000 | TREC submission: qid, "Q0", docid, rank, score, runstring |
 
 The passage corpus is also in jsonl format. Each passage has:
 
@@ -230,8 +230,8 @@ We are sharing the following additional resources which we hope will be useful f
 
 | Dataset | Filename | File size | Num Records | Format |
 |------|----------|----------:|------------:|--------|
-| [Segmented document collection](https://github.com/castorini/anserini/blob/master/docs/experiments-msmarco-v2.md#document-collection-segmented) | [msmarco_v2_doc_segmented.tar](https://msmarco.blob.core.windows.net/msmarcoranking/msmarco_v2_doc_segmented.tar) | 25.4 GB | 124,131,414 | tar |
-| [Augmented passage collection](https://github.com/castorini/anserini/blob/master/docs/experiments-msmarco-v2.md#passage-collection-augmented) | [msmarco_v2_passage_augmented.tar](https://msmarco.blob.core.windows.net/msmarcoranking/msmarco_v2_passage_augmented.tar) | 20.0 GB | 138,364,198 | tar |
+| [Segmented document collection](https://github.com/castorini/anserini/blob/master/docs/experiments-msmarco-v2.md#document-collection-segmented) | [msmarco_v2_doc_segmented.tar](https://msmarco.z22.web.core.windows.net/msmarcoranking/msmarco_v2_doc_segmented.tar) | 25.4 GB | 124,131,414 | tar |
+| [Augmented passage collection](https://github.com/castorini/anserini/blob/master/docs/experiments-msmarco-v2.md#passage-collection-augmented) | [msmarco_v2_passage_augmented.tar](https://msmarco.z22.web.core.windows.net/msmarcoranking/msmarco_v2_passage_augmented.tar) | 20.0 GB | 138,364,198 | tar |
 
 ## Coordinators
 
