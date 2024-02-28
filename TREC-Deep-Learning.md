@@ -1,6 +1,8 @@
 # TREC 2023 Deep Learning Track Guidelines
 
-**This year we are celebrating the 5<sup>th</sup> anniversary of the TREC Deep Learning Track!** 🥳
+**This year we are celebrating the 5<sup>th</sup> anniversary and the final edition of the TREC Deep Learning Track!** 🥳
+
+**Overview paper:** [https://trec.nist.gov/pubs/trec32/papers/Overview_deep.pdf](https://trec.nist.gov/pubs/trec32/papers/Overview_deep.pdf)
 
 ## Previous editions
 
