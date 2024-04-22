@@ -98,6 +98,7 @@ wget --header "X-Ms-Version: 2019-12-12" https://msmarco.z22.web.core.windows.ne
 | Validation 2 (TREC test 2022) | [2022.qrels.pass.withDupes.txt](https://trec.nist.gov/data/deep/2022.qrels.pass.withDupes.txt)          |     15 MB | 386,416  | qid, "Q0", docid, rating |
 | Test (TREC test 2023) | [2023_queries.tsv](https://msmarco.z22.web.core.windows.net/msmarcoranking/2023_queries.tsv) | 37.2 KB | 700 | tsv: qid, query |
 | Test (TREC test 2023) | [2023_passage_top100.txt.gz](https://msmarco.z22.web.core.windows.net/msmarcoranking/2023_passage_top100.txt.gz) | 868.1 KB | 70,000 | TREC submission: qid, "Q0", docid, rank, score, runstring |
+| Test (TREC test 2023) | [2023.qrels.pass.withDupes.txt](https://trec.nist.gov/data/deep/2023.qrels.pass.withDupes.txt)          |     891 KB | 22,327  | qid, "Q0", docid, rating |
 
 The passage corpus is also in jsonl format. Each passage has:
 
@@ -142,6 +143,7 @@ doc_json['body'].encode()[x:y].decode()
 | Validation 4 (TREC test 2022) | [2022.qrels.docs.inferred.txt](https://trec.nist.gov/data/deep/2022.qrels.docs.inferred.txt)          |   13.1 MB |                  369,638  | qid, "Q0", docid, rating       |
 | Test (TREC test 2023) | [2023_queries.tsv](https://msmarco.z22.web.core.windows.net/msmarcoranking/2023_queries.tsv) | 37.2 KB | 700 | tsv: qid, query |
 | Test (TREC test 2023) | [2023_document_top100.txt.gz](https://msmarco.z22.web.core.windows.net/msmarcoranking/2023_document_top100.txt.gz) | 881.0 KB | 70,000 | TREC submission: qid, "Q0", docid, rank, score, runstring |
+| Test (TREC test 2023) | [2023.qrels.docs.withDupes.txt](https://trec.nist.gov/data/deep/2023.qrels.docs.withDupes.txt)          |   659 KB |                  18,034  | qid, "Q0", docid, rating       |
 
 The document corpus is in jsonl format. Each document has:
 
